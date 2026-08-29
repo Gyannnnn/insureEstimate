@@ -1,0 +1,14 @@
+{
+  "slug": "rhode-island",
+  "name": "Rhode Island",
+  "abbreviation": "RI",
+  "region": "Northeast",
+  "image": "/images/states/rhode-island.jpg",
+  "imageAlt": "Rhode Island state outline",
+  "baseRate": 165,
+  "avgRent": 1500,
+  "requirementsNote": "Rhode Island state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Rhode Island Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Rhode Island based on personal property, liability limits, and deductible options."
+}

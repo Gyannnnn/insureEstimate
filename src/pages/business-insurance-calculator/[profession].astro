@@ -1,0 +1,111 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import SiteHeader from '../../components/SiteHeader.astro';
+import PageFooter from '../../components/PageFooter.astro';
+import EntityHero from '../../components/EntityHero.astro';
+import CalculatorCard from '../../components/CalculatorCard.astro';
+import { siteCopy } from '../../lib/site';
+import '../../styles/global.css';
+
+export async function getStaticPaths() {
+  return (await getCollection('professions')).map(({ data }) => ({ params: { profession: data.slug } }));
+}
+const profession = await getEntry('professions', Astro.params.profession!);
+if (!profession) return Astro.redirect('/');
+const { data } = profession;
+const title = data.seoTitle || `Business Insurance Cost for ${data.name}`;
+const description = data.seoDescription || `Explore baseline liability, E&O, and commercial property cost estimates for a ${data.name.toLowerCase()}.`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title} | PolicyLens</title>
+  <meta name="description" content={description}>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-background font-body-md text-on-surface">
+  <SiteHeader active="Business Insurance" />
+
+  <main class="w-full pt-20 md:pt-24 min-h-[calc(100vh-300px)]">
+    <!-- Shared Entity Hero -->
+    <EntityHero
+      title={`Business Insurance Cost for ${data.name}`}
+      subtitle={`Model General Liability and Professional E&O coverage requirements tailored to ${data.name.toLowerCase()} operations.`}
+      category={data.category || 'Professional Services'}
+      badgeText="2026 Actuarial Model"
+      statValue="$450 – $850"
+      statLabel="Estimated Annual Premium"
+    />
+
+    <!-- Shared Calculator Card (Connected to Real Engine) -->
+    <section id="calculator" class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 scroll-mt-[100px]">
+      <CalculatorCard
+        title={`${data.name} Insurance Estimator`}
+        subtitle="Select annual revenue and coverage parameters to compute real-time cost projections."
+        type="business"
+        entityName={data.name}
+        riskFactor={data.riskFactor}
+      />
+    </section>
+
+    <!-- Recommended Coverage Badges & Risk Factors -->
+    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md z-10 relative">
+      <div class="bg-surface-container-low rounded-2xl p-6 md:p-8 border border-outline-variant/30">
+        <div class="flex flex-col gap- stack-sm mb-6">
+          <span class="font-label-sm text-xs text-secondary uppercase tracking-widest font-semibold">Recommended Coverage</span>
+          <h2 class="font-headline-md text-headline-md text-primary">Key Risk Factors for {data.name}</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {data.recommendedCoverage && data.recommendedCoverage.map((item: string, index: number) => (
+            <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/30 flex flex-col gap-2">
+              <div class="w-7 h-7 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs font-bold font-data-tabular">
+                0{index + 1}
+              </div>
+              <h3 class="font-body-md font-semibold text-primary">{item}</h3>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                Standard baseline requirement for active {data.name.toLowerCase()} contracts and client agreements.
+              </p>
+            </div>
+          ))}
+          <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/30 flex flex-col gap-2">
+            <div class="w-7 h-7 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs font-bold font-data-tabular">
+              03
+            </div>
+            <h3 class="font-body-md font-semibold text-primary">Policy Customization</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Compare carrier-specific endorsement options and deductible tiers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology Block -->
+    <section id="methodology" class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg z-10 relative border-t border-outline-variant/20 mt-stack-md">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+        <div class="flex flex-col gap-stack-sm">
+          <span class="font-label-sm text-xs text-secondary uppercase tracking-widest font-semibold">Transparency</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary">Actuarial Methodology</h2>
+          <p class="font-body-md text-on-surface-variant leading-relaxed">
+            {siteCopy.methodology}
+          </p>
+        </div>
+        <div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 flex flex-col gap-4">
+          <h3 class="font-headline-md text-lg text-primary font-semibold">Need a custom estimate?</h3>
+          <p class="text-xs text-on-surface-variant">Explore our full index of profession calculators or review state requirements.</p>
+          <a href="/business-insurance-calculator/" class="inline-flex items-center justify-center h-11 bg-primary text-on-primary font-label-sm text-xs rounded-xl hover:bg-primary/90 transition-colors">
+            View All Profession Calculators
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <PageFooter />
+</body>
+</html>

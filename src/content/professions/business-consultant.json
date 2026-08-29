@@ -1,0 +1,18 @@
+{
+  "slug": "business-consultant",
+  "name": "Business Consultant",
+  "category": "Professional Services",
+  "image": "/images/professions/business-consultant.jpg",
+  "imageAlt": "Business Consultant performing commercial work",
+  "riskFactor": 1,
+  "typicalEmployeeRange": "0-3",
+  "recommendedCoverage": [
+    "Errors & Omissions",
+    "General Liability",
+    "Cyber Liability"
+  ],
+  "notes": "",
+  "intro": "",
+  "seoTitle": "Business Insurance Cost for Business Consultants | PolicyLens",
+  "seoDescription": "Calculate estimated business insurance costs for business consultant businesses including general liability and professional E&O coverage."
+}

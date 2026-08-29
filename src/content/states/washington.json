@@ -1,0 +1,14 @@
+{
+  "slug": "washington",
+  "name": "Washington",
+  "abbreviation": "WA",
+  "region": "West",
+  "image": "/images/states/washington.jpg",
+  "imageAlt": "Washington state outline",
+  "baseRate": 160,
+  "avgRent": 1750,
+  "requirementsNote": "Washington state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Washington Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Washington based on personal property, liability limits, and deductible options."
+}

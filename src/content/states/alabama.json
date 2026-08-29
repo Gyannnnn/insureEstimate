@@ -1,0 +1,14 @@
+{
+  "slug": "alabama",
+  "name": "Alabama",
+  "abbreviation": "AL",
+  "region": "South",
+  "image": "/images/states/alabama.jpg",
+  "imageAlt": "Alabama state outline",
+  "baseRate": 195,
+  "avgRent": 1150,
+  "requirementsNote": "Alabama state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Alabama Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Alabama based on personal property, liability limits, and deductible options."
+}

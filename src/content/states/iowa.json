@@ -1,0 +1,14 @@
+{
+  "slug": "iowa",
+  "name": "Iowa",
+  "abbreviation": "IA",
+  "region": "Midwest",
+  "image": "/images/states/iowa.jpg",
+  "imageAlt": "Iowa state outline",
+  "baseRate": 145,
+  "avgRent": 1000,
+  "requirementsNote": "Iowa state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Iowa Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Iowa based on personal property, liability limits, and deductible options."
+}

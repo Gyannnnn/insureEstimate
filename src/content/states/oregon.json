@@ -1,0 +1,14 @@
+{
+  "slug": "oregon",
+  "name": "Oregon",
+  "abbreviation": "OR",
+  "region": "West",
+  "image": "/images/states/oregon.jpg",
+  "imageAlt": "Oregon state outline",
+  "baseRate": 160,
+  "avgRent": 1600,
+  "requirementsNote": "Oregon state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Oregon Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Oregon based on personal property, liability limits, and deductible options."
+}

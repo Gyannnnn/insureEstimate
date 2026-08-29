@@ -1,0 +1,14 @@
+{
+  "slug": "massachusetts",
+  "name": "Massachusetts",
+  "abbreviation": "MA",
+  "region": "Northeast",
+  "image": "/images/states/massachusetts.jpg",
+  "imageAlt": "Massachusetts state outline",
+  "baseRate": 160,
+  "avgRent": 2000,
+  "requirementsNote": "Massachusetts state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Massachusetts Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Massachusetts based on personal property, liability limits, and deductible options."
+}

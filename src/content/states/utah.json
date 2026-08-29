@@ -1,0 +1,14 @@
+{
+  "slug": "utah",
+  "name": "Utah",
+  "abbreviation": "UT",
+  "region": "West",
+  "image": "/images/states/utah.jpg",
+  "imageAlt": "Utah state outline",
+  "baseRate": 145,
+  "avgRent": 1550,
+  "requirementsNote": "Utah state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Utah Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Utah based on personal property, liability limits, and deductible options."
+}

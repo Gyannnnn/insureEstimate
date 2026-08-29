@@ -1,0 +1,14 @@
+{
+  "slug": "oklahoma",
+  "name": "Oklahoma",
+  "abbreviation": "OK",
+  "region": "South",
+  "image": "/images/states/oklahoma.jpg",
+  "imageAlt": "Oklahoma state outline",
+  "baseRate": 230,
+  "avgRent": 1050,
+  "requirementsNote": "Oklahoma state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Oklahoma Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Oklahoma based on personal property, liability limits, and deductible options."
+}

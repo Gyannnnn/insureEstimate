@@ -1,0 +1,14 @@
+{
+  "slug": "california",
+  "name": "California",
+  "abbreviation": "CA",
+  "region": "West",
+  "image": "/images/states/california.jpg",
+  "imageAlt": "California state outline",
+  "baseRate": 185,
+  "avgRent": 1950,
+  "requirementsNote": "California state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "California Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in California based on personal property, liability limits, and deductible options."
+}

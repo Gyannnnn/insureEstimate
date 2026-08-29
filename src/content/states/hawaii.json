@@ -1,0 +1,14 @@
+{
+  "slug": "hawaii",
+  "name": "Hawaii",
+  "abbreviation": "HI",
+  "region": "West",
+  "image": "/images/states/hawaii.jpg",
+  "imageAlt": "Hawaii state outline",
+  "baseRate": 175,
+  "avgRent": 2100,
+  "requirementsNote": "Hawaii state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Hawaii Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Hawaii based on personal property, liability limits, and deductible options."
+}

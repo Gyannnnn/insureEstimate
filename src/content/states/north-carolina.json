@@ -1,0 +1,14 @@
+{
+  "slug": "north-carolina",
+  "name": "North Carolina",
+  "abbreviation": "NC",
+  "region": "South",
+  "image": "/images/states/north-carolina.jpg",
+  "imageAlt": "North Carolina state outline",
+  "baseRate": 185,
+  "avgRent": 1400,
+  "requirementsNote": "North Carolina state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "North Carolina Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in North Carolina based on personal property, liability limits, and deductible options."
+}

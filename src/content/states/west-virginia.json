@@ -1,0 +1,14 @@
+{
+  "slug": "west-virginia",
+  "name": "West Virginia",
+  "abbreviation": "WV",
+  "region": "South",
+  "image": "/images/states/west-virginia.jpg",
+  "imageAlt": "West Virginia state outline",
+  "baseRate": 175,
+  "avgRent": 950,
+  "requirementsNote": "West Virginia state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "West Virginia Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in West Virginia based on personal property, liability limits, and deductible options."
+}

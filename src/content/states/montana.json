@@ -1,0 +1,14 @@
+{
+  "slug": "montana",
+  "name": "Montana",
+  "abbreviation": "MT",
+  "region": "West",
+  "image": "/images/states/montana.jpg",
+  "imageAlt": "Montana state outline",
+  "baseRate": 150,
+  "avgRent": 1250,
+  "requirementsNote": "Montana state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Montana Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Montana based on personal property, liability limits, and deductible options."
+}

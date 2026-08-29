@@ -1,0 +1,14 @@
+{
+  "slug": "michigan",
+  "name": "Michigan",
+  "abbreviation": "MI",
+  "region": "Midwest",
+  "image": "/images/states/michigan.jpg",
+  "imageAlt": "Michigan state outline",
+  "baseRate": 180,
+  "avgRent": 1250,
+  "requirementsNote": "Michigan state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Michigan Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Michigan based on personal property, liability limits, and deductible options."
+}

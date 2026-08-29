@@ -1,0 +1,14 @@
+{
+  "slug": "alaska",
+  "name": "Alaska",
+  "abbreviation": "AK",
+  "region": "West",
+  "image": "/images/states/alaska.jpg",
+  "imageAlt": "Alaska state outline",
+  "baseRate": 155,
+  "avgRent": 1350,
+  "requirementsNote": "Alaska state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Alaska Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Alaska based on personal property, liability limits, and deductible options."
+}

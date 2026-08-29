@@ -1,0 +1,14 @@
+{
+  "slug": "virginia",
+  "name": "Virginia",
+  "abbreviation": "VA",
+  "region": "South",
+  "image": "/images/states/virginia.jpg",
+  "imageAlt": "Virginia state outline",
+  "baseRate": 165,
+  "avgRent": 1600,
+  "requirementsNote": "Virginia state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Virginia Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Virginia based on personal property, liability limits, and deductible options."
+}

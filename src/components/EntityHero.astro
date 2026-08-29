@@ -1,0 +1,75 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  category: string;
+  badgeText?: string;
+  statValue?: string;
+  statLabel?: string;
+  bgImage?: string;
+}
+
+const {
+  title,
+  subtitle,
+  category,
+  badgeText = '2026 Actuarial Model',
+  statValue = '$15–$25',
+  statLabel = 'Average Monthly Premium',
+  bgImage
+} = Astro.props;
+---
+
+<section class="relative w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-4 pb-stack-md z-10">
+  <!-- Ambient Grid Background -->
+  <div aria-hidden="true" class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+    <svg class="absolute top-0 left-0 w-full h-full opacity-[0.03]" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="hero-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1"></path>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#hero-pattern)"></rect>
+    </svg>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-gutter items-center relative z-10">
+    <div class="flex flex-col gap-stack-sm max-w-3xl">
+      <div class="flex items-center gap-base">
+        <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-label-sm uppercase tracking-wider font-semibold">
+          {category}
+        </span>
+        <span class="text-xs text-on-surface-variant font-data-tabular">
+          {badgeText}
+        </span>
+      </div>
+
+      <h1 class="font-display-lg text-display-lg text-primary tracking-tight font-semibold">
+        {title}
+      </h1>
+
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+        {subtitle}
+      </p>
+    </div>
+
+    <!-- Stat Highlight Card / Image Shell -->
+    <div class="bg-surface-container-low rounded-2xl p-6 border border-outline-variant/30 relative overflow-hidden flex flex-col justify-between shadow-sm min-h-[160px]">
+      {bgImage && (
+        <div class="absolute inset-0 opacity-15 bg-cover bg-center" style={`background-image: url('${bgImage}')`}></div>
+      )}
+      <div class="relative z-10">
+        <span class="font-label-sm text-xs text-on-surface-variant uppercase tracking-wider block mb-1">
+          {statLabel}
+        </span>
+        <div class="font-headline-lg text-[36px] font-bold text-primary font-data-tabular">
+          {statValue}
+        </div>
+      </div>
+      <div class="relative z-10 mt-4 pt-3 border-t border-outline-variant/30 flex items-center gap-2 text-xs text-secondary font-medium">
+        <span class="material-symbols-outlined text-[16px]">verified</span>
+        Data-backed planning baseline
+      </div>
+    </div>
+  </div>
+</section>

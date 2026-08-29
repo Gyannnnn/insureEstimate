@@ -1,0 +1,14 @@
+{
+  "slug": "nevada",
+  "name": "Nevada",
+  "abbreviation": "NV",
+  "region": "West",
+  "image": "/images/states/nevada.jpg",
+  "imageAlt": "Nevada state outline",
+  "baseRate": 175,
+  "avgRent": 1500,
+  "requirementsNote": "Nevada state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Nevada Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Nevada based on personal property, liability limits, and deductible options."
+}

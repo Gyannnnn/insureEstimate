@@ -1,0 +1,14 @@
+{
+  "slug": "connecticut",
+  "name": "Connecticut",
+  "abbreviation": "CT",
+  "region": "Northeast",
+  "image": "/images/states/connecticut.jpg",
+  "imageAlt": "Connecticut state outline",
+  "baseRate": 165,
+  "avgRent": 1600,
+  "requirementsNote": "Connecticut state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Connecticut Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Connecticut based on personal property, liability limits, and deductible options."
+}

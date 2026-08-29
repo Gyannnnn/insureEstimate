@@ -1,0 +1,14 @@
+{
+  "slug": "maine",
+  "name": "Maine",
+  "abbreviation": "ME",
+  "region": "Northeast",
+  "image": "/images/states/maine.jpg",
+  "imageAlt": "Maine state outline",
+  "baseRate": 145,
+  "avgRent": 1350,
+  "requirementsNote": "Maine state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Maine Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Maine based on personal property, liability limits, and deductible options."
+}

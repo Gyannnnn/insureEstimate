@@ -1,0 +1,14 @@
+{
+  "slug": "vermont",
+  "name": "Vermont",
+  "abbreviation": "VT",
+  "region": "Northeast",
+  "image": "/images/states/vermont.jpg",
+  "imageAlt": "Vermont state outline",
+  "baseRate": 140,
+  "avgRent": 1400,
+  "requirementsNote": "Vermont state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Vermont Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Vermont based on personal property, liability limits, and deductible options."
+}

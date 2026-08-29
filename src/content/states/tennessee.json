@@ -1,0 +1,14 @@
+{
+  "slug": "tennessee",
+  "name": "Tennessee",
+  "abbreviation": "TN",
+  "region": "South",
+  "image": "/images/states/tennessee.jpg",
+  "imageAlt": "Tennessee state outline",
+  "baseRate": 190,
+  "avgRent": 1350,
+  "requirementsNote": "Tennessee state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Tennessee Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Tennessee based on personal property, liability limits, and deductible options."
+}

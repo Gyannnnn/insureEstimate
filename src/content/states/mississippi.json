@@ -1,0 +1,14 @@
+{
+  "slug": "mississippi",
+  "name": "Mississippi",
+  "abbreviation": "MS",
+  "region": "South",
+  "image": "/images/states/mississippi.jpg",
+  "imageAlt": "Mississippi state outline",
+  "baseRate": 225,
+  "avgRent": 1000,
+  "requirementsNote": "Mississippi state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Mississippi Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Mississippi based on personal property, liability limits, and deductible options."
+}

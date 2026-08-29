@@ -1,0 +1,14 @@
+{
+  "slug": "illinois",
+  "name": "Illinois",
+  "abbreviation": "IL",
+  "region": "Midwest",
+  "image": "/images/states/illinois.jpg",
+  "imageAlt": "Illinois state outline",
+  "baseRate": 170,
+  "avgRent": 1450,
+  "requirementsNote": "Illinois state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Illinois Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Illinois based on personal property, liability limits, and deductible options."
+}

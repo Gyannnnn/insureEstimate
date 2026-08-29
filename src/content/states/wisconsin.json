@@ -1,0 +1,14 @@
+{
+  "slug": "wisconsin",
+  "name": "Wisconsin",
+  "abbreviation": "WI",
+  "region": "Midwest",
+  "image": "/images/states/wisconsin.jpg",
+  "imageAlt": "Wisconsin state outline",
+  "baseRate": 150,
+  "avgRent": 1200,
+  "requirementsNote": "Wisconsin state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Wisconsin Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Wisconsin based on personal property, liability limits, and deductible options."
+}

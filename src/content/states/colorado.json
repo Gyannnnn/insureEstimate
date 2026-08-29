@@ -1,0 +1,14 @@
+{
+  "slug": "colorado",
+  "name": "Colorado",
+  "abbreviation": "CO",
+  "region": "West",
+  "image": "/images/states/colorado.jpg",
+  "imageAlt": "Colorado state outline",
+  "baseRate": 160,
+  "avgRent": 1750,
+  "requirementsNote": "Colorado state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Colorado Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Colorado based on personal property, liability limits, and deductible options."
+}

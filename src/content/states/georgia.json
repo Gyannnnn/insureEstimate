@@ -1,0 +1,14 @@
+{
+  "slug": "georgia",
+  "name": "Georgia",
+  "abbreviation": "GA",
+  "region": "South",
+  "image": "/images/states/georgia.jpg",
+  "imageAlt": "Georgia state outline",
+  "baseRate": 205,
+  "avgRent": 1500,
+  "requirementsNote": "Georgia state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Georgia Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Georgia based on personal property, liability limits, and deductible options."
+}

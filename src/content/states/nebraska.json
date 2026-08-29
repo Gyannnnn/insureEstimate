@@ -1,0 +1,14 @@
+{
+  "slug": "nebraska",
+  "name": "Nebraska",
+  "abbreviation": "NE",
+  "region": "Midwest",
+  "image": "/images/states/nebraska.jpg",
+  "imageAlt": "Nebraska state outline",
+  "baseRate": 165,
+  "avgRent": 1100,
+  "requirementsNote": "Nebraska state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Nebraska Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Nebraska based on personal property, liability limits, and deductible options."
+}

@@ -1,0 +1,14 @@
+{
+  "slug": "pennsylvania",
+  "name": "Pennsylvania",
+  "abbreviation": "PA",
+  "region": "Northeast",
+  "image": "/images/states/pennsylvania.jpg",
+  "imageAlt": "Pennsylvania state outline",
+  "baseRate": 165,
+  "avgRent": 1350,
+  "requirementsNote": "Pennsylvania state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Pennsylvania Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Pennsylvania based on personal property, liability limits, and deductible options."
+}

@@ -1,0 +1,14 @@
+{
+  "slug": "kansas",
+  "name": "Kansas",
+  "abbreviation": "KS",
+  "region": "Midwest",
+  "image": "/images/states/kansas.jpg",
+  "imageAlt": "Kansas state outline",
+  "baseRate": 185,
+  "avgRent": 1100,
+  "requirementsNote": "Kansas state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Kansas Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Kansas based on personal property, liability limits, and deductible options."
+}

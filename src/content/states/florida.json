@@ -1,0 +1,14 @@
+{
+  "slug": "florida",
+  "name": "Florida",
+  "abbreviation": "FL",
+  "region": "South",
+  "image": "/images/states/florida.jpg",
+  "imageAlt": "Florida state outline",
+  "baseRate": 235,
+  "avgRent": 1850,
+  "requirementsNote": "Florida state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Florida Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Florida based on personal property, liability limits, and deductible options."
+}

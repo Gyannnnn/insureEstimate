@@ -1,0 +1,67 @@
+{
+  "$ref": "#/definitions/states",
+  "definitions": {
+    "states": {
+      "type": "object",
+      "properties": {
+        "slug": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "abbreviation": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "imageAlt": {
+          "type": "string"
+        },
+        "baseRate": {
+          "type": "number",
+          "minimum": 0
+        },
+        "avgRent": {
+          "type": "number",
+          "minimum": 0
+        },
+        "requirementsNote": {
+          "type": "string"
+        },
+        "intro": {
+          "type": "string"
+        },
+        "seoTitle": {
+          "type": "string"
+        },
+        "seoDescription": {
+          "type": "string"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "slug",
+        "name",
+        "abbreviation",
+        "region",
+        "image",
+        "imageAlt",
+        "baseRate",
+        "avgRent",
+        "requirementsNote",
+        "intro",
+        "seoTitle",
+        "seoDescription"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

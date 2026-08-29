@@ -1,0 +1,17 @@
+{
+  "slug": "virtual-assistant",
+  "name": "Virtual Assistant",
+  "category": "Professional Services",
+  "image": "/images/professions/virtual-assistant.jpg",
+  "imageAlt": "Virtual Assistant performing commercial work",
+  "riskFactor": 0.8,
+  "typicalEmployeeRange": "0-1",
+  "recommendedCoverage": [
+    "General Liability",
+    "Cyber Risk"
+  ],
+  "notes": "",
+  "intro": "",
+  "seoTitle": "Business Insurance Cost for Virtual Assistants | PolicyLens",
+  "seoDescription": "Calculate estimated business insurance costs for virtual assistant businesses including general liability and professional E&O coverage."
+}

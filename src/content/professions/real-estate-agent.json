@@ -1,0 +1,17 @@
+{
+  "slug": "real-estate-agent",
+  "name": "Real Estate Agent",
+  "category": "Professional Services",
+  "image": "/images/professions/real-estate-agent.jpg",
+  "imageAlt": "Real Estate Agent performing commercial work",
+  "riskFactor": 1.2,
+  "typicalEmployeeRange": "0-3",
+  "recommendedCoverage": [
+    "Errors & Omissions (Real Estate)",
+    "General Liability"
+  ],
+  "notes": "",
+  "intro": "",
+  "seoTitle": "Business Insurance Cost for Real Estate Agents | PolicyLens",
+  "seoDescription": "Calculate estimated business insurance costs for real estate agent businesses including general liability and professional E&O coverage."
+}

@@ -1,0 +1,14 @@
+{
+  "slug": "indiana",
+  "name": "Indiana",
+  "abbreviation": "IN",
+  "region": "Midwest",
+  "image": "/images/states/indiana.jpg",
+  "imageAlt": "Indiana state outline",
+  "baseRate": 175,
+  "avgRent": 1100,
+  "requirementsNote": "Indiana state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Indiana Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Indiana based on personal property, liability limits, and deductible options."
+}

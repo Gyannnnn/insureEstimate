@@ -1,0 +1,14 @@
+{
+  "slug": "texas",
+  "name": "Texas",
+  "abbreviation": "TX",
+  "region": "South",
+  "image": "/images/states/texas.jpg",
+  "imageAlt": "Texas state outline",
+  "baseRate": 220,
+  "avgRent": 1500,
+  "requirementsNote": "Texas state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Texas Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Texas based on personal property, liability limits, and deductible options."
+}

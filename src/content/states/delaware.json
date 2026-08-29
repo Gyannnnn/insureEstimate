@@ -1,0 +1,14 @@
+{
+  "slug": "delaware",
+  "name": "Delaware",
+  "abbreviation": "DE",
+  "region": "South",
+  "image": "/images/states/delaware.jpg",
+  "imageAlt": "Delaware state outline",
+  "baseRate": 160,
+  "avgRent": 1450,
+  "requirementsNote": "Delaware state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Delaware Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Delaware based on personal property, liability limits, and deductible options."
+}

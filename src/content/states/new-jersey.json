@@ -1,0 +1,14 @@
+{
+  "slug": "new-jersey",
+  "name": "New Jersey",
+  "abbreviation": "NJ",
+  "region": "Northeast",
+  "image": "/images/states/new-jersey.jpg",
+  "imageAlt": "New Jersey state outline",
+  "baseRate": 165,
+  "avgRent": 1800,
+  "requirementsNote": "New Jersey state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "New Jersey Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in New Jersey based on personal property, liability limits, and deductible options."
+}

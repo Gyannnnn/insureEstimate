@@ -1,0 +1,14 @@
+{
+  "slug": "new-hampshire",
+  "name": "New Hampshire",
+  "abbreviation": "NH",
+  "region": "Northeast",
+  "image": "/images/states/new-hampshire.jpg",
+  "imageAlt": "New Hampshire state outline",
+  "baseRate": 145,
+  "avgRent": 1550,
+  "requirementsNote": "New Hampshire state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "New Hampshire Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in New Hampshire based on personal property, liability limits, and deductible options."
+}

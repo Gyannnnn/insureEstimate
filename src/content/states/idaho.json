@@ -1,0 +1,14 @@
+{
+  "slug": "idaho",
+  "name": "Idaho",
+  "abbreviation": "ID",
+  "region": "West",
+  "image": "/images/states/idaho.jpg",
+  "imageAlt": "Idaho state outline",
+  "baseRate": 140,
+  "avgRent": 1300,
+  "requirementsNote": "Idaho state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Idaho Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Idaho based on personal property, liability limits, and deductible options."
+}

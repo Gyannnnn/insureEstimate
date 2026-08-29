@@ -1,0 +1,14 @@
+{
+  "slug": "maryland",
+  "name": "Maryland",
+  "abbreviation": "MD",
+  "region": "South",
+  "image": "/images/states/maryland.jpg",
+  "imageAlt": "Maryland state outline",
+  "baseRate": 170,
+  "avgRent": 1650,
+  "requirementsNote": "Maryland state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Maryland Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Maryland based on personal property, liability limits, and deductible options."
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "it-consultant",
+  "name": "IT Consultant",
+  "category": "Professional Services",
+  "image": "/images/professions/it-consultant.jpg",
+  "imageAlt": "IT Consultant performing commercial work",
+  "riskFactor": 1.15,
+  "typicalEmployeeRange": "0-5",
+  "recommendedCoverage": [
+    "Errors & Omissions",
+    "Cyber Liability / Tech E&O"
+  ],
+  "notes": "",
+  "intro": "",
+  "seoTitle": "Business Insurance Cost for IT Consultants | PolicyLens",
+  "seoDescription": "Calculate estimated business insurance costs for it consultant businesses including general liability and professional E&O coverage."
+}

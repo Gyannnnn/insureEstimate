@@ -1,0 +1,14 @@
+{
+  "slug": "kentucky",
+  "name": "Kentucky",
+  "abbreviation": "KY",
+  "region": "South",
+  "image": "/images/states/kentucky.jpg",
+  "imageAlt": "Kentucky state outline",
+  "baseRate": 180,
+  "avgRent": 1100,
+  "requirementsNote": "Kentucky state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Kentucky Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Kentucky based on personal property, liability limits, and deductible options."
+}

@@ -1,0 +1,14 @@
+{
+  "slug": "arizona",
+  "name": "Arizona",
+  "abbreviation": "AZ",
+  "region": "West",
+  "image": "/images/states/arizona.jpg",
+  "imageAlt": "Arizona state outline",
+  "baseRate": 165,
+  "avgRent": 1550,
+  "requirementsNote": "Arizona state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Arizona Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Arizona based on personal property, liability limits, and deductible options."
+}

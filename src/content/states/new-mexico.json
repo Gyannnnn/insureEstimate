@@ -1,0 +1,14 @@
+{
+  "slug": "new-mexico",
+  "name": "New Mexico",
+  "abbreviation": "NM",
+  "region": "West",
+  "image": "/images/states/new-mexico.jpg",
+  "imageAlt": "New Mexico state outline",
+  "baseRate": 180,
+  "avgRent": 1200,
+  "requirementsNote": "New Mexico state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "New Mexico Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in New Mexico based on personal property, liability limits, and deductible options."
+}

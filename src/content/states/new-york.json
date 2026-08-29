@@ -1,0 +1,14 @@
+{
+  "slug": "new-york",
+  "name": "New York",
+  "abbreviation": "NY",
+  "region": "Northeast",
+  "image": "/images/states/new-york.jpg",
+  "imageAlt": "New York state outline",
+  "baseRate": 195,
+  "avgRent": 2100,
+  "requirementsNote": "New York state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "New York Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in New York based on personal property, liability limits, and deductible options."
+}

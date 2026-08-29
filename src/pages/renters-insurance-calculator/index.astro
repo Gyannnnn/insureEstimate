@@ -1,0 +1,106 @@
+---
+import SiteHeader from "../../components/SiteHeader.astro";
+import PageFooter from "../../components/PageFooter.astro";
+import CalculatorCard from "../../components/CalculatorCard.astro";
+import "../../styles/global.css";
+
+const states = [
+  "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", 
+  "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", 
+  "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", 
+  "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", 
+  "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", 
+  "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", 
+  "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", 
+  "Wisconsin", "Wyoming"
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renters Insurance Cost Calculator - InsureEstimate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-background font-body-md text-on-surface">
+  <SiteHeader active="Renters Insurance" />
+
+  <main class="w-full pt-20 md:pt-24 min-h-[calc(100vh-300px)]">
+    <div class="flex flex-col w-full relative">
+      <div aria-hidden="true" class="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-surface to-surface-container-low"></div>
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary-container/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-fixed/20 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4"></div>
+      </div>
+      
+      <section class="max-w-[1280px] mx-auto w-full px-margin-mobile md:px-margin-desktop pt-4 pb-stack-lg relative z-10 flex flex-col gap-stack-lg">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-gutter items-center">
+          <div class="flex flex-col gap-stack-sm max-w-3xl">
+            <div class="flex items-center gap-base">
+              <span class="px-2.5 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-label-sm uppercase tracking-wider font-semibold inline-flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                2026 State Actuarial Model
+              </span>
+            </div>
+            <h1 class="font-display-lg text-display-lg text-primary tracking-tight font-semibold">
+              Renters Insurance Cost Calculator
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              Estimate your monthly renters insurance premium across all 50 states. Model personal property coverage, liability limits, and deductibles using localized data filings.
+            </p>
+          </div>
+
+          <!-- Stat Highlight Card -->
+          <div class="bg-surface-container-low rounded-2xl p-6 border border-outline-variant/30 relative overflow-hidden flex flex-col justify-between shadow-sm min-h-[160px]">
+            <div class="relative z-10">
+              <span class="font-label-sm text-xs text-on-surface-variant uppercase tracking-wider block mb-1">
+                National Average Renters Rate
+              </span>
+              <div class="font-headline-lg text-[36px] font-bold text-primary font-data-tabular">
+                $15 – $22 <span class="text-sm font-normal text-on-surface-variant font-body-md">/ mo</span>
+              </div>
+            </div>
+            <div class="relative z-10 mt-4 pt-3 border-t border-outline-variant/30 flex items-center gap-2 text-xs text-secondary font-medium">
+              <span class="material-symbols-outlined text-[16px]">verified</span>
+              Updated with Q3 2026 Regulatory Data
+            </div>
+          </div>
+        </div>
+
+        <!-- Shared Calculator Card (Connected to Real Engine) -->
+        <div id="calculator" class="w-full scroll-mt-[100px]">
+          <CalculatorCard
+            title="Interactive Renters Estimator"
+            subtitle="Adjust coverage parameters below to compute real-time cost projections."
+            type="renters"
+            entityName="National Benchmark"
+            baseRate={180}
+          />
+        </div>
+      </section>
+
+      <section id="browse-states" class="max-w-[1280px] mx-auto w-full px-margin-mobile md:px-margin-desktop pb-stack-lg relative z-10 scroll-mt-24">
+        <div class="flex flex-col gap-stack-md mb-stack-lg">
+          <h2 class="font-headline-lg text-headline-lg text-on-surface">Browse Renters Insurance by State</h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant">Select your state for a more detailed analysis and local coverage insights.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          {states.map(state => (
+            <a 
+              href={`/renters-insurance-calculator/${state.toLowerCase().replace(/\s+/g, '-')}/`}
+              class="p-3 rounded border border-outline-variant/30 hover:border-primary hover:bg-surface-container transition-all text-body-md text-on-surface"
+            >
+              {state}
+            </a>
+          ))}
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <PageFooter />
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "slug": "management-consultant",
+  "name": "Management Consultant",
+  "category": "Professional Services",
+  "image": "/images/professions/management-consultant.jpg",
+  "imageAlt": "Management Consultant performing commercial work",
+  "riskFactor": 1.05,
+  "typicalEmployeeRange": "0-5",
+  "recommendedCoverage": [
+    "Errors & Omissions",
+    "General Liability"
+  ],
+  "notes": "",
+  "intro": "",
+  "seoTitle": "Business Insurance Cost for Management Consultants | PolicyLens",
+  "seoDescription": "Calculate estimated business insurance costs for management consultant businesses including general liability and professional E&O coverage."
+}

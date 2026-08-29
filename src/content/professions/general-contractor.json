@@ -1,0 +1,19 @@
+{
+  "slug": "general-contractor",
+  "name": "General Contractor",
+  "category": "Trades & Construction",
+  "image": "/images/professions/general-contractor.jpg",
+  "imageAlt": "General Contractor performing commercial work",
+  "riskFactor": 2.2,
+  "typicalEmployeeRange": "1-10",
+  "recommendedCoverage": [
+    "General Liability",
+    "Workers' Compensation",
+    "Commercial Auto",
+    "Tools & Equipment"
+  ],
+  "notes": "",
+  "intro": "",
+  "seoTitle": "Business Insurance Cost for General Contractors | PolicyLens",
+  "seoDescription": "Calculate estimated business insurance costs for general contractor businesses including general liability and professional E&O coverage."
+}

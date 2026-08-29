@@ -1,0 +1,17 @@
+{
+  "slug": "tutor",
+  "name": "Tutor",
+  "category": "Educational Services",
+  "image": "/images/professions/tutor.jpg",
+  "imageAlt": "Tutor performing commercial work",
+  "riskFactor": 0.85,
+  "typicalEmployeeRange": "0-1",
+  "recommendedCoverage": [
+    "General Liability",
+    "Professional Liability"
+  ],
+  "notes": "",
+  "intro": "",
+  "seoTitle": "Business Insurance Cost for Tutors | PolicyLens",
+  "seoDescription": "Calculate estimated business insurance costs for tutor businesses including general liability and professional E&O coverage."
+}

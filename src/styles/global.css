@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { 
+    background: theme('colors.canvas'); 
+    color: theme('colors.ink'); 
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body { @apply m-0 bg-canvas font-sans antialiased; }
+}
+
+@layer components {
+  .center { @apply flex items-center justify-center; }
+  .center-col { @apply flex flex-col items-center justify-center; }
+  .between { @apply flex items-center justify-between; }
+  .card { @apply rounded-xl border border-line bg-paper shadow-sm; }
+  .container-page { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-10; }
+  .field-label { @apply text-xs font-semibold uppercase tracking-wider text-ink-muted; }
+  .field-control { @apply w-full rounded-md border border-line bg-paper px-4 py-3 text-ink outline-none transition focus:border-ink focus:ring-2 focus:ring-ink/10; }
+}

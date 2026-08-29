@@ -1,0 +1,14 @@
+{
+  "slug": "louisiana",
+  "name": "Louisiana",
+  "abbreviation": "LA",
+  "region": "South",
+  "image": "/images/states/louisiana.jpg",
+  "imageAlt": "Louisiana state outline",
+  "baseRate": 245,
+  "avgRent": 1200,
+  "requirementsNote": "Louisiana state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Louisiana Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Louisiana based on personal property, liability limits, and deductible options."
+}

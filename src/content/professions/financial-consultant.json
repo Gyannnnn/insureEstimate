@@ -1,0 +1,18 @@
+{
+  "slug": "financial-consultant",
+  "name": "Financial Consultant",
+  "category": "Professional Services",
+  "image": "/images/professions/financial-consultant.jpg",
+  "imageAlt": "Financial Consultant performing commercial work",
+  "riskFactor": 1.25,
+  "typicalEmployeeRange": "0-5",
+  "recommendedCoverage": [
+    "Errors & Omissions (Fiduciary)",
+    "General Liability",
+    "Cyber Risk"
+  ],
+  "notes": "",
+  "intro": "",
+  "seoTitle": "Business Insurance Cost for Financial Consultants | PolicyLens",
+  "seoDescription": "Calculate estimated business insurance costs for financial consultant businesses including general liability and professional E&O coverage."
+}

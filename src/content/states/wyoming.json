@@ -1,0 +1,14 @@
+{
+  "slug": "wyoming",
+  "name": "Wyoming",
+  "abbreviation": "WY",
+  "region": "West",
+  "image": "/images/states/wyoming.jpg",
+  "imageAlt": "Wyoming state outline",
+  "baseRate": 140,
+  "avgRent": 1100,
+  "requirementsNote": "Wyoming state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Wyoming Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Wyoming based on personal property, liability limits, and deductible options."
+}

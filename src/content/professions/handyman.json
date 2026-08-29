@@ -1,0 +1,17 @@
+{
+  "slug": "handyman",
+  "name": "Handyman",
+  "category": "Trades & Construction",
+  "image": "/images/professions/handyman.jpg",
+  "imageAlt": "Handyman performing commercial work",
+  "riskFactor": 1.6,
+  "typicalEmployeeRange": "0-2",
+  "recommendedCoverage": [
+    "General Liability",
+    "Tools & Equipment"
+  ],
+  "notes": "",
+  "intro": "",
+  "seoTitle": "Business Insurance Cost for Handymans | PolicyLens",
+  "seoDescription": "Calculate estimated business insurance costs for handyman businesses including general liability and professional E&O coverage."
+}

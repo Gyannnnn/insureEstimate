@@ -1,0 +1,14 @@
+{
+  "slug": "ohio",
+  "name": "Ohio",
+  "abbreviation": "OH",
+  "region": "Midwest",
+  "image": "/images/states/ohio.jpg",
+  "imageAlt": "Ohio state outline",
+  "baseRate": 165,
+  "avgRent": 1150,
+  "requirementsNote": "Ohio state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Ohio Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Ohio based on personal property, liability limits, and deductible options."
+}

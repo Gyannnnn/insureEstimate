@@ -1,0 +1,14 @@
+{
+  "slug": "minnesota",
+  "name": "Minnesota",
+  "abbreviation": "MN",
+  "region": "Midwest",
+  "image": "/images/states/minnesota.jpg",
+  "imageAlt": "Minnesota state outline",
+  "baseRate": 165,
+  "avgRent": 1400,
+  "requirementsNote": "Minnesota state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Minnesota Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Minnesota based on personal property, liability limits, and deductible options."
+}

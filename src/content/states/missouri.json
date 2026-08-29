@@ -1,0 +1,14 @@
+{
+  "slug": "missouri",
+  "name": "Missouri",
+  "abbreviation": "MO",
+  "region": "Midwest",
+  "image": "/images/states/missouri.jpg",
+  "imageAlt": "Missouri state outline",
+  "baseRate": 190,
+  "avgRent": 1150,
+  "requirementsNote": "Missouri state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Missouri Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Missouri based on personal property, liability limits, and deductible options."
+}

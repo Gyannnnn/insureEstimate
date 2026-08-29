@@ -1,0 +1,14 @@
+{
+  "slug": "arkansas",
+  "name": "Arkansas",
+  "abbreviation": "AR",
+  "region": "South",
+  "image": "/images/states/arkansas.jpg",
+  "imageAlt": "Arkansas state outline",
+  "baseRate": 210,
+  "avgRent": 1050,
+  "requirementsNote": "Arkansas state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
+  "intro": "",
+  "seoTitle": "Arkansas Renters Insurance Cost Calculator",
+  "seoDescription": "Estimate renters insurance costs in Arkansas based on personal property, liability limits, and deductible options."
+}
