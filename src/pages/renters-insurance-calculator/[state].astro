@@ -5,6 +5,7 @@ import { getCollection, getEntry } from 'astro:content';
 import SiteHeader from '../../components/SiteHeader.astro';
 import PageFooter from '../../components/PageFooter.astro';
 import CalculatorCard from '../../components/CalculatorCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import '../../styles/global.css';
 
 export async function getStaticPaths() {
@@ -53,6 +54,12 @@ if (!fs.existsSync(absoluteImagePath)) {
 
       <!-- Main Layout Container -->
       <div class="max-w-[1280px] mx-auto w-full px-margin-mobile md:px-margin-desktop pt-4 pb-stack-lg lg:pb-[72px] relative z-10 flex flex-col gap-stack-lg lg:gap-[96px]">
+        <!-- Breadcrumbs Navigation -->
+        <Breadcrumbs items={[
+          { label: 'Renters Insurance', href: '/renters-insurance-calculator/' },
+          { label: data.name }
+        ]} />
+
         <!-- Hero Section -->
         <section class="flex flex-col md:flex-row gap-gutter items-start">
           <div class="flex-1 flex flex-col gap-stack-md max-w-2xl">

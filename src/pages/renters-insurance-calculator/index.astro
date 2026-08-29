@@ -2,6 +2,7 @@
 import SiteHeader from "../../components/SiteHeader.astro";
 import PageFooter from "../../components/PageFooter.astro";
 import CalculatorCard from "../../components/CalculatorCard.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import "../../styles/global.css";
 
 const states = [
@@ -37,6 +38,9 @@ const states = [
       </div>
       
       <section class="max-w-[1280px] mx-auto w-full px-margin-mobile md:px-margin-desktop pt-4 pb-stack-lg relative z-10 flex flex-col gap-stack-lg">
+        <!-- Breadcrumbs Navigation -->
+        <Breadcrumbs items={[{ label: 'Renters Insurance' }]} />
+
         <div class="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-gutter items-center">
           <div class="flex flex-col gap-stack-sm max-w-3xl">
             <div class="flex items-center gap-base">
