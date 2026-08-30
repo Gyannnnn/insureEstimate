@@ -34,7 +34,7 @@ const jsonLd = {
 
 <nav aria-label="Breadcrumb" class:list={["w-full mb-4 sm:mb-6 z-20 relative", className]}>
   <!-- Schema.org JSON-LD for Search Engine Microdata -->
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
 
   <ol class="flex items-center flex-wrap gap-1 sm:gap-1.5 text-xs sm:text-sm text-on-surface-variant font-medium">
     {allItems.map((item, index) => {

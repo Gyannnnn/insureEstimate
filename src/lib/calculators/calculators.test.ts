@@ -2,7 +2,7 @@ import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import { calculateRentersPremium } from './rentersInsurance';
 import { calculateBusinessPremium } from './businessInsurance';
-import { validateRentersInput, validateBusinessInput, round2 } from './validate';
+import { validateBusinessInput, round2 } from './validate';
 
 describe('Calculator Engine & Validation Unit Tests', () => {
   describe('Rounding Utility', () => {

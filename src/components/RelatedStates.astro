@@ -1,5 +1,5 @@
 ---
-import { getRelatedStatesForPage, type StateData, type StateCardItem } from '../lib/relatedStates';
+import { getRelatedStatesForPage, type StateData } from '../lib/relatedStates';
 
 interface Props {
   currentState: StateData;
@@ -9,9 +9,8 @@ interface Props {
 const { currentState, allStates } = Astro.props;
 const { regionalStates, similarRateStates, popularStates, regionGroups } = getRelatedStatesForPage(currentState, allStates);
 
-const currentStateName = currentState.data.name;
 const currentRegion = currentState.data.region;
-const currentMonthly = Math.round(currentState.data.baseRate * 0.088); // approximate or actual standard monthly
+
 
 function getRateDiffLabel(targetMonthly: number, currentMonthlyVal: number): { text: string; isHigher: boolean; isSame: boolean } {
   const diff = targetMonthly - currentMonthlyVal;
@@ -122,7 +121,6 @@ function getRateDiffLabel(targetMonthly: number, currentMonthlyVal: number): { t
     <!-- Cluster 2: Similar Rate Tier Grid -->
     <div x-show="activeTab === 'similar'" style="display: none;" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
       {similarRateStates.map(state => {
-        const diff = getRateDiffLabel(state.monthlyCost, Math.round(currentState.data.baseRate * 0.088));
         return (
           <a
             href={state.href}
@@ -167,7 +165,6 @@ function getRateDiffLabel(targetMonthly: number, currentMonthlyVal: number): { t
     <!-- Cluster 3: National Benchmarks Grid -->
     <div x-show="activeTab === 'popular'" style="display: none;" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
       {popularStates.map(state => {
-        const diff = getRateDiffLabel(state.monthlyCost, Math.round(currentState.data.baseRate * 0.088));
         return (
           <a
             href={state.href}
@@ -276,7 +273,7 @@ function getRateDiffLabel(targetMonthly: number, currentMonthlyVal: number): { t
     const tabButtons = document.querySelectorAll('#related-states button');
     const tabGrids = document.querySelectorAll('#related-states [x-show]');
     
-    if (!window.Alpine) {
+    if (!(window as any).Alpine) {
       tabButtons.forEach((btn, idx) => {
         btn.addEventListener('click', () => {
           tabButtons.forEach(b => {
