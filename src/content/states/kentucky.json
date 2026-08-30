@@ -10,5 +10,55 @@
   "requirementsNote": "Kentucky state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
   "intro": "",
   "seoTitle": "Kentucky Renters Insurance Cost Calculator",
-  "seoDescription": "Estimate renters insurance costs in Kentucky based on personal property, liability limits, and deductible options."
+  "seoDescription": "Estimate renters insurance costs in Kentucky based on personal property, liability limits, and deductible options.",
+  "demographics": {
+    "typicalPersonalProperty": 30000,
+    "typicalLiability": 100000,
+    "typicalDeductible": 500,
+    "demographicNote": "Most Kentucky renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that holds up across the state's mix of tornado, flood, and mountain terrain risk."
+  },
+  "riskFactors": [
+    {
+      "icon": "wind",
+      "title": "Tornado Risk",
+      "description": "Kentucky averages about twenty one tornadoes a year, and the December 2021 quad state tornado outbreak that devastated Mayfield stands as one of the most destructive single weather events in recent U.S. history. Wind damage to personal belongings from a tornado is a named peril covered under a standard renters policy."
+    },
+    {
+      "icon": "flood",
+      "title": "Leading Flood Risk Nationally",
+      "description": "Kentucky experiences more flood disasters than any other state, driven by its mountainous eastern terrain and dense network of rivers, with roughly fifteen percent of properties facing significant flood risk. Flood damage is excluded from standard renters insurance and requires a separate policy through the National Flood Insurance Program."
+    },
+    {
+      "icon": "warning",
+      "title": "Landslides in Eastern Kentucky",
+      "description": "The mountainous terrain of eastern Kentucky creates real landslide risk, particularly after heavy rain saturates hillside soil. Like flood and earthquake damage, landslide damage is generally excluded from standard renters insurance and may require a separate policy."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is renters insurance required in Kentucky?",
+      "answer": "No. Kentucky state law does not require tenants to carry renters insurance, though landlords can and often do include a renters insurance requirement in the lease."
+    },
+    {
+      "question": "Does renters insurance cover tornado damage in Kentucky?",
+      "answer": "Yes. Wind damage to personal belongings from a tornado is covered under a standard renters policy, which matters given events like the devastating December 2021 tornado outbreak that struck Mayfield and western Kentucky."
+    },
+    {
+      "question": "Does renters insurance cover flood damage in Kentucky?",
+      "answer": "No. Kentucky has more flood disasters than any other state, but flood damage is excluded from standard renters insurance regardless. Renters in flood prone eastern Kentucky or basement apartments should purchase a separate policy through the National Flood Insurance Program."
+    },
+    {
+      "question": "Does renters insurance cover landslide damage?",
+      "answer": "No. Landslide damage, a real risk in Kentucky's mountainous eastern terrain, is excluded from standard renters insurance along with flood and earthquake damage."
+    },
+    {
+      "question": "How much does renters insurance cost in Kentucky?",
+      "answer": "Costs vary by location, generally running higher in tornado prone western Kentucky cities like Madisonville than in northern areas near Cincinnati. Use the calculator above for an estimate based on your specific coverage choices."
+    }
+  ],
+  "blogContent": {
+    "whyThisRate": "Kentucky's renters insurance rate reflects a state with more flood disasters than any other in the country, a fact that surprises many renters who associate Kentucky's insurance risk primarily with tornadoes. The state does face real tornado risk, underscored by the devastating December 2021 quad state outbreak that struck Mayfield and much of western Kentucky, one of the most destructive tornado events in recent U.S. history. Eastern Kentucky's mountainous terrain adds landslide risk on top of its flood exposure, particularly after heavy rain saturates hillside soil. Renters insurance, however, covers personal belongings rather than a building's structure, and both flood and landslide damage are excluded from standard coverage entirely, which limits how much these two dominant risks actually drive up the base rate compared to tornado and wind exposure.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, the calculator applies Kentucky's base rate of one hundred eighty dollars a year with no adjustment at these default levels, landing around one hundred fifty eight to two hundred two dollars a year, or roughly thirteen to seventeen dollars a month. Renters in western Kentucky cities with elevated tornado risk, or in eastern Kentucky flood and landslide zones, should expect real world quotes to vary more from this baseline than renters in less exposed areas.",
+    "comparisonNote": "Within the South region, Kentucky's rate sits below Arkansas and Alabama despite sharing meaningful tornado exposure, largely because Kentucky's single largest risk, flooding, falls outside what a standard renters policy covers. Compared to the national average, Kentucky renters insurance runs somewhat higher, driven by a combination of tornado activity and the state's uniquely high concentration of flood-prone terrain."
+  }
 }

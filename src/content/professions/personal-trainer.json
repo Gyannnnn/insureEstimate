@@ -13,5 +13,54 @@
   "notes": "",
   "intro": "",
   "seoTitle": "Business Insurance Cost for Personal Trainers | PolicyLens",
-  "seoDescription": "Calculate estimated business insurance costs for personal trainer businesses including general liability and professional E&O coverage."
+  "seoDescription": "Calculate estimated business insurance costs for personal trainer businesses including general liability and professional E&O coverage.",
+  "industryContext": {
+    "typicalRevenueTier": "0-50k",
+    "typicalEmployeeCount": "0-2",
+    "contextNote": ""
+  },
+  "riskFactors": [
+    {
+      "icon": "shield",
+      "title": "",
+      "description": ""
+    },
+    {
+      "icon": "shield",
+      "title": "",
+      "description": ""
+    },
+    {
+      "icon": "shield",
+      "title": "",
+      "description": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "",
+      "answer": ""
+    }
+  ],
+  "blogContent": {
+    "whyThisRiskFactor": "",
+    "howCalculated": "",
+    "comparisonNote": ""
+  }
 }

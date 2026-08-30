@@ -10,5 +10,55 @@
   "requirementsNote": "Georgia state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
   "intro": "",
   "seoTitle": "Georgia Renters Insurance Cost Calculator",
-  "seoDescription": "Estimate renters insurance costs in Georgia based on personal property, liability limits, and deductible options."
+  "seoDescription": "Estimate renters insurance costs in Georgia based on personal property, liability limits, and deductible options.",
+  "demographics": {
+    "typicalPersonalProperty": 30000,
+    "typicalLiability": 100000,
+    "typicalDeductible": 500,
+    "demographicNote": "Most Georgia renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that holds up across both the state's coastal hurricane exposure and its inland tornado and hail risk."
+  },
+  "riskFactors": [
+    {
+      "icon": "storm",
+      "title": "Coastal Hurricane and Wind Risk",
+      "description": "Georgia's six coastal counties, including Chatham, Glynn, and Camden, face direct exposure to Atlantic hurricanes and named tropical storms. In some high risk coastal ZIP codes, standard carriers may exclude wind coverage entirely, requiring renters to obtain it separately through the Georgia Underwriting Association."
+    },
+    {
+      "icon": "wind",
+      "title": "Dixie Alley Tornado and Hail Risk",
+      "description": "Georgia sits within the Dixie Alley tornado corridor, with the state recording seventy nine tornadoes in a single recent storm season. Inland and north Georgia counties face frequent tornado, straight line wind, and hail activity, all generally covered under a standard renters policy."
+    },
+    {
+      "icon": "security",
+      "title": "Urban Property Crime",
+      "description": "Metro Atlanta's population density contributes to higher property crime rates than in Georgia's smaller cities and rural counties, which can influence both personal property and liability pricing for renters in and around the city."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is renters insurance required in Georgia?",
+      "answer": "No. Georgia state law does not require tenants to carry renters insurance, though many landlords and property managers require proof of coverage as a lease condition."
+    },
+    {
+      "question": "Does renters insurance cover hurricane damage in Georgia?",
+      "answer": "Wind damage from a hurricane is generally covered, though some high risk coastal ZIP codes may have wind excluded from the standard policy, requiring separate coverage through the Georgia Underwriting Association."
+    },
+    {
+      "question": "Does renters insurance cover tornado damage in Georgia?",
+      "answer": "Yes. Wind and hail damage from tornadoes is covered under a standard renters policy, which matters given Georgia's position within the Dixie Alley tornado corridor."
+    },
+    {
+      "question": "Does renters insurance cover flood damage in Georgia?",
+      "answer": "No. Flood damage, including storm surge along the coast, is excluded from standard renters insurance and requires a separate policy through the National Flood Insurance Program."
+    },
+    {
+      "question": "How much does renters insurance cost in Georgia?",
+      "answer": "Costs vary by location, generally running higher in Atlanta and along the coast than in smaller inland cities. Use the calculator above for an estimate based on your specific coverage choices."
+    }
+  ],
+  "blogContent": {
+    "whyThisRate": "Georgia's renters insurance rate reflects a genuinely split risk profile between its coast and its interior. The six coastal counties face direct Atlantic hurricane exposure, and in the highest risk ZIP codes, standard insurers may decline to include wind coverage at all, pushing renters toward the Georgia Underwriting Association as a last resort option. Inland and north Georgia counties face a different risk entirely, sitting within the Dixie Alley tornado corridor with frequent tornado, hail, and straight line wind activity. Metro Atlanta adds a smaller, more localized factor through higher urban property crime rates. Together, these three distinct risk zones keep Georgia's base rate above the national average even though no single hazard dominates statewide.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, the calculator applies Georgia's base rate of two hundred five dollars a year with no adjustment at these default levels, landing around one hundred eighty to two hundred thirty dollars a year, or roughly fifteen to nineteen dollars a month. Renters in the six coastal counties should confirm whether wind coverage is included in their specific policy, since some high risk coastal ZIP codes require it as a separate endorsement outside this standard calculation.",
+    "comparisonNote": "Within the South region, Georgia's rate sits below Florida's despite sharing hurricane exposure along its coast, largely because only a small fraction of the state faces that risk directly while the rest deals with the comparatively less severe tornado and hail pattern common across Dixie Alley. Compared to the national average, Georgia renters insurance runs somewhat higher, driven by the combination of coastal wind exposure and inland severe storm risk rather than any single dominant hazard."
+  }
 }

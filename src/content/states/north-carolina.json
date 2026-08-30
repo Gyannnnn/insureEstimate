@@ -10,5 +10,55 @@
   "requirementsNote": "North Carolina state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
   "intro": "",
   "seoTitle": "North Carolina Renters Insurance Cost Calculator",
-  "seoDescription": "Estimate renters insurance costs in North Carolina based on personal property, liability limits, and deductible options."
+  "seoDescription": "Estimate renters insurance costs in North Carolina based on personal property, liability limits, and deductible options.",
+  "demographics": {
+    "typicalPersonalProperty": 30000,
+    "typicalLiability": 100000,
+    "typicalDeductible": 500,
+    "demographicNote": ""
+  },
+  "riskFactors": [
+    {
+      "icon": "shield",
+      "title": "",
+      "description": ""
+    },
+    {
+      "icon": "shield",
+      "title": "",
+      "description": ""
+    },
+    {
+      "icon": "shield",
+      "title": "",
+      "description": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "",
+      "answer": ""
+    }
+  ],
+  "blogContent": {
+    "whyThisRate": "",
+    "howCalculated": "",
+    "comparisonNote": ""
+  }
 }

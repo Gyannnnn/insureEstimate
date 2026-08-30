@@ -10,5 +10,55 @@
   "requirementsNote": "Delaware state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
   "intro": "",
   "seoTitle": "Delaware Renters Insurance Cost Calculator",
-  "seoDescription": "Estimate renters insurance costs in Delaware based on personal property, liability limits, and deductible options."
+  "seoDescription": "Estimate renters insurance costs in Delaware based on personal property, liability limits, and deductible options.",
+  "demographics": {
+    "typicalPersonalProperty": 30000,
+    "typicalLiability": 100000,
+    "typicalDeductible": 500,
+    "demographicNote": "Most Delaware renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that reflects the state's affordable cost of living alongside its close proximity to Atlantic coast storm exposure."
+  },
+  "riskFactors": [
+    {
+      "icon": "storm",
+      "title": "Nor'easters and Coastal Storms",
+      "description": "Delaware's small size means nearly every resident lives within reach of the Atlantic coast or Delaware Bay, exposing the whole state to nor'easters and occasional hurricane remnants. Standard renters policies cover wind damage to personal belongings from these storms."
+    },
+    {
+      "icon": "flood",
+      "title": "Low Elevation Storm Surge",
+      "description": "Delaware's low lying coastal geography, particularly near Rehoboth Beach, Lewes, and the Delaware Bay shoreline, makes it one of the more flood prone states in the country. Flood damage from storm surge is excluded from standard renters insurance and requires a separate policy through the National Flood Insurance Program."
+    },
+    {
+      "icon": "water_damage",
+      "title": "Water Backup From Aging Infrastructure",
+      "description": "Older plumbing and sewer systems in cities like Wilmington and Dover can cause water to back up into units during heavy rain events. This type of damage typically requires a separate water backup endorsement, since it is treated differently from storm related flooding."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is renters insurance required in Delaware?",
+      "answer": "No. Delaware state law does not require tenants to carry renters insurance, though landlords may require it as a condition of the lease under the Delaware Residential Landlord Tenant Code."
+    },
+    {
+      "question": "Does renters insurance cover nor'easter damage in Delaware?",
+      "answer": "Yes. Wind damage to personal belongings from nor'easters and coastal storms is typically covered under a standard renters policy, which matters statewide given Delaware's proximity to the coast."
+    },
+    {
+      "question": "Does renters insurance cover storm surge flooding in Delaware?",
+      "answer": "No. Flood damage, including storm surge from a nor'easter or hurricane, is excluded from standard renters insurance. Renters near Rehoboth Beach, Lewes, or the Delaware Bay shoreline should consider a separate flood policy through the National Flood Insurance Program."
+    },
+    {
+      "question": "Does renters insurance cover water backup damage?",
+      "answer": "Not by default. Water that backs up through a drain or sewer line during heavy rain typically requires a separate water backup endorsement, worth considering in older cities like Wilmington and Dover."
+    },
+    {
+      "question": "How much does renters insurance cost in Delaware?",
+      "answer": "Costs vary by insurer, location, and coverage level, running close to the national average overall despite Delaware's coastal exposure. Use the calculator above for an estimate based on your specific coverage choices."
+    }
+  ],
+  "blogContent": {
+    "whyThisRate": "Delaware's renters insurance rate sits close to the national average, which might surprise renters aware of the state's low lying, flood prone geography. Delaware's small size means nearly every resident lives within reach of the Atlantic coast or Delaware Bay, and nor'easters bring wind and storm exposure statewide rather than only to a narrow coastal strip. What keeps the base rate from climbing higher is that the state's most severe risk, storm surge flooding, is excluded from standard renters insurance entirely and priced as a separate policy. Older cities like Wilmington and Dover add a smaller, more localized risk through aging infrastructure and water backup, which is also typically a separate add on rather than baked into the standard rate.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, the calculator applies Delaware's base rate of one hundred sixty dollars a year with no adjustment at these default levels, landing around one hundred forty one to one hundred seventy nine dollars a year, or roughly twelve to fifteen dollars a month. Renters near the immediate coastline in towns like Rehoboth Beach or Lewes should budget separately for flood coverage, since storm surge risk sits outside what this standard calculation covers.",
+    "comparisonNote": "Within the South region, Delaware's rate sits below higher risk states like Alabama and Arkansas, reflecting a narrower risk profile where the state's biggest exposure, coastal flooding, falls outside standard coverage rather than raising the base rate directly. Compared to the national average, Delaware renters insurance runs close to typical levels, with the most significant cost differences appearing locally between inland communities and immediate coastal towns rather than across the state as a whole."
+  }
 }

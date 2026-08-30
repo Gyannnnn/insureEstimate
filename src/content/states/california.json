@@ -10,5 +10,55 @@
   "requirementsNote": "California state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
   "intro": "",
   "seoTitle": "California Renters Insurance Cost Calculator",
-  "seoDescription": "Estimate renters insurance costs in California based on personal property, liability limits, and deductible options."
+  "seoDescription": "Estimate renters insurance costs in California based on personal property, liability limits, and deductible options.",
+  "demographics": {
+    "typicalPersonalProperty": 35000,
+    "typicalLiability": 100000,
+    "typicalDeductible": 500,
+    "demographicNote": "California renters often choose personal property coverage above the standard thirty thousand dollar tier, given the state's high cost of living and the higher replacement cost of furniture, electronics, and other belongings in major metro areas."
+  },
+  "riskFactors": [
+    {
+      "icon": "fire",
+      "title": "Wildfire and Insurer Non Renewals",
+      "description": "California has experienced billions of dollars in wildfire losses over the past decade, prompting several major insurers to limit new policies or non renew existing ones in high risk zones. Renters in wildland urban interface areas, such as the Oakland and Berkeley hills or the Sierra foothills, may notice fewer insurer options even though renters insurance itself is generally easier to place than homeowners coverage."
+    },
+    {
+      "icon": "activity",
+      "title": "Seismic Activity",
+      "description": "California sits along some of the most active fault lines in North America. Standard renters policies exclude earthquake damage to personal property, though coverage is available separately through the California Earthquake Authority or a private carrier."
+    },
+    {
+      "icon": "flood",
+      "title": "Atmospheric River Flooding",
+      "description": "Powerful atmospheric river storms have caused significant flooding across California in recent years, particularly in low lying and coastal areas. Flood damage is excluded from standard renters insurance and requires a separate policy through the National Flood Insurance Program."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is renters insurance legally required in California?",
+      "answer": "No. California state law does not mandate renters insurance, but the majority of landlords and property managers require proof of coverage as part of the lease agreement."
+    },
+    {
+      "question": "Does standard California renters insurance cover earthquake damage?",
+      "answer": "No. Standard renters policies exclude earthquake damage. Tenants can add coverage through the California Earthquake Authority or a private insurer offering a separate earthquake endorsement."
+    },
+    {
+      "question": "Does renters insurance cover wildfire damage in California?",
+      "answer": "Yes. Fire damage, including wildfire, is one of the core perils covered under a standard renters policy, even in areas where insurers have limited new homeowners coverage due to wildfire risk."
+    },
+    {
+      "question": "How much personal property coverage do I need in California?",
+      "answer": "Most California renters choose between thirty thousand and fifty thousand dollars in personal property coverage, reflecting the state's higher cost of living and the replacement value of electronics, furniture, and other belongings in major metro areas."
+    },
+    {
+      "question": "Why does California renters insurance cost less than expected given its wildfire risk?",
+      "answer": "Wildfire primarily affects the cost and availability of homeowners insurance, which covers the structure itself. Renters insurance covers personal belongings and liability, a smaller overall exposure, so it remains relatively affordable even in higher wildfire risk areas."
+    }
+  ],
+  "blogContent": {
+    "whyThisRate": "California's renters insurance base rate reflects a state balancing two competing forces. Wildfire losses have reshaped the homeowners insurance market, pushing hundreds of thousands of properties onto the state's FAIR Plan as major carriers pull back from high risk zones. Renters insurance, however, covers personal belongings rather than the structure itself, which limits how much wildfire exposure affects the rate compared to a homeowners policy. Earthquake risk is excluded from standard coverage entirely, so frequent seismic activity does not directly raise the base rate either. The result is a rate that sits close to the national average despite the state's reputation for high disaster risk.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, the calculator applies California's base rate of one hundred eighty five dollars a year with no adjustment at these default levels, landing around one hundred sixty three to two hundred seven dollars a year, or roughly fourteen to seventeen dollars a month. California renters who increase personal property coverage toward the thirty five thousand dollar level common in the state will see a proportionally higher estimate, since coverage amount is one of the largest factors in the formula.",
+    "comparisonNote": "Within the West region, California's rate sits close to Arizona's despite very different risk drivers, wildfire and earthquake exposure in California versus wildfire and monsoon exposure in Arizona. Compared to the national average, California renters insurance remains competitive, since the state's most severe and costly risks, wildfire and earthquake, both fall largely outside what a standard renters policy actually covers."
+  }
 }

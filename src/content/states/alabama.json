@@ -10,5 +10,55 @@
   "requirementsNote": "Alabama state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
   "intro": "",
   "seoTitle": "Alabama Renters Insurance Cost Calculator",
-  "seoDescription": "Estimate renters insurance costs in Alabama based on personal property, liability limits, and deductible options."
+  "seoDescription": "Estimate renters insurance costs in Alabama based on personal property, liability limits, and deductible options.",
+  "demographics": {
+    "typicalPersonalProperty": 30000,
+    "typicalLiability": 100000,
+    "typicalDeductible": 500,
+    "demographicNote": "Most Alabama renters choose $30,000 in personal property coverage with a $500 deductible — a level that protects furniture, electronics, and clothing against Alabama's frequent severe-storm losses without inflating the monthly premium unnecessarily."
+  },
+  "riskFactors": [
+    {
+      "icon": "wind",
+      "title": "Tornado Alley Exposure",
+      "description": "Alabama sits within 'Dixie Alley,' one of the most tornado-prone regions in the country, averaging roughly five to six dozen tornadoes a year according to NOAA data. Standard renters policies cover wind damage to personal belongings, which keeps statewide premiums above the national average."
+    },
+    {
+      "icon": "waves",
+      "title": "Gulf Coast Hurricane Risk",
+      "description": "Coastal counties like Mobile and Baldwin face direct hurricane exposure from June through November. Wind damage from a hurricane is typically covered, but flood damage from storm surge is not — renters near the coast should consider a separate flood policy."
+    },
+    {
+      "icon": "droplet",
+      "title": "Standard Flood Exclusion",
+      "description": "Like every state, standard renters insurance in Alabama excludes flood damage regardless of cause — hurricane storm surge, heavy rain, or a burst pipe from a neighboring unit. Renters in flood-prone areas can add coverage through the National Flood Insurance Program."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is renters insurance required in Alabama?",
+      "answer": "No. Alabama state law does not require tenants to carry renters insurance, but many landlords and property managers include it as a lease condition, particularly in apartment complexes."
+    },
+    {
+      "question": "Does renters insurance cover tornado damage in Alabama?",
+      "answer": "Yes. A standard renters policy covers wind damage to your personal belongings from tornadoes and severe storms, which are common across Alabama's Dixie Alley region. It does not cover the building structure itself — that's your landlord's responsibility."
+    },
+    {
+      "question": "Does renters insurance cover hurricane damage?",
+      "answer": "Wind damage from a hurricane is typically covered, but flood damage — including storm surge — is not. Renters in coastal counties like Mobile or Baldwin may want a separate flood policy for full protection."
+    },
+    {
+      "question": "How much does renters insurance cost in Alabama?",
+      "answer": "Cost estimates vary by insurer, coverage level, and location within the state. Alabama's tornado and hurricane exposure tend to push rates somewhat above the national average — use the calculator above for an estimate based on your specific coverage choices."
+    },
+    {
+      "question": "What deductible should I choose for renters insurance in Alabama?",
+      "answer": "A $500 deductible is the most common choice among Alabama renters, balancing a manageable out-of-pocket cost against a lower monthly premium. Renters comfortable covering more out-of-pocket before a claim can choose a higher deductible for additional savings."
+    }
+  ],
+  "blogContent": {
+    "whyThisRate": "Alabama's renters insurance rates sit above the national average largely because of geography, not because insurers are targeting the state. The northern and central counties fall inside 'Dixie Alley,' a corridor with some of the highest tornado frequency in the country, while the Gulf Coast counties face a separate hurricane risk from June through November. Insurers price both hazards into statewide averages, even for renters whose belongings sit well inland from the coast. Alabama's relatively affordable cost of living works in the opposite direction — lower rebuild and replacement costs compared to coastal states like California help keep rates from climbing even higher despite the storm exposure.",
+    "howCalculated": "For a standard profile — $20,000 in personal property coverage, $100,000 in liability, and a $500 deductible — the calculator applies Alabama's base rate of $195/year with no adjustment at these default levels, landing around $171–$218 a year, or roughly $14–$18 a month. Choosing a higher deductible or lower coverage amount reduces this estimate; increasing personal property coverage to $50,000 or liability to $500,000 raises it. The formula weights Alabama's elevated base rate against your specific coverage choices, so two renters in the same state can see meaningfully different estimates depending on how much they're insuring.",
+    "comparisonNote": "Within the South region, Alabama's rate reflects its dual tornado-and-hurricane exposure, placing it above inland southern states with lower storm frequency but generally in line with other Gulf Coast states facing similar risk profiles. Compared to the national average, Alabama renters can expect to pay somewhat more for equivalent coverage, driven primarily by severe weather patterns rather than the crime or population-density factors that drive costs in other states."
+  }
 }

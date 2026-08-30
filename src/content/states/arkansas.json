@@ -10,5 +10,55 @@
   "requirementsNote": "Arkansas state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
   "intro": "",
   "seoTitle": "Arkansas Renters Insurance Cost Calculator",
-  "seoDescription": "Estimate renters insurance costs in Arkansas based on personal property, liability limits, and deductible options."
+  "seoDescription": "Estimate renters insurance costs in Arkansas based on personal property, liability limits, and deductible options.",
+  "demographics": {
+    "typicalPersonalProperty": 30000,
+    "typicalLiability": 100000,
+    "typicalDeductible": 500,
+    "demographicNote": "Most Arkansas renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that reflects the state's affordable cost of living even as it accounts for genuine tornado and severe storm exposure."
+  },
+  "riskFactors": [
+    {
+      "icon": "storm",
+      "title": "Tornado Alley and Hail Exposure",
+      "description": "Arkansas sits at the convergence of Tornado Alley and Dixie Alley, giving the state some of the country's highest tornado and hail frequency, with roughly one hundred sixty hail events recorded annually. Standard renters policies cover wind and hail damage to personal belongings, which keeps statewide premiums elevated."
+    },
+    {
+      "icon": "activity",
+      "title": "New Madrid Seismic Zone",
+      "description": "Northeastern Arkansas, including areas near Jonesboro, sits within the New Madrid Seismic Zone, one of the most active earthquake zones in the central United States. Earthquake damage is excluded from standard renters policies, so renters in this region may want a separate earthquake endorsement."
+    },
+    {
+      "icon": "flood",
+      "title": "River and Flash Flood Risk",
+      "description": "Communities along the Arkansas River corridor and other low lying areas face regular flood risk from heavy rain and storm runoff. Flood damage is excluded from standard renters insurance and requires a separate policy through the National Flood Insurance Program."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is renters insurance required in Arkansas?",
+      "answer": "No. Arkansas state law does not require tenants to carry renters insurance, though many landlords and property management companies require proof of coverage, often with a minimum liability limit of one hundred thousand dollars."
+    },
+    {
+      "question": "Does renters insurance cover tornado damage in Arkansas?",
+      "answer": "Yes. A standard renters policy covers wind and hail damage to your personal belongings from tornadoes and severe thunderstorms, which are common across the state given its position at the convergence of Tornado Alley and Dixie Alley."
+    },
+    {
+      "question": "Does renters insurance cover earthquake damage in Arkansas?",
+      "answer": "No. Standard renters insurance excludes earthquake damage, which is worth noting for renters in northeastern Arkansas near the New Madrid Seismic Zone. A separate earthquake endorsement can be added for additional protection."
+    },
+    {
+      "question": "Does renters insurance cover flood damage in Arkansas?",
+      "answer": "No. Flood damage, including flash flooding along the Arkansas River corridor, is excluded from standard renters insurance. Renters in flood prone areas can purchase a separate policy through the National Flood Insurance Program."
+    },
+    {
+      "question": "How much does renters insurance cost in Arkansas?",
+      "answer": "Costs vary by insurer, location, and coverage level. Arkansas tends to see somewhat elevated rates due to its tornado and hail exposure, even with a relatively low overall cost of living. Use the calculator above for an estimate based on your specific coverage choices."
+    }
+  ],
+  "blogContent": {
+    "whyThisRate": "Arkansas carries one of the more distinctive risk profiles among southern states because it sits at the overlap of three separate hazard zones. Tornado Alley and Dixie Alley both extend into the state, driving frequent tornado and hail activity, while the New Madrid Seismic Zone in the northeast adds a real earthquake risk that most southern states simply do not face. Rivers and low lying terrain add a third layer of flood exposure in certain communities. Despite all three hazards, Arkansas's low overall cost of living helps keep the base rate from climbing as high as some neighboring states, since rebuilding and replacement costs remain relatively modest.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, the calculator applies Arkansas's base rate of two hundred ten dollars a year with no adjustment at these default levels, landing around one hundred eighty five to two hundred thirty five dollars a year, or roughly fifteen to twenty dollars a month. Raising personal property coverage or liability limits increases this estimate, while a higher deductible lowers it. Arkansas's base rate sits above nearby states like Alabama, reflecting the added seismic exposure layered on top of its tornado and hail risk.",
+    "comparisonNote": "Within the South region, Arkansas's rate runs higher than Alabama's despite a lower cost of living, largely because of the additional New Madrid Seismic Zone earthquake exposure that Alabama does not share. Compared to the national average, Arkansas renters can expect a noticeably higher premium, driven by the rare combination of tornado, hail, and earthquake risk converging within a single state."
+  }
 }

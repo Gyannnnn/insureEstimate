@@ -1,0 +1,300 @@
+---
+import { getRelatedStatesForPage, type StateData, type StateCardItem } from '../lib/relatedStates';
+
+interface Props {
+  currentState: StateData;
+  allStates: StateData[];
+}
+
+const { currentState, allStates } = Astro.props;
+const { regionalStates, similarRateStates, popularStates, regionGroups } = getRelatedStatesForPage(currentState, allStates);
+
+const currentStateName = currentState.data.name;
+const currentRegion = currentState.data.region;
+const currentMonthly = Math.round(currentState.data.baseRate * 0.088); // approximate or actual standard monthly
+
+function getRateDiffLabel(targetMonthly: number, currentMonthlyVal: number): { text: string; isHigher: boolean; isSame: boolean } {
+  const diff = targetMonthly - currentMonthlyVal;
+  if (Math.abs(diff) <= 1) {
+    return { text: 'Similar rate', isHigher: false, isSame: true };
+  }
+  if (diff > 0) {
+    return { text: `+$${diff}/mo`, isHigher: true, isSame: false };
+  }
+  return { text: `-$${Math.abs(diff)}/mo`, isHigher: false, isSame: false };
+}
+---
+
+<section id="related-states" class="mt-stack-md pt-stack-lg border-t border-outline-variant/40 w-full scroll-mt-24">
+  <div class="flex flex-col gap-stack-sm mb-8">
+    <div class="flex items-center gap-2">
+      <span class="w-8 h-[2px] bg-secondary"></span>
+      <span class="font-label-sm text-xs text-secondary uppercase tracking-widest font-semibold">State Comparison Matrix</span>
+    </div>
+    <h2 class="font-headline-lg text-headline-lg text-primary font-bold">
+      Compare Renters Insurance with Other States
+    </h2>
+    <p class="font-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+      Renters insurance rates vary widely across state lines due to regional perils, weather trends, and housing age. Explore localized calculator profiles in neighboring {currentRegion} states and similar cost tiers.
+    </p>
+  </div>
+
+  <!-- Clustered Tabs Container -->
+  <div x-data="{ activeTab: 'regional' }" class="flex flex-col gap-6 w-full">
+    <!-- Tab Controls -->
+    <div class="flex flex-wrap items-center gap-2 p-1.5 bg-surface-container-low rounded-xl border border-outline-variant/30 max-w-fit">
+      <button
+        @click="activeTab = 'regional'"
+        :class="activeTab === 'regional' ? 'bg-surface-container-lowest text-primary shadow-sm font-semibold' : 'text-on-surface-variant hover:text-primary'"
+        class="px-4 py-2 rounded-lg text-xs md:text-sm font-data-tabular transition-all duration-200 flex items-center gap-2"
+      >
+        <span class="material-symbols-outlined text-[16px] text-secondary">explore</span>
+        <span>Regional & Nearby ({regionalStates.length})</span>
+      </button>
+
+      <button
+        @click="activeTab = 'similar'"
+        :class="activeTab === 'similar' ? 'bg-surface-container-lowest text-primary shadow-sm font-semibold' : 'text-on-surface-variant hover:text-primary'"
+        class="px-4 py-2 rounded-lg text-xs md:text-sm font-data-tabular transition-all duration-200 flex items-center gap-2"
+      >
+        <span class="material-symbols-outlined text-[16px] text-primary">equalizer</span>
+        <span>Similar Price Tier ({similarRateStates.length})</span>
+      </button>
+
+      <button
+        @click="activeTab = 'popular'"
+        :class="activeTab === 'popular' ? 'bg-surface-container-lowest text-primary shadow-sm font-semibold' : 'text-on-surface-variant hover:text-primary'"
+        class="px-4 py-2 rounded-lg text-xs md:text-sm font-data-tabular transition-all duration-200 flex items-center gap-2"
+      >
+        <span class="material-symbols-outlined text-[16px] text-tertiary">trending_up</span>
+        <span>National Benchmarks ({popularStates.length})</span>
+      </button>
+    </div>
+
+    <!-- Cluster 1: Regional & Nearby States Grid -->
+    <div x-show="activeTab === 'regional'" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+      {regionalStates.map(state => {
+        const diff = getRateDiffLabel(state.monthlyCost, Math.round(currentState.data.baseRate * 0.088));
+        return (
+          <a
+            href={state.href}
+            class="group bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/30 hover:border-primary/50 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
+          >
+            <div class="absolute top-0 right-0 w-20 h-20 bg-primary/5 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+            
+            <div class="flex flex-col gap-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded bg-surface-container-low text-primary text-[11px] font-semibold uppercase tracking-wider font-data-tabular">
+                  {state.region}
+                </span>
+                <span class={`text-[11px] font-semibold px-2 py-0.5 rounded font-data-tabular ${
+                  diff.isSame ? 'bg-surface-container-low text-on-surface-variant' :
+                  diff.isHigher ? 'bg-amber-500/10 text-amber-700' : 'bg-emerald-500/10 text-emerald-700'
+                }`}>
+                  {diff.text} vs {currentState.data.abbreviation}
+                </span>
+              </div>
+
+              <div>
+                <h3 class="font-headline-sm text-lg text-primary font-bold group-hover:text-secondary transition-colors">
+                  {state.name}
+                </h3>
+                <span class="font-data-tabular text-xs text-on-surface-variant">
+                  {state.abbreviation} State Profile
+                </span>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between">
+              <div class="flex items-baseline gap-1.5 font-data-tabular">
+                <span class="font-bold text-base text-primary">${state.annualCost}</span>
+                <span class="text-xs text-on-surface-variant">/yr (${state.monthlyCost}/mo)</span>
+              </div>
+              <span class="inline-flex items-center text-xs font-semibold text-primary group-hover:translate-x-1 transition-transform">
+                View Rates <span class="material-symbols-outlined text-[16px] ml-0.5">chevron_right</span>
+              </span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+
+    <!-- Cluster 2: Similar Rate Tier Grid -->
+    <div x-show="activeTab === 'similar'" style="display: none;" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+      {similarRateStates.map(state => {
+        const diff = getRateDiffLabel(state.monthlyCost, Math.round(currentState.data.baseRate * 0.088));
+        return (
+          <a
+            href={state.href}
+            class="group bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/30 hover:border-primary/50 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
+          >
+            <div class="absolute top-0 right-0 w-20 h-20 bg-secondary/5 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+
+            <div class="flex flex-col gap-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded bg-surface-container-low text-primary text-[11px] font-semibold uppercase tracking-wider font-data-tabular">
+                  {state.region}
+                </span>
+                <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-primary/10 text-primary font-data-tabular">
+                  Matching Base Rate
+                </span>
+              </div>
+
+              <div>
+                <h3 class="font-headline-sm text-lg text-primary font-bold group-hover:text-secondary transition-colors">
+                  {state.name}
+                </h3>
+                <span class="font-data-tabular text-xs text-on-surface-variant">
+                  {state.abbreviation} State Profile
+                </span>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between">
+              <div class="flex items-baseline gap-1.5 font-data-tabular">
+                <span class="font-bold text-base text-primary">${state.annualCost}</span>
+                <span class="text-xs text-on-surface-variant">/yr (${state.monthlyCost}/mo)</span>
+              </div>
+              <span class="inline-flex items-center text-xs font-semibold text-primary group-hover:translate-x-1 transition-transform">
+                View Rates <span class="material-symbols-outlined text-[16px] ml-0.5">chevron_right</span>
+              </span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+
+    <!-- Cluster 3: National Benchmarks Grid -->
+    <div x-show="activeTab === 'popular'" style="display: none;" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+      {popularStates.map(state => {
+        const diff = getRateDiffLabel(state.monthlyCost, Math.round(currentState.data.baseRate * 0.088));
+        return (
+          <a
+            href={state.href}
+            class="group bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/30 hover:border-primary/50 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
+          >
+            <div class="absolute top-0 right-0 w-20 h-20 bg-tertiary/5 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+
+            <div class="flex flex-col gap-3">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded bg-surface-container-low text-primary text-[11px] font-semibold uppercase tracking-wider font-data-tabular">
+                  {state.region}
+                </span>
+                <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-secondary/10 text-secondary font-data-tabular">
+                  Benchmark
+                </span>
+              </div>
+
+              <div>
+                <h3 class="font-headline-sm text-lg text-primary font-bold group-hover:text-secondary transition-colors">
+                  {state.name}
+                </h3>
+                <span class="font-data-tabular text-xs text-on-surface-variant">
+                  {state.abbreviation} State Profile
+                </span>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between">
+              <div class="flex items-baseline gap-1.5 font-data-tabular">
+                <span class="font-bold text-base text-primary">${state.annualCost}</span>
+                <span class="text-xs text-on-surface-variant">/yr (${state.monthlyCost}/mo)</span>
+              </div>
+              <span class="inline-flex items-center text-xs font-semibold text-primary group-hover:translate-x-1 transition-transform">
+                View Rates <span class="material-symbols-outlined text-[16px] ml-0.5">chevron_right</span>
+              </span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+
+  <!-- Full 50-State Directory Matrix for Complete Search Crawling & Easy Access -->
+  <div class="mt-12 bg-surface-container-lowest p-6 md:p-8 rounded-2xl border border-outline-variant/30 shadow-sm">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-outline-variant/20 mb-6">
+      <div>
+        <h3 class="font-headline-md text-xl text-primary font-bold flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-[22px]">map</span>
+          All 50 State Renters Insurance Calculators
+        </h3>
+        <p class="font-body-md text-sm text-on-surface-variant mt-1">
+          Select any US state below to view actuarial rate breakdowns and personalized policy estimates.
+        </p>
+      </div>
+      <a
+        href="/renters-insurance-calculator/"
+        class="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-secondary transition-colors shrink-0"
+      >
+        View Full Index <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+      </a>
+    </div>
+
+    <!-- 4 Regional Columns Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {Object.entries(regionGroups).map(([regionName, items]) => (
+        <div class="flex flex-col gap-3">
+          <h4 class="font-data-tabular text-xs font-bold text-primary uppercase tracking-wider pb-1.5 border-b border-outline-variant/30 flex items-center justify-between">
+            <span>{regionName} Region</span>
+            <span class="text-[10px] px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-normal">
+              {items.length} States
+            </span>
+          </h4>
+          <ul class="flex flex-col gap-1.5 text-xs font-data-tabular">
+            {items.map(item => {
+              const isCurrent = item.slug === currentState.data.slug;
+              return (
+                <li>
+                  {isCurrent ? (
+                    <span class="px-2 py-1 rounded bg-primary/10 text-primary font-semibold flex items-center justify-between">
+                      <span>{item.name} ({item.abbreviation})</span>
+                      <span class="text-[10px] uppercase font-bold text-primary">Current</span>
+                    </span>
+                  ) : (
+                    <a
+                      href={item.href}
+                      class="px-2 py-1 rounded hover:bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors flex items-center justify-between group"
+                    >
+                      <span class="group-hover:translate-x-0.5 transition-transform">{item.name}</span>
+                      <span class="text-[11px] text-on-surface-variant/60 font-mono group-hover:text-primary">${item.monthlyCost}/mo</span>
+                    </a>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Simple client-side AlpineJS script fallback if Alpine is present, or vanilla script tab toggle -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // If Alpine is not present, provide Vanilla fallback tab switcher
+    const tabButtons = document.querySelectorAll('#related-states button');
+    const tabGrids = document.querySelectorAll('#related-states [x-show]');
+    
+    if (!window.Alpine) {
+      tabButtons.forEach((btn, idx) => {
+        btn.addEventListener('click', () => {
+          tabButtons.forEach(b => {
+            b.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+            b.classList.add('text-on-surface-variant');
+          });
+          btn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+          btn.classList.remove('text-on-surface-variant');
+
+          tabGrids.forEach((grid, gIdx) => {
+            if (idx === gIdx) {
+              (grid as HTMLElement).style.display = 'grid';
+            } else {
+              (grid as HTMLElement).style.display = 'none';
+            }
+          });
+        });
+      });
+    }
+  });
+</script>

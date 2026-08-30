@@ -10,5 +10,55 @@
   "requirementsNote": "Florida state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
   "intro": "",
   "seoTitle": "Florida Renters Insurance Cost Calculator",
-  "seoDescription": "Estimate renters insurance costs in Florida based on personal property, liability limits, and deductible options."
+  "seoDescription": "Estimate renters insurance costs in Florida based on personal property, liability limits, and deductible options.",
+  "demographics": {
+    "typicalPersonalProperty": 30000,
+    "typicalLiability": 100000,
+    "typicalDeductible": 500,
+    "demographicNote": "Most Florida renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, though many coastal renters increase this given the higher cost of replacing belongings after a major storm."
+  },
+  "riskFactors": [
+    {
+      "icon": "storm",
+      "title": "Hurricane Season Wind Risk",
+      "description": "Florida's hurricane season runs from June through November, and Florida law requires insurers to include windstorm coverage in residential policies unless a renter declines it in writing. Wind damage to personal belongings from a hurricane is covered, which is why declining this coverage is rarely a good idea."
+    },
+    {
+      "icon": "flood",
+      "title": "Storm Surge and Flood Exclusion",
+      "description": "Florida accounts for roughly one third of all National Flood Insurance Program policies nationwide, reflecting how serious flood risk is across the state. Flood damage from storm surge or heavy rainfall is excluded from standard renters insurance and requires a separate flood policy."
+    },
+    {
+      "icon": "warning",
+      "title": "Sinkhole Risk",
+      "description": "Parts of Florida, particularly Pasco, Hernando, and Hillsborough counties, sit on limestone bedrock prone to sinkhole activity. Sinkhole damage is generally excluded from standard renters insurance and may require a separate sinkhole endorsement in these specific counties."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is renters insurance required in Florida?",
+      "answer": "No. Florida state law does not require tenants to carry renters insurance, though virtually all apartment complexes in cities like Miami, Tampa, Orlando, and Jacksonville require it as a lease condition."
+    },
+    {
+      "question": "Does renters insurance cover hurricane damage in Florida?",
+      "answer": "Yes, for wind. Florida law requires insurers to include windstorm coverage by default, covering wind damage to personal belongings from a hurricane. Flood damage from storm surge is a separate matter."
+    },
+    {
+      "question": "Does renters insurance cover flood damage in Florida?",
+      "answer": "No. Flood damage, including storm surge and heavy rainfall flooding, is excluded from standard renters insurance. Florida holds roughly one third of all National Flood Insurance Program policies nationally, so many renters purchase this coverage separately."
+    },
+    {
+      "question": "Does renters insurance cover sinkhole damage?",
+      "answer": "Not by default. Sinkhole damage is generally excluded from a standard policy, and renters in sinkhole prone counties like Pasco, Hernando, or Hillsborough may want to ask about a separate sinkhole endorsement."
+    },
+    {
+      "question": "How much does renters insurance cost in Florida?",
+      "answer": "Costs vary significantly by location, running higher in coastal cities like Miami or Fort Lauderdale than in inland cities like Orlando or Gainesville. Use the calculator above for an estimate based on your specific coverage choices."
+    }
+  ],
+  "blogContent": {
+    "whyThisRate": "Florida's renters insurance rate sits above the national average, driven primarily by hurricane season, which runs from June through November and brings the risk of high winds across the entire state. Florida law actually requires insurers to include windstorm coverage in a standard policy by default, which raises the baseline cost compared to states where wind coverage is optional. Flood damage from storm surge, Florida's single largest financial risk during a hurricane, is excluded from standard coverage entirely and priced as a separate policy, which keeps the base rate from climbing even higher than it already has. A smaller, uniquely Florida risk, sinkhole activity in counties built on limestone bedrock, adds further complexity in specific regions like Pasco and Hernando counties.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, the calculator applies Florida's base rate of two hundred thirty five dollars a year with no adjustment at these default levels, landing around two hundred seven to two hundred sixty three dollars a year, or roughly seventeen to twenty two dollars a month. Renters near the coast in cities like Miami or Fort Lauderdale should budget separately for flood coverage, since storm surge risk sits entirely outside what this standard calculation covers.",
+    "comparisonNote": "Within the South region, Florida carries one of the highest base rates, driven by mandatory windstorm coverage and the scale of hurricane exposure compared to states like Alabama or Arkansas that face tornado risk instead. Compared to the national average, Florida renters insurance runs meaningfully higher, though the gap between renters and homeowners insurance in the state is narrower than in most places, since renters coverage does not carry the same flood and structural exposure that has driven Florida's homeowners insurance market into a well documented crisis."
+  }
 }

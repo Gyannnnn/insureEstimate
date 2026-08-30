@@ -10,5 +10,55 @@
   "requirementsNote": "Louisiana state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
   "intro": "",
   "seoTitle": "Louisiana Renters Insurance Cost Calculator",
-  "seoDescription": "Estimate renters insurance costs in Louisiana based on personal property, liability limits, and deductible options."
+  "seoDescription": "Estimate renters insurance costs in Louisiana based on personal property, liability limits, and deductible options.",
+  "demographics": {
+    "typicalPersonalProperty": 30000,
+    "typicalLiability": 100000,
+    "typicalDeductible": 500,
+    "demographicNote": "Most Louisiana renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, though many increase this given the state's hurricane exposure and the value of replacing belongings after evacuation related loss."
+  },
+  "riskFactors": [
+    {
+      "icon": "storm",
+      "title": "Hurricane and Named Storm Risk",
+      "description": "Louisiana faces direct hurricane strikes regularly, and the state's property insurance market has remained in crisis since Hurricane Ida struck in 2021, pushing many homeowners toward Louisiana Citizens, the state backed insurer of last resort. Wind damage to personal belongings from a hurricane is generally covered under a standard renters policy."
+    },
+    {
+      "icon": "flood",
+      "title": "Highest Flood Claims in the Nation",
+      "description": "Louisiana has paid out more National Flood Insurance Program claims than any other state, totaling over thirteen billion dollars, reflecting how much of the state sits at or below sea level. Flood damage, whether from storm surge, heavy rain, or river overflow, is excluded from standard renters insurance and requires a separate policy."
+    },
+    {
+      "icon": "warning",
+      "title": "Coastal Land Loss",
+      "description": "Louisiana's coastline is eroding and sinking faster than almost anywhere else in the country, gradually removing the natural barriers that once buffered inland communities from storm surge. This ongoing land loss is a factor insurers weigh when pricing coastal risk, even though it is not itself a named peril in a renters policy."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is renters insurance required in Louisiana?",
+      "answer": "No. Louisiana state law does not require tenants to carry renters insurance, though property managers frequently require proof of coverage in the lease agreement."
+    },
+    {
+      "question": "Does renters insurance cover hurricane damage in Louisiana?",
+      "answer": "Wind and hail damage from a hurricane is generally covered under a standard renters policy, though flood damage from storm surge is not. Given Louisiana's insurance market pressures since Hurricane Ida, confirming your specific policy terms is worth the extra step."
+    },
+    {
+      "question": "Does renters insurance cover flood damage in Louisiana?",
+      "answer": "No. Louisiana has paid out more flood insurance claims than any other state, but flood damage remains excluded from standard renters insurance. A separate policy through the National Flood Insurance Program is necessary for flood protection."
+    },
+    {
+      "question": "Why is Louisiana's insurance market considered to be in crisis?",
+      "answer": "Since Hurricane Ida in 2021, several private insurers have left the Louisiana market or sharply raised rates, pushing many property owners toward Louisiana Citizens, the state's insurer of last resort. Renters insurance has been less affected than homeowners insurance, since it covers belongings rather than the structure itself."
+    },
+    {
+      "question": "How much does renters insurance cost in Louisiana?",
+      "answer": "Costs run above the national average, particularly in coastal parishes near New Orleans, Kenner, and Slidell. Use the calculator above for an estimate based on your specific coverage choices."
+    }
+  ],
+  "blogContent": {
+    "whyThisRate": "Louisiana's renters insurance rate ranks among the highest in the country, driven by a combination of hurricane exposure and a genuinely distressed insurance market. Since Hurricane Ida struck in 2021, the state's property insurance market has been in an ongoing crisis, with several private insurers leaving entirely and many homeowners relying on Louisiana Citizens, the state backed insurer of last resort. Flooding compounds this further, and Louisiana has paid out more National Flood Insurance Program claims than any other state, a reflection of how much of the state sits at or below sea level. Renters insurance feels less of this pressure than homeowners insurance does, since it covers personal belongings rather than a building's structure, and flood damage specifically is excluded from standard coverage and priced separately. Even so, the base rate for renters insurance in Louisiana remains elevated because hurricane wind risk alone is significant enough to affect it statewide.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, the calculator applies Louisiana's base rate of two hundred forty five dollars a year with no adjustment at these default levels, landing around two hundred sixteen to two hundred seventy four dollars a year, or roughly eighteen to twenty three dollars a month, among the highest baseline estimates of any state in this calculator. Renters in coastal parishes near New Orleans or Lake Pontchartrain should budget separately for flood coverage, since that risk sits entirely outside what this standard calculation covers.",
+    "comparisonNote": "Within the South region, Louisiana carries the highest base rate of any state in this calculator, exceeding even Florida, reflecting the compounding effect of hurricane risk and a genuinely troubled insurance market rather than hurricane exposure alone. Compared to the national average, Louisiana renters insurance runs substantially higher, though the gap between renters and homeowners insurance costs remains wide, since renters coverage avoids the structural flood and wind risk that has driven Louisiana's homeowners market into crisis."
+  }
 }

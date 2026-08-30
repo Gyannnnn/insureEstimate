@@ -10,5 +10,55 @@
   "requirementsNote": "Idaho state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
   "intro": "",
   "seoTitle": "Idaho Renters Insurance Cost Calculator",
-  "seoDescription": "Estimate renters insurance costs in Idaho based on personal property, liability limits, and deductible options."
+  "seoDescription": "Estimate renters insurance costs in Idaho based on personal property, liability limits, and deductible options.",
+  "demographics": {
+    "typicalPersonalProperty": 30000,
+    "typicalLiability": 100000,
+    "typicalDeductible": 500,
+    "demographicNote": "Most Idaho renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that fits comfortably within one of the most affordable renters insurance markets in the country."
+  },
+  "riskFactors": [
+    {
+      "icon": "fire",
+      "title": "Mountain and Canyon Wildfire Risk",
+      "description": "Wildfire risk in Idaho concentrates in specific mountain and canyon communities such as Sun Valley, Ketchum, Hailey, and Stanley, rather than spreading evenly statewide. Standard renters policies cover fire and smoke damage to personal belongings, which matters most for renters in these higher risk zones."
+    },
+    {
+      "icon": "snowflake",
+      "title": "Winter Storms and Frozen Pipes",
+      "description": "Idaho winters bring heavy snowfall and extended freezing temperatures, raising the risk of frozen pipes and water damage from burst plumbing. This type of water damage is typically covered under a standard renters policy."
+    },
+    {
+      "icon": "activity",
+      "title": "Seismic Activity",
+      "description": "Idaho experiences more earthquake activity than many renters realize, including a magnitude six point nine event near Borah Peak in nineteen eighty three. Standard renters insurance excludes earthquake damage, so renters near active fault zones may want a separate earthquake endorsement."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is renters insurance required in Idaho?",
+      "answer": "No. Idaho state law does not require tenants to carry renters insurance, though most large apartment complexes in Boise, Nampa, and Meridian require it with at least one hundred thousand dollars in liability coverage."
+    },
+    {
+      "question": "Does renters insurance cover wildfire damage in Idaho?",
+      "answer": "Yes. Fire damage, including wildfire and smoke damage, is covered under a standard renters policy, particularly relevant for renters in mountain communities like Sun Valley, Ketchum, or Stanley."
+    },
+    {
+      "question": "Does renters insurance cover earthquake damage in Idaho?",
+      "answer": "No. Standard renters insurance excludes earthquake damage, even though Idaho has a real history of seismic activity, including a significant earthquake near Borah Peak in nineteen eighty three. A separate earthquake endorsement can be added for protection."
+    },
+    {
+      "question": "Why is renters insurance so affordable in Idaho?",
+      "answer": "Idaho avoids the hurricanes, tornadoes, and widespread hail that drive up costs in much of the country, and its wildfire risk is concentrated in specific mountain communities rather than spread statewide, keeping the overall base rate low."
+    },
+    {
+      "question": "What deductible should I choose for renters insurance in Idaho?",
+      "answer": "A five hundred dollar deductible is a common and affordable starting point in Idaho, given the state's already low base rate, though renters in wildfire prone mountain communities may consider a higher deductible to further reduce their premium."
+    }
+  ],
+  "blogContent": {
+    "whyThisRate": "Idaho's renters insurance rate ranks among the lowest in the country, and the reasons come down to what the state does not have rather than what it does. Idaho avoids the hurricanes, tornadoes, and widespread hail corridors that push up costs across the South, Midwest, and Gulf Coast. The state's real risk, wildfire, concentrates heavily in specific mountain and canyon communities like Sun Valley, Ketchum, and Stanley rather than affecting the state broadly, so it has less impact on the statewide average than a hazard like tornado risk would in a state such as Arkansas. Winter storms and frozen pipes add a smaller, more universal risk, while a lesser known seismic history, including a significant nineteen eighty three earthquake near Borah Peak, sits entirely outside what a standard renters policy covers.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, the calculator applies Idaho's base rate of one hundred forty dollars a year with no adjustment at these default levels, landing around one hundred twenty three to one hundred fifty seven dollars a year, or roughly ten to thirteen dollars a month, among the most affordable estimates of any state in this calculator. Renters in wildfire prone mountain communities may still see higher real world quotes than this baseline reflects, since local risk varies more within Idaho than the statewide average suggests.",
+    "comparisonNote": "Within the West region, Idaho's rate sits well below Arizona, California, and Colorado, reflecting a state with a genuinely low overall risk profile outside of specific mountain wildfire zones. Compared to the national average, Idaho renters insurance ranks among the most affordable in the country, though renters in high risk zip codes like Blaine County should expect real world quotes above this statewide baseline."
+  }
 }

@@ -10,5 +10,55 @@
   "requirementsNote": "Kansas state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
   "intro": "",
   "seoTitle": "Kansas Renters Insurance Cost Calculator",
-  "seoDescription": "Estimate renters insurance costs in Kansas based on personal property, liability limits, and deductible options."
+  "seoDescription": "Estimate renters insurance costs in Kansas based on personal property, liability limits, and deductible options.",
+  "demographics": {
+    "typicalPersonalProperty": 30000,
+    "typicalLiability": 100000,
+    "typicalDeductible": 500,
+    "demographicNote": "Most Kansas renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that balances protection against the state's frequent tornado and hail activity without pushing the monthly premium too high."
+  },
+  "riskFactors": [
+    {
+      "icon": "wind",
+      "title": "Tornado Alley Core",
+      "description": "Kansas ranks first in the nation for EF5 tornadoes and averages roughly ninety six tornadoes a year, with peak activity from April through June. Wind and debris damage to personal belongings from a tornado is a named peril covered under a standard renters policy."
+    },
+    {
+      "icon": "storm",
+      "title": "Severe Hail",
+      "description": "Kansas experiences some of the most damaging hailstorms in the country, with claims from a single severe storm season regularly running into the billions statewide. Hail damage to personal property, including electronics and furniture near windows, is covered under a standard renters policy."
+    },
+    {
+      "icon": "flood",
+      "title": "Flash Flood Exclusion",
+      "description": "Heavy spring and summer thunderstorms can produce flash flooding in cities like Wichita and across low lying parts of the state. Flood damage from any source, including flash flooding, is excluded from standard renters insurance and requires a separate policy through the National Flood Insurance Program."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is renters insurance required in Kansas?",
+      "answer": "No. Kansas does not legally require renters insurance, though most landlords require at least one hundred thousand dollars in liability coverage as part of the lease agreement."
+    },
+    {
+      "question": "Does renters insurance cover tornado damage in Kansas?",
+      "answer": "Yes. Kansas ranks first in the nation for EF5 tornadoes and averages about ninety six tornadoes a year, and wind damage to personal belongings from a tornado is covered under a standard renters policy."
+    },
+    {
+      "question": "Does renters insurance cover hail damage in Kansas?",
+      "answer": "Yes. Hail damage to personal property is covered under a standard renters policy, which matters given how frequently severe hailstorms affect the state."
+    },
+    {
+      "question": "Does renters insurance cover flash flood damage in Kansas?",
+      "answer": "No. Flash flood damage, including flooding in cities like Wichita during heavy storms, is excluded from standard renters insurance. Renters can purchase a separate flood policy through the National Flood Insurance Program."
+    },
+    {
+      "question": "How much does renters insurance cost in Kansas?",
+      "answer": "Costs vary by location and coverage level, generally running a bit above the national average given the state's position in Tornado Alley. Use the calculator above for an estimate based on your specific coverage choices."
+    }
+  ],
+  "blogContent": {
+    "whyThisRate": "Kansas's renters insurance rate sits above the national average for one clear reason: the state occupies the very heart of Tornado Alley and ranks first in the nation for EF5 tornadoes. Averaging around ninety six tornadoes a year, Kansas sees a volume of severe weather claims that few other states match. Severe hail compounds this further, with individual storm seasons generating billions of dollars in claims statewide. Flash flooding adds a third layer of risk in cities like Wichita, though this risk sits outside standard coverage entirely and is priced as a separate flood policy. Renters insurance, which covers personal belongings rather than a building's structure, feels this tornado and hail exposure less severely than Kansas's homeowners insurance market, which ranks among the most expensive in the country.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, the calculator applies Kansas's base rate of one hundred eighty five dollars a year with no adjustment at these default levels, landing around one hundred sixty three to two hundred seven dollars a year, or roughly fourteen to seventeen dollars a month. Renters in tornado prone areas of western and central Kansas should expect real world quotes to reflect this elevated statewide baseline more directly than renters in less exposed regions.",
+    "comparisonNote": "Within the Midwest region, Kansas's rate sits above Iowa and close to Illinois, reflecting its position at the absolute center of Tornado Alley rather than the secondary corridor risk seen in neighboring states. Compared to the national average, Kansas renters insurance runs meaningfully higher, driven almost entirely by tornado and hail frequency rather than flood, earthquake, or coastal risk."
+  }
 }
