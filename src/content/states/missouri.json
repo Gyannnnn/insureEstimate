@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most Missouri renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that fits the state's moderate cost of living while accounting for its unusual combination of tornado and earthquake risk."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "wind",
+      "title": "Tornado Alley Exposure",
+      "description": "Missouri sits within Tornado Alley and averages around forty five tornadoes a year, with the devastating 2011 Joplin tornado standing as one of the deadliest single tornadoes in modern U.S. history. Wind damage to personal belongings from a tornado is a named peril covered under a standard renters policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "activity",
+      "title": "New Madrid Seismic Zone",
+      "description": "Southeastern Missouri, from Cape Girardeau through the Bootheel counties, sits atop the New Madrid Seismic Zone, which the U.S. Geological Survey estimates has a twenty five to forty percent chance of producing a magnitude six or larger earthquake within the next fifty years. Standard renters insurance excludes earthquake damage entirely, and coverage in the highest risk counties has fallen to just eleven percent of residences."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "flood",
+      "title": "River Flooding",
+      "description": "The Missouri and Mississippi rivers create persistent flood risk for communities along their banks statewide. Flood damage from these rivers is excluded from standard renters insurance and requires a separate policy through the National Flood Insurance Program."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in Missouri?",
+      "answer": "No. Missouri state law does not require renters insurance, though landlords can require it as part of a lease agreement."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover tornado damage in Missouri?",
+      "answer": "Yes. Wind damage to personal belongings from a tornado is covered under a standard renters policy, which matters significantly given Missouri's history with events like the devastating 2011 Joplin tornado."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover earthquake damage in Missouri?",
+      "answer": "No. Standard renters insurance excludes earthquake damage, a real concern in southeastern Missouri near the New Madrid Seismic Zone. Earthquake coverage in this region has fallen to historic lows, with only about eleven percent of residences currently carrying it."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover flooding from the Missouri or Mississippi River?",
+      "answer": "No. Flood damage from Missouri's major rivers is excluded from standard renters insurance. Renters in flood prone communities can purchase a separate policy through the National Flood Insurance Program."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in Missouri?",
+      "answer": "Missouri renters insurance runs close to the national average, generally similar between Kansas City and St. Louis, with somewhat higher costs in the tornado prone Joplin area. Use the calculator above for a Missouri renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "Missouri renters insurance rates reflect one of the more unusual risk combinations in the country. The state sits squarely within Tornado Alley, averaging around forty five tornadoes a year, and the 2011 Joplin tornado remains one of the deadliest single tornado events in modern U.S. history. Layered directly beneath that wind risk sits the New Madrid Seismic Zone, an active fault system running through southeastern Missouri that the U.S. Geological Survey estimates carries a twenty five to forty percent chance of a major earthquake within the next fifty years. Standard renters insurance excludes earthquake damage entirely, and coverage rates in the highest risk Bootheel counties have collapsed to just eleven percent of residences, down from over sixty percent two decades ago. River flooding along the Missouri and Mississippi rivers adds a third layer of excluded risk. Missouri is one of the few states in the country where both tornado and earthquake endorsements genuinely deserve consideration side by side.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our Missouri renters insurance calculator applies the state's base rate of one hundred ninety dollars a year with no adjustment at these default levels, landing around one hundred sixty seven to two hundred thirteen dollars a year, or roughly fourteen to eighteen dollars a month. Renters in southeastern Missouri near the New Madrid Seismic Zone or in tornado prone areas like Joplin should consider separate earthquake coverage and confirm wind coverage beyond this standard baseline.",
+    "comparisonNote": "Within the Midwest region, Missouri's rate sits above Illinois and Indiana, reflecting the added weight of genuine earthquake exposure layered on top of already significant tornado risk. Compared to the national average, Missouri renters insurance runs close to typical levels, though the state's rare tornado and earthquake combination makes it a genuinely distinct risk profile compared to neighboring states."
   }
 }

@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most New Hampshire renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that fits comfortably within one of the most affordable renters insurance markets in the Northeast."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "warning",
+      "title": "Older Housing Fire Risk",
+      "description": "New Hampshire's older rental housing stock, common in cities like Manchester and Concord, often includes dated electrical systems and wood stoves that raise fire risk, particularly from November through April. Fire damage to personal belongings is covered under a standard renters policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "storm",
+      "title": "Seacoast Nor'easters",
+      "description": "Coastal communities like Hampton and Portsmouth face nor'easter wind and storm exposure that pushes rates notably higher than inland cities like Concord, which sees some of the cheapest renters insurance rates in the state. Wind damage to personal belongings from a nor'easter is covered under a standard renters policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "snowflake",
+      "title": "Ice Dams and Frozen Pipes",
+      "description": "New Hampshire's heavy snowfall and freeze thaw cycles make ice dams and frozen pipe bursts a leading cause of renters insurance claims statewide. This type of sudden water damage is typically covered under a standard renters policy."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in New Hampshire?",
+      "answer": "No. New Hampshire does not legally require renters insurance, though about seventy two percent of landlords require it as a lease condition."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover ice dam damage in New Hampshire?",
+      "answer": "Yes, in most cases. Sudden water damage from an ice dam or frozen pipe, a leading cause of claims in the Granite State, is typically covered under a standard renters policy."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Why is renters insurance more expensive on the New Hampshire coast?",
+      "answer": "Coastal towns like Hampton face nor'easter wind and storm surge exposure that inland cities like Concord do not, which is why seacoast renters insurance rates run noticeably higher than the statewide average."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover fire damage in older New Hampshire apartments?",
+      "answer": "Yes. Fire damage is covered under a standard renters policy, which matters in New Hampshire's older rental housing stock, where dated electrical systems and wood stoves raise fire risk during the winter months."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in New Hampshire?",
+      "answer": "New Hampshire renters insurance ranks among the most affordable in the country, with Concord typically the cheapest city and coastal Hampton running higher due to storm exposure. Use the calculator above for a New Hampshire renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "New Hampshire renters insurance ranks among the most affordable in the country, a reflection of a state that avoids the hurricane, tornado, and earthquake risk found elsewhere while still facing genuine, if more contained, hazards of its own. The state's older rental housing stock, common in cities like Manchester and Concord, carries elevated fire risk from dated electrical systems and wood stoves, particularly during the long winter heating season. Coastal communities like Hampton and Portsmouth face nor'easter wind and storm exposure that pushes local rates noticeably above inland cities like Concord, which consistently posts some of the cheapest renters insurance rates in the state. Ice dams and frozen pipes round out the risk picture, a leading cause of claims during New Hampshire's harsh winters. None of these risks individually rival the catastrophic exposure of a hurricane or wildfire state, which is why New Hampshire's base rate stays low even with real weather and older housing risk factored in.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our New Hampshire renters insurance calculator applies the state's base rate of one hundred forty five dollars a year with no adjustment at these default levels, landing around one hundred twenty eight to one hundred sixty two dollars a year, or roughly eleven to fourteen dollars a month. Renters in coastal Hampton or Portsmouth should expect real world quotes to run above this statewide baseline given the added nor'easter exposure.",
+    "comparisonNote": "Within the Northeast region, New Hampshire's rate sits close to Maine, sharing a similarly low overall risk profile, though New Hampshire's older housing stock adds a fire risk dimension Maine shares to a lesser degree. Compared to the national average, New Hampshire renters insurance ranks among the most affordable in the country, since the state avoids the hurricane, tornado, and earthquake risk driving up costs elsewhere."
   }
 }
