@@ -33,6 +33,26 @@ export const POST: APIRoute = async ({ request }) => {
 
   const resend = new Resend(resendApiKey);
   try {
+    // Strictly load environment variables from process.env or import.meta.env
+    const resendApiKey = process.env.RESEND_API_KEY || import.meta.env.RESEND_API_KEY;
+    const recipientEmail = process.env.CONTACT_RECIPIENT_EMAIL || import.meta.env.CONTACT_RECIPIENT_EMAIL;
+
+    if (!resendApiKey) {
+      console.error('Missing RESEND_API_KEY in environment variables.');
+      return new Response(
+        JSON.stringify({ success: false, error: 'Server email service is not configured properly.' }),
+        { status: 500, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    if (!recipientEmail) {
+      console.error('Missing CONTACT_RECIPIENT_EMAIL in environment variables.');
+      return new Response(
+        JSON.stringify({ success: false, error: 'Server email recipient is not configured properly.' }),
+        { status: 500, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
     const body = await request.json();
     const { name, email, subject, message } = body;
 
@@ -151,6 +171,9 @@ export const POST: APIRoute = async ({ request }) => {
     </body>
     </html>
     `;
+
+    // Initialize Resend with key from environment variables
+    const resend = new Resend(resendApiKey);
 
     // Send email using Resend SDK
     const resendResponse = await resend.emails.send({
