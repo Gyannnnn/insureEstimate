@@ -1,9 +1,13 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "insure-estimate",
-  "compatibility_date": "2026-08-28",
-  "pages_build_output_dir": "./dist",
+  "name": "insureestimate",
+  "main": "./dist/_worker.js/index.js",
+  "compatibility_date": "2026-08-30",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    "binding": "ASSETS"
   }
 }
