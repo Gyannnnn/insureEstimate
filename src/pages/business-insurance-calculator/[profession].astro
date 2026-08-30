@@ -10,6 +10,7 @@ import {
   calculateNationalBusinessAverage
 } from '../../lib/calculators/standardProfile';
 import { siteCopy } from '../../lib/site';
+import GoogleAnalytics from '../../components/GoogleAnalytics.astro';
 import '../../styles/global.css';
 
 export async function getStaticPaths() {
@@ -104,6 +105,7 @@ const professionPct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost /
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <GoogleAnalytics />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title} | PolicyLens</title>

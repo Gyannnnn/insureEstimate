@@ -2,6 +2,7 @@
 import SiteHeader from '../components/SiteHeader.astro';
 import PageFooter from '../components/PageFooter.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import '../styles/global.css';
 
 const breadcrumbItems = [
@@ -15,6 +16,7 @@ const lastUpdated = 'August 30, 2026';
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <GoogleAnalytics />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms and Conditions - InsureEstimate</title>

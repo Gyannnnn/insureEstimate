@@ -12,6 +12,7 @@ import {
   getRentersStandardPremium,
   calculateNationalRentersAverage
 } from '../../lib/calculators/standardProfile';
+import GoogleAnalytics from '../../components/GoogleAnalytics.astro';
 import '../../styles/global.css';
 
 export async function getStaticPaths() {
@@ -117,6 +118,7 @@ const statePct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost / maxR
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <GoogleAnalytics />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title} | InsureEstimate</title>
