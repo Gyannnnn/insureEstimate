@@ -42,34 +42,41 @@ const topProfessions = [
 ];
 ---
 
-<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm transition-all duration-300">
+<!-- Import Google Font for Brand Logo -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] transition-all duration-300">
+  <!-- Subtle Top Emerald Accent Line -->
+  <div class="h-[2px] w-full bg-gradient-to-r from-emerald-500/0 via-emerald-600/60 to-emerald-500/0"></div>
+
   <div class="h-16 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between gap-4">
     
-    <!-- BRAND LOGO -->
-    <a href="/" class="flex items-center gap-3 group shrink-0 focus:outline-none">
-      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-on-primary font-bold text-sm shadow-md group-hover:scale-105 transition-transform duration-300">
-        IE
-      </div>
-      <div class="flex flex-col">
-        <span class="font-headline-md text-base md:text-lg tracking-tight text-primary font-bold leading-none">InsureEstimate</span>
-        <span class="text-[10px] text-on-surface-variant font-data-tabular leading-tight">Actuarial Intelligence</span>
+    <!-- BRAND LOGO: InsureEstimate -->
+    <a href="/" class="flex items-center gap-2.5 group shrink-0 focus:outline-none py-1">
+      <!-- Professional Typography Logo -->
+      <div class="flex items-center font-['Plus_Jakarta_Sans',sans-serif]">
+        <span class="text-xl md:text-2xl font-bold tracking-tight text-slate-900">Insure</span>
+        <span class="text-xl md:text-2xl font-extrabold tracking-tight text-emerald-700">Estimate</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block ml-0.5 self-baseline mb-1"></span>
       </div>
     </a>
 
-    <!-- DESKTOP SHADCN-STYLE NAVIGATION MENU (CENTER) -->
-    <nav aria-label="Main Navigation" class="hidden lg:flex items-center gap-1">
+    <!-- DESKTOP NAVIGATION MENU (CENTER) -->
+    <nav aria-label="Main Navigation" class="hidden lg:flex items-center gap-1.5">
       
       <!-- HOME LINK -->
       <a 
         href="/" 
         class:list={[
-          'px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5',
+          'px-4 py-2 rounded-xl text-sm font-medium transition-all flex items-center gap-2',
           active === 'Home' 
-            ? 'bg-surface-container-high text-primary font-semibold' 
-            : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'
+            ? 'bg-emerald-50/80 text-emerald-900 font-semibold border border-emerald-200/60 shadow-xs' 
+            : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
         ]}
       >
-        <span class="material-symbols-outlined text-[18px]">home</span>
+        <span class="material-symbols-outlined text-[18px] text-slate-500">home</span>
         <span>Home</span>
       </a>
 
@@ -78,35 +85,35 @@ const topProfessions = [
         <a 
           href="/renters-insurance-calculator/" 
           class:list={[
-            'px-4 py-2 rounded-lg text-sm font-medium transition-all inline-flex items-center gap-1.5 cursor-pointer',
+            'px-4 py-2 rounded-xl text-sm font-medium transition-all inline-flex items-center gap-2 cursor-pointer',
             active === 'Renters Insurance' 
-              ? 'bg-surface-container-high text-primary font-semibold' 
-              : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'
+              ? 'bg-emerald-50/80 text-emerald-900 font-semibold border border-emerald-200/60 shadow-xs' 
+              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
           ]}
         >
-          <span class="material-symbols-outlined text-[18px]">home_work</span>
+          <span class="material-symbols-outlined text-[18px] text-slate-500">home_work</span>
           <span>Renters Insurance</span>
-          <span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover/nav-renters:rotate-180 transition-transform duration-200">expand_more</span>
+          <span class="material-symbols-outlined text-[16px] text-slate-400 group-hover/nav-renters:rotate-180 group-hover/nav-renters:text-emerald-700 transition-transform duration-200">expand_more</span>
         </a>
 
         <!-- MEGA MENU PANEL -->
         <div class="absolute left-1/2 -translate-x-1/2 top-full w-[860px] opacity-0 invisible group-hover/nav-renters:opacity-100 group-hover/nav-renters:visible transition-all duration-200 ease-out translate-y-2 group-hover/nav-renters:translate-y-0 pointer-events-none group-hover/nav-renters:pointer-events-auto">
-          <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-2xl p-5 grid grid-cols-[240px_1fr] gap-6 backdrop-blur-2xl">
+          <div class="bg-white/95 rounded-2xl border border-slate-200/90 shadow-2xl p-5 grid grid-cols-[240px_1fr] gap-6 backdrop-blur-2xl">
             
             <!-- Featured Spotlight Column -->
-            <div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/20 flex flex-col justify-between">
+            <div class="bg-gradient-to-br from-emerald-50/60 via-slate-50 to-white p-4 rounded-xl border border-emerald-100 flex flex-col justify-between">
               <div class="flex flex-col gap-2">
-                <span class="px-2 py-0.5 rounded-full bg-secondary/10 text-secondary text-[10px] font-label-sm font-bold uppercase tracking-wider w-max">
+                <span class="px-2.5 py-0.5 rounded-full bg-emerald-100/80 text-emerald-800 text-[10px] font-semibold uppercase tracking-wider w-max border border-emerald-200/60">
                   Residential Baseline
                 </span>
-                <h3 class="font-headline-md text-base font-bold text-primary">Renters Estimator</h3>
-                <p class="text-xs text-on-surface-variant leading-relaxed">
-                  Compare rates across all 50 US states modeled with local actuarial filing data.
+                <h3 class="font-headline-md text-base font-bold text-slate-900">Renters Estimator</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Compare rates across all 50 US states modeled with localized actuarial filing data.
                 </p>
               </div>
               <a 
                 href="/renters-insurance-calculator/" 
-                class="mt-4 inline-flex items-center justify-between w-full p-2.5 bg-primary text-on-primary rounded-lg text-xs font-medium hover:bg-primary/90 transition-colors"
+                class="mt-4 inline-flex items-center justify-between w-full p-2.5 bg-slate-900 text-white rounded-lg text-xs font-semibold hover:bg-slate-800 transition-colors shadow-sm"
               >
                 <span>National Index</span>
                 <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
@@ -116,25 +123,25 @@ const topProfessions = [
             <!-- States Directory Column (20 Popular States in 4-Column Grid) -->
             <div class="flex flex-col justify-between">
               <div>
-                <div class="flex items-center justify-between pb-2 mb-3 border-b border-outline-variant/20">
-                  <span class="text-xs font-semibold text-primary uppercase tracking-wider font-label-sm">Top State Estimators</span>
-                  <span class="text-[11px] text-on-surface-variant font-data-tabular">20 Popular States</span>
+                <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-100">
+                  <span class="text-xs font-bold text-slate-900 uppercase tracking-wider font-label-sm">Top State Estimators</span>
+                  <span class="text-[11px] text-slate-500 font-data-tabular">20 Popular States</span>
                 </div>
                 <div class="grid grid-cols-4 gap-2">
                   {topStates.map((st) => (
                     <a 
                       href={`/renters-insurance-calculator/${st.slug}/`}
-                      class="flex items-center justify-between p-1.5 px-2 rounded-lg bg-surface-container-lowest border border-outline-variant/20 hover:border-primary/40 hover:bg-surface-container-low transition-all group/st"
+                      class="flex items-center justify-between p-1.5 px-2 rounded-lg bg-slate-50/60 border border-slate-200/60 hover:border-emerald-500/50 hover:bg-emerald-50/40 transition-all group/st"
                     >
-                      <span class="text-xs font-medium text-on-surface group-hover/st:text-primary transition-colors truncate">{st.name}</span>
-                      <span class="text-[10px] font-data-tabular text-on-surface-variant/70 group-hover/st:text-primary ml-1 shrink-0">{st.code}</span>
+                      <span class="text-xs font-medium text-slate-700 group-hover/st:text-emerald-800 transition-colors truncate">{st.name}</span>
+                      <span class="text-[10px] font-data-tabular text-slate-400 group-hover/st:text-emerald-700 ml-1 shrink-0">{st.code}</span>
                     </a>
                   ))}
                 </div>
               </div>
               <a 
                 href="/renters-insurance-calculator/#browse-states" 
-                class="mega-scroll-link mt-3 pt-2.5 border-t border-outline-variant/20 flex items-center justify-between text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                class="mega-scroll-link mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-emerald-700 hover:text-emerald-800 transition-colors"
               >
                 <span>View All 50 US States</span>
                 <span class="material-symbols-outlined text-[16px]">chevron_right</span>
@@ -150,35 +157,35 @@ const topProfessions = [
         <a 
           href="/business-insurance-calculator/" 
           class:list={[
-            'px-4 py-2 rounded-lg text-sm font-medium transition-all inline-flex items-center gap-1.5 cursor-pointer',
+            'px-4 py-2 rounded-xl text-sm font-medium transition-all inline-flex items-center gap-2 cursor-pointer',
             active === 'Business Insurance' 
-              ? 'bg-surface-container-high text-primary font-semibold' 
-              : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'
+              ? 'bg-emerald-50/80 text-emerald-900 font-semibold border border-emerald-200/60 shadow-xs' 
+              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
           ]}
         >
-          <span class="material-symbols-outlined text-[18px]">business_center</span>
+          <span class="material-symbols-outlined text-[18px] text-slate-500">business_center</span>
           <span>Business Insurance</span>
-          <span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover/nav-business:rotate-180 transition-transform duration-200">expand_more</span>
+          <span class="material-symbols-outlined text-[16px] text-slate-400 group-hover/nav-business:rotate-180 group-hover/nav-business:text-emerald-700 transition-transform duration-200">expand_more</span>
         </a>
 
         <!-- MEGA MENU PANEL -->
         <div class="absolute left-1/2 -translate-x-1/2 top-full w-[800px] opacity-0 invisible group-hover/nav-business:opacity-100 group-hover/nav-business:visible transition-all duration-200 ease-out translate-y-2 group-hover/nav-business:translate-y-0 pointer-events-none group-hover/nav-business:pointer-events-auto">
-          <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-2xl p-5 grid grid-cols-[240px_1fr] gap-6 backdrop-blur-2xl">
+          <div class="bg-white/95 rounded-2xl border border-slate-200/90 shadow-2xl p-5 grid grid-cols-[240px_1fr] gap-6 backdrop-blur-2xl">
             
             <!-- Featured Spotlight Column -->
-            <div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/20 flex flex-col justify-between">
+            <div class="bg-gradient-to-br from-emerald-50/60 via-slate-50 to-white p-4 rounded-xl border border-emerald-100 flex flex-col justify-between">
               <div class="flex flex-col gap-2">
-                <span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-label-sm font-bold uppercase tracking-wider w-max">
+                <span class="px-2.5 py-0.5 rounded-full bg-emerald-100/80 text-emerald-800 text-[10px] font-semibold uppercase tracking-wider w-max border border-emerald-200/60">
                   Commercial Models
                 </span>
-                <h3 class="font-headline-md text-base font-bold text-primary">Business Estimator</h3>
-                <p class="text-xs text-on-surface-variant leading-relaxed">
+                <h3 class="font-headline-md text-base font-bold text-slate-900">Business Estimator</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
                   Tailored General Liability &amp; E&amp;O cost projections for freelancers and small businesses.
                 </p>
               </div>
               <a 
                 href="/business-insurance-calculator/" 
-                class="mt-4 inline-flex items-center justify-between w-full p-2.5 bg-primary text-on-primary rounded-lg text-xs font-medium hover:bg-primary/90 transition-colors"
+                class="mt-4 inline-flex items-center justify-between w-full p-2.5 bg-slate-900 text-white rounded-lg text-xs font-semibold hover:bg-slate-800 transition-colors shadow-sm"
               >
                 <span>Profession Index</span>
                 <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
@@ -188,22 +195,22 @@ const topProfessions = [
             <!-- Professions Directory Column -->
             <div class="flex flex-col justify-between">
               <div>
-                <div class="flex items-center justify-between pb-2 mb-3 border-b border-outline-variant/20">
-                  <span class="text-xs font-semibold text-primary uppercase tracking-wider font-label-sm">Popular Business Profiles</span>
-                  <span class="text-[11px] text-on-surface-variant font-data-tabular">35+ Industries</span>
+                <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-100">
+                  <span class="text-xs font-bold text-slate-900 uppercase tracking-wider font-label-sm">Popular Business Profiles</span>
+                  <span class="text-[11px] text-slate-500 font-data-tabular">35+ Industries</span>
                 </div>
                 <div class="grid grid-cols-2 gap-2">
                   {topProfessions.map((prof) => (
                     <a 
                       href={`/business-insurance-calculator/${prof.slug}/`}
-                      class="flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-lowest border border-outline-variant/20 hover:border-primary/40 hover:bg-surface-container-low transition-all group/prof"
+                      class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50/60 border border-slate-200/60 hover:border-emerald-500/50 hover:bg-emerald-50/40 transition-all group/prof"
                     >
-                      <div class="w-7 h-7 rounded-md bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover/prof:bg-primary group-hover/prof:text-on-primary transition-colors">
+                      <div class="w-7 h-7 rounded-md bg-emerald-100/80 text-emerald-800 flex items-center justify-center shrink-0 group-hover/prof:bg-emerald-700 group-hover/prof:text-white transition-colors">
                         <span class="material-symbols-outlined text-[16px]">{prof.icon}</span>
                       </div>
                       <div class="flex flex-col min-w-0">
-                        <span class="text-xs font-medium text-on-surface group-hover/prof:text-primary transition-colors truncate">{prof.name}</span>
-                        <span class="text-[10px] text-on-surface-variant/70 font-data-tabular">{prof.tag}</span>
+                        <span class="text-xs font-medium text-slate-700 group-hover/prof:text-emerald-900 transition-colors truncate">{prof.name}</span>
+                        <span class="text-[10px] text-slate-400 font-data-tabular">{prof.tag}</span>
                       </div>
                     </a>
                   ))}
@@ -211,7 +218,7 @@ const topProfessions = [
               </div>
               <a 
                 href="/business-insurance-calculator/#profession-search-section" 
-                class="mega-scroll-link mt-3 pt-2.5 border-t border-outline-variant/20 flex items-center justify-between text-xs font-semibold text-primary hover:text-secondary transition-colors"
+                class="mega-scroll-link mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-emerald-700 hover:text-emerald-800 transition-colors"
               >
                 <span>Explore All 35+ Profession Profiles</span>
                 <span class="material-symbols-outlined text-[16px]">chevron_right</span>
@@ -228,9 +235,10 @@ const topProfessions = [
     <div class="hidden sm:flex items-center gap-3 shrink-0">
       <a 
         href="/renters-insurance-calculator" 
-        class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary text-on-primary text-xs font-medium hover:bg-primary/90 transition-all shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98]"
+        class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition-all shadow-sm hover:shadow-md border border-slate-800 group"
       >
-        <span class="material-symbols-outlined text-[18px]">calculate</span>
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="material-symbols-outlined text-[18px] text-slate-300 group-hover:text-white transition-colors">calculate</span>
         <span>Get Instant Estimate</span>
       </a>
     </div>
@@ -240,7 +248,7 @@ const topProfessions = [
       <button 
         id="mobile-menu-toggle"
         type="button" 
-        class="w-10 h-10 flex items-center justify-center text-primary rounded-xl hover:bg-surface-container transition-colors focus:outline-none border border-outline-variant/30" 
+        class="w-10 h-10 flex items-center justify-center text-slate-900 rounded-xl hover:bg-slate-100 transition-colors focus:outline-none border border-slate-200" 
         aria-label="Toggle Navigation Menu"
       >
         <span id="menu-icon-open" class="material-symbols-outlined text-[24px]">menu</span>
@@ -253,66 +261,66 @@ const topProfessions = [
   <!-- MOBILE NAVIGATION DRAWER -->
   <div 
     id="mobile-menu" 
-    class="hidden lg:hidden border-t border-outline-variant/30 bg-white/95 backdrop-blur-2xl px-margin-mobile py-5 flex-col gap-4 shadow-xl max-h-[85vh] overflow-y-auto"
+    class="hidden lg:hidden border-t border-slate-200 bg-white/95 backdrop-blur-2xl px-margin-mobile py-5 flex-col gap-4 shadow-xl max-h-[85vh] overflow-y-auto"
   >
     <a 
       href="/" 
       class:list={[
         'p-3 rounded-xl font-medium text-sm flex items-center justify-between transition-colors',
-        active === 'Home' ? 'bg-surface-container-high text-primary font-semibold' : 'text-on-surface hover:bg-surface-container-low'
+        active === 'Home' ? 'bg-emerald-50 text-emerald-900 font-semibold border border-emerald-200' : 'text-slate-700 hover:bg-slate-50'
       ]}
     >
       <div class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-primary text-[20px]">home</span>
+        <span class="material-symbols-outlined text-slate-500 text-[20px]">home</span>
         <span>Home</span>
       </div>
-      <span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+      <span class="material-symbols-outlined text-slate-400 text-[18px]">chevron_right</span>
     </a>
 
     <!-- Mobile Renters Section -->
-    <div class="flex flex-col gap-2 p-3 bg-surface-container-low/50 rounded-xl border border-outline-variant/20">
+    <div class="flex flex-col gap-2 p-3.5 bg-slate-50 rounded-xl border border-slate-200/80">
       <a 
         href="/renters-insurance-calculator/#browse-states" 
-        class="mega-scroll-link flex items-center justify-between font-semibold text-sm text-primary"
+        class="mega-scroll-link flex items-center justify-between font-bold text-sm text-slate-900"
       >
         <div class="flex items-center gap-2.5">
-          <span class="material-symbols-outlined text-primary text-[20px]">home_work</span>
+          <span class="material-symbols-outlined text-emerald-700 text-[20px]">home_work</span>
           <span>Renters Insurance</span>
         </div>
-        <span class="text-xs font-normal text-secondary font-data-tabular">All 50 States →</span>
+        <span class="text-xs font-semibold text-emerald-700 font-data-tabular">All 50 States →</span>
       </a>
-      <div class="grid grid-cols-2 gap-1.5 mt-2 pt-2 border-t border-outline-variant/20">
+      <div class="grid grid-cols-2 gap-1.5 mt-2 pt-2.5 border-t border-slate-200/60">
         {topStates.slice(0, 8).map((st) => (
           <a 
             href={`/renters-insurance-calculator/${st.slug}/`}
-            class="text-xs text-on-surface-variant hover:text-primary py-1 px-2 rounded bg-surface-container-lowest border border-outline-variant/20 flex items-center justify-between"
+            class="text-xs text-slate-700 hover:text-emerald-800 py-1 px-2 rounded bg-white border border-slate-200/80 flex items-center justify-between"
           >
             <span class="truncate">{st.name}</span>
-            <span class="text-[10px] text-on-surface-variant/60 font-data-tabular ml-1">{st.code}</span>
+            <span class="text-[10px] text-slate-400 font-data-tabular ml-1">{st.code}</span>
           </a>
         ))}
       </div>
     </div>
 
     <!-- Mobile Business Section -->
-    <div class="flex flex-col gap-2 p-3 bg-surface-container-low/50 rounded-xl border border-outline-variant/20">
+    <div class="flex flex-col gap-2 p-3.5 bg-slate-50 rounded-xl border border-slate-200/80">
       <a 
         href="/business-insurance-calculator/#profession-search-section" 
-        class="mega-scroll-link flex items-center justify-between font-semibold text-sm text-primary"
+        class="mega-scroll-link flex items-center justify-between font-bold text-sm text-slate-900"
       >
         <div class="flex items-center gap-2.5">
-          <span class="material-symbols-outlined text-primary text-[20px]">business_center</span>
+          <span class="material-symbols-outlined text-emerald-700 text-[20px]">business_center</span>
           <span>Business Insurance</span>
         </div>
-        <span class="text-xs font-normal text-secondary font-data-tabular">35+ Profiles →</span>
+        <span class="text-xs font-semibold text-emerald-700 font-data-tabular">35+ Profiles →</span>
       </a>
-      <div class="grid grid-cols-1 gap-1.5 mt-2 pt-2 border-t border-outline-variant/20">
+      <div class="grid grid-cols-1 gap-1.5 mt-2 pt-2.5 border-t border-slate-200/60">
         {topProfessions.slice(0, 4).map((prof) => (
           <a 
             href={`/business-insurance-calculator/${prof.slug}/`}
-            class="text-xs text-on-surface-variant hover:text-primary py-1.5 px-2 rounded bg-surface-container-lowest border border-outline-variant/20 flex items-center gap-2"
+            class="text-xs text-slate-700 hover:text-emerald-800 py-1.5 px-2 rounded bg-white border border-slate-200/80 flex items-center gap-2"
           >
-            <span class="material-symbols-outlined text-[16px] text-primary">{prof.icon}</span>
+            <span class="material-symbols-outlined text-[16px] text-emerald-700">{prof.icon}</span>
             <span>{prof.name}</span>
           </a>
         ))}
@@ -323,8 +331,9 @@ const topProfessions = [
     <div class="pt-2">
       <a 
         href="/renters-insurance-calculator/#calculator" 
-        class="flex items-center justify-center gap-2 w-full py-3 bg-primary text-on-primary font-medium text-sm rounded-xl shadow-md"
+        class="flex items-center justify-center gap-2 w-full py-3 bg-slate-900 text-white font-semibold text-sm rounded-xl shadow-md border border-slate-800"
       >
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         <span class="material-symbols-outlined text-[18px]">calculate</span>
         <span>Get Instant Estimate</span>
       </a>

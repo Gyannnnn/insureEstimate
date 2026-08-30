@@ -8,31 +8,34 @@ const allProfessionsRaw = await getCollection('professions');
 const allProfessions = allProfessionsRaw.sort((a, b) => a.data.name.localeCompare(b.data.name));
 ---
 
-<footer class="w-full bg-white border-t border-outline-variant/30 mt-stack-lg relative z-10">
+<!-- Import Google Font for Brand Logo -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+<footer class="w-full bg-slate-50/60 border-t border-slate-200/80 mt-stack-lg relative z-10">
   <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col gap-8">
     
     <!-- TOP ROW: BRAND & QUICK LINKS -->
-    <div class="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-8 border-b border-outline-variant/20 pb-8">
+    <div class="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-8 border-b border-slate-200/70 pb-8">
       
       <!-- Brand Column -->
       <div class="flex flex-col gap-3">
-        <a href="/" class="flex items-center gap-3 group focus:outline-none w-max">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-on-primary font-bold text-sm shadow-md group-hover:scale-105 transition-transform duration-300">
-            IE
-          </div>
-          <div class="flex flex-col">
-            <span class="font-headline-md text-lg tracking-tight text-primary font-bold leading-none">InsureEstimate</span>
-            <span class="text-[11px] text-on-surface-variant font-data-tabular mt-0.5">Actuarial Cost Intelligence Engine</span>
+        <a href="/" class="flex items-center group focus:outline-none w-max py-0.5">
+          <div class="flex items-center font-['Plus_Jakarta_Sans',sans-serif]">
+            <span class="text-2xl font-bold tracking-tight text-slate-900">Insure</span>
+            <span class="text-2xl font-extrabold tracking-tight text-emerald-700">Estimate</span>
+            <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block ml-0.5 self-baseline mb-1"></span>
           </div>
         </a>
-        <p class="text-xs text-on-surface-variant leading-relaxed max-w-md">
+        <p class="text-xs text-slate-600 leading-relaxed max-w-md">
           Providing transparent, data-driven insurance premium estimates across all 50 US States and 35+ professional categories based on statutory insurance filings and actuarial risk benchmarks.
         </p>
         <div class="flex items-center gap-2 mt-1">
-          <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-label-sm font-semibold uppercase tracking-wider">
+          <span class="px-2.5 py-1 rounded-full bg-emerald-100/70 text-emerald-800 text-[10px] font-semibold uppercase tracking-wider border border-emerald-200/60">
             50 US States
           </span>
-          <span class="px-2.5 py-1 rounded-full bg-secondary/10 text-secondary text-[10px] font-label-sm font-semibold uppercase tracking-wider">
+          <span class="px-2.5 py-1 rounded-full bg-slate-200/70 text-slate-700 text-[10px] font-semibold uppercase tracking-wider border border-slate-300/60">
             35+ Business Models
           </span>
         </div>
@@ -40,23 +43,23 @@ const allProfessions = allProfessionsRaw.sort((a, b) => a.data.name.localeCompar
 
       <!-- Calculators Column -->
       <div class="flex flex-col gap-3">
-        <h4 class="font-label-sm text-xs text-primary uppercase font-bold tracking-wider">Core Estimator Hubs</h4>
+        <h4 class="font-label-sm text-xs text-slate-900 uppercase font-bold tracking-wider">Core Estimator Hubs</h4>
         <nav class="flex flex-col gap-2.5 text-xs">
-          <a class="group text-on-surface-variant hover:text-primary transition-colors font-medium flex items-center gap-2 w-max" href="/renters-insurance-calculator/">
-            <span class="material-symbols-outlined text-[16px] text-secondary">home_work</span>
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full">
+          <a class="group text-slate-600 hover:text-emerald-800 transition-colors font-medium flex items-center gap-2 w-max" href="/renters-insurance-calculator/">
+            <span class="material-symbols-outlined text-[16px] text-emerald-700">home_work</span>
+            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
               Renters Insurance Calculator
             </span>
           </a>
-          <a class="group text-on-surface-variant hover:text-primary transition-colors font-medium flex items-center gap-2 w-max" href="/business-insurance-calculator/">
-            <span class="material-symbols-outlined text-[16px] text-primary">business_center</span>
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full">
+          <a class="group text-slate-600 hover:text-emerald-800 transition-colors font-medium flex items-center gap-2 w-max" href="/business-insurance-calculator/">
+            <span class="material-symbols-outlined text-[16px] text-slate-700">business_center</span>
+            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
               Business Insurance Calculator
             </span>
           </a>
-          <a class="group text-on-surface-variant hover:text-primary transition-colors font-medium flex items-center gap-2 w-max" href="/renters-insurance-calculator/#browse-states">
-            <span class="material-symbols-outlined text-[16px] text-on-surface-variant">map</span>
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full">
+          <a class="group text-slate-600 hover:text-emerald-800 transition-colors font-medium flex items-center gap-2 w-max" href="/renters-insurance-calculator/#browse-states">
+            <span class="material-symbols-outlined text-[16px] text-slate-500">map</span>
+            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
               State Renters Directory
             </span>
           </a>
@@ -65,20 +68,20 @@ const allProfessions = allProfessionsRaw.sort((a, b) => a.data.name.localeCompar
 
       <!-- Platform Links -->
       <div class="flex flex-col gap-3">
-        <h4 class="font-label-sm text-xs text-primary uppercase font-bold tracking-wider">Platform &amp; Navigation</h4>
+        <h4 class="font-label-sm text-xs text-slate-900 uppercase font-bold tracking-wider">Platform &amp; Navigation</h4>
         <nav class="flex flex-col gap-2.5 text-xs">
-          <a class="group text-on-surface-variant hover:text-primary transition-colors font-medium w-max" href="/">
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full">
+          <a class="group text-slate-600 hover:text-emerald-800 transition-colors font-medium w-max" href="/">
+            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
               Home Page
             </span>
           </a>
-          <a class="group text-on-surface-variant hover:text-primary transition-colors font-medium w-max" href="/business-insurance-calculator/#profession-search-section">
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full">
+          <a class="group text-slate-600 hover:text-emerald-800 transition-colors font-medium w-max" href="/business-insurance-calculator/#profession-search-section">
+            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
               Profession Search
             </span>
           </a>
-          <a class="group text-on-surface-variant hover:text-primary transition-colors font-medium w-max" href="/#methodology">
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full">
+          <a class="group text-slate-600 hover:text-emerald-800 transition-colors font-medium w-max" href="/#methodology">
+            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
               Actuarial Methodology
             </span>
           </a>
@@ -88,16 +91,16 @@ const allProfessions = allProfessionsRaw.sort((a, b) => a.data.name.localeCompar
     </div>
 
     <!-- SECTION 1: ALL 50 STATES RENTERS INSURANCE DIRECTORY -->
-    <div class="flex flex-col gap-3 border-b border-outline-variant/20 pb-8">
+    <div class="flex flex-col gap-3 border-b border-slate-200/70 pb-8">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-1">
         <div class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
-          <h3 class="font-headline-md text-xs font-bold text-primary uppercase tracking-wider font-label-sm">
+          <span class="material-symbols-outlined text-emerald-700 text-[20px]">location_on</span>
+          <h3 class="font-headline-md text-xs font-bold text-slate-900 uppercase tracking-wider font-label-sm">
             Renters Insurance by State
           </h3>
-          <span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[10px] font-data-tabular font-semibold">
+          <!-- <span class="px-2 py-0.5 rounded bg-slate-200/70 text-slate-700 text-[10px] font-data-tabular font-semibold">
             All 50 States
-          </span>
+          </span> -->
         </div>
       </div>
 
@@ -105,9 +108,9 @@ const allProfessions = allProfessionsRaw.sort((a, b) => a.data.name.localeCompar
         {allStates.map((st) => (
           <a 
             href={`/renters-insurance-calculator/${st.data.slug}/`}
-            class="text-xs text-on-surface-variant hover:text-primary transition-colors font-medium py-0.5 group w-max"
+            class="text-xs text-slate-600 hover:text-emerald-800 transition-colors font-medium py-0.5 group w-max"
           >
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full">
+            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
               {st.data.name}
             </span>
           </a>
@@ -116,16 +119,16 @@ const allProfessions = allProfessionsRaw.sort((a, b) => a.data.name.localeCompar
     </div>
 
     <!-- SECTION 2: ALL BUSINESS PROFESSIONS DIRECTORY -->
-    <div class="flex flex-col gap-3 border-b border-outline-variant/20 pb-8">
+    <div class="flex flex-col gap-3 border-b border-slate-200/70 pb-8">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-1">
         <div class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-primary text-[20px]">work</span>
-          <h3 class="font-headline-md text-xs font-bold text-primary uppercase tracking-wider font-label-sm">
+          <span class="material-symbols-outlined text-green-700 text-[20px]">work</span>
+          <h3 class="font-headline-md text-xs font-bold text-slate-900 uppercase tracking-wider font-label-sm">
             Business Insurance by Profession
           </h3>
-          <span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[10px] font-data-tabular font-semibold">
+          <!-- <span class="px-2 py-0.5 rounded bg-slate-200/70 text-slate-700 text-[10px] font-data-tabular font-semibold">
             {allProfessions.length} Professions
-          </span>
+          </span> -->
         </div>
       </div>
 
@@ -133,9 +136,9 @@ const allProfessions = allProfessionsRaw.sort((a, b) => a.data.name.localeCompar
         {allProfessions.map((prof) => (
           <a 
             href={`/business-insurance-calculator/${prof.data.slug}/`}
-            class="text-xs text-on-surface-variant hover:text-primary transition-colors font-medium py-0.5 group w-max"
+            class="text-xs text-slate-600 hover:text-emerald-800 transition-colors font-medium py-0.5 group w-max"
           >
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full">
+            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
               {prof.data.name}
             </span>
           </a>
@@ -144,12 +147,12 @@ const allProfessions = allProfessionsRaw.sort((a, b) => a.data.name.localeCompar
     </div>
 
     <!-- BOTTOM LEGAL & COPYRIGHT ROW -->
-    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant text-center md:text-left pt-2">
-      <p class="font-body-md italic max-w-2xl text-[11px]">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 text-center md:text-left pt-2">
+      <p class="font-body-md italic max-w-2xl text-[11px] leading-relaxed">
         Disclaimer: InsureEstimate premium projections are calculated using statutory regulatory filings, state loss ratios, and industry actuarial risk models. Estimates are for informational purposes and do not constitute binding insurance quotes.
       </p>
       <div class="flex items-center gap-3 shrink-0">
-        <span class="font-data-tabular font-medium text-[11px]">
+        <span class="font-data-tabular font-medium text-[11px] text-slate-600">
           © {new Date().getFullYear()} InsureEstimate. All rights reserved.
         </span>
       </div>
