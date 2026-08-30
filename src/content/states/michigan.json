@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most Michigan renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that balances the state's affordable cost of living against real winter storm and urban flood risk."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "snowflake",
+      "title": "Lake Effect Snow",
+      "description": "Communities near Lake Michigan, including Grand Rapids, Muskegon, and Traverse City, can receive over one hundred to two hundred inches of lake effect snow in a single season, creating real roof collapse and ice dam risk. Snow and wind related damage to personal belongings is generally covered under a standard Michigan renters insurance policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "flood",
+      "title": "Great Lakes Shoreline and River Flooding",
+      "description": "Michigan has more freshwater shoreline than any other state, over three thousand two hundred miles, along with thousands of inland lakes and rivers that can rise rapidly during spring snowmelt. Flood damage from this rising water is excluded from standard renters insurance and requires a separate policy through the National Flood Insurance Program."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "water_damage",
+      "title": "Detroit Urban Sewer Flooding",
+      "description": "Metro Detroit's aging combined sewer system regularly overflows during intense rain events, causing basement flooding for hundreds of thousands of homes, as seen in the significant 2014 Detroit area flooding. This type of backup damage typically requires a separate water backup endorsement rather than standard coverage."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in Michigan?",
+      "answer": "No. Michigan law does not require renters insurance, though landlords can require it as a lease condition under the state's Truth in Renting Act."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover lake effect snow damage in Michigan?",
+      "answer": "Yes. Snow and wind related damage to personal belongings, including from lake effect snow near Grand Rapids or Traverse City, is covered under a standard Michigan renters insurance policy."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover flooding in Michigan?",
+      "answer": "No. Flood damage from Michigan's rivers, inland lakes, or the Great Lakes shoreline is excluded from standard renters insurance and requires a separate policy through the National Flood Insurance Program."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover basement flooding in Detroit?",
+      "answer": "Not by default. Basement flooding from an overwhelmed sewer system, a recurring issue in Metro Detroit during heavy rain, typically requires a separate water backup endorsement."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in Michigan?",
+      "answer": "Costs vary by location, generally running higher in flood prone areas of Wayne and Macomb counties. Use the calculator above for a Michigan renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "Michigan renters insurance rates reflect a state defined by water in almost every direction. The Great Lakes surrounding Michigan give it more freshwater shoreline than any other state, and thousands of inland lakes and rivers can rise rapidly during spring snowmelt, creating real flood risk across both rural and urban areas. In Metro Detroit specifically, an aging combined sewer system regularly overflows during intense rain, a problem that caused significant basement flooding across the region in 2014. Lake effect snow adds a separate winter risk, with communities near Lake Michigan sometimes receiving over one hundred inches in a single season, raising the risk of roof collapse and ice dams. Flood and sewer backup damage both sit outside standard renters coverage, which limits how much of Michigan's water related risk actually reaches the base rate.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our Michigan renters insurance calculator applies the state's base rate of one hundred eighty dollars a year with no adjustment at these default levels, landing around one hundred fifty eight to two hundred two dollars a year, or roughly thirteen to seventeen dollars a month. Renters comparing quotes in Wayne or Macomb counties with elevated flood risk, or in lake effect snow zones near Grand Rapids, should budget separately for flood coverage and confirm their policy handles winter roof damage.",
+    "comparisonNote": "Within the Midwest region, Michigan's rate sits close to Illinois, sharing a similar mix of severe storm and urban flood risk, though Michigan's lake effect snow and Great Lakes shoreline exposure give it a distinct seasonal pattern. Compared to the national average, Michigan renters insurance runs close to typical levels, with Metro Detroit and lakeside communities carrying somewhat higher risk than the rest of the state."
   }
 }

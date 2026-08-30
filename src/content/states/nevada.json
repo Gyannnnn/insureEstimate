@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most Nevada renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that fits comfortably within one of the more affordable renters insurance markets in the West."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "activity",
+      "title": "Seismic Activity",
+      "description": "Nevada is the third most seismically active state in the country, a fact that surprises many renters given the state's desert image. Standard renters insurance excludes earthquake damage, so renters near Reno, Carson City, or the Tahoe corridor may want a separate earthquake endorsement."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "fire",
+      "title": "Reno Tahoe Wildfire Risk",
+      "description": "Roughly seventy four percent of properties in the Reno area sit in a wildfire risk zone, reflecting the region's proximity to forested terrain. Fire and smoke damage to personal belongings is covered under a standard Nevada renters insurance policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "flood",
+      "title": "Las Vegas Monsoon Flash Flooding",
+      "description": "Southern Nevada's summer monsoon season can produce sudden, intense flash flooding in Las Vegas and the surrounding valley, even in a desert climate. Flood damage from monsoon runoff is excluded from standard renters insurance and requires a separate policy."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in Nevada?",
+      "answer": "No. Nevada does not require renters insurance by law, though landlords in Las Vegas and Reno commonly require it as a lease condition."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover earthquake damage in Nevada?",
+      "answer": "No. Standard renters insurance excludes earthquake damage, which matters given Nevada is the third most seismically active state in the country, particularly in the Reno Carson City Tahoe corridor."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover wildfire damage in Las Vegas or Reno?",
+      "answer": "Yes. Fire and smoke damage to personal belongings is covered under a standard renters policy, especially relevant near Reno, where roughly seventy four percent of properties sit in a wildfire risk zone."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover monsoon flash flood damage in Las Vegas?",
+      "answer": "No. Flood damage from monsoon runoff, a real risk in Las Vegas despite the desert climate, is excluded from standard renters insurance and requires a separate flood policy."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in Nevada?",
+      "answer": "Nevada renters insurance runs close to or slightly below the national average, with Henderson typically cheaper than urban Las Vegas due to newer construction and lower crime rates. Use the calculator above for a Nevada renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "Nevada renters insurance costs stay close to or slightly below the national average, a reflection of a state whose real risks are less visible than its desert image suggests. Nevada is actually the third most seismically active state in the country, with meaningful earthquake risk concentrated in the Reno Carson City Tahoe corridor, though this risk is excluded from standard coverage entirely. Wildfire adds a second, more visible layer, with roughly seventy four percent of properties in the Reno area sitting within a wildfire risk zone. Las Vegas faces an entirely different hazard in its summer monsoon season, which can produce sudden flash flooding despite the valley's desert climate. Because Nevada avoids hurricanes and widespread tornado activity, and because its most severe risk, earthquake, sits outside standard coverage, the state's renters insurance base rate remains comparatively affordable.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our Nevada renters insurance calculator applies the state's base rate of one hundred seventy five dollars a year with no adjustment at these default levels, landing around one hundred fifty four to one hundred ninety six dollars a year, or roughly thirteen to sixteen dollars a month. Renters near Reno's wildfire zones or Las Vegas's flash flood prone washes should budget separately for the coverage this standard calculation doesn't include.",
+    "comparisonNote": "Within the West region, Nevada's rate sits close to Hawaii's despite an entirely different hazard mix, seismic and wildfire risk here versus hurricane and volcanic risk there. Compared to the national average, Nevada renters insurance runs close to typical levels, reflecting a state that avoids the most expensive catastrophe categories even though it carries real, often overlooked risks of its own."
   }
 }

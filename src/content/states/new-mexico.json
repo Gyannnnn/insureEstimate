@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most New Mexico renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that fits the state's moderate cost of living while accounting for real wildfire and monsoon flood risk."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "fire",
+      "title": "Wildfire in a Prolonged Drought",
+      "description": "The 2022 Hermits Peak Calf Canyon Fire became the largest wildfire in New Mexico history, and ongoing drought conditions have driven insurers to pull back from wildfire prone counties, with Rio Arriba County seeing a one hundred sixty seven percent increase in non renewals in a single year. Fire and smoke damage to personal belongings is covered under a standard renters policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "flood",
+      "title": "Monsoon Flash Flooding",
+      "description": "New Mexico's summer monsoon season brings intense, localized flash flooding to desert and canyon areas, catching many renters off guard in a state known for its arid climate. Flood damage from monsoon runoff is excluded from standard renters insurance and requires a separate policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "warning",
+      "title": "Dust Storms",
+      "description": "Extended drought conditions across New Mexico contribute to dust storms that can damage property and reduce air quality, an often overlooked risk alongside the state's more prominent wildfire exposure."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in New Mexico?",
+      "answer": "No. New Mexico does not require renters insurance by law, though landlords can make it a condition of the lease."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover wildfire damage in New Mexico?",
+      "answer": "Yes. Fire and smoke damage to personal belongings is covered under a standard renters policy, which matters given the 2022 Hermits Peak Calf Canyon Fire became the largest wildfire in state history."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover monsoon flood damage in New Mexico?",
+      "answer": "No. Flash flooding during monsoon season, common in desert and canyon areas despite the state's arid reputation, is excluded from standard renters insurance and requires a separate flood policy."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Why are New Mexico insurers dropping wildfire coverage?",
+      "answer": "Ongoing drought conditions have driven several insurers to pull back from wildfire prone areas, with Rio Arriba County alone seeing a one hundred sixty seven percent increase in non renewals in a single recent year. Renters who lose coverage in the open market may qualify for the state's FAIR Plan."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in New Mexico?",
+      "answer": "New Mexico renters insurance runs close to or slightly below the national average, though costs are rising in wildfire prone areas near Santa Fe and the Jemez Mountains. Use the calculator above for a New Mexico renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "New Mexico renters insurance costs stay close to the national average, though the state's underlying risk picture has shifted noticeably in recent years. The 2022 Hermits Peak Calf Canyon Fire became the largest wildfire in New Mexico history, and prolonged drought conditions since have pushed several insurers to pull back from wildfire prone counties entirely, with Rio Arriba County alone seeing a one hundred sixty seven percent increase in non renewals in a single year. Monsoon season adds a second, less expected risk, bringing intense flash flooding to desert and canyon areas that catches many renters off guard given the state's arid reputation. Dust storms round out the picture as a smaller, drought driven hazard. Renters insurance, which covers personal belongings rather than a building's structure, feels less of the wildfire driven market pressure reshaping New Mexico's homeowners insurance market, keeping the renters insurance base rate more stable even as wildfire risk grows.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our New Mexico renters insurance calculator applies the state's base rate of one hundred eighty dollars a year with no adjustment at these default levels, landing around one hundred fifty eight to two hundred two dollars a year, or roughly thirteen to seventeen dollars a month. Renters near Santa Fe or other wildfire prone northern New Mexico communities should expect real world quotes to run above this statewide baseline given rising wildfire related costs.",
+    "comparisonNote": "Within the West region, New Mexico's rate sits close to Georgia's despite a completely different hazard mix, wildfire and monsoon flooding here versus hurricane and tornado risk there. Compared to the national average, New Mexico renters insurance runs close to typical levels, though wildfire driven insurer pullback is pushing costs upward in specific northern communities faster than the statewide average reflects."
   }
 }
