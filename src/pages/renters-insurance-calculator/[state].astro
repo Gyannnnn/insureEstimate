@@ -424,7 +424,7 @@ const statePct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost / maxR
             </div>
             {validFaqs.length > 0 ? (
               <>
-                <script type="application/ld+json" set:html={JSON.stringify({
+                <script type="application/ld+json" is:inline set:html={JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "FAQPage",
                   "mainEntity": validFaqs.map(faq => ({

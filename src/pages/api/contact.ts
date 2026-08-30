@@ -31,7 +31,6 @@ export const POST: APIRoute = async ({ request }) => {
     );
   }
 
-  const resend = new Resend(resendApiKey);
   try {
     // Strictly load environment variables from process.env or import.meta.env
     const resendApiKey = process.env.RESEND_API_KEY || import.meta.env.RESEND_API_KEY;

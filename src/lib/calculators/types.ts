@@ -1,15 +1,22 @@
+export type PropertyValue = 10000 | 20000 | 30000 | 50000;
+export type LiabilityCoverage = 100000 | 300000 | 500000;
+export type Deductible = 500 | 1000 | 2500;
+
+export type RevenueTier = "0-50k" | "50-150k" | "150-500k" | "500k+";
+export type CoverageType = "GL" | "GL+EO";
+
 export interface RentersInput {
   stateBaseRate: number;
-  propertyValue: 10000 | 20000 | 30000 | 50000;
-  liabilityCoverage: 100000 | 300000 | 500000;
-  deductible: 500 | 1000 | 2500;
+  propertyValue: PropertyValue;
+  liabilityCoverage: LiabilityCoverage;
+  deductible: Deductible;
 }
 
 export interface BusinessInput {
   professionRiskFactor: number;
-  revenueTier: "0-50k" | "50-150k" | "150-500k" | "500k+";
+  revenueTier: RevenueTier;
   employeeCount: number;
-  coverageType: "GL" | "GL+EO";
+  coverageType: CoverageType;
 }
 
 export interface PremiumEstimate {
@@ -20,3 +27,4 @@ export interface PremiumEstimate {
   breakdown: { label: string; value: number }[];
   disclaimer: string;
 }
+
