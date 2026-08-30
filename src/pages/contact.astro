@@ -1,0 +1,483 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import '../styles/global.css';
+
+const breadcrumbItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Contact Us' }
+];
+
+const contactTopics = [
+  { value: '', label: 'Select Inquiry Category...' },
+  { value: 'general', label: 'General Platform Question' },
+  { value: 'feedback', label: 'Calculator Feedback & Suggestion' },
+  { value: 'data_update', label: 'State Rate Data Update' },
+  { value: 'media', label: 'Media & Press Inquiry' },
+  { value: 'privacy', label: 'Data Privacy Request' }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - InsureEstimate Support & Inquiries</title>
+  <meta name="description" content="Get in touch with the InsureEstimate actuarial research team for inquiries, state rate feedback, media requests, or calculator suggestions.">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-background font-body-md text-slate-800 antialiased selection:bg-emerald-100 selection:text-emerald-900">
+  <SiteHeader active="" />
+
+  <main class="w-full pt-20 md:pt-24 min-h-[calc(100vh-300px)]">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6">
+      <Breadcrumbs items={breadcrumbItems} />
+
+      <!-- PAGE HEADER -->
+      <section class="mt-6 mb-10 pb-8 border-b border-slate-200/80">
+        <div class="flex flex-col gap-3 max-w-3xl">
+          <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest">Get In Touch</span>
+          <h1 class="font-['Plus_Jakarta_Sans',sans-serif] text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Contact InsureEstimate Support
+          </h1>
+          <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+            Have questions about our actuarial calculation methodology, state renters rate data, or business insurance risk models? Send us a message and our email engine will deliver it directly to our team.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2-COLUMN CONTENT SECTION -->
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-10 items-start mb-16">
+        
+        <!-- LEFT COLUMN: CONTACT CARDS & METRICS -->
+        <div class="flex flex-col gap-6">
+          
+          <div class="bg-slate-900 text-white p-6 md:p-8 rounded-3xl shadow-xl flex flex-col gap-6 relative overflow-hidden">
+            <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div class="flex flex-col gap-2">
+              <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Fast Support SLA</span>
+              <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-xl font-bold">Direct Channels</h2>
+              <p class="text-xs text-slate-300 leading-relaxed">Our research and data compliance team reviews every submission promptly.</p>
+            </div>
+
+            <div class="flex flex-col gap-4 text-xs">
+              <div class="flex items-start gap-3.5 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
+                <span class="material-symbols-outlined text-emerald-400 text-[20px] shrink-0">mail</span>
+                <div>
+                  <span class="block font-bold text-white">General & Support Inquiries</span>
+                  <a href="mailto:hi.gyanaranjanpatra@gmail.com" class="text-emerald-300 hover:underline">hi.gyanaranjanpatra@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3.5 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
+                <span class="material-symbols-outlined text-emerald-400 text-[20px] shrink-0">security</span>
+                <div>
+                  <span class="block font-bold text-white">Data Privacy & Legal Office</span>
+                  <a href="mailto:privacy@insureestimate.com" class="text-emerald-300 hover:underline">privacy@insureestimate.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3.5 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
+                <span class="material-symbols-outlined text-emerald-400 text-[20px] shrink-0">schedule</span>
+                <div>
+                  <span class="block font-bold text-white">Support Operating Hours</span>
+                  <span class="text-slate-300">Mon - Fri: 8:00 AM - 6:00 PM EST</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ SNIPPET CARD -->
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 space-y-4">
+            <h3 class="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-slate-900 text-base flex items-center gap-2">
+              <span class="material-symbols-outlined text-emerald-700 text-[20px]">help</span>
+              Quick Answers
+            </h3>
+            <div class="space-y-3 text-xs">
+              <div>
+                <p class="font-semibold text-slate-900">Can I request an official insurance quote here?</p>
+                <p class="text-slate-600 mt-0.5">InsureEstimate provides actuarial estimates only. To buy a policy, contact licensed carrier agents directly.</p>
+              </div>
+              <div class="pt-2 border-t border-slate-200/60">
+                <p class="font-semibold text-slate-900">How often are state rates updated?</p>
+                <p class="text-slate-600 mt-0.5">Our state base rates are audited quarterly against state statutory insurance filings.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: INTERACTIVE FORM WITH REAL-TIME VALIDATION & RESEND API -->
+        <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-200/80 shadow-md">
+          <div class="mb-6 flex flex-col gap-1">
+            <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-xl font-bold text-slate-900">Send Us a Message</h2>
+            <p class="text-xs text-slate-500">Fill out the form below. All fields marked with <span class="text-red-500">*</span> are required.</p>
+          </div>
+
+          <!-- SERVER ERROR BANNER (HIDDEN INITIALLY) -->
+          <div id="contact-api-error-banner" class="hidden mb-6 p-4 rounded-xl bg-red-50 border border-red-200 text-red-900 text-xs flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-red-600 text-[20px] shrink-0">error</span>
+            <div class="space-y-0.5">
+              <span class="font-bold block">Transmission Failed</span>
+              <span id="api-error-text">An unexpected error occurred. Please try again.</span>
+            </div>
+          </div>
+
+          <!-- SUCCESS BANNER (HIDDEN INITIALLY) -->
+          <div id="contact-success-banner" class="hidden p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 flex-col gap-3">
+            <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-md">
+              <span class="material-symbols-outlined text-[24px]">mark_email_read</span>
+            </div>
+            <h3 class="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-lg">Message Dispatched Successfully!</h3>
+            <p class="text-xs leading-relaxed text-emerald-900">
+              Thank you for contacting InsureEstimate. Your message has been sent via Resend API to <strong class="font-semibold">hi.gyanaranjanpatra@gmail.com</strong>. A team member will reply to your provided email address shortly.
+            </p>
+            <button 
+              id="reset-form-btn" 
+              type="button" 
+              class="mt-2 text-xs font-bold text-emerald-800 hover:text-emerald-950 underline self-start cursor-pointer"
+            >
+              Send another message →
+            </button>
+          </div>
+
+          <!-- CONTACT FORM -->
+          <form id="contact-form" novalidate class="flex flex-col gap-5">
+            
+            <!-- FULL NAME FIELD -->
+            <div class="flex flex-col gap-1.5 relative">
+              <label for="contact-name" class="text-xs font-bold text-slate-700 uppercase tracking-wider">
+                Full Name <span class="text-red-500">*</span>
+              </label>
+              <div class="relative">
+                <input 
+                  type="text" 
+                  id="contact-name" 
+                  name="name"
+                  placeholder="e.g. Sarah Jenkins" 
+                  class="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-600 transition-all placeholder:text-slate-400"
+                >
+                <span id="name-valid-icon" class="hidden material-symbols-outlined text-emerald-600 text-[18px] absolute right-3 top-1/2 -translate-y-1/2">check_circle</span>
+              </div>
+              <span id="name-error" class="hidden text-[11px] font-medium text-red-600 flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">error</span>
+                <span>Please enter your full name (at least 2 characters).</span>
+              </span>
+            </div>
+
+            <!-- EMAIL ADDRESS FIELD -->
+            <div class="flex flex-col gap-1.5 relative">
+              <label for="contact-email" class="text-xs font-bold text-slate-700 uppercase tracking-wider">
+                Email Address <span class="text-red-500">*</span>
+              </label>
+              <div class="relative">
+                <input 
+                  type="email" 
+                  id="contact-email" 
+                  name="email"
+                  placeholder="e.g. sarah.jenkins@example.com" 
+                  class="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-600 transition-all placeholder:text-slate-400"
+                >
+                <span id="email-valid-icon" class="hidden material-symbols-outlined text-emerald-600 text-[18px] absolute right-3 top-1/2 -translate-y-1/2">check_circle</span>
+              </div>
+              <span id="email-error" class="hidden text-[11px] font-medium text-red-600 flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">error</span>
+                <span>Please enter a valid email address (e.g. user@domain.com).</span>
+              </span>
+            </div>
+
+            <!-- INQUIRY CATEGORY FIELD -->
+            <div class="flex flex-col gap-1.5 relative">
+              <label for="contact-subject" class="text-xs font-bold text-slate-700 uppercase tracking-wider">
+                Inquiry Category <span class="text-red-500">*</span>
+              </label>
+              <div class="relative">
+                <select 
+                  id="contact-subject" 
+                  name="subject"
+                  class="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-600 transition-all bg-white cursor-pointer"
+                >
+                  {contactTopics.map((topic) => (
+                    <option value={topic.value}>{topic.label}</option>
+                  ))}
+                </select>
+              </div>
+              <span id="subject-error" class="hidden text-[11px] font-medium text-red-600 flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">error</span>
+                <span>Please select an inquiry category.</span>
+              </span>
+            </div>
+
+            <!-- MESSAGE FIELD -->
+            <div class="flex flex-col gap-1.5 relative">
+              <label for="contact-message" class="text-xs font-bold text-slate-700 uppercase tracking-wider">
+                Message <span class="text-red-500">*</span>
+              </label>
+              <textarea 
+                id="contact-message" 
+                name="message"
+                rows="4"
+                placeholder="Write your question, calculator feedback, or state data inquiry here..."
+                class="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-600 transition-all placeholder:text-slate-400"
+              ></textarea>
+              <div class="flex items-center justify-between">
+                <span id="message-error" class="hidden text-[11px] font-medium text-red-600 flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[14px]">error</span>
+                  <span>Message must be at least 10 characters long.</span>
+                </span>
+                <span id="char-count" class="text-[10px] text-slate-400 font-data-tabular ml-auto">0 / 1000</span>
+              </div>
+            </div>
+
+            <!-- SUBMIT BUTTON WITH LOADING SPINNER ANIMATION -->
+            <button 
+              id="contact-submit-btn" 
+              type="submit" 
+              class="mt-2 w-full py-3.5 px-6 rounded-xl bg-slate-900 text-white font-['Plus_Jakarta_Sans',sans-serif] font-bold text-sm hover:bg-slate-800 active:scale-[0.99] transition-all shadow-md flex items-center justify-center gap-2.5 group cursor-pointer border border-slate-800 disabled:opacity-70 disabled:cursor-not-allowed"
+            >
+              <span id="btn-spinner" class="hidden w-4 h-4 rounded-full border-2 border-white/30 border-t-emerald-400 animate-spin"></span>
+              <span id="btn-text">Send Message</span>
+              <span id="btn-icon" class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">send</span>
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <PageFooter />
+
+  <!-- CLIENT-SIDE SCRIPT CONNECTED TO RESEND API ENGINE -->
+  <script>
+    const form = document.getElementById('contact-form') as HTMLFormElement | null;
+    const nameInput = document.getElementById('contact-name') as HTMLInputElement | null;
+    const emailInput = document.getElementById('contact-email') as HTMLInputElement | null;
+    const subjectSelect = document.getElementById('contact-subject') as HTMLSelectElement | null;
+    const messageInput = document.getElementById('contact-message') as HTMLTextAreaElement | null;
+
+    const nameError = document.getElementById('name-error');
+    const nameIcon = document.getElementById('name-valid-icon');
+
+    const emailError = document.getElementById('email-error');
+    const emailIcon = document.getElementById('email-valid-icon');
+
+    const subjectError = document.getElementById('subject-error');
+
+    const messageError = document.getElementById('message-error');
+    const charCount = document.getElementById('char-count');
+
+    const submitBtn = document.getElementById('contact-submit-btn') as HTMLButtonElement | null;
+    const btnText = document.getElementById('btn-text');
+    const btnSpinner = document.getElementById('btn-spinner');
+    const btnIcon = document.getElementById('btn-icon');
+
+    const apiErrorBanner = document.getElementById('contact-api-error-banner');
+    const apiErrorText = document.getElementById('api-error-text');
+
+    const successBanner = document.getElementById('contact-success-banner');
+    const resetBtn = document.getElementById('reset-form-btn');
+
+    // Validation Functions
+    function validateName(): boolean {
+      if (!nameInput) return false;
+      const val = nameInput.value.trim();
+      const isValid = val.length >= 2;
+
+      if (isValid) {
+        nameInput.classList.remove('border-red-500', 'bg-red-50/20');
+        nameInput.classList.add('border-emerald-500', 'bg-emerald-50/20');
+        nameError?.classList.add('hidden');
+        nameIcon?.classList.remove('hidden');
+      } else {
+        nameInput.classList.remove('border-emerald-500', 'bg-emerald-50/20');
+        if (val.length > 0) {
+          nameInput.classList.add('border-red-500', 'bg-red-50/20');
+          nameError?.classList.remove('hidden');
+        } else {
+          nameInput.classList.remove('border-red-500', 'bg-red-50/20');
+          nameError?.classList.add('hidden');
+        }
+        nameIcon?.classList.add('hidden');
+      }
+      return isValid;
+    }
+
+    function validateEmail(): boolean {
+      if (!emailInput) return false;
+      const val = emailInput.value.trim();
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const isValid = regex.test(val);
+
+      if (isValid) {
+        emailInput.classList.remove('border-red-500', 'bg-red-50/20');
+        emailInput.classList.add('border-emerald-500', 'bg-emerald-50/20');
+        emailError?.classList.add('hidden');
+        emailIcon?.classList.remove('hidden');
+      } else {
+        emailInput.classList.remove('border-emerald-500', 'bg-emerald-50/20');
+        if (val.length > 0) {
+          emailInput.classList.add('border-red-500', 'bg-red-50/20');
+          emailError?.classList.remove('hidden');
+        } else {
+          emailInput.classList.remove('border-red-500', 'bg-red-50/20');
+          emailError?.classList.add('hidden');
+        }
+        emailIcon?.classList.add('hidden');
+      }
+      return isValid;
+    }
+
+    function validateSubject(): boolean {
+      if (!subjectSelect) return false;
+      const val = subjectSelect.value;
+      const isValid = val !== '';
+
+      if (isValid) {
+        subjectSelect.classList.remove('border-red-500', 'bg-red-50/20');
+        subjectSelect.classList.add('border-emerald-500', 'bg-emerald-50/20');
+        subjectError?.classList.add('hidden');
+      } else {
+        subjectSelect.classList.remove('border-emerald-500', 'bg-emerald-50/20');
+        subjectSelect.classList.add('border-red-500', 'bg-red-50/20');
+        subjectError?.classList.remove('hidden');
+      }
+      return isValid;
+    }
+
+    function validateMessage(): boolean {
+      if (!messageInput) return false;
+      const val = messageInput.value.trim();
+      const isValid = val.length >= 10;
+
+      if (charCount) charCount.textContent = `${val.length} / 1000`;
+
+      if (isValid) {
+        messageInput.classList.remove('border-red-500', 'bg-red-50/20');
+        messageInput.classList.add('border-emerald-500', 'bg-emerald-50/20');
+        messageError?.classList.add('hidden');
+      } else {
+        messageInput.classList.remove('border-emerald-500', 'bg-emerald-50/20');
+        if (val.length > 0) {
+          messageInput.classList.add('border-red-500', 'bg-red-50/20');
+          messageError?.classList.remove('hidden');
+        } else {
+          messageInput.classList.remove('border-red-500', 'bg-red-50/20');
+          messageError?.classList.add('hidden');
+        }
+      }
+      return isValid;
+    }
+
+    // Attach Real-Time Event Listeners
+    nameInput?.addEventListener('input', validateName);
+    nameInput?.addEventListener('blur', validateName);
+
+    emailInput?.addEventListener('input', validateEmail);
+    emailInput?.addEventListener('blur', validateEmail);
+
+    subjectSelect?.addEventListener('change', validateSubject);
+
+    messageInput?.addEventListener('input', validateMessage);
+    messageInput?.addEventListener('blur', validateMessage);
+
+    // Form Submit Handler with Resend Integration
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      apiErrorBanner?.classList.add('hidden');
+
+      const isNameValid = validateName();
+      const isEmailValid = validateEmail();
+      const isSubjectValid = validateSubject();
+      const isMessageValid = validateMessage();
+
+      if (!isNameValid && nameInput) {
+        nameInput.classList.add('border-red-500', 'bg-red-50/20');
+        nameError?.classList.remove('hidden');
+      }
+      if (!isEmailValid && emailInput) {
+        emailInput.classList.add('border-red-500', 'bg-red-50/20');
+        emailError?.classList.remove('hidden');
+      }
+      if (!isSubjectValid && subjectSelect) {
+        subjectSelect.classList.add('border-red-500', 'bg-red-50/20');
+        subjectError?.classList.remove('hidden');
+      }
+      if (!isMessageValid && messageInput) {
+        messageInput.classList.add('border-red-500', 'bg-red-50/20');
+        messageError?.classList.remove('hidden');
+      }
+
+      if (!isNameValid || !isEmailValid || !isSubjectValid || !isMessageValid) {
+        return;
+      }
+
+      // Enter Loading State
+      if (submitBtn) submitBtn.disabled = true;
+      if (btnText) btnText.textContent = 'Sending Email...';
+      btnSpinner?.classList.remove('hidden');
+      btnIcon?.classList.add('hidden');
+
+      const payload = {
+        name: nameInput?.value.trim(),
+        email: emailInput?.value.trim(),
+        subject: subjectSelect?.value,
+        message: messageInput?.value.trim()
+      };
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+          form.classList.add('hidden');
+          successBanner?.classList.remove('hidden');
+          successBanner?.classList.add('flex');
+        } else {
+          throw new Error(data.error || 'Server reported failure during dispatch.');
+        }
+      } catch (err: any) {
+        console.error('Submission error:', err);
+        if (apiErrorBanner && apiErrorText) {
+          apiErrorText.textContent = err.message || 'Network error occurred while connecting to Resend engine.';
+          apiErrorBanner.classList.remove('hidden');
+        }
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+        if (btnText) btnText.textContent = 'Send Message';
+        btnSpinner?.classList.add('hidden');
+        btnIcon?.classList.remove('hidden');
+      }
+    });
+
+    // Reset Form Listener
+    resetBtn?.addEventListener('click', () => {
+      form?.reset();
+      form?.classList.remove('hidden');
+      successBanner?.classList.add('hidden');
+      successBanner?.classList.remove('flex');
+      apiErrorBanner?.classList.add('hidden');
+
+      [nameInput, emailInput, subjectSelect, messageInput].forEach(el => {
+        el?.classList.remove('border-emerald-500', 'bg-emerald-50/20', 'border-red-500', 'bg-red-50/20');
+      });
+
+      nameIcon?.classList.add('hidden');
+      emailIcon?.classList.add('hidden');
+      if (charCount) charCount.textContent = '0 / 1000';
+    });
+  </script>
+</body>
+</html>
