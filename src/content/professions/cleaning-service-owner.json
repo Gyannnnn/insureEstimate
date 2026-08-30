@@ -13,5 +13,54 @@
   "notes": "",
   "intro": "",
   "seoTitle": "Business Insurance Cost for Cleaning Service Owners | PolicyLens",
-  "seoDescription": "Calculate estimated business insurance costs for cleaning service owner businesses including general liability and professional E&O coverage."
+  "seoDescription": "Calculate estimated business insurance costs for cleaning service owner businesses including general liability and professional E&O coverage.",
+  "industryContext": {
+    "typicalRevenueTier": "0-50k",
+    "typicalEmployeeCount": "1-5",
+    "contextNote": ""
+  },
+  "riskFactors": [
+    {
+      "icon": "shield",
+      "title": "",
+      "description": ""
+    },
+    {
+      "icon": "shield",
+      "title": "",
+      "description": ""
+    },
+    {
+      "icon": "shield",
+      "title": "",
+      "description": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "",
+      "answer": ""
+    }
+  ],
+  "blogContent": {
+    "whyThisRiskFactor": "",
+    "howCalculated": "",
+    "comparisonNote": ""
+  }
 }

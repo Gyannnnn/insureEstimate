@@ -4,17 +4,101 @@ import SiteHeader from '../../components/SiteHeader.astro';
 import PageFooter from '../../components/PageFooter.astro';
 import EntityHero from '../../components/EntityHero.astro';
 import CalculatorCard from '../../components/CalculatorCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import {
+  getBusinessStandardPremium,
+  calculateNationalBusinessAverage
+} from '../../lib/calculators/standardProfile';
 import { siteCopy } from '../../lib/site';
 import '../../styles/global.css';
 
 export async function getStaticPaths() {
   return (await getCollection('professions')).map(({ data }) => ({ params: { profession: data.slug } }));
 }
+
 const profession = await getEntry('professions', Astro.params.profession!);
 if (!profession) return Astro.redirect('/');
 const { data } = profession;
 const title = data.seoTitle || `Business Insurance Cost for ${data.name}`;
 const description = data.seoDescription || `Explore baseline liability, E&O, and commercial property cost estimates for a ${data.name.toLowerCase()}.`;
+
+const allProfessions = await getCollection('professions');
+const nationalAvgAnnual = calculateNationalBusinessAverage(allProfessions.map(p => p.data.riskFactor));
+
+const standardEst = getBusinessStandardPremium(data.riskFactor);
+const derivedAnnualCost = standardEst.annual;
+const derivedMonthlyCost = standardEst.monthly;
+
+const industryContext = data.industryContext || {
+  typicalRevenueTier: "0-50k",
+  typicalEmployeeCount: data.typicalEmployeeRange || "1",
+  contextNote: ""
+};
+
+const validRiskFactors = (data.riskFactors || []).filter(
+  rf => (rf.title && rf.title.trim() !== '') || (rf.description && rf.description.trim() !== '')
+);
+
+const validFaqs = (data.faqs || []).filter(
+  f => f.question && f.question.trim() !== '' && f.answer && f.answer.trim() !== ''
+);
+
+const blogContent = data.blogContent || { whyThisRiskFactor: "", howCalculated: "", comparisonNote: "" };
+const hasBlogContent = Boolean(
+  blogContent.whyThisRiskFactor?.trim() ||
+  blogContent.howCalculated?.trim() ||
+  blogContent.comparisonNote?.trim()
+);
+
+const isDev = import.meta.env.DEV;
+
+const ICON_MAP: Record<string, string> = {
+  // Weather & Perils
+  wind: 'air',
+  waves: 'waves',
+  droplet: 'water_drop',
+  drop: 'water_drop',
+  water: 'water_drop',
+  rain: 'water_drop',
+  storm: 'thunderstorm',
+  hurricane: 'cyclone',
+  tornado: 'tornado',
+  fire: 'local_fire_department',
+  flood: 'flood',
+  hail: 'ac_unit',
+  snow: 'ac_unit',
+  snowflake: 'ac_unit',
+  cold: 'ac_unit',
+  earthquake: 'landslide',
+  seismic: 'landslide',
+  activity: 'landslide',
+
+  // Logistics & Business
+  package: 'package_2',
+  box: 'package_2',
+  shipping: 'local_shipping',
+  truck: 'local_shipping',
+  gavel: 'gavel',
+  security: 'security',
+  description: 'description',
+  volcano: 'volcano',
+  water_damage: 'water_damage',
+  shield: 'shield',
+  briefcase: 'work',
+  tool: 'construction',
+  building: 'domain',
+  person: 'person',
+  medical: 'medical_services'
+};
+
+function getIconName(iconName?: string): string {
+  if (!iconName || !iconName.trim()) return 'shield';
+  const key = iconName.toLowerCase().trim();
+  return ICON_MAP[key] || key;
+}
+
+const maxRate = Math.max(derivedAnnualCost, nationalAvgAnnual) * 1.2;
+const professionPct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost / maxRate) * 100)));
 ---
 
 <!DOCTYPE html>
@@ -31,14 +115,22 @@ const description = data.seoDescription || `Explore baseline liability, E&O, and
   <SiteHeader active="Business Insurance" />
 
   <main class="w-full pt-20 md:pt-24 min-h-[calc(100vh-300px)]">
+    <!-- Breadcrumbs Navigation -->
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-4">
+      <Breadcrumbs items={[
+        { label: 'Business Insurance', href: '/business-insurance-calculator/' },
+        { label: data.name }
+      ]} />
+    </div>
+
     <!-- Shared Entity Hero -->
     <EntityHero
       title={`Business Insurance Cost for ${data.name}`}
       subtitle={`Model General Liability and Professional E&O coverage requirements tailored to ${data.name.toLowerCase()} operations.`}
       category={data.category || 'Professional Services'}
       badgeText="2026 Actuarial Model"
-      statValue="$450 – $850"
-      statLabel="Estimated Annual Premium"
+      statValue={`$${derivedAnnualCost} /yr`}
+      statLabel="Derived Baseline Premium"
     />
 
     <!-- Shared Calculator Card (Connected to Real Engine) -->
@@ -52,40 +144,228 @@ const description = data.seoDescription || `Explore baseline liability, E&O, and
       />
     </section>
 
-    <!-- Recommended Coverage Badges & Risk Factors -->
+    <!-- Market Data & Industry Context Section -->
     <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md z-10 relative">
-      <div class="bg-surface-container-low rounded-2xl p-6 md:p-8 border border-outline-variant/30">
-        <div class="flex flex-col gap- stack-sm mb-6">
-          <span class="font-label-sm text-xs text-secondary uppercase tracking-widest font-semibold">Recommended Coverage</span>
-          <h2 class="font-headline-md text-headline-md text-primary">Key Risk Factors for {data.name}</h2>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {data.recommendedCoverage && data.recommendedCoverage.map((item: string, index: number) => (
-            <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/30 flex flex-col gap-2">
-              <div class="w-7 h-7 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs font-bold font-data-tabular">
-                0{index + 1}
-              </div>
-              <h3 class="font-body-md font-semibold text-primary">{item}</h3>
-              <p class="text-xs text-on-surface-variant leading-relaxed">
-                Standard baseline requirement for active {data.name.toLowerCase()} contracts and client agreements.
-              </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+        <!-- Market Data Headline Card -->
+        <div class="bg-surface-container-lowest rounded-2xl p-6 md:p-8 border border-outline-variant/30 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+          <div>
+            <span class="font-label-sm text-xs text-secondary uppercase tracking-widest font-semibold block mb-2">Market Data</span>
+            <h2 class="font-headline-md text-headline-md text-primary mb-4">Average Annual Cost</h2>
+            <div class="flex items-baseline gap-2 mb-4">
+              <span class="font-display-lg text-[40px] text-primary leading-none">${derivedAnnualCost}</span>
+              <span class="font-data-tabular text-data-tabular text-on-surface-variant">/year (${derivedMonthlyCost}/mo)</span>
             </div>
-          ))}
-          <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/30 flex flex-col gap-2">
-            <div class="w-7 h-7 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs font-bold font-data-tabular">
-              03
-            </div>
-            <h3 class="font-body-md font-semibold text-primary">Policy Customization</h3>
-            <p class="text-xs text-on-surface-variant leading-relaxed">
-              Compare carrier-specific endorsement options and deductible tiers.
+            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+              Derived average premium for a standard solo {data.name.toLowerCase()} policy ($0-50k revenue tier, General Liability coverage).
             </p>
           </div>
+          <div class="mt-6 pt-4 border-t border-outline-variant/20">
+            <div class="flex justify-between font-data-tabular text-xs text-on-surface-variant mb-2">
+              <span>{data.name} Benchmark (${derivedAnnualCost})</span>
+              <span>National Industry Avg (${nationalAvgAnnual})</span>
+            </div>
+            <div class="w-full h-2.5 bg-surface-container-high rounded-full overflow-hidden flex">
+              <div class="bg-primary rounded-full transition-all duration-500" style={`width: ${professionPct}%`}></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Industry Context Card -->
+        <div class="bg-surface-container-lowest rounded-2xl p-6 md:p-8 border border-outline-variant/30 flex flex-col justify-between shadow-sm">
+          <div>
+            <span class="font-label-sm text-xs text-secondary uppercase tracking-widest font-semibold block mb-2">Operational Context</span>
+            <h2 class="font-headline-md text-headline-md text-primary mb-4">Industry Profile</h2>
+            <ul class="flex flex-col gap-3 font-data-tabular text-sm mb-4">
+              <li class="flex justify-between border-b border-outline-variant/20 pb-2">
+                <span class="text-on-surface-variant">Typical Revenue Tier</span>
+                <span class="text-primary font-medium">{industryContext.typicalRevenueTier}</span>
+              </li>
+              <li class="flex justify-between border-b border-outline-variant/20 pb-2">
+                <span class="text-on-surface-variant">Typical Team Size</span>
+                <span class="text-primary font-medium">{industryContext.typicalEmployeeCount}</span>
+              </li>
+              <li class="flex justify-between pb-2">
+                <span class="text-on-surface-variant">Actuarial Risk Rating</span>
+                <span class="text-primary font-medium">{data.riskFactor} multiplier</span>
+              </li>
+            </ul>
+          </div>
+          {industryContext.contextNote?.trim() ? (
+            <p class="font-body-md text-xs text-on-surface-variant leading-relaxed pt-3 border-t border-outline-variant/20">
+              {industryContext.contextNote}
+            </p>
+          ) : isDev ? (
+            <p class="font-body-md text-xs text-on-surface-variant/60 italic pt-3 border-t border-outline-variant/20">
+              [Dev Mode] Industry context note coming soon.
+            </p>
+          ) : (
+            <p class="font-body-md text-xs text-on-surface-variant leading-relaxed pt-3 border-t border-outline-variant/20">
+              Baseline profiles reflect common operational structures for small-to-midsize {data.name.toLowerCase()} businesses.
+            </p>
+          )}
         </div>
       </div>
     </section>
 
-    <!-- Methodology Block -->
+    <!-- Risk Factors Section -->
+    {(validRiskFactors.length > 0 || isDev) && (
+      <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md z-10 relative">
+        <div class="bg-surface-container-low rounded-2xl p-6 md:p-8 border border-outline-variant/30">
+          <div class="flex flex-col gap-stack-sm mb-6">
+            <span class="font-label-sm text-xs text-secondary uppercase tracking-widest font-semibold">Exposure Analysis</span>
+            <h2 class="font-headline-md text-headline-md text-primary">Key Risk Factors for {data.name}</h2>
+          </div>
+
+          {validRiskFactors.length > 0 ? (
+            <div class={`grid gap-4 ${
+              validRiskFactors.length === 2 ? 'grid-cols-1 sm:grid-cols-2' :
+              validRiskFactors.length === 4 ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4' :
+              'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+            }`}>
+              {validRiskFactors.map(rf => (
+                <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/30 flex flex-col gap-2.5 shadow-sm hover:shadow-md hover:border-primary/40 transition-all">
+                  <div class="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[22px] not-italic normal-case select-none">{getIconName(rf.icon)}</span>
+                  </div>
+                  {rf.title && <h3 class="font-body-md font-bold text-primary text-base">{rf.title}</h3>}
+                  {rf.description && <p class="text-xs text-on-surface-variant leading-relaxed">{rf.description}</p>}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div class="p-6 bg-surface-container-lowest rounded-xl border border-dashed border-outline-variant/60 text-xs text-on-surface-variant/70 italic">
+              [Dev Mode] Specific risk factors for {data.name} will appear here once written.
+            </div>
+          )}
+        </div>
+      </section>
+    )}
+
+    <!-- Recommended Coverage Fallback / Complement -->
+    {data.recommendedCoverage && data.recommendedCoverage.length > 0 && validRiskFactors.length === 0 && !isDev && (
+      <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md z-10 relative">
+        <div class="bg-surface-container-low rounded-2xl p-6 md:p-8 border border-outline-variant/30">
+          <div class="flex flex-col gap-stack-sm mb-6">
+            <span class="font-label-sm text-xs text-secondary uppercase tracking-widest font-semibold">Recommended Policies</span>
+            <h2 class="font-headline-md text-headline-md text-primary">Standard Coverage for {data.name}</h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {data.recommendedCoverage.map((item: string, index: number) => (
+              <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/30 flex flex-col gap-2">
+                <div class="w-7 h-7 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs font-bold font-data-tabular">
+                  0{index + 1}
+                </div>
+                <h3 class="font-body-md font-semibold text-primary">{item}</h3>
+                <p class="text-xs text-on-surface-variant leading-relaxed">
+                  Standard baseline coverage for active {data.name.toLowerCase()} commercial contracts.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Blog Section -->
+    {(hasBlogContent || isDev) && (
+      <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md z-10 relative w-full">
+        <div class="flex flex-col gap-stack-sm mb-6">
+          <span class="font-label-sm text-xs text-secondary uppercase tracking-widest font-semibold">Industry Insights</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary">Understanding {data.name} Insurance Rates</h2>
+        </div>
+        {hasBlogContent ? (
+          <div class="w-full bg-surface-container-lowest p-6 md:p-8 rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col gap-6">
+            {blogContent.whyThisRiskFactor?.trim() && (
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center gap-2">
+                  <div class="w-2 h-2 rounded-full bg-secondary"></div>
+                  <h3 class="font-headline-sm text-lg text-primary font-bold">Why {data.name} Has a Risk Multiplier of {data.riskFactor}</h3>
+                </div>
+                <p class="font-body-md text-on-surface-variant leading-relaxed pl-4">{blogContent.whyThisRiskFactor}</p>
+              </div>
+            )}
+            {blogContent.howCalculated?.trim() && (
+              <div class="flex flex-col gap-2 pt-5 border-t border-outline-variant/20">
+                <div class="flex items-center gap-2">
+                  <div class="w-2 h-2 rounded-full bg-primary"></div>
+                  <h3 class="font-headline-sm text-lg text-primary font-bold">How Premium Projections Are Modeled</h3>
+                </div>
+                <p class="font-body-md text-on-surface-variant leading-relaxed pl-4">{blogContent.howCalculated}</p>
+              </div>
+            )}
+            {blogContent.comparisonNote?.trim() && (
+              <div class="flex flex-col gap-2 pt-5 border-t border-outline-variant/20">
+                <div class="flex items-center gap-2">
+                  <div class="w-2 h-2 rounded-full bg-outline"></div>
+                  <h3 class="font-headline-sm text-lg text-primary font-bold">Industry & Peer Comparison</h3>
+                </div>
+                <p class="font-body-md text-on-surface-variant leading-relaxed pl-4">{blogContent.comparisonNote}</p>
+              </div>
+            )}
+          </div>
+        ) : (
+          <div class="bg-surface-container-low p-6 rounded-2xl border border-dashed border-outline-variant/60 text-xs text-on-surface-variant/70 italic">
+            [Dev Mode] Editorial insights for {data.name} will appear here once written.
+          </div>
+        )}
+      </section>
+    )}
+
+    <!-- FAQ Section -->
+    {(validFaqs.length > 0 || isDev) && (
+      <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md z-10 relative w-full">
+        <div class="text-center mb-stack-md max-w-2xl mx-auto">
+          <h2 class="font-headline-lg text-headline-lg text-primary mb-2">Frequently Asked Questions</h2>
+          <p class="font-body-md text-on-surface-variant">Common insurance questions for {data.name} businesses.</p>
+        </div>
+        {validFaqs.length > 0 ? (
+          <>
+            <script type="application/ld+json" set:html={JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": validFaqs.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              }))
+            })} />
+            <div class="flex flex-col gap-3.5 max-w-4xl mx-auto">
+              {validFaqs.map(faq => (
+                <details class="group bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm overflow-hidden transition-all duration-200 hover:border-primary/40 hover:shadow-md">
+                  <summary class="p-5 flex justify-between items-center font-headline-sm font-bold text-primary hover:text-secondary cursor-pointer list-none select-none gap-4 text-base">
+                    <div class="flex items-center gap-3">
+                      <div class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                        <span class="material-symbols-outlined text-[18px]">help_outline</span>
+                      </div>
+                      <span>{faq.question}</span>
+                    </div>
+                    <div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300 text-on-surface-variant">
+                      <span class="material-symbols-outlined text-[18px]">expand_more</span>
+                    </div>
+                  </summary>
+                  <div class="px-5 pb-5 pt-0">
+                    <div class="pt-3 border-t border-outline-variant/15 text-sm text-on-surface-variant leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </>
+        ) : (
+          <div class="bg-surface-container-low p-6 rounded-2xl border border-dashed border-outline-variant/60 text-xs text-on-surface-variant/70 text-center italic max-w-4xl mx-auto">
+            [Dev Mode] FAQ content for {data.name} will appear here once written.
+          </div>
+        )}
+      </section>
+    )}
+
+    <!-- Shared Methodology Block -->
     <section id="methodology" class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg z-10 relative border-t border-outline-variant/20 mt-stack-md">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
         <div class="flex flex-col gap-stack-sm">

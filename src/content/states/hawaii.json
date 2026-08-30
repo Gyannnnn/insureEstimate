@@ -10,5 +10,55 @@
   "requirementsNote": "Hawaii state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
   "intro": "",
   "seoTitle": "Hawaii Renters Insurance Cost Calculator",
-  "seoDescription": "Estimate renters insurance costs in Hawaii based on personal property, liability limits, and deductible options."
+  "seoDescription": "Estimate renters insurance costs in Hawaii based on personal property, liability limits, and deductible options.",
+  "demographics": {
+    "typicalPersonalProperty": 30000,
+    "typicalLiability": 100000,
+    "typicalDeductible": 500,
+    "demographicNote": "Most Hawaii renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that accounts for the state's elevated cost of living and higher replacement costs due to shipping goods across the Pacific."
+  },
+  "riskFactors": [
+    {
+      "icon": "storm",
+      "title": "Hurricane and Tropical Storm Wind",
+      "description": "Hawaii sits in the Central Pacific hurricane belt and faces seasonal tropical storm activity. Unlike a Hawaii homeowners policy, where hurricane wind is often a separate purchase, a standard renters policy typically includes wind damage to personal belongings as a named peril."
+    },
+    {
+      "icon": "activity",
+      "title": "Volcanic Activity",
+      "description": "Kilauea, one of the most active volcanoes on Earth, has destroyed hundreds of homes on the Big Island in past eruptions. Volcanic eruption is generally a named peril under a standard renters policy, covering personal property damaged by ash, lava, or volcanic debris."
+    },
+    {
+      "icon": "flood",
+      "title": "Tsunami and Flood Exclusion",
+      "description": "Coastal Hawaiian communities face both tsunami and flood risk from heavy rain or storm surge. Unlike hurricane wind and volcanic damage, tsunami and flood damage are excluded from standard renters insurance and require a separate policy through the National Flood Insurance Program."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is renters insurance required in Hawaii?",
+      "answer": "No. Hawaii state law does not require tenants to carry renters insurance, though property managers frequently require proof of coverage in a lease agreement."
+    },
+    {
+      "question": "Does renters insurance cover hurricane damage in Hawaii?",
+      "answer": "Yes. Unlike homeowners insurance, where hurricane wind coverage is often purchased separately, a standard renters policy typically includes wind damage to personal belongings as a named peril."
+    },
+    {
+      "question": "Does renters insurance cover volcanic damage in Hawaii?",
+      "answer": "Yes. Volcanic eruption is generally a named peril under a standard renters policy, covering personal property damaged by ash, lava, or volcanic debris, which matters most for renters on the Big Island near Kilauea."
+    },
+    {
+      "question": "Does renters insurance cover tsunami damage?",
+      "answer": "No. Tsunami and flood damage are excluded from standard renters insurance, regardless of cause. Renters in coastal areas can purchase separate flood coverage through the National Flood Insurance Program."
+    },
+    {
+      "question": "How much does renters insurance cost in Hawaii?",
+      "answer": "Costs stay relatively affordable overall, since Hawaii's isolation from mainland weather systems that generate tornadoes and hailstorms helps keep claims volume lower than in many other states. Use the calculator above for an estimate based on your specific coverage choices."
+    }
+  ],
+  "blogContent": {
+    "whyThisRate": "Hawaii's renters insurance rate looks relatively affordable given how unusual the state's overall risk profile is. Homeowners insurance in Hawaii often requires separate purchases for hurricane wind and volcanic eruption coverage, but a standard renters policy typically includes both as named perils covering personal belongings, which simplifies the picture considerably for tenants. The state's isolation from mainland weather systems also means Hawaii never faces the tornado or hailstorm activity that drives up rates across much of the continental United States. What standard renters insurance does not cover, tsunami and flood damage, remains a real risk for coastal communities and requires a separate policy, similar to the exclusion in every other state.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, the calculator applies Hawaii's base rate of one hundred seventy five dollars a year with no adjustment at these default levels, landing around one hundred fifty four to one hundred ninety six dollars a year, or roughly thirteen to sixteen dollars a month. Renters on the Big Island near active volcanic zones or in coastal tsunami areas should still budget for the separate flood policy that standard coverage does not include.",
+    "comparisonNote": "Within the West region, Hawaii's rate sits close to California's despite a completely different hazard mix, hurricane and volcanic risk bundled into standard coverage in Hawaii versus wildfire and earthquake exclusions in California. Compared to the national average, Hawaii renters insurance remains competitive, since the state's most catastrophic risks, tsunami and flood, fall outside what a standard policy covers, much like the pattern seen in other high risk states."
+  }
 }

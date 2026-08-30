@@ -10,5 +10,55 @@
   "requirementsNote": "Illinois state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
   "intro": "",
   "seoTitle": "Illinois Renters Insurance Cost Calculator",
-  "seoDescription": "Estimate renters insurance costs in Illinois based on personal property, liability limits, and deductible options."
+  "seoDescription": "Estimate renters insurance costs in Illinois based on personal property, liability limits, and deductible options.",
+  "demographics": {
+    "typicalPersonalProperty": 30000,
+    "typicalLiability": 100000,
+    "typicalDeductible": 500,
+    "demographicNote": "Most Illinois renters choose thirty thousand to forty thousand dollars in personal property coverage with a five hundred dollar deductible, a range that fits the state's mix of severe storm risk and higher urban replacement costs in Chicago."
+  },
+  "riskFactors": [
+    {
+      "icon": "storm",
+      "title": "Tornado and Hail Alley",
+      "description": "Illinois sits within Tornado Alley and recorded a state record one hundred forty two tornadoes in 2024 alone, along with over two hundred severe hail reports. Wind and hail damage to personal belongings is a named peril covered under a standard renters policy."
+    },
+    {
+      "icon": "water_damage",
+      "title": "Urban Sewer Backup",
+      "description": "Chicago's aging sewer infrastructure causes frequent basement flooding during heavy rain, with one state study finding ninety percent of flood damage claims came from properties outside mapped flood zones, mostly from sewer systems backing up. This type of damage requires a separate water backup endorsement, since standard policies do not cover it."
+    },
+    {
+      "icon": "activity",
+      "title": "New Madrid Fault Earthquake Risk",
+      "description": "Southern Illinois sits along the New Madrid fault line, giving the region real earthquake exposure that is easy to overlook given the state's better known tornado risk. Standard renters insurance excludes earthquake damage, so renters near the fault may want a separate endorsement."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is renters insurance required in Illinois?",
+      "answer": "No. Illinois does not mandate renters insurance statewide, though landlords may require it in the lease agreement, and Chicago's Residential Landlord and Tenant Ordinance adds further tenant protections."
+    },
+    {
+      "question": "Does renters insurance cover tornado damage in Illinois?",
+      "answer": "Yes. Wind damage to personal belongings from tornadoes, hail, and severe thunderstorms is a named peril under a standard renters policy, which matters given Illinois recorded a record number of tornadoes in 2024."
+    },
+    {
+      "question": "Does renters insurance cover basement flooding in Chicago?",
+      "answer": "Not by default. Basement flooding from a backed up sewer during heavy rain requires a separate water backup endorsement, since standard renters insurance excludes this type of water damage even though it is one of the most common claims in the city."
+    },
+    {
+      "question": "Does renters insurance cover earthquake damage in Illinois?",
+      "answer": "No. Standard renters insurance excludes earthquake damage, worth noting for renters in southern Illinois near the New Madrid fault line, an often overlooked risk given the state's more prominent tornado exposure."
+    },
+    {
+      "question": "How much does renters insurance cost in Illinois?",
+      "answer": "Costs run close to the national average overall, with Chicago typically pricing higher than smaller cities like Springfield or Aurora due to theft risk and higher property values. Use the calculator above for an estimate based on your specific coverage choices."
+    }
+  ],
+  "blogContent": {
+    "whyThisRate": "Illinois's renters insurance rate sits close to the national average, shaped by a genuinely layered risk profile rather than one dominant hazard. The state's well known tornado risk, including a record one hundred forty two tornadoes in 2024, drives wind and hail related claims statewide. In Chicago specifically, aging sewer infrastructure creates a distinct urban risk, basement flooding from backed up sewers during heavy rain, that requires its own separate endorsement since it falls outside standard water damage coverage. A third and often overlooked risk sits in southern Illinois, where the state borders the New Madrid fault line, adding real earthquake exposure that most renters associate with states farther south rather than Illinois itself.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, the calculator applies Illinois's base rate of one hundred seventy dollars a year with no adjustment at these default levels, landing around one hundred fifty to one hundred ninety dollars a year, or roughly twelve to sixteen dollars a month. Chicago renters concerned about basement flooding should budget separately for a water backup endorsement, since that risk sits outside what this standard calculation covers.",
+    "comparisonNote": "Within the Midwest region, Illinois's rate reflects a similar tornado and hail risk to states further south like Arkansas, though Illinois's added urban sewer backup risk in Chicago and its southern earthquake exposure near the New Madrid fault give it a distinct profile rather than a simple copy of a southern tornado state. Compared to the national average, Illinois renters insurance runs close to typical levels, with Chicago pricing consistently higher than the rest of the state due to urban crime and infrastructure risk."
+  }
 }

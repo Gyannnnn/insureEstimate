@@ -2,6 +2,7 @@
 import SiteHeader from "../../components/SiteHeader.astro";
 import PageFooter from "../../components/PageFooter.astro";
 import CalculatorCard from "../../components/CalculatorCard.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import "../../styles/global.css";
 
 const states = [
@@ -37,6 +38,9 @@ const states = [
       </div>
       
       <section class="max-w-[1280px] mx-auto w-full px-margin-mobile md:px-margin-desktop pt-4 pb-stack-lg relative z-10 flex flex-col gap-stack-lg">
+        <!-- Breadcrumbs Navigation -->
+        <Breadcrumbs items={[{ label: 'Renters Insurance' }]} />
+
         <div class="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-gutter items-center">
           <div class="flex flex-col gap-stack-sm max-w-3xl">
             <div class="flex items-center gap-base">
@@ -91,11 +95,280 @@ const states = [
           {states.map(state => (
             <a 
               href={`/renters-insurance-calculator/${state.toLowerCase().replace(/\s+/g, '-')}/`}
-              class="p-3 rounded border border-outline-variant/30 hover:border-primary hover:bg-surface-container transition-all text-body-md text-on-surface"
+              class="p-3 rounded border border-outline-variant/30 hover:border-primary hover:bg-surface-container transition-all text-body-md text-on-surface flex items-center justify-between group"
             >
-              {state}
+              <span>{state}</span>
+              <span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors">chevron_right</span>
             </a>
           ))}
+        </div>
+      </section>
+      <!-- Editorial Article / SEO Guide on Renters Insurance Calculation -->
+      <article id="guide" class="max-w-[1280px] mx-auto w-full px-margin-mobile md:px-margin-desktop pb-stack-lg relative z-10 scroll-mt-24">
+        <div class="border-t border-outline-variant/30 pt-stack-lg w-full flex flex-col gap-8">
+          
+          <!-- Article Header -->
+          <header class="flex flex-col gap-3 pb-6 border-b border-outline-variant/20">
+            <span class="font-label-sm text-xs text-secondary uppercase tracking-widest font-semibold">Underwriting & Actuarial Guide</span>
+            <h2 class="font-display-lg text-3xl md:text-4xl text-primary font-bold tracking-tight leading-tight">
+              Understanding Renters Insurance Pricing: How Premiums Are Calculated
+            </h2>
+            <p class="font-body-lg text-lg text-on-surface-variant leading-relaxed">
+              Renters insurance is widely recognized as one of the most affordable forms of property protection, yet premium rates can vary significantly depending on where you live and how your policy is configured. To understand why a policy in Florida costs $235 a year while the same coverage in Alaska costs $155, it helps to examine the underlying mathematical formula and underwriting factors that insurance carriers use to calculate rates.
+            </p>
+          </header>
+
+          <!-- Article Section 1: The Core Formula -->
+          <section class="flex flex-col gap-4 text-on-surface leading-relaxed font-body-md text-base">
+            <h3 class="font-headline-md text-2xl text-primary font-bold">The Actuarial Calculation Formula</h3>
+            <p>
+              At its core, insurance pricing relies on probability modeling and statutory rate filings submitted to state insurance departments. When you request a quote or adjust coverage sliders in an estimation engine, your projected annual premium is calculated using a baseline state rate multiplied by specific adjustment factors for your personal belongings, liability limits, and deductible choice:
+            </p>
+
+            <!-- Inline Formula Box -->
+            <div class="my-3 p-5 md:p-6 bg-surface-container-lowest rounded-xl border border-outline-variant/40 shadow-sm font-mono text-sm md:text-base text-primary leading-snug">
+              <span class="text-xs uppercase font-sans tracking-wider text-secondary font-bold block mb-2 font-mono">Standard Renters Insurance Formula:</span>
+              <strong>Annual Premium = Base Rate × Property Factor × Liability Factor × Deductible Factor</strong>
+              <span class="text-xs text-on-surface-variant font-sans block mt-2 font-mono">
+                Projected Range = Annual Premium ± (Annual Premium × 0.12)
+              </span>
+            </div>
+
+            <p>
+              In this formula, the <strong>Base Rate</strong> represents the statewide benchmark premium for a standard policy offering $20,000 in personal property coverage, $100,000 in liability protection, and a $500 deductible. Each individual choice you make then acts as a multiplier against that base rate.
+            </p>
+          </section>
+
+          <!-- Article Section 2: Coverage Parameters & Multipliers -->
+          <section class="flex flex-col gap-4 text-on-surface leading-relaxed font-body-md text-base pt-4 border-t border-outline-variant/20">
+            <h3 class="font-headline-md text-2xl text-primary font-bold">How Coverage Multipliers Affect Your Rate</h3>
+            <p>
+              Understanding how adjustment factors work allows renters to customize their policies intelligently. Personal property coverage is the primary driver of price adjustments because it directly determines the maximum financial payout an insurer might make following a total loss event such as a apartment fire or severe weather disaster.
+            </p>
+            <p>
+              For example, selecting $10,000 in personal property coverage reduces the property factor to <strong>0.60x</strong>, lowering your premium below the state baseline. Keeping the default $20,000 limit sets the factor to <strong>1.00x</strong>. Increasing your personal property limit to $30,000 raises the multiplier to <strong>1.30x</strong>, while a $50,000 policy increases it to <strong>1.80x</strong> to reflect the higher total replacement value of furniture, electronics, and wardrobe.
+            </p>
+            <p>
+              Liability limits, by contrast, carry much smaller incremental costs. Because severe liability claims occur far less frequently than property loss claims, raising your personal liability limit from $100,000 (<strong>1.00x</strong> baseline) to $300,000 adjusts the multiplier to just <strong>1.08x</strong> (an 8% increase). Pushing liability to $500,000 adjusts the factor to <strong>1.15x</strong>. This means renters can often quintuple their legal protection for just a couple dollars more per month.
+            </p>
+            <p>
+              Deductibles work as an inverse multiplier: accepting more out-of-pocket risk when filing a claim rewards you with a lower ongoing premium. A standard $500 deductible serves as the <strong>1.00x</strong> baseline. Raising your deductible to $1,000 reduces the multiplier to <strong>0.90x</strong>, effectively applying a 10% discount to your annual bill. For renters who opt for a $2,500 deductible, the factor drops to <strong>0.78x</strong>, providing a 22% discount.
+            </p>
+          </section>
+
+          <!-- Article Section 3: Geographic & State Loss Drivers -->
+          <section class="flex flex-col gap-4 text-on-surface leading-relaxed font-body-md text-base pt-4 border-t border-outline-variant/20">
+            <h3 class="font-headline-md text-2xl text-primary font-bold">Why State Base Rates Vary Across the Country</h3>
+            <p>
+              While personal coverage settings determine your individual multipliers, the baseline state rate is dictated by regional risk factors that individual renters cannot control. Insurance companies calculate state base rates by evaluating historical loss ratios, local population density, crime rates, and regional climate patterns over multi-year periods.
+            </p>
+            <p>
+              Weather and natural perils represent the largest single cause of state-level rate variations. States located in high-frequency severe weather corridors—such as Alabama, Oklahoma, and Arkansas in "Dixie Alley" and "Tornado Alley"—face regular wind and hail claims that elevate baseline rates. Similarly, coastal states like Florida and Georgia factor hurricane wind exposure into their base rate filings, whereas states in the Pacific Northwest and Mountain West generally benefit from lower baseline rates due to fewer catastrophic severe storms.
+            </p>
+            <p>
+              Housing infrastructure and regional economics also play a vital role. In older northeastern states like Connecticut and Massachusetts, a significant portion of multi-family housing stock was constructed prior to modern plumbing and heating standards, leading to higher rates of winter pipe bursts. Furthermore, areas with higher general living expenses see higher average claim payouts when insurers replace damaged items at current retail prices.
+            </p>
+          </section>
+
+          <!-- Article Section 4: Practical Tips for Renters -->
+          <section class="flex flex-col gap-4 text-on-surface leading-relaxed font-body-md text-base pt-4 border-t border-outline-variant/20">
+            <h3 class="font-headline-md text-2xl text-primary font-bold">Strategies to Optimize Your Monthly Premium</h3>
+            <p>
+              If you are looking to secure the lowest possible rate while maintaining adequate protection, consider taking a systematic approach to policy optimization:
+            </p>
+            <p>
+              First, conduct a realistic personal property inventory rather than guessing your coverage needs. Many renters overestimate the replacement value of older belongings or underinsure expensive electronics. Matching your property limit to your actual inventory prevents paying for excess coverage you do not need.
+            </p>
+            <p>
+              Second, take advantage of multi-policy bundling. Most national insurance carriers offer discounts between 5% and 15% when you purchase your renters policy from the same provider that insures your vehicle.
+            </p>
+            <p>
+              Finally, inquire about safety credits. Installing deadbolt locks, smoke detectors, fire extinguishers, or monitored security systems can qualify your apartment for protective device discounts that reduce your base premium even further.
+            </p>
+          </section>
+
+        </div>
+      </article>
+
+      <!-- FAQ Section (High Search Intent) -->
+      <section id="faqs" class="max-w-[1280px] mx-auto w-full px-margin-mobile md:px-margin-desktop pb-stack-lg relative z-10 scroll-mt-24">
+        <div class="border-t border-outline-variant/30 pt-stack-lg flex flex-col gap-stack-md">
+          <div class="text-center mb-stack-md max-w-2xl mx-auto flex flex-col gap-2">
+            <h2 class="font-headline-lg text-headline-lg text-primary font-bold">Frequently Asked Questions</h2>
+            <p class="font-body-lg text-on-surface-variant">High-intent questions about renters insurance costs, coverage calculation, and policy limits.</p>
+          </div>
+
+          <!-- Schema.org FAQPage Microdata -->
+          <script type="application/ld+json" set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much does renters insurance cost per month on average?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Across the United States, renters insurance costs between $15 and $22 per month on average (or roughly $180 per year). Exact premiums depend on your state's base rate, selected personal property coverage, liability limits, and claim deductible."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How accurate is this renters insurance cost calculator?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our calculator models expected premium ranges using actual state base rates derived from statutory insurance department filings, loss ratios, and actuarial multipliers for property limits, liability, and deductibles, delivering estimates within a ±12% statutory tolerance band."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the standard personal property coverage limit for renters?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most tenants select $20,000 to $30,000 in personal property coverage. This limit should reflect the actual replacement value of your electronics, furniture, clothing, appliances, and personal belongings."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is renters insurance required by law in the US?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No US state legally mandates renters insurance by statute. However, the majority of landlords and property management companies require proof of renters insurance (typically with a $100,000 minimum liability limit) as a condition of your lease agreement."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does a standard renters insurance policy cover?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A standard renters policy covers three main areas: Personal Property (protection against fire, theft, wind, and burst pipes), Personal Liability (legal and medical expenses if a guest is injured in your rental), and Additional Living Expenses (temporary housing costs if your unit becomes uninhabitable due to a covered loss)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I lower my monthly renters insurance estimate?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can lower your premium by raising your deductible from $500 to $1,000 (saves roughly 10%), bundling renters insurance with auto insurance (saves 5% to 15%), or installing safety equipment like smoke detectors, deadbolts, and burglar alarms."
+                }
+              }
+            ]
+          })} />
+
+          <div class="flex flex-col gap-3.5 max-w-4xl mx-auto w-full">
+            <details class="group bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm overflow-hidden transition-all duration-200 hover:border-primary/40 hover:shadow-md">
+              <summary class="p-5 flex justify-between items-center font-headline-sm font-bold text-primary hover:text-secondary cursor-pointer list-none select-none gap-4 text-base">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                    <span class="material-symbols-outlined text-[18px]">help_outline</span>
+                  </div>
+                  <span>How much does renters insurance cost per month on average?</span>
+                </div>
+                <div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300 text-on-surface-variant">
+                  <span class="material-symbols-outlined text-[18px]">expand_more</span>
+                </div>
+              </summary>
+              <div class="px-5 pb-5 pt-0">
+                <div class="pt-3 border-t border-outline-variant/15 text-sm text-on-surface-variant leading-relaxed">
+                  Across the United States, renters insurance costs between $15 and $22 per month on average (or roughly $180 per year). Exact premiums depend on your state's base rate, selected personal property coverage, liability limits, and claim deductible.
+                </div>
+              </div>
+            </details>
+
+            <details class="group bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm overflow-hidden transition-all duration-200 hover:border-primary/40 hover:shadow-md">
+              <summary class="p-5 flex justify-between items-center font-headline-sm font-bold text-primary hover:text-secondary cursor-pointer list-none select-none gap-4 text-base">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                    <span class="material-symbols-outlined text-[18px]">help_outline</span>
+                  </div>
+                  <span>How accurate is this renters insurance cost calculator?</span>
+                </div>
+                <div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300 text-on-surface-variant">
+                  <span class="material-symbols-outlined text-[18px]">expand_more</span>
+                </div>
+              </summary>
+              <div class="px-5 pb-5 pt-0">
+                <div class="pt-3 border-t border-outline-variant/15 text-sm text-on-surface-variant leading-relaxed">
+                  Our calculator models expected premium ranges using actual state base rates derived from statutory insurance department filings, loss ratios, and actuarial multipliers for property limits, liability, and deductibles, delivering estimates within a ±12% statutory tolerance band.
+                </div>
+              </div>
+            </details>
+
+            <details class="group bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm overflow-hidden transition-all duration-200 hover:border-primary/40 hover:shadow-md">
+              <summary class="p-5 flex justify-between items-center font-headline-sm font-bold text-primary hover:text-secondary cursor-pointer list-none select-none gap-4 text-base">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                    <span class="material-symbols-outlined text-[18px]">help_outline</span>
+                  </div>
+                  <span>What is the standard personal property coverage limit for renters?</span>
+                </div>
+                <div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300 text-on-surface-variant">
+                  <span class="material-symbols-outlined text-[18px]">expand_more</span>
+                </div>
+              </summary>
+              <div class="px-5 pb-5 pt-0">
+                <div class="pt-3 border-t border-outline-variant/15 text-sm text-on-surface-variant leading-relaxed">
+                  Most tenants select $20,000 to $30,000 in personal property coverage. This limit should reflect the actual replacement value of your electronics, furniture, clothing, appliances, and personal belongings.
+                </div>
+              </div>
+            </details>
+
+            <details class="group bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm overflow-hidden transition-all duration-200 hover:border-primary/40 hover:shadow-md">
+              <summary class="p-5 flex justify-between items-center font-headline-sm font-bold text-primary hover:text-secondary cursor-pointer list-none select-none gap-4 text-base">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                    <span class="material-symbols-outlined text-[18px]">help_outline</span>
+                  </div>
+                  <span>Is renters insurance required by law in the US?</span>
+                </div>
+                <div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300 text-on-surface-variant">
+                  <span class="material-symbols-outlined text-[18px]">expand_more</span>
+                </div>
+              </summary>
+              <div class="px-5 pb-5 pt-0">
+                <div class="pt-3 border-t border-outline-variant/15 text-sm text-on-surface-variant leading-relaxed">
+                  No US state legally mandates renters insurance by statute. However, the majority of landlords and property management companies require proof of renters insurance (typically with a $100,000 minimum liability limit) as a condition of your lease agreement.
+                </div>
+              </div>
+            </details>
+
+            <details class="group bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm overflow-hidden transition-all duration-200 hover:border-primary/40 hover:shadow-md">
+              <summary class="p-5 flex justify-between items-center font-headline-sm font-bold text-primary hover:text-secondary cursor-pointer list-none select-none gap-4 text-base">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                    <span class="material-symbols-outlined text-[18px]">help_outline</span>
+                  </div>
+                  <span>What does a standard renters insurance policy cover?</span>
+                </div>
+                <div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300 text-on-surface-variant">
+                  <span class="material-symbols-outlined text-[18px]">expand_more</span>
+                </div>
+              </summary>
+              <div class="px-5 pb-5 pt-0">
+                <div class="pt-3 border-t border-outline-variant/15 text-sm text-on-surface-variant leading-relaxed">
+                  A standard renters policy covers three main areas: Personal Property (protection against fire, theft, wind, and burst pipes), Personal Liability (legal and medical expenses if a guest is injured in your rental), and Additional Living Expenses (temporary housing costs if your unit becomes uninhabitable due to a covered loss).
+                </div>
+              </div>
+            </details>
+
+            <details class="group bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm overflow-hidden transition-all duration-200 hover:border-primary/40 hover:shadow-md">
+              <summary class="p-5 flex justify-between items-center font-headline-sm font-bold text-primary hover:text-secondary cursor-pointer list-none select-none gap-4 text-base">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                    <span class="material-symbols-outlined text-[18px]">help_outline</span>
+                  </div>
+                  <span>How can I lower my monthly renters insurance estimate?</span>
+                </div>
+                <div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300 text-on-surface-variant">
+                  <span class="material-symbols-outlined text-[18px]">expand_more</span>
+                </div>
+              </summary>
+              <div class="px-5 pb-5 pt-0">
+                <div class="pt-3 border-t border-outline-variant/15 text-sm text-on-surface-variant leading-relaxed">
+                  You can lower your premium by raising your deductible from $500 to $1,000 (saves roughly 10%), bundling renters insurance with auto insurance (saves 5% to 15%), or installing safety equipment like smoke detectors, deadbolts, and burglar alarms.
+                </div>
+              </div>
+            </details>
+          </div>
         </div>
       </section>
     </div>

@@ -1,0 +1,85 @@
+---
+export interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items?: BreadcrumbItem[];
+  class?: string;
+  showHome?: boolean;
+}
+
+const { items = [], class: className = '', showHome = true } = Astro.props;
+
+// Build full breadcrumb list starting with Home
+const allItems: BreadcrumbItem[] = showHome
+  ? [{ label: 'Home', href: '/' }, ...items]
+  : items;
+
+// Generate Schema.org BreadcrumbList JSON-LD for SEO
+const siteUrl = Astro.site ? Astro.site.origin : 'https://insureestimate.com';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': allItems.map((item, index) => ({
+    '@type': 'ListItem',
+    'position': index + 1,
+    'name': item.label,
+    'item': item.href ? new URL(item.href, siteUrl).href : (Astro.url ? Astro.url.href : siteUrl)
+  }))
+};
+---
+
+<nav aria-label="Breadcrumb" class:list={["w-full mb-4 sm:mb-6 z-20 relative", className]}>
+  <!-- Schema.org JSON-LD for Search Engine Microdata -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <ol class="flex items-center flex-wrap gap-1 sm:gap-1.5 text-xs sm:text-sm text-on-surface-variant font-medium">
+    {allItems.map((item, index) => {
+      const isLast = index === allItems.length - 1;
+      const isHome = index === 0 && showHome;
+
+      return (
+        <li class="inline-flex items-center gap-1 sm:gap-1.5">
+          {index > 0 && (
+            <span class="material-symbols-outlined text-[14px] text-on-surface-variant/40 shrink-0 select-none" aria-hidden="true">
+              chevron_right
+            </span>
+          )}
+
+          {isLast ? (
+            <span 
+              class="inline-flex items-center gap-1 text-primary font-semibold truncate max-w-[200px] sm:max-w-xs md:max-w-none" 
+              aria-current="page"
+            >
+              {isHome && (
+                <span class="material-symbols-outlined text-[16px] text-primary shrink-0">home</span>
+              )}
+              <span class="truncate">{item.label}</span>
+            </span>
+          ) : (
+            <a 
+              href={item.href || '/'} 
+              class="inline-flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors group"
+            >
+              {isHome ? (
+                <>
+                  <span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary transition-colors shrink-0">home</span>
+                  <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full">
+                    {item.label}
+                  </span>
+                </>
+              ) : (
+                <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full">
+                  {item.label}
+                </span>
+              )}
+            </a>
+          )}
+        </li>
+      );
+    })}
+  </ol>
+</nav>

@@ -10,5 +10,55 @@
   "requirementsNote": "Iowa state law does not mandate renters insurance, but property managers frequently require proof of coverage in standard rental agreements.",
   "intro": "",
   "seoTitle": "Iowa Renters Insurance Cost Calculator",
-  "seoDescription": "Estimate renters insurance costs in Iowa based on personal property, liability limits, and deductible options."
+  "seoDescription": "Estimate renters insurance costs in Iowa based on personal property, liability limits, and deductible options.",
+  "demographics": {
+    "typicalPersonalProperty": 30000,
+    "typicalLiability": 100000,
+    "typicalDeductible": 500,
+    "demographicNote": "Most Iowa renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that fits the state's already affordable rates while still accounting for real derecho, tornado, and flood risk."
+  },
+  "riskFactors": [
+    {
+      "icon": "storm",
+      "title": "Derecho Wind Events",
+      "description": "The August 2020 derecho tore through Cedar Rapids and much of Iowa with sustained winds near one hundred forty miles per hour, becoming the costliest thunderstorm in United States history at roughly eleven point five billion dollars in damage. Iowa saw another significant derecho in 2025, and wind damage from these storms is a named peril covered under a standard renters policy."
+    },
+    {
+      "icon": "wind",
+      "title": "Tornado Alley Position",
+      "description": "Iowa sits in the heart of Tornado Alley and averages more than fifty tornadoes a year, with peak activity from April through June. A tornado that tears the roof off an apartment building can destroy everything inside, and standard renters insurance covers that damage to personal belongings."
+    },
+    {
+      "icon": "flood",
+      "title": "River Flooding",
+      "description": "Iowa's rivers, including the Mississippi and Des Moines rivers, have caused significant flooding in the past, most notably the catastrophic 2008 floods that damaged communities statewide. Flood damage is excluded from standard renters insurance and requires a separate policy through the National Flood Insurance Program."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is renters insurance required in Iowa?",
+      "answer": "No. Iowa state law does not require tenants to carry renters insurance, though landlords in cities like Des Moines, Cedar Rapids, and Ames frequently require proof of coverage as a lease condition."
+    },
+    {
+      "question": "Does renters insurance cover derecho damage in Iowa?",
+      "answer": "Yes. The August 2020 derecho that struck Cedar Rapids with sustained winds near one hundred forty miles per hour became the costliest thunderstorm in United States history, and wind damage from derechos like it is covered under a standard renters policy."
+    },
+    {
+      "question": "Does renters insurance cover tornado damage in Iowa?",
+      "answer": "Yes. Iowa averages more than fifty tornadoes annually, and wind damage to personal belongings from a tornado is a named peril under a standard renters policy."
+    },
+    {
+      "question": "Does renters insurance cover flooding from the Mississippi or Des Moines River?",
+      "answer": "No. Flood damage, including river flooding, is excluded from standard renters insurance. Iowa renters near the Mississippi, Des Moines, or Cedar River corridors should consider a separate flood policy through the National Flood Insurance Program."
+    },
+    {
+      "question": "How much does renters insurance cost in Iowa?",
+      "answer": "Iowa renters insurance ranks among the more affordable options nationally, generally running eleven to fourteen dollars a month, even with the state's real exposure to derechos, tornadoes, and river flooding. Use the calculator above for an estimate based on your specific coverage choices."
+    }
+  ],
+  "blogContent": {
+    "whyThisRate": "Iowa's renters insurance rate stays relatively affordable despite the state facing some of the most dramatic wind events in the country. The August 2020 derecho, which tore through Cedar Rapids with sustained winds near one hundred forty miles per hour, became the costliest thunderstorm in United States history at roughly eleven point five billion dollars in damage, and Iowa saw another significant derecho as recently as 2025. Layered on top of that, Iowa sits squarely in Tornado Alley, averaging more than fifty tornadoes a year. River flooding along the Mississippi and Des Moines rivers adds a third risk, most memorably during the catastrophic 2008 floods. What keeps the base rate from climbing higher is that renters insurance covers personal belongings rather than a building's structure, and flood damage specifically is excluded and priced separately, limiting how much of Iowa's most catastrophic risk actually flows into the standard rate.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, the calculator applies Iowa's base rate of one hundred forty five dollars a year with no adjustment at these default levels, landing around one hundred twenty eight to one hundred sixty two dollars a year, or roughly eleven to fourteen dollars a month. Renters in Cedar Rapids or other derecho affected areas should confirm their policy explicitly lists wind as a covered peril, since this is where the bulk of Iowa's storm related claims originate.",
+    "comparisonNote": "Within the Midwest region, Iowa's rate sits below Illinois and Indiana despite facing arguably more dramatic wind events, since the derecho and tornado risk driving Iowa's headlines translates into a smaller rate impact for renters insurance than for homeowners insurance, which has risen sharply statewide. Compared to the national average, Iowa renters insurance remains one of the more affordable options in the country, even accounting for the state's real derecho, tornado, and flood exposure."
+  }
 }

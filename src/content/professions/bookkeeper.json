@@ -13,5 +13,42 @@
   "notes": "",
   "intro": "",
   "seoTitle": "Business Insurance Cost for Bookkeepers | PolicyLens",
-  "seoDescription": "Calculate estimated business insurance costs for bookkeeper businesses including general liability and professional E&O coverage."
+  "seoDescription": "Calculate estimated business insurance costs for bookkeeper businesses including general liability and professional E&O coverage.",
+  "industryContext": {
+    "typicalRevenueTier": "0-50k",
+    "typicalEmployeeCount": "0-2 employees",
+    "contextNote": "Bookkeeping businesses handle critical financial records and tax ledgers, making Errors & Omissions coverage essential alongside General Liability."
+  },
+  "riskFactors": [
+    {
+      "icon": "description",
+      "title": "Ledger & Tax Errors",
+      "description": "Mistakes in client financial reconciliation or payroll reporting can result in third-party financial loss claims."
+    },
+    {
+      "icon": "security",
+      "title": "Data Privacy Exposure",
+      "description": "Managing confidential client records creates liability for digital data breaches or unauthorized access."
+    },
+    {
+      "icon": "gavel",
+      "title": "Contract Scope Disputes",
+      "description": "Disagreements over financial reporting timelines or accounting scope can lead to legal defense fees."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Why do bookkeepers need Errors & Omissions (E&O) insurance?",
+      "answer": "Errors & Omissions insurance protects bookkeepers from financial claims alleging professional negligence, calculation mistakes, or failure to deliver agreed services."
+    },
+    {
+      "question": "What is the average cost of business insurance for a bookkeeper?",
+      "answer": "A solo bookkeeper operating in the $0-50k revenue tier pays an estimated $255 per year for baseline General Liability coverage."
+    }
+  ],
+  "blogContent": {
+    "whyThisRiskFactor": "Bookkeepers hold a 0.9 actuarial risk factor, reflecting low physical premises hazard balanced by professional financial accuracy exposure.",
+    "howCalculated": "Premiums scale based on annual commercial revenue tier, team size, and optional Professional Liability (E&O) endorsements.",
+    "comparisonNote": "Bookkeeping insurance premiums are lower than high-exposure trades like electrical or plumbing contractors, but slightly higher than copywriters."
+  }
 }
