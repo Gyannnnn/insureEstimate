@@ -1,0 +1,168 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import '../styles/global.css';
+
+const breadcrumbItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Privacy Policy' }
+];
+
+const lastUpdated = 'August 30, 2026';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - InsureEstimate</title>
+  <meta name="description" content="Read InsureEstimate's Privacy Policy. Learn how we protect your information, enforce no data-selling policies, and maintain client-side calculator privacy.">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-background font-body-md text-slate-800 antialiased selection:bg-emerald-100 selection:text-emerald-900">
+  <SiteHeader active="" />
+
+  <main class="w-full pt-20 md:pt-24 min-h-[calc(100vh-300px)]">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6">
+      <Breadcrumbs items={breadcrumbItems} />
+
+      <!-- HEADER CONTAINER -->
+      <section class="mt-6 mb-10 pb-8 border-b border-slate-200/80">
+        <div class="flex flex-col gap-3">
+          <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest">Legal & Governance</span>
+          <h1 class="font-['Plus_Jakarta_Sans',sans-serif] text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Privacy Policy
+          </h1>
+          <p class="text-xs text-slate-500 font-data-tabular">
+            Effective Date: {lastUpdated} | InsureEstimate Platform Transparency Standard
+          </p>
+        </div>
+      </section>
+
+      <!-- POLICY CONTENT BODY -->
+      <div class="max-w-4xl space-y-10 text-slate-700 text-sm md:text-base leading-relaxed">
+        
+        <!-- SECTION 1: INTRODUCTION -->
+        <section class="space-y-4">
+          <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-xl md:text-2xl font-bold text-slate-900">
+            1. Introduction & Commitment to Privacy
+          </h2>
+          <p>
+            At <strong>InsureEstimate</strong> ("we," "our," or "us"), privacy is a cornerstone of our service design. We operate an independent actuarial estimation platform providing cost benchmarks for renters insurance across all 50 US states and business insurance across 35+ professional categories.
+          </p>
+          <p>
+            Unlike traditional insurance lead-generation sites that capture personal identifiable information (PII) to sell to aggressive sales agents, InsureEstimate is engineered to minimize data collection. Our rate calculators run client-side in your browser, allowing you to estimate insurance costs without surrendering sensitive financial details, Social Security Numbers (SSNs), or contact information.
+          </p>
+        </section>
+
+        <!-- SECTION 2: INFORMATION WE COLLECT -->
+        <section class="space-y-4 pt-6 border-t border-slate-200/60">
+          <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-xl md:text-2xl font-bold text-slate-900">
+            2. Information We Collect
+          </h2>
+          <p>We strictly limit the information collected across our platform:</p>
+          
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 space-y-4">
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">A. Interactive Calculator Inputs (Non-Identifiable)</h3>
+              <p class="text-xs text-slate-600 mt-1">
+                When you input variables into our Renters Insurance Calculator (e.g., state selection, personal property valuation, deductible preference, liability limit) or Business Insurance Calculator (e.g., profession code, annual revenue tier, employee count, coverage type), these parameters are processed locally within your web browser. They are not tied to your identity.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">B. Voluntary Contact Submissions</h3>
+              <p class="text-xs text-slate-600 mt-1">
+                If you choose to submit inquiries through our Contact Us form, we collect the information you explicitly provide: your full name, email address, inquiry topic, and message content. This data is used solely to respond to your communication.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-slate-900 text-base">C. Automated Technical Log Data</h3>
+              <p class="text-xs text-slate-600 mt-1">
+                Like standard web server infrastructure, our hosting environment logs standard technical metadata, including internet protocol (IP) addresses, browser type, device type, operating system, referring URLs, timestamp of access, and pages viewed. This technical data is aggregated for security monitoring and system optimization.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3: WE DO NOT SELL DATA -->
+        <section class="space-y-4 pt-6 border-t border-slate-200/60">
+          <div class="p-6 rounded-2xl bg-emerald-50/80 border border-emerald-200/80 flex items-start gap-4">
+            <span class="material-symbols-outlined text-emerald-700 text-[28px] shrink-0">verified</span>
+            <div class="space-y-1">
+              <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-lg font-bold text-emerald-950">
+                3. Strict Policy: We Do Not Sell Your Data
+              </h2>
+              <p class="text-xs md:text-sm text-emerald-900 leading-relaxed">
+                InsureEstimate does not sell, rent, license, or monetize your personal information to third-party insurance brokers, marketing agencies, or data brokers. You will never receive unsolicited phone calls, emails, or spam resulting from using our cost estimation tools.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 4: COOKIES & LOCAL STORAGE -->
+        <section class="space-y-4 pt-6 border-t border-slate-200/60">
+          <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-xl md:text-2xl font-bold text-slate-900">
+            4. Cookies & Local Storage Technologies
+          </h2>
+          <p>
+            We use essential cookies and browser local storage to maintain session preferences (such as remembering your selected state or calculation inputs as you navigate between pages). We may also utilize privacy-preserving, anonymized web analytics to measure aggregate page traffic patterns.
+          </p>
+          <p>
+            You can modify your browser settings to disable cookies or clear local storage at any time; however, doing so may reset your saved calculator state during browsing.
+          </p>
+        </section>
+
+        <!-- SECTION 5: DATA SECURITY & RETENTION -->
+        <section class="space-y-4 pt-6 border-t border-slate-200/60">
+          <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-xl md:text-2xl font-bold text-slate-900">
+            5. Data Security & Retention
+          </h2>
+          <p>
+            We implement industry-standard administrative, physical, and technical safeguards to protect server communications via TLS/SSL encryption. Voluntary contact form communications are retained only as long as necessary to address your specific request or comply with legal obligations.
+          </p>
+        </section>
+
+        <!-- SECTION 6: USER PRIVACY RIGHTS -->
+        <section class="space-y-4 pt-6 border-t border-slate-200/60">
+          <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-xl md:text-2xl font-bold text-slate-900">
+            6. Your Privacy Rights (CCPA/CPRA & GDPR Compliance)
+          </h2>
+          <p>
+            Depending on your jurisdiction (such as California under the CCPA/CPRA or Europe under GDPR), you possess specific privacy rights regarding your data:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-xs md:text-sm text-slate-600">
+            <li><strong>Right to Know & Access:</strong> You may request disclosure of any personal data we hold about you.</li>
+            <li><strong>Right to Deletion:</strong> You may request the deletion of your submitted contact messages.</li>
+            <li><strong>Right to Correction:</strong> You may request correction of inaccurate personal data.</li>
+            <li><strong>Right to Non-Discrimination:</strong> We do not discriminate against users who exercise their legal privacy rights.</li>
+          </ul>
+        </section>
+
+        <!-- SECTION 7: CONTACT US REGARDING PRIVACY -->
+        <section class="space-y-4 pt-6 border-t border-slate-200/60 pb-12">
+          <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-xl md:text-2xl font-bold text-slate-900">
+            7. Contact Information
+          </h2>
+          <p>
+            If you have questions or privacy concerns regarding this Privacy Policy or wish to exercise your data rights, please contact our Data Compliance Team:
+          </p>
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 text-xs md:text-sm font-data-tabular space-y-1">
+            <p class="font-bold text-slate-900">InsureEstimate Data Privacy Office</p>
+            <p class="text-slate-600">Email: <a href="mailto:privacy@insureestimate.com" class="text-emerald-700 underline hover:text-emerald-800">privacy@insureestimate.com</a></p>
+            <p class="text-slate-600">Web Form: <a href="/contact" class="text-emerald-700 underline hover:text-emerald-800">https://insureestimate.com/contact</a></p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <PageFooter />
+</body>
+</html>
