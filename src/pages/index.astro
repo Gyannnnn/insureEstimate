@@ -5,174 +5,364 @@ import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 import "../styles/global.css";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <GoogleAnalytics />
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InsureEstimate - Home</title>
-  <meta name="description" content="Estimate your insurance costs with confidence. Get transparent estimates for renters and small business insurance based on coverage, location, and industry.">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-</head>
-<body class="bg-background font-body-md text-on-surface">
-  <SiteHeader active="Home" />
+  <head>
+    <GoogleAnalytics />
 
-  <main class="w-full pt-20 md:pt-24 min-h-[calc(100vh-300px)]">
-    <div class="flex flex-col w-full font-body-md text-on-surface relative">
-      <!-- Ambient Background Decoration -->
-      <div class="fixed inset-0 pointer-events-none -z-10 bg-gradient-to-br from-surface-bright via-surface-bright to-surface-container-highest overflow-hidden">
-        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary-fixed/5 rounded-full blur-[120px] transform translate-x-1/3 -translate-y-1/3"></div>
-        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-fixed/5 rounded-full blur-[100px] transform -translate-x-1/3 translate-y-1/3"></div>
-      </div>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InsureEstimate - Home</title>
+    <meta
+      name="description"
+      content="Estimate your insurance costs with confidence. Get transparent estimates for renters and small business insurance based on coverage, location, and industry."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-      <!-- Hero Section -->
-      <section class="relative pt-4 pb-stack-lg px-margin-mobile md:px-margin-desktop md:pt-6 md:pb-32 w-full max-w-container-max mx-auto">
-        <!-- Status Badge -->
-        <div class="flex justify-center mb-stack-md">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant shadow-sm backdrop-blur-sm">
-            <span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(0,108,73,0.5)] animate-pulse"></span>
-            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Data-Driven Estimates</span>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+
+    
+  </head>
+  <body class="bg-background font-body-md text-on-surface">
+    <SiteHeader active="Home" />
+
+    <main class="w-full pt-20 md:pt-24 min-h-[calc(100vh-300px)]">
+      <div class="flex flex-col w-full font-body-md text-on-surface relative">
+        <!-- Ambient Background Decoration -->
+        <div
+          class="fixed inset-0 pointer-events-none -z-10 bg-gradient-to-br from-surface-bright via-surface-bright to-surface-container-highest overflow-hidden"
+        >
+          <div
+            class="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary-fixed/5 rounded-full blur-[120px] transform translate-x-1/3 -translate-y-1/3"
+          >
+          </div>
+          <div
+            class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-fixed/5 rounded-full blur-[100px] transform -translate-x-1/3 translate-y-1/3"
+          >
           </div>
         </div>
 
-        <div class="text-center max-w-3xl mx-auto flex flex-col gap-stack-md relative z-10">
-          <h1 class="font-display-lg text-display-lg text-on-surface tracking-tight leading-tight">
-            Estimate your insurance costs with <span class="text-primary italic font-serif">confidence.</span>
-          </h1>
-          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-            Get a transparent estimate based on coverage, location, industry, and other factors. No sales pitch. No obligation.
-          </p>
-        </div>
-
-        <!-- Action Cards Container -->
-        <div class="mt-stack-lg md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-gutter relative z-20 max-w-5xl mx-auto">
-          <!-- Renters Card -->
-          <a href="/renters-insurance-calculator/" class="group relative flex flex-col bg-surface-container-lowest rounded-xl p-stack-md md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-outline-variant/30 hover:border-secondary/20 overflow-hidden cursor-pointer">
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="flex items-start justify-between mb-stack-md">
-              <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
-                <span class="material-symbols-outlined text-[28px]">home_work</span>
-              </div>
-              <div class="text-right">
-                <span class="font-data-tabular text-data-tabular text-on-surface-variant/70">RESIDENTIAL</span>
-              </div>
+        <!-- Hero Section -->
+        <section
+          class="relative pt-4 pb-stack-lg px-margin-mobile md:px-margin-desktop md:pt-6 md:pb-32 w-full max-w-container-max mx-auto"
+        >
+          <!-- Status Badge -->
+          <div class="flex justify-center mb-stack-md">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant shadow-sm backdrop-blur-sm"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(0,108,73,0.5)] animate-pulse"
+              ></span>
+              <span
+                class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider"
+                >Data-Driven Estimates</span
+              >
             </div>
-            <h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Renters Insurance</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg flex-grow">
-              Estimate renters insurance costs by state and coverage. Includes personal property, liability, and additional living expenses.
+          </div>
+
+          <div
+            class="text-center max-w-3xl mx-auto flex flex-col gap-stack-md relative z-10"
+          >
+            <h1
+              class="font-display-lg text-display-lg text-on-surface tracking-tight leading-tight"
+            >
+              Estimate your insurance costs with <span
+                class="text-primary italic font-serif">confidence.</span
+              >
+            </h1>
+            <p
+              class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed"
+            >
+              Get a transparent estimate based on coverage, location, industry,
+              and other factors. No sales pitch. No obligation.
             </p>
-            <div class="flex items-center gap-2 font-label-sm text-label-sm text-primary group-hover:text-secondary transition-colors uppercase tracking-widest mt-auto">
-              <span>Calculate Renters Insurance</span>
-              <span class="material-symbols-outlined text-[16px] transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
-            </div>
-            <!-- Decorative Graphic -->
-            <div class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none">
-              <svg fill="currentColor" height="150" viewBox="0 0 24 24" width="150"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
-            </div>
-          </a>
+          </div>
 
-          <!-- Business Card -->
-          <a href="/business-insurance-calculator/" class="group relative flex flex-col bg-surface-container-lowest rounded-xl p-stack-md md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-outline-variant/30 hover:border-primary/20 overflow-hidden cursor-pointer">
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="flex items-start justify-between mb-stack-md">
-              <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
-                <span class="material-symbols-outlined text-[28px]">business_center</span>
+          <!-- Action Cards Container -->
+          <div
+            class="mt-stack-lg md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-gutter relative z-20 max-w-5xl mx-auto"
+          >
+            <!-- Renters Card -->
+            <a
+              href="/renters-insurance-calculator/"
+              class="group relative flex flex-col bg-surface-container-lowest rounded-xl p-stack-md md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-outline-variant/30 hover:border-secondary/20 overflow-hidden cursor-pointer"
+            >
+              <div
+                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
               </div>
-              <div class="text-right">
-                <span class="font-data-tabular text-data-tabular text-on-surface-variant/70">COMMERCIAL</span>
+              <div class="flex items-start justify-between mb-stack-md">
+                <div
+                  class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300"
+                >
+                  <span class="material-symbols-outlined text-[28px]"
+                    >home_work</span
+                  >
+                </div>
+                <div class="text-right">
+                  <span
+                    class="font-data-tabular text-data-tabular text-on-surface-variant/70"
+                    >RESIDENTIAL</span
+                  >
+                </div>
               </div>
-            </div>
-            <h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Business Insurance</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg flex-grow">
-              Estimate business insurance costs based on your profession, revenue, and team size. Tailored for specialized industries.
-            </p>
-            <div class="flex items-center gap-2 font-label-sm text-label-sm text-primary transition-colors uppercase tracking-widest mt-auto">
-              <span>Calculate Business Insurance</span>
-              <span class="material-symbols-outlined text-[16px] transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
-            </div>
-            <!-- Decorative Graphic -->
-            <div class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none">
-              <svg fill="currentColor" height="150" viewBox="0 0 24 24" width="150"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"></path></svg>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      <!-- Methodology Preview Section -->
-      <section id="methodology" class="py-stack-lg px-margin-mobile md:px-margin-desktop md:py-24 bg-surface w-full">
-        <div class="max-w-container-max mx-auto">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-            <div class="lg:col-span-5 flex flex-col gap-stack-md pr-0 lg:pr-8">
-              <h2 class="font-headline-lg text-headline-lg text-on-surface">Precision modeling, completely transparent.</h2>
-              <p class="font-body-lg text-body-lg text-on-surface-variant">
-                Our estimates aren't pulled from thin air. We aggregate millions of data points across public filings, industry benchmarks, and real-world quotes to build our pricing models. 
+              <h3
+                class="font-headline-md text-headline-md text-on-surface mb-stack-sm"
+              >
+                Renters Insurance
+              </h3>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant mb-stack-lg flex-grow"
+              >
+                Estimate renters insurance costs by state and coverage. Includes
+                personal property, liability, and additional living expenses.
               </p>
-              <ul class="flex flex-col gap-4 mt-4">
-                <li class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-secondary mt-0.5">check_circle</span>
-                  <div>
-                    <strong class="font-data-tabular text-data-tabular text-on-surface block">Data Sourcing</strong>
-                    <span class="font-body-md text-body-md text-on-surface-variant">Actuarial tables and state regulatory filings.</span>
-                  </div>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="material-symbols-outlined text-secondary mt-0.5">check_circle</span>
-                  <div>
-                    <strong class="font-data-tabular text-data-tabular text-on-surface block">Machine Learning</strong>
-                    <span class="font-body-md text-body-md text-on-surface-variant">Dynamic localized risk adjustment.</span>
-                  </div>
-                </li>
-              </ul>
-              <div class="mt-stack-md">
-                <a href="#methodology" class="inline-flex items-center justify-center gap-2 h-10 px-6 rounded border border-outline-variant bg-surface-container-lowest text-primary hover:bg-surface-container-low transition-colors font-label-sm text-label-sm uppercase">
-                  Read Our Methodology
-                </a>
+              <div
+                class="flex items-center gap-2 font-label-sm text-label-sm text-primary group-hover:text-secondary transition-colors uppercase tracking-widest mt-auto"
+              >
+                <span>Calculate Renters Insurance</span>
+                <span
+                  class="material-symbols-outlined text-[16px] transform group-hover:translate-x-1 transition-transform"
+                  >arrow_forward</span
+                >
               </div>
-            </div>
+              <!-- Decorative Graphic -->
+              <div
+                class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none"
+              >
+                <svg
+                  fill="currentColor"
+                  height="150"
+                  viewBox="0 0 24 24"
+                  width="150"
+                  ><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg
+                >
+              </div>
+            </a>
 
-            <!-- Abstract Data Visualization / Illustration -->
-            <div class="lg:col-span-7 mt-stack-lg lg:mt-0 relative h-[400px] w-full rounded-2xl bg-surface-container-low border border-outline-variant/50 shadow-sm overflow-hidden flex items-center justify-center">
-              <!-- Decorative Chart lines -->
-              <svg class="absolute inset-0 w-full h-full text-on-surface-variant/10" preserveAspectRatio="none" viewBox="0 0 100 100">
-                <path class="text-primary-fixed/20" d="M0 100 C 20 80, 40 90, 60 50 S 80 40, 100 20 L 100 100 Z" fill="currentColor"></path>
-                <path d="M0 100 C 30 70, 50 60, 70 30 S 90 20, 100 10 L 100 100 Z" fill="none" stroke="currentColor" stroke-width="0.5"></path>
-              </svg>
-
-              <!-- Floating Data Cards -->
-              <div class="relative z-10 w-[80%] max-w-[400px]">
-                <!-- Card 1 -->
-                <div class="bg-surface-container-lowest p-4 rounded-xl shadow-md border border-outline-variant/30 transform -rotate-2 -translate-x-4 translate-y-4 hover:rotate-0 hover:translate-x-0 hover:translate-y-0 transition-transform duration-500 hover:z-20 relative">
-                  <div class="flex justify-between items-center mb-2">
-                    <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Average Premium</span>
-                    <span class="material-symbols-outlined text-secondary text-[16px]">trending_down</span>
-                  </div>
-                  <div class="font-display-lg text-headline-lg text-on-surface">$42.50<span class="font-data-tabular text-body-md text-on-surface-variant">/mo</span></div>
-                  <div class="h-1 w-full bg-surface-container mt-3 rounded-full overflow-hidden">
-                    <div class="h-full bg-secondary w-2/3"></div>
-                  </div>
+            <!-- Business Card -->
+            <a
+              href="/business-insurance-calculator/"
+              class="group relative flex flex-col bg-surface-container-lowest rounded-xl p-stack-md md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-outline-variant/30 hover:border-primary/20 overflow-hidden cursor-pointer"
+            >
+              <div
+                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+              </div>
+              <div class="flex items-start justify-between mb-stack-md">
+                <div
+                  class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300"
+                >
+                  <span class="material-symbols-outlined text-[28px]"
+                    >business_center</span
+                  >
                 </div>
+                <div class="text-right">
+                  <span
+                    class="font-data-tabular text-data-tabular text-on-surface-variant/70"
+                    >COMMERCIAL</span
+                  >
+                </div>
+              </div>
+              <h3
+                class="font-headline-md text-headline-md text-on-surface mb-stack-sm"
+              >
+                Business Insurance
+              </h3>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant mb-stack-lg flex-grow"
+              >
+                Estimate business insurance costs based on your profession,
+                revenue, and team size. Tailored for specialized industries.
+              </p>
+              <div
+                class="flex items-center gap-2 font-label-sm text-label-sm text-primary transition-colors uppercase tracking-widest mt-auto"
+              >
+                <span>Calculate Business Insurance</span>
+                <span
+                  class="material-symbols-outlined text-[16px] transform group-hover:translate-x-1 transition-transform"
+                  >arrow_forward</span
+                >
+              </div>
+              <!-- Decorative Graphic -->
+              <div
+                class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none"
+              >
+                <svg
+                  fill="currentColor"
+                  height="150"
+                  viewBox="0 0 24 24"
+                  width="150"
+                  ><path
+                    d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"
+                  ></path></svg
+                >
+              </div>
+            </a>
+          </div>
+        </section>
 
-                <!-- Card 2 -->
-                <div class="bg-surface-container-lowest p-4 rounded-xl shadow-lg border border-outline-variant/30 transform rotate-3 translate-x-12 -translate-y-8 hover:rotate-0 hover:translate-x-8 hover:-translate-y-12 transition-transform duration-500 hover:z-20 relative border-t-2 border-t-secondary">
-                  <div class="flex justify-between items-center mb-2">
-                    <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Risk Adjustment</span>
-                    <span class="font-data-tabular text-data-tabular text-secondary">+1.2%</span>
+        <!-- Methodology Preview Section -->
+        <section
+          id="methodology"
+          class="py-stack-lg px-margin-mobile md:px-margin-desktop md:py-24 bg-surface w-full"
+        >
+          <div class="max-w-container-max mx-auto">
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center"
+            >
+              <div
+                class="lg:col-span-5 flex flex-col gap-stack-md pr-0 lg:pr-8"
+              >
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">
+                  Precision modeling, completely transparent.
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">
+                  Our estimates aren't pulled from thin air. We aggregate
+                  millions of data points across public filings, industry
+                  benchmarks, and real-world quotes to build our pricing models.
+                </p>
+                <ul class="flex flex-col gap-4 mt-4">
+                  <li class="flex items-start gap-3">
+                    <span
+                      class="material-symbols-outlined text-secondary mt-0.5"
+                      >check_circle</span
+                    >
+                    <div>
+                      <strong
+                        class="font-data-tabular text-data-tabular text-on-surface block"
+                        >Data Sourcing</strong
+                      >
+                      <span
+                        class="font-body-md text-body-md text-on-surface-variant"
+                        >Actuarial tables and state regulatory filings.</span
+                      >
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span
+                      class="material-symbols-outlined text-secondary mt-0.5"
+                      >check_circle</span
+                    >
+                    <div>
+                      <strong
+                        class="font-data-tabular text-data-tabular text-on-surface block"
+                        >Machine Learning</strong
+                      >
+                      <span
+                        class="font-body-md text-body-md text-on-surface-variant"
+                        >Dynamic localized risk adjustment.</span
+                      >
+                    </div>
+                  </li>
+                </ul>
+                <div class="mt-stack-md">
+                  <a
+                    href="#methodology"
+                    class="inline-flex items-center justify-center gap-2 h-10 px-6 rounded border border-outline-variant bg-surface-container-lowest text-primary hover:bg-surface-container-low transition-colors font-label-sm text-label-sm uppercase"
+                  >
+                    Read Our Methodology
+                  </a>
+                </div>
+              </div>
+
+              <!-- Abstract Data Visualization / Illustration -->
+              <div
+                class="lg:col-span-7 mt-stack-lg lg:mt-0 relative h-[400px] w-full rounded-2xl bg-surface-container-low border border-outline-variant/50 shadow-sm overflow-hidden flex items-center justify-center"
+              >
+                <!-- Decorative Chart lines -->
+                <svg
+                  class="absolute inset-0 w-full h-full text-on-surface-variant/10"
+                  preserveAspectRatio="none"
+                  viewBox="0 0 100 100"
+                >
+                  <path
+                    class="text-primary-fixed/20"
+                    d="M0 100 C 20 80, 40 90, 60 50 S 80 40, 100 20 L 100 100 Z"
+                    fill="currentColor"></path>
+                  <path
+                    d="M0 100 C 30 70, 50 60, 70 30 S 90 20, 100 10 L 100 100 Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="0.5"></path>
+                </svg>
+
+                <!-- Floating Data Cards -->
+                <div class="relative z-10 w-[80%] max-w-[400px]">
+                  <!-- Card 1 -->
+                  <div
+                    class="bg-surface-container-lowest p-4 rounded-xl shadow-md border border-outline-variant/30 transform -rotate-2 -translate-x-4 translate-y-4 hover:rotate-0 hover:translate-x-0 hover:translate-y-0 transition-transform duration-500 hover:z-20 relative"
+                  >
+                    <div class="flex justify-between items-center mb-2">
+                      <span
+                        class="font-label-sm text-label-sm text-on-surface-variant uppercase"
+                        >Average Premium</span
+                      >
+                      <span
+                        class="material-symbols-outlined text-secondary text-[16px]"
+                        >trending_down</span
+                      >
+                    </div>
+                    <div
+                      class="font-display-lg text-headline-lg text-on-surface"
+                    >
+                      $42.50<span
+                        class="font-data-tabular text-body-md text-on-surface-variant"
+                        >/mo</span>
+                    </div>
+                    <div
+                      class="h-1 w-full bg-surface-container mt-3 rounded-full overflow-hidden"
+                    >
+                      <div class="h-full bg-secondary w-2/3"></div>
+                    </div>
                   </div>
-                  <div class="flex gap-2">
-                    <span class="inline-block px-2 py-1 bg-surface-container-high rounded text-xs font-data-tabular text-on-surface">ZIP 90210</span>
-                    <span class="inline-block px-2 py-1 bg-surface-container-high rounded text-xs font-data-tabular text-on-surface">Urban</span>
+
+                  <!-- Card 2 -->
+                  <div
+                    class="bg-surface-container-lowest p-4 rounded-xl shadow-lg border border-outline-variant/30 transform rotate-3 translate-x-12 -translate-y-8 hover:rotate-0 hover:translate-x-8 hover:-translate-y-12 transition-transform duration-500 hover:z-20 relative border-t-2 border-t-secondary"
+                  >
+                    <div class="flex justify-between items-center mb-2">
+                      <span
+                        class="font-label-sm text-label-sm text-on-surface-variant uppercase"
+                        >Risk Adjustment</span
+                      >
+                      <span
+                        class="font-data-tabular text-data-tabular text-secondary"
+                        >+1.2%</span
+                      >
+                    </div>
+                    <div class="flex gap-2">
+                      <span
+                        class="inline-block px-2 py-1 bg-surface-container-high rounded text-xs font-data-tabular text-on-surface"
+                        >ZIP 90210</span
+                      >
+                      <span
+                        class="inline-block px-2 py-1 bg-surface-container-high rounded text-xs font-data-tabular text-on-surface"
+                        >Urban</span
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-  </main>
+        </section>
+      </div>
+    </main>
 
-  <PageFooter />
-</body>
+    <PageFooter />
+  </body>
 </html>
