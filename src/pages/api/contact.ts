@@ -16,7 +16,7 @@ export const POST: APIRoute = async ({ request }) => {
   const recipientEmail = import.meta.env.CONTACT_RECIPIENT_EMAIL || process.env.CONTACT_RECIPIENT_EMAIL;
 
   if (!resendApiKey) {
-    console.error('Missing RESEND_API_KEY in environment variables.');
+    console.error('Something Went Wrong');
     return new Response(
       JSON.stringify({ success: false, error: 'Email service configuration missing RESEND_API_KEY.' }),
       { status: 500, headers: { 'Content-Type': 'application/json' } }
@@ -37,7 +37,7 @@ export const POST: APIRoute = async ({ request }) => {
     const recipientEmail = process.env.CONTACT_RECIPIENT_EMAIL || import.meta.env.CONTACT_RECIPIENT_EMAIL;
 
     if (!resendApiKey) {
-      console.error('Missing RESEND_API_KEY in environment variables.');
+      console.error('Something Went Wrong');
       return new Response(
         JSON.stringify({ success: false, error: 'Server email service is not configured properly.' }),
         { status: 500, headers: { 'Content-Type': 'application/json' } }

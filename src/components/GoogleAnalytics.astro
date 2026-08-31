@@ -1,0 +1,17 @@
+---
+interface Props {
+  id?: string;
+}
+
+const { id = 'G-S9SC6WR694' } = Astro.props;
+---
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S9SC6WR694"></script>
+
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S9SC6WR694');
+</script>
