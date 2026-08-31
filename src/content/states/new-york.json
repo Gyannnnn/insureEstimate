@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most New York renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, though renters in Manhattan and other high value neighborhoods often increase this given the cost of replacing electronics, furniture, and other belongings."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "flood",
+      "title": "Basement Apartment Flooding",
+      "description": "Remnants of Hurricane Ida caused deadly flooding in New York City basement apartments in 2021, a tragedy that exposed how vulnerable below grade units are during intense rainfall. Flood damage from this kind of storm is excluded from standard renters insurance and requires a separate policy through the National Flood Insurance Program."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "storm",
+      "title": "Nor'easter and Coastal Hurricane Wind",
+      "description": "New York City and Long Island face direct nor'easter and hurricane exposure, and Hurricane Sandy in 2012 caused massive flooding and damage across the region. Wind damage to personal belongings from these storms is covered under a standard New York renters insurance policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "snowflake",
+      "title": "Buffalo Lake Effect Snow",
+      "description": "Western New York around Buffalo regularly sees some of the heaviest snowfall in the continental United States, and 2024 alone brought five separate lake effect snow emergencies to the region. Wind, hail, and roof damage from the weight of snow is generally covered under a standard renters policy."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in New York?",
+      "answer": "No. New York does not require renters insurance by state law, though landlords commonly require it in lease agreements, especially in New York City."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover basement apartment flooding in New York City?",
+      "answer": "No. Flood damage, including the kind that caused deadly basement apartment flooding during Hurricane Ida's remnants in 2021, is excluded from standard renters insurance and requires a separate flood policy."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover hurricane damage in New York?",
+      "answer": "Wind damage from a hurricane or nor'easter is generally covered, though flood damage, including the kind Hurricane Sandy caused across New York City and Long Island in 2012, is excluded and requires separate coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover lake effect snow damage in Buffalo?",
+      "answer": "Yes. Wind, hail, and roof damage from the weight of snow, including Buffalo's frequent lake effect snow emergencies, is generally covered under a standard New York renters insurance policy."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in New York?",
+      "answer": "Costs vary significantly by location, generally higher in New York City and Long Island than in smaller upstate cities. Use the calculator above for a New York renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "New York renters insurance costs reflect a state split between two very different weather realities. New York City and Long Island face nor'easter and hurricane exposure, underscored by Hurricane Sandy's massive 2012 flooding and, a decade later, the deadly basement apartment flooding caused by Hurricane Ida's remnants in 2021, a disaster that exposed just how vulnerable below grade units are during intense rainfall. Meanwhile, Buffalo and western New York face an entirely different hazard in lake effect snow, with 2024 alone bringing five separate snow emergencies to the region. Aging infrastructure in both New York City and older upstate buildings also makes sewer and drain backup a common source of claims. Flood damage from either the coast or basement level flooding remains excluded from standard renters coverage, which limits how much of New York's most catastrophic risk actually reaches the base rate.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our New York renters insurance calculator applies the state's base rate of one hundred ninety five dollars a year with no adjustment at these default levels, landing around one hundred seventy two to two hundred eighteen dollars a year, or roughly fourteen to eighteen dollars a month. Renters in basement or ground floor New York City apartments, or in Buffalo's heaviest lake effect snow zones, should budget separately for the risks this standard calculation doesn't include.",
+    "comparisonNote": "Within the Northeast region, New York's rate sits above New Jersey and Connecticut, reflecting the combination of New York City's dense urban risk and coastal storm exposure with Buffalo's distinct lake effect snow hazard. Compared to the national average, New York renters insurance runs higher, driven primarily by New York City's high property values and flood exposure rather than a single dominant statewide peril."
   }
 }

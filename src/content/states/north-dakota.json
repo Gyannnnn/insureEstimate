@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most North Dakota renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that fits the state's affordable rates while accounting for real spring flood and severe hail risk."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "flood",
+      "title": "Red River Spring Flooding",
+      "description": "The Red River of the North flows northward, an unusual geography where southern stretches thaw each spring while northern channels remain frozen, causing water to back up and overflow. The 1997 flood crested at fifty four feet in Grand Forks and caused up to four billion dollars in damage. Flood damage from the Red River is excluded from standard renters insurance and requires a separate policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "storm",
+      "title": "Severe Hail",
+      "description": "North Dakota sits in one of the country's highest hail frequency zones, with summer storms capable of shattering windows and damaging property across the plains. Hail damage to personal belongings is covered under a standard renters policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "snowflake",
+      "title": "Blizzards and Extreme Cold",
+      "description": "North Dakota's continental climate produces some of the largest seasonal temperature swings in the country, with winter blizzards capable of causing roof collapse and frozen pipe bursts. This type of sudden water damage is typically covered under a standard renters policy."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in North Dakota?",
+      "answer": "No. North Dakota does not require renters insurance by law, though landlords may require it as a lease condition."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover Red River flood damage?",
+      "answer": "No. Flood damage from the Red River, which has produced major floods in 1997, 2009, and 2022 across Fargo and Grand Forks, is excluded from standard renters insurance and requires a separate policy through the National Flood Insurance Program."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover hail damage in North Dakota?",
+      "answer": "Yes. North Dakota sits in one of the highest hail frequency zones in the country, and hail damage to personal belongings is covered under a standard renters policy."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover blizzard damage in North Dakota?",
+      "answer": "Yes, in most cases. If a blizzard causes physical damage to your building, like a roof collapse or a burst pipe, the resulting damage to your belongings is typically covered under a standard renters policy."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in North Dakota?",
+      "answer": "North Dakota renters insurance ranks among the more affordable states nationally, though costs run higher in Red River Valley cities like Fargo and Grand Forks given the area's flood history. Use the calculator above for a North Dakota renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "North Dakota renters insurance stays affordable despite a genuinely unusual flood risk most renters outside the state have never heard of. The Red River of the North flows northward, an unusual geography where southern stretches thaw each spring while northern channels remain frozen, causing the river to back up and overflow its banks. The 1997 flood crested at fifty four feet in Grand Forks and caused up to four billion dollars in damage, and major floods have recurred in 1882, 1897, 1950, 1996, 2006, 2009, and 2022. Beyond the Red River Valley, North Dakota sits in one of the country's highest hail frequency zones, and its continental climate produces blizzards severe enough to cause roof collapse and frozen pipe bursts. Because flood damage sits entirely outside standard renters coverage, the state's recurring and well documented flood risk has far less impact on the base rate than the hail and winter storm exposure that is actually covered.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our North Dakota renters insurance calculator applies the state's base rate of one hundred forty dollars a year with no adjustment at these default levels, landing around one hundred twenty three to one hundred fifty seven dollars a year, or roughly ten to thirteen dollars a month. Renters in Fargo, Grand Forks, or other Red River Valley communities should strongly consider a separate flood policy given the river's well documented recurring flood history.",
+    "comparisonNote": "Within the Midwest region, North Dakota's rate sits close to Idaho's, reflecting a similarly low overall base rate despite each state carrying its own distinct and genuinely serious risk, Red River flooding here versus wildfire there. Compared to the national average, North Dakota renters insurance ranks among the most affordable in the country, since the state's most catastrophic risk, flooding, falls outside what the standard policy actually prices."
   }
 }

@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most North Carolina renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that holds up across both coastal hurricane exposure and inland mountain flood risk."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "storm",
+      "title": "Coastal Hurricane Wind",
+      "description": "North Carolina's Outer Banks and coastal counties face direct hurricane exposure, and in the designated beach territory, most standard insurers exclude windstorm coverage entirely, requiring a separate NCIUA Beach Plan wind policy. Inland, standard renters policies cover hurricane wind damage to personal belongings."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "flood",
+      "title": "Inland Mountain Flooding",
+      "description": "Hurricane Helene's remnants devastated western North Carolina in September 2024, bringing catastrophic flooding to Asheville and the Blue Ridge Mountains, an area many residents never considered flood prone. An estimated ninety six percent of North Carolinians with flood damage from Helene did not have flood insurance. Flood damage is excluded from standard renters insurance and requires a separate policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "warning",
+      "title": "Mountain Landslide Risk",
+      "description": "The same rainfall that caused Helene's historic flooding also triggered destructive landslides across western North Carolina's mountain communities. Landslide damage, like flood damage, is generally excluded from standard renters insurance and requires separate coverage."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in North Carolina?",
+      "answer": "No. North Carolina state law does not require renters insurance, and as of 2024, landlords cannot require tenants to buy insurance from a specific carrier."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover hurricane damage in North Carolina?",
+      "answer": "Wind damage from a hurricane is generally covered inland, though coastal properties in the designated beach territory often require a separate NCIUA Beach Plan wind policy, since standard insurers exclude windstorm coverage there."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover flooding from Hurricane Helene style storms?",
+      "answer": "No. Flood damage, including the catastrophic inland flooding Hurricane Helene caused across western North Carolina in 2024, is excluded from standard renters insurance regardless of location, even in mountain areas with no prior flood history."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover landslide damage in the mountains?",
+      "answer": "No. Landslide damage, a real risk in western North Carolina's mountain communities as Hurricane Helene demonstrated, is excluded from standard renters insurance."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in North Carolina?",
+      "answer": "North Carolina renters insurance averages among the cheaper states nationally, though coastal areas run higher due to hurricane risk. Use the calculator above for a North Carolina renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "North Carolina renters insurance costs reflect a state whose real risk extends well beyond its coastline. Coastal counties and the Outer Banks face direct hurricane wind exposure, serious enough that standard insurers exclude windstorm coverage in the designated beach territory, requiring a separate Beach Plan policy. But the more striking recent lesson came from inland North Carolina, where Hurricane Helene's remnants devastated Asheville and the surrounding Blue Ridge Mountains in September 2024, an area with no meaningful history of flood risk. An estimated ninety six percent of North Carolinians with flood damage from Helene had no flood insurance, having never imagined they needed it. The same storm triggered destructive landslides across the same mountain communities. Both flood and landslide damage remain excluded from standard renters coverage, which is precisely what left so many western North Carolina renters and homeowners financially exposed when Helene hit.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our North Carolina renters insurance calculator applies the state's base rate of one hundred eighty five dollars a year with no adjustment at these default levels, landing around one hundred sixty three to two hundred seven dollars a year, or roughly fourteen to seventeen dollars a month. Renters anywhere in North Carolina, coastal or mountain, should strongly consider a separate flood policy given Helene's demonstration that elevation and distance from the coast no longer guarantee protection.",
+    "comparisonNote": "Within the South region, North Carolina's rate sits below Florida and Louisiana despite real hurricane exposure, reflecting the fact that renters insurance covers belongings rather than the structural and flood risk that has driven those states' homeowners markets into crisis. Compared to the national average, North Carolina renters insurance runs close to typical levels, though Hurricane Helene has fundamentally changed how the state's insurers and residents think about inland flood risk."
   }
 }
