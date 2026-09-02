@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most Washington renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, though Seattle renters often carry higher liability limits given the region's higher cost of living."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "activity",
+      "title": "Cascadia Subduction Zone",
+      "description": "The U.S. Geological Survey estimates an eighty five percent chance of an earthquake with a magnitude of six point five or higher in the Puget Sound region within the next fifty years. Standard renters insurance excludes earthquake damage, so Seattle and Tacoma renters may want a separate earthquake endorsement given this significant documented risk."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "fire",
+      "title": "Eastern Washington Wildfire",
+      "description": "The drier climate east of the Cascades brings real wildfire risk to communities across Eastern Washington, distinct from the wetter conditions on the western side of the state. Fire and smoke damage to personal belongings is covered under a standard renters policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "flood",
+      "title": "Puget Sound and River Flooding",
+      "description": "Locations near water, especially the Puget Sound region, face elevated flood risk from heavy rain and storm surge, one of the two biggest factors driving renters insurance costs across Washington. Flood damage is excluded from standard renters insurance and requires a separate policy."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in Washington state?",
+      "answer": "No. Washington does not require renters insurance by law, though many Seattle landlords require it with at least one hundred thousand dollars in liability coverage as a lease condition."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover earthquake damage in Washington?",
+      "answer": "No. Standard renters insurance excludes earthquake damage, a critical gap given the U.S. Geological Survey estimates an eighty five percent chance of a magnitude six point five or higher earthquake in the Puget Sound region within fifty years."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover wildfire damage in Washington?",
+      "answer": "Yes. Fire and smoke damage to personal belongings is covered under a standard renters policy, relevant particularly in Eastern Washington's drier climate east of the Cascades."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover flooding near Puget Sound?",
+      "answer": "No. Flood damage is excluded from standard renters insurance regardless of cause, which matters given proximity to water, especially Puget Sound, is one of the two biggest cost drivers for Washington renters insurance."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in Washington state?",
+      "answer": "Washington renters insurance runs slightly below the national average statewide, with Seattle costing somewhat more than cities like Yakima or Pullman due to higher theft rates and liability exposure. Use the calculator above for a Washington renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "Washington renters insurance stays slightly below the national average, a rate that significantly understates the state's single largest catastrophic risk. The U.S. Geological Survey estimates an eighty five percent chance of a magnitude six point five or higher earthquake striking the Puget Sound region within the next fifty years, one of the most significant documented seismic risks of any state in the country. Because standard renters insurance excludes earthquake damage entirely, this risk has essentially no effect on the base rate despite its severity. Wildfire adds a second, geographically distinct risk in Eastern Washington's drier climate east of the Cascades, while flooding near Puget Sound and the state's rivers ranks as one of the two biggest cost drivers insurers actually price into renters insurance, alongside urban location. The result is a state where the true catastrophic risk, Cascadia, sits almost entirely outside what the standard rate reflects.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our Washington renters insurance calculator applies the state's base rate of one hundred sixty dollars a year with no adjustment at these default levels, landing around one hundred forty one to one hundred seventy nine dollars a year, or roughly twelve to fifteen dollars a month. Seattle and Tacoma renters should strongly consider a separate earthquake endorsement given the Cascadia Subduction Zone's documented eighty five percent fifty year probability.",
+    "comparisonNote": "Within the West region, Washington's rate sits close to Oregon's, sharing the same Cascadia Subduction Zone earthquake exposure and a similar wildfire and flood risk profile. Compared to the national average, Washington renters insurance runs close to typical levels, though this masks what may be the single most significant underpriced catastrophic risk of any state in this calculator."
   }
 }

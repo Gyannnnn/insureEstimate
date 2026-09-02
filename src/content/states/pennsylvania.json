@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most Pennsylvania renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, though renters in older Philadelphia rowhomes often consider additional coverage given the building stock's age."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "flood",
+      "title": "Statewide Flood Exposure",
+      "description": "State emergency officials describe Pennsylvania as one of the most flood prone states in the nation, and a CoreLogic study found over five hundred fifteen thousand Pennsylvania properties outside FEMA designated flood hazard areas that still carry moderate to high flood risk. Flood damage is excluded from standard renters insurance and requires a separate policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "water_damage",
+      "title": "Philadelphia Stormwater Flooding",
+      "description": "Philadelphia sits at the confluence of the Delaware and Schuylkill rivers, and heavy rainfall regularly overwhelms the city's aging combined sewer system, flooding basements that a separate sewer backup endorsement, not standard coverage, is needed to protect."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "warning",
+      "title": "Older Rowhome Fire and Water Risk",
+      "description": "Philadelphia's dense stock of older rowhomes and shared apartment units carries elevated fire and water damage risk, where even minor incidents in one unit can affect neighboring properties. Fire damage to personal belongings is covered under a standard renters policy."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in Pennsylvania?",
+      "answer": "No. Pennsylvania does not require renters insurance by law, though landlords and property managers commonly require it as a lease condition with liability minimums of one hundred thousand to three hundred thousand dollars."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover flood damage in Pennsylvania?",
+      "answer": "No. Even though state emergency officials call Pennsylvania one of the most flood prone states in the country, flood damage is excluded from standard renters insurance and requires a separate policy, since over five hundred thousand properties outside official flood zones still carry real flood risk."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover basement flooding in Philadelphia?",
+      "answer": "Not by default. Stormwater flooding from Philadelphia's aging combined sewer system typically requires a separate water backup or sewer endorsement rather than standard coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover fire damage in an older Philadelphia rowhome?",
+      "answer": "Yes. Fire damage to personal belongings is covered under a standard renters policy, which matters in Philadelphia's dense stock of older rowhomes where fire risk between adjoining units is a real concern."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in Pennsylvania?",
+      "answer": "Pennsylvania renters insurance runs close to or below the national average statewide, though urban areas like Philadelphia cost noticeably more than rural parts of the state. Use the calculator above for a Pennsylvania renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "Pennsylvania renters insurance costs stay close to the national average, even though state emergency officials describe Pennsylvania as one of the most flood prone states in the entire country. What makes this risk especially deceptive is that a CoreLogic study found over five hundred fifteen thousand Pennsylvania properties sitting outside official FEMA flood hazard areas that still carry moderate to high flood risk, meaning many renters who assume they're safe may not be. Philadelphia adds its own distinct layer, sitting at the confluence of the Delaware and Schuylkill rivers with an aging combined sewer system that regularly floods basements during heavy rain, a risk that requires a separate water backup endorsement rather than standard coverage. The city's dense stock of older rowhomes adds further fire and water damage risk between adjoining units. Because flood damage in any form remains excluded from standard renters coverage, Pennsylvania's most pervasive risk has surprisingly little effect on the base rate itself.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our Pennsylvania renters insurance calculator applies the state's base rate of one hundred sixty five dollars a year with no adjustment at these default levels, landing around one hundred forty five to one hundred eighty five dollars a year, or roughly twelve to fifteen dollars a month. Philadelphia renters, especially those in basement or ground floor units, should strongly consider a water backup endorsement given how often the city's sewer system overflows during heavy rain.",
+    "comparisonNote": "Within the Northeast region, Pennsylvania's rate sits close to New Jersey and Ohio, sharing meaningful flood exposure, though Pennsylvania's statewide flood risk, extending well beyond mapped high risk zones, makes it a more geographically dispersed hazard than most neighboring states face. Compared to the national average, Pennsylvania renters insurance runs close to typical levels, a fact that undersells just how significant the state's flood exposure actually is."
   }
 }

@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most Oregon renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that fits the state's moderate cost of living while accounting for real wildfire and earthquake exposure."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "activity",
+      "title": "Cascadia Subduction Zone",
+      "description": "A seven hundred mile fault running off the Oregon and Washington coast has the potential to produce a magnitude eight to nine or larger earthquake, and geologists estimate roughly a one in three chance of a significant Cascadia event within the next fifty years. Standard renters insurance excludes earthquake damage, so renters in Portland, Salem, or coastal communities may want a separate earthquake endorsement."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "fire",
+      "title": "Wildfire Expansion",
+      "description": "The September 2020 Labor Day fires burned over one million acres across Oregon's western valleys and foothills within just seventy two hours, a scale of wildfire that has expanded well beyond the historically obvious high risk areas. Fire and smoke damage to personal belongings is covered under a standard renters policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "flood",
+      "title": "River Valley Flooding",
+      "description": "Western Oregon's rivers, including the Willamette, Umpqua, and Rogue, flood regularly during heavy winter rain. Flood damage from these rivers is excluded from standard renters insurance and requires a separate policy through the National Flood Insurance Program."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in Oregon?",
+      "answer": "No. Oregon does not require renters insurance by law, though landlords can require it as a lease condition."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover earthquake damage in Oregon?",
+      "answer": "No. Standard renters insurance excludes earthquake damage, a real concern given the Cascadia Subduction Zone carries roughly a one in three chance of producing a major earthquake within the next fifty years."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover wildfire damage in Oregon?",
+      "answer": "Yes. Fire and smoke damage to personal belongings is covered under a standard renters policy, which matters given the 2020 Labor Day fires burned over a million acres across the state in just three days."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover flooding from the Willamette River?",
+      "answer": "No. Flood damage from Oregon's river valleys, including the Willamette, Umpqua, and Rogue, is excluded from standard renters insurance and requires a separate flood policy."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in Oregon?",
+      "answer": "Oregon renters insurance runs close to or slightly below the national average, generally a bit higher in Portland given the city's earthquake and wildfire exposure. Use the calculator above for an Oregon renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "Oregon's renters insurance rate reflects a state whose real risk profile is more layered than its rainy reputation suggests. The Cascadia Subduction Zone, a seven hundred mile fault off the Oregon coast, carries roughly a one in three chance of producing a magnitude eight to nine or larger earthquake within the next fifty years, a catastrophic risk that sits entirely outside standard renters coverage. Wildfire has expanded dramatically beyond its historically obvious range, underscored by the September 2020 Labor Day fires that burned over a million acres across western Oregon in just seventy two hours. River valley flooding along the Willamette, Umpqua, and Rogue adds a third, more routine winter risk. Because Oregon's most catastrophic risk, the Cascadia earthquake, is excluded from standard coverage, and because wildfire and flood risk remain geographically concentrated, the state's renters insurance base rate stays close to the national average despite these genuinely serious underlying hazards.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our Oregon renters insurance calculator applies the state's base rate of one hundred sixty dollars a year with no adjustment at these default levels, landing around one hundred forty one to one hundred seventy nine dollars a year, or roughly twelve to fifteen dollars a month. Renters in Portland or coastal communities should strongly consider a separate earthquake endorsement given the Cascadia Subduction Zone's documented long term risk.",
+    "comparisonNote": "Within the West region, Oregon's rate sits close to Colorado's despite an entirely different hazard mix, earthquake and wildfire risk here versus hail and localized wildfire there. Compared to the national average, Oregon renters insurance runs close to typical levels, though the state's Cascadia earthquake exposure represents one of the most significant, if underpriced, long term risks of any state in this calculator."
   }
 }

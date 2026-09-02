@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most South Carolina renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, though coastal renters near Charleston and Myrtle Beach often add flood coverage given the region's real hurricane exposure."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "storm",
+      "title": "Coastal Hurricane Risk",
+      "description": "South Carolina faces direct hurricane exposure in the Charleston and Myrtle Beach areas, with Hurricane Hugo in 1989 remaining catastrophic decades later and more recent storms like Matthew and Dorian causing significant damage. Wind damage to personal belongings from a hurricane is covered under a standard renters policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "flood",
+      "title": "Tidal and Storm Surge Flooding",
+      "description": "Charleston experiences frequent flooding even without hurricanes due to tidal, or sunny day, flooding, and storm surge during tropical events poses the greater catastrophic threat along the entire coast. Flood damage is excluded from standard renters insurance and requires a separate policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "activity",
+      "title": "Middleton Place Summerville Seismic Zone",
+      "description": "A significant portion of South Carolina sits within the Middleton Place Summerville seismic zone near Charleston and Kershaw County, an inland earthquake risk that surprises many renters who associate the state entirely with hurricanes. Standard renters insurance excludes earthquake damage, requiring a separate rider."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in South Carolina?",
+      "answer": "No. South Carolina does not require renters insurance by law, though most apartment complexes in Charleston, Columbia, and Myrtle Beach require proof of coverage as a lease condition."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover hurricane damage in South Carolina?",
+      "answer": "Yes, for wind. Standard renters insurance covers wind damage from hurricanes, but flooding, which is often the greater threat from a tropical storm, is excluded and requires a separate flood policy."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover tidal flooding in Charleston?",
+      "answer": "No. Charleston's frequent tidal, or sunny day, flooding is excluded from standard renters insurance just like storm surge flooding, and requires a separate policy through the National Flood Insurance Program."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover earthquake damage in South Carolina?",
+      "answer": "No. Standard renters insurance excludes earthquake damage, which matters given a significant part of the state sits within the Middleton Place Summerville seismic zone near Charleston, an inland risk many renters overlook."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in South Carolina?",
+      "answer": "South Carolina renters insurance runs slightly below the national average statewide, though coastal cities like Charleston and Hilton Head cost noticeably more than inland cities like Greenville. Use the calculator above for a South Carolina renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "South Carolina's renters insurance rate reflects a state carrying two very different catastrophic risks at once. Hurricane exposure along the coast is well known, with Hurricane Hugo's 1989 devastation still shaping the state's insurance market decades later, and more recent storms like Matthew and Dorian keeping that risk current. What surprises many renters is that a significant portion of the state, including areas near Charleston and Kershaw County, sits within the Middleton Place Summerville seismic zone, giving South Carolina real inland earthquake risk that has nothing to do with its coastline. Charleston adds a third layer through frequent tidal flooding that occurs even without a storm, a phenomenon locals call sunny day flooding. Both flood and earthquake damage remain excluded from standard renters coverage, which keeps the base rate from reflecting the full scope of these two very different hazards.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our South Carolina renters insurance calculator applies the state's base rate of one hundred ninety five dollars a year with no adjustment at these default levels, landing around one hundred seventy two to two hundred eighteen dollars a year, or roughly fourteen to eighteen dollars a month. Renters near Charleston should consider both a flood policy and an earthquake rider, since the city carries meaningful exposure to both hazards independently.",
+    "comparisonNote": "Within the South region, South Carolina's rate sits between Georgia and Alabama, reflecting meaningful hurricane exposure without Florida's mandatory windstorm requirements. Compared to the national average, South Carolina renters insurance runs somewhat higher, driven by the combination of coastal hurricane risk and the state's lesser known inland seismic zone near Charleston."
   }
 }

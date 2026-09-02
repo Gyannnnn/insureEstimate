@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most Utah renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, though outdoor recreation gear like ski equipment and mountain bikes often pushes Salt Lake City renters toward higher limits."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "activity",
+      "title": "Wasatch Fault Earthquake Risk",
+      "description": "Utah sits along the seismically active Wasatch Fault, which runs directly through the state's most populated corridor, and a magnitude five point seven earthquake struck near Salt Lake City in 2020. Standard renters insurance excludes earthquake damage, so renters along the Wasatch Front may want a separate endorsement."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "fire",
+      "title": "Wildland Urban Interface Wildfire",
+      "description": "Utah's dry conditions and vegetation, combined with ongoing drought, place foothill and canyon communities at high wildfire risk. Fire and smoke damage to personal belongings is covered under a standard renters policy, and most standard policies include this coverage without requiring an add on."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "flood",
+      "title": "Post-Fire Flash Flooding and Mudslides",
+      "description": "Utah's flooding is often a direct side effect of wildfire, since burned hillsides lose the vegetation that would normally absorb heavy rain, leading to flash flooding and mudslides in the following season. Flood and mudslide damage are excluded from standard renters insurance and require separate coverage."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in Utah?",
+      "answer": "No. Utah does not require renters insurance by law, though landlords may require it as a lease condition."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover earthquake damage in Utah?",
+      "answer": "No. Standard renters insurance excludes earthquake damage, a real risk given Utah's Wasatch Fault runs through the state's most populated corridor and produced a magnitude five point seven earthquake near Salt Lake City in 2020."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover wildfire damage in Utah?",
+      "answer": "Yes. Most standard renters insurance policies in Utah include wildfire coverage automatically, protecting personal belongings from fire and smoke damage without needing an additional endorsement."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover mudslide damage after a wildfire in Utah?",
+      "answer": "No. Flood and mudslide damage, including the kind that often follows a wildfire once burned hillsides lose their ability to absorb rain, is excluded from standard renters insurance."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in Utah?",
+      "answer": "Utah renters insurance ranks among the more affordable states nationally, with Salt Lake City running somewhat higher than smaller cities like Logan given urban density and theft risk. Use the calculator above for a Utah renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "Utah renters insurance stays affordable despite the state carrying one of the more significant earthquake risks in the country. The Wasatch Fault runs directly through Utah's most populated corridor, and a magnitude five point seven earthquake struck near Salt Lake City as recently as 2020, a reminder that this risk is not theoretical. Because standard renters insurance excludes earthquake damage entirely, this catastrophic risk has little direct effect on the base rate. Wildfire adds a second, more visible layer in foothill and canyon communities, and Utah's flooding often arrives as a direct consequence of wildfire, since burned hillsides lose the vegetation that would otherwise absorb heavy rain, producing flash floods and mudslides in the following season. Because flood and mudslide damage are also excluded from standard coverage, Utah's renters insurance rate reflects its wildfire risk far more than its combined earthquake and post-fire flood exposure.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our Utah renters insurance calculator applies the state's base rate of one hundred forty five dollars a year with no adjustment at these default levels, landing around one hundred twenty eight to one hundred sixty two dollars a year, or roughly eleven to fourteen dollars a month. Renters along the Wasatch Front should strongly consider a separate earthquake endorsement given the fault's documented activity, and renters near recently burned foothill areas should watch for elevated flash flood risk in the following rainy season.",
+    "comparisonNote": "Within the West region, Utah's rate sits close to Idaho and Wyoming, reflecting a similarly low overall base rate despite Utah carrying a distinctly higher earthquake risk that those states do not share to the same degree. Compared to the national average, Utah renters insurance runs below typical levels, a rate that undersells the seriousness of the Wasatch Fault risk given how much of that exposure sits outside standard coverage."
   }
 }

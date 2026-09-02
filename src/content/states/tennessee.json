@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most Tennessee renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that holds up across the state's real tornado and flood exposure in both Nashville and Memphis."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "wind",
+      "title": "Middle Tennessee Nighttime Tornadoes",
+      "description": "The March 2020 EF-3 tornado tore through East Nashville, Germantown, and Donelson at one in the morning while residents slept, killing twenty five people and destroying thousands of homes and apartments. Unlike classic Tornado Alley twisters in Oklahoma and Kansas, Middle Tennessee tornadoes often strike at night with far less warning time. Wind damage to personal belongings from a tornado is covered under a standard Tennessee renters insurance policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "flood",
+      "title": "Nashville Flood Risk",
+      "description": "The May 2010 Nashville flood killed twenty six people and caused over two billion dollars in damage, with homes near the Cumberland River facing the highest ongoing risk. Flood damage is excluded from standard renters insurance and requires a separate policy through the National Flood Insurance Program."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "storm",
+      "title": "Severe Hail and Thunderstorms",
+      "description": "Hail damage claims in Tennessee averaged eight thousand four hundred dollars per incident statewide in 2023, and the state experiences over fifty severe weather days a year on average. Hail and wind damage to personal property is covered under a standard renters policy."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in Tennessee?",
+      "answer": "No. Tennessee does not require renters insurance by law, though landlords in Nashville, Memphis, and other active rental markets commonly include it as a lease condition."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover tornado damage in Tennessee?",
+      "answer": "Yes. Tornadoes and windstorms are covered perils under a standard Tennessee renters insurance policy, which matters given Middle Tennessee's history, including the deadly March 2020 Nashville tornado."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover flooding in Nashville?",
+      "answer": "No. Standard renters insurance does not cover flooding, including water rising from the Cumberland River or stormwater runoff. Nashville renters near flood-prone areas should explore federally backed NFIP coverage or a private flood policy."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover hail damage in Tennessee?",
+      "answer": "Yes. Hail damage to personal belongings is a covered peril under a standard renters policy, relevant given hail claims in Tennessee averaged over eight thousand dollars per incident in 2023."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in Tennessee?",
+      "answer": "Tennessee renters insurance runs above the national average, generally higher in Nashville and Memphis than in smaller cities. Use the calculator above for a Tennessee renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "Tennessee renters insurance costs sit above the national average, driven by a combination of tornado, flood, and hail risk concentrated most heavily around Nashville and Memphis. Middle Tennessee's tornado risk carries a distinct danger that classic Tornado Alley states don't share as often: the March 2020 EF-3 tornado struck East Nashville and Germantown at one in the morning while residents slept, a pattern of nighttime tornadoes that gives far less warning than daytime storms in Oklahoma or Kansas. Flooding adds a second major risk, underscored by the catastrophic May 2010 Nashville flood that killed twenty six people and caused over two billion dollars in damage along the Cumberland River. Severe hail rounds out the picture, with claims averaging eight thousand four hundred dollars per incident in 2023 alone across more than fifty severe weather days a year statewide. Because flood damage remains excluded from standard renters coverage regardless of these numbers, Tennessee's base rate reflects its tornado and hail exposure far more than its flood risk.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our Tennessee renters insurance calculator applies the state's base rate of one hundred ninety dollars a year with no adjustment at these default levels, landing around one hundred sixty seven to two hundred thirteen dollars a year, or roughly fourteen to eighteen dollars a month. Nashville renters near the Cumberland River or in older buildings should budget separately for flood coverage, since that risk sits entirely outside this standard calculation.",
+    "comparisonNote": "Within the South region, Tennessee's rate sits below Mississippi and Louisiana despite meaningful tornado exposure, reflecting a risk profile without the hurricane wind risk those Gulf Coast states carry. Compared to the national average, Tennessee renters insurance runs noticeably higher, driven by the combination of Middle Tennessee's nighttime tornado risk and Nashville's documented flood history along the Cumberland River."
   }
 }

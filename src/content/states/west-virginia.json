@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most West Virginia renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that holds up across the state's real flood, landslide, and mining related ground movement risk."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "flood",
+      "title": "Mountain Valley Flooding",
+      "description": "West Virginia experienced over one thousand six hundred floods between 2010 and 2021, making flooding the most common natural disaster in the state, driven by mountainous terrain and deep river valleys that concentrate runoff into low lying areas. Flood damage is excluded from standard renters insurance and requires a separate policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "activity",
+      "title": "Mining Related Ground Movement",
+      "description": "While West Virginia doesn't experience many natural earthquakes, the state's long history of coal mining has produced frequent ground movement from subsidence, a risk fairly unique to the state compared to natural seismic activity elsewhere. This type of earth movement is generally excluded from both standard and earthquake insurance policies."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "warning",
+      "title": "Landslides",
+      "description": "Landslides are among the most common natural disasters in West Virginia's mountainous terrain, and critically, they are not covered by flood insurance, earthquake insurance, or standard renters insurance. Renters may need separate difference in conditions coverage specifically to protect belongings against landslide damage."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in West Virginia?",
+      "answer": "No. West Virginia does not require renters insurance by law, though many landlords and property managers include it as a lease condition."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover flooding in West Virginia?",
+      "answer": "No. Despite flooding being the most common natural disaster in the state, with over one thousand six hundred floods recorded between 2010 and 2021, flood damage is excluded from standard renters insurance and requires a separate policy."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover landslide damage in West Virginia?",
+      "answer": "No. Landslides are a common hazard in West Virginia's mountainous terrain, but they are excluded from standard renters insurance, flood insurance, and earthquake insurance alike, requiring separate difference in conditions coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is mining related ground movement, and is it covered?",
+      "answer": "West Virginia's extensive coal mining history has caused frequent ground subsidence, a form of earth movement distinct from natural earthquakes. This type of damage is generally excluded from both standard renters insurance and dedicated earthquake policies."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in West Virginia?",
+      "answer": "West Virginia renters insurance runs close to the national average, with urban areas like Bluefield and Fairmont typically costing more than rural parts of the state. Use the calculator above for a West Virginia renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "West Virginia renters insurance costs reflect a state with a genuinely unusual set of overlapping ground and water hazards. Flooding is the single most common natural disaster in the state, with over one thousand six hundred recorded floods between 2010 and 2021 alone, a direct consequence of mountainous terrain and deep river valleys that funnel rainfall into low lying communities. Landslides add a second, related risk across the same mountainous terrain, and critically, this is a hazard that falls through the cracks of standard coverage entirely, excluded not just from renters insurance but from both flood insurance and earthquake insurance as well, requiring a specific difference in conditions policy. West Virginia also carries a risk almost no other state shares in the same way: decades of coal mining have produced frequent ground subsidence, an earth movement risk distinct from natural seismic activity and similarly excluded from standard coverage. Because all three of these hazards sit outside what a standard renters policy actually prices, West Virginia's base rate understates just how layered the state's true risk profile is.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our West Virginia renters insurance calculator applies the state's base rate of one hundred seventy five dollars a year with no adjustment at these default levels, landing around one hundred fifty four to one hundred ninety six dollars a year, or roughly thirteen to sixteen dollars a month. Renters in mountainous or river valley communities should specifically ask about difference in conditions coverage, since landslide risk isn't addressed by flood or earthquake policies alone.",
+    "comparisonNote": "Within the South region, West Virginia's rate sits below Kentucky despite sharing significant flood and landslide exposure, reflecting the state's lower overall property replacement costs. Compared to the national average, West Virginia renters insurance runs close to typical levels, though this figure meaningfully understates the state's true risk given how many of its hazards, flood, landslide, and mining subsidence, all fall outside standard coverage."
   }
 }

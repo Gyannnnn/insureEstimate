@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most Rhode Island renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, a level that holds up across the state's real hurricane and coastal flood exposure given its entirely coastal geography."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "storm",
+      "title": "Hurricane Wind Risk",
+      "description": "The Great Hurricane of 1938 put downtown Providence under more than a dozen feet of storm surge, a disaster significant enough that the city later built the Fox Point Hurricane Barrier for protection. Wind damage to personal belongings from hurricanes and nor'easters is covered under a standard Rhode Island renters insurance policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "flood",
+      "title": "Rapidly Rising Flood Claims",
+      "description": "National Flood Insurance Program payouts to Rhode Island residents jumped from just eleven thousand dollars in 2019 to four point six million dollars in 2023, a four hundred seventeen fold increase reflecting the state's growing flood exposure. Flood damage, including storm surge from Narragansett Bay, is excluded from standard renters insurance."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "water_damage",
+      "title": "River and Urban Flooding",
+      "description": "Providence sits where the Woonasquatucket and Moshassuck rivers meet Narragansett Bay, and the Blackstone and Pawtuxet rivers add further inland flood risk, as seen when the Pawtuxet crested at record levels during the March 2010 flood. This type of flooding is excluded from standard renters insurance and requires a separate policy."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in Rhode Island?",
+      "answer": "No. Rhode Island law does not require renters insurance, though many landlords and property management companies in Providence require it as a lease condition."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover hurricane damage in Rhode Island?",
+      "answer": "Yes, for wind. Standard renters policies cover wind and rain damage from hurricanes, but storm surge flooding, like the surge that famously devastated downtown Providence in the 1938 hurricane, is excluded and requires separate flood insurance."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover storm surge from Narragansett Bay?",
+      "answer": "No. Storm surge flooding is excluded from standard renters insurance regardless of source. Renters in flood zone buildings near Narragansett Bay or the Atlantic coast should purchase a separate flood policy."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Is flood risk increasing in Rhode Island?",
+      "answer": "Yes, significantly. National Flood Insurance Program payouts to Rhode Island residents rose from eleven thousand dollars in 2019 to four point six million dollars in 2023, a dramatic increase reflecting warming temperatures and rising sea levels."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in Rhode Island?",
+      "answer": "Rhode Island renters insurance runs close to the national average, generally higher for coastal properties near Newport or South County than for inland Providence neighborhoods. Use the calculator above for a Rhode Island renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "Rhode Island's renters insurance rate reflects a state where the entire population lives close to the water, and where flood risk has grown sharply in recent years. The Great Hurricane of 1938 remains the defining benchmark for the state's storm risk, having put downtown Providence under more than a dozen feet of surge and prompting the construction of the Fox Point Hurricane Barrier that still protects the city today. More recently, National Flood Insurance Program payouts to Rhode Island residents jumped from just eleven thousand dollars in 2019 to four point six million dollars in 2023, a four hundred seventeen fold increase that signals how quickly the state's flood exposure is intensifying. Providence's location where the Woonasquatucket and Moshassuck rivers meet Narragansett Bay, combined with inland river flooding along the Blackstone and Pawtuxet, adds further risk. Because all of this flood exposure sits outside standard renters coverage, the base rate reflects Rhode Island's wind risk far more than its rapidly growing flood risk.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our Rhode Island renters insurance calculator applies the state's base rate of one hundred sixty five dollars a year with no adjustment at these default levels, landing around one hundred forty five to one hundred eighty five dollars a year, or roughly twelve to fifteen dollars a month. Renters anywhere near Narragansett Bay or a Providence area river should strongly consider a separate flood policy given how sharply flood claims have risen in recent years.",
+    "comparisonNote": "Within the Northeast region, Rhode Island's rate sits close to Connecticut and New Jersey, sharing meaningful coastal storm exposure, though Rhode Island's documented four hundred seventeen fold increase in flood claims stands out even among its coastal neighbors. Compared to the national average, Rhode Island renters insurance runs close to typical levels, though this likely understates the state's rapidly intensifying flood risk given how much of that risk sits outside what the standard policy prices."
   }
 }

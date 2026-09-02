@@ -15,50 +15,50 @@
     "typicalPersonalProperty": 30000,
     "typicalLiability": 100000,
     "typicalDeductible": 500,
-    "demographicNote": ""
+    "demographicNote": "Most Virginia renters choose thirty thousand dollars in personal property coverage with a five hundred dollar deductible, though Northern Virginia renters in one of the country's most expensive rental markets often carry higher limits."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "flood",
+      "title": "Hampton Roads Sea Level Rise",
+      "description": "Hampton Roads sits at the intersection of Atlantic hurricane tracks, Chesapeake Bay storm surge, and one of the fastest rates of sea level rise on the entire East Coast, producing recurring nuisance flooding from high tides alone, separate from any storm. Flood damage is excluded from standard renters insurance and requires a separate policy."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "storm",
+      "title": "Coastal Hurricane and Percentage Deductibles",
+      "description": "In coastal counties like Hampton Roads and the Eastern Shore, insurers commonly apply a separate hurricane deductible calculated as a percentage, often two to five percent, of insured personal property value rather than a flat dollar amount. Wind damage to personal belongings from a hurricane is covered, but confirming this deductible structure matters."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "water_damage",
+      "title": "James and Potomac River Flooding",
+      "description": "The James River poses a significant flood risk to parts of Richmond, while the Potomac River can flood areas across Northern Virginia, showing that Virginia's flood exposure extends well beyond its coastline. Flood damage from these rivers is excluded from standard renters insurance."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Is renters insurance required in Virginia?",
+      "answer": "No. Virginia does not require renters insurance by law, but the Virginia Residential Landlord and Tenant Act allows landlords to require it, and most apartment complexes do."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover hurricane damage in Virginia?",
+      "answer": "Wind damage is generally covered, but in Hampton Roads and the Eastern Shore, insurers often apply a percentage based hurricane deductible, meaning your out of pocket cost could be significantly higher than a standard flat deductible."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover flooding in Hampton Roads?",
+      "answer": "No. Flood damage is excluded from standard renters insurance, which matters significantly in Hampton Roads given the region's status as one of the fastest sea level rise areas on the East Coast."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does renters insurance cover flooding from the James River in Richmond?",
+      "answer": "No. Flood damage from Virginia's rivers, including the James in Richmond and the Potomac in Northern Virginia, is excluded from standard renters insurance and requires a separate flood policy."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "How much does renters insurance cost in Virginia?",
+      "answer": "Virginia renters insurance runs close to the national average statewide, with coastal Hampton Roads and the Eastern Shore costing noticeably more than inland cities like Roanoke. Use the calculator above for a Virginia renters insurance quote based on your specific coverage choices."
     }
   ],
   "blogContent": {
-    "whyThisRate": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRate": "Virginia renters insurance costs sit close to the national average, though that statewide figure masks a sharp divide between the coast and the rest of the Commonwealth. Hampton Roads faces a genuinely compound risk, sitting at the intersection of Atlantic hurricane tracks, Chesapeake Bay storm surge, and one of the fastest rates of sea level rise on the entire East Coast, producing nuisance flooding from high tides alone even without a named storm. Coastal renters also face a practical complication most inland renters never encounter: many insurers apply a percentage based hurricane deductible rather than a flat dollar amount, meaning a storm claim can cost meaningfully more out of pocket than expected. Flood risk is not exclusively coastal either, with the James River threatening Richmond and the Potomac affecting Northern Virginia. Because flood damage in any form remains excluded from standard renters coverage, Virginia's base rate reflects general storm wind risk far more than the state's genuinely serious and geographically widespread flood exposure.",
+    "howCalculated": "For a standard profile, twenty thousand dollars in personal property coverage, one hundred thousand dollars in liability, and a five hundred dollar deductible, our Virginia renters insurance calculator applies the state's base rate of one hundred sixty five dollars a year with no adjustment at these default levels, landing around one hundred forty five to one hundred eighty five dollars a year, or roughly twelve to fifteen dollars a month. Renters in Hampton Roads should confirm whether their policy applies a percentage based hurricane deductible, and Richmond or Northern Virginia renters near the James or Potomac rivers should consider a separate flood policy.",
+    "comparisonNote": "Within the South region, Virginia's rate sits below Georgia and South Carolina despite sharing meaningful hurricane exposure, reflecting the fact that only a portion of the state, primarily Hampton Roads, faces the most severe coastal risk. Compared to the national average, Virginia renters insurance runs close to typical levels, though this statewide average significantly understates the elevated risk concentrated in the state's fastest sea level rise region."
   }
 }
