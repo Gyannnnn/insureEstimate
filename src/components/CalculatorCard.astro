@@ -37,43 +37,62 @@ const {
 
         {type === 'renters' ? (
           <div class="flex flex-col gap-5" data-calc-type="renters" data-base-rate={baseRate}>
-            <!-- Property Value Selector -->
+            <!-- 1. Personal Property Coverage Slider (Full Width) -->
+            <div class="flex flex-col gap-2.5">
+              <div class="flex items-center justify-between">
+                <label class="font-label-sm text-xs text-on-surface font-semibold" for="card-property-slider">Personal Property Coverage</label>
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-secondary/10 text-secondary rounded-full border border-secondary/20 text-xs font-medium font-data-tabular">
+                  <span class="material-symbols-outlined text-[16px]">home_storage</span>
+                  <span id="card-property-val" class="font-bold">$20,000</span>
+                  <span id="card-property-badge-label" class="text-[11px] text-on-surface-variant font-normal">(Standard)</span>
+                </div>
+              </div>
+
+              <div class="relative flex items-center w-full py-1">
+                <input 
+                  id="card-property-slider" 
+                  type="range" 
+                  min="0" 
+                  max="3" 
+                  step="1" 
+                  value="1" 
+                  class="w-full h-2.5 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-secondary focus:outline-none focus:ring-2 focus:ring-secondary/20 transition-all" 
+                />
+              </div>
+
+              <div class="flex justify-between text-[11px] font-data-tabular text-on-surface-variant/70 px-0.5">
+                <span>$10k (Minimal)</span>
+                <span>$20k (Standard)</span>
+                <span>$30k (Rec.)</span>
+                <span>$50k (High)</span>
+              </div>
+            </div>
+
+            <!-- 2. Liability Limit Selector -->
             <div class="flex flex-col gap-2">
-              <label class="font-label-sm text-xs text-on-surface" for="card-property-select">Personal Property Coverage</label>
-              <select id="card-property-select" class="h-11 px-4 rounded-xl border border-outline-variant bg-surface-container-low text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/20">
-                <option value="10000">$10,000 (Minimal)</option>
-                <option value="20000" selected>$20,000 (Standard Baseline)</option>
-                <option value="30000">$30,000 (Recommended)</option>
-                <option value="50000">$50,000 (High Asset)</option>
+              <label class="font-label-sm text-xs text-on-surface font-semibold" for="card-liability-select">Liability Limit</label>
+              <select id="card-liability-select" class="h-11 px-4 rounded-xl border border-outline-variant bg-surface-container-low text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/20">
+                <option value="100000">$100,000 (Standard)</option>
+                <option value="300000" selected>$300,000 (Recommended)</option>
+                <option value="500000">$500,000 (Maximum)</option>
               </select>
             </div>
 
-            <!-- Liability Selector & Deductible -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="flex flex-col gap-2">
-                <label class="font-label-sm text-xs text-on-surface" for="card-liability-select">Liability Limit</label>
-                <select id="card-liability-select" class="h-11 px-4 rounded-xl border border-outline-variant bg-surface-container-low text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/20">
-                  <option value="100000">$100,000 (Standard)</option>
-                  <option value="300000" selected>$300,000 (Recommended)</option>
-                  <option value="500000">$500,000 (Maximum)</option>
-                </select>
-              </div>
-
-              <div class="flex flex-col gap-2">
-                <label class="font-label-sm text-xs text-on-surface" for="card-deductible-select">Deductible Tier</label>
-                <select id="card-deductible-select" class="h-11 px-4 rounded-xl border border-outline-variant bg-surface-container-low text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/20">
-                  <option value="500">$500 Deductible</option>
-                  <option value="1000" selected>$1,000 Deductible (Standard)</option>
-                  <option value="2500">$2,500 Deductible (High Savings)</option>
-                </select>
-              </div>
+            <!-- 3. Deductible Tier Selector -->
+            <div class="flex flex-col gap-2">
+              <label class="font-label-sm text-xs text-on-surface font-semibold" for="card-deductible-select">Deductible Tier</label>
+              <select id="card-deductible-select" class="h-11 px-4 rounded-xl border border-outline-variant bg-surface-container-low text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/20">
+                <option value="500">$500 Deductible</option>
+                <option value="1000" selected>$1,000 Deductible (Standard)</option>
+                <option value="2500">$2,500 Deductible (High Savings)</option>
+              </select>
             </div>
           </div>
         ) : (
           <div class="flex flex-col gap-5" data-calc-type="business" data-risk-factor={riskFactor}>
-            <!-- Revenue Tier Selector -->
+            <!-- 1. Annual Revenue Tier Selector -->
             <div class="flex flex-col gap-2">
-              <label class="font-label-sm text-xs text-on-surface" for="card-revenue-tier">Annual Revenue Tier</label>
+              <label class="font-label-sm text-xs text-on-surface font-semibold" for="card-revenue-tier">Annual Revenue Tier</label>
               <select id="card-revenue-tier" class="h-11 px-4 rounded-xl border border-outline-variant bg-surface-container-low text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/20">
                 <option value="0-50k">$0 – $50,000 (Micro / Solo)</option>
                 <option value="50-150k" selected>$50,000 – $150,000 (Growing Service)</option>
@@ -82,19 +101,44 @@ const {
               </select>
             </div>
 
-            <!-- Employee Count & Coverage Selector -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="flex flex-col gap-2">
-                <label class="font-label-sm text-xs text-on-surface" for="card-employee-count">Employee Count</label>
-                <input id="card-employee-count" type="number" min="0" max="500" step="1" value="1" class="h-11 px-4 rounded-xl border border-outline-variant bg-surface-container-low text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/20" />
+            <!-- 2. Coverage Type Selector -->
+            <div class="flex flex-col gap-2">
+              <label class="font-label-sm text-xs text-on-surface font-semibold" for="card-coverage-type">Coverage Type</label>
+              <select id="card-coverage-type" class="h-11 px-4 rounded-xl border border-outline-variant bg-surface-container-low text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/20">
+                <option value="GL">General Liability Only (GL)</option>
+                <option value="GL+EO" selected>General Liability + E&amp;O (GL+EO)</option>
+              </select>
+            </div>
+
+            <!-- 3. Employee Count Slider (Full Width, Vertical Below) -->
+            <div class="flex flex-col gap-2.5">
+              <div class="flex items-center justify-between">
+                <label class="font-label-sm text-xs text-on-surface font-semibold" for="card-employee-count">Employee Count</label>
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-primary/10 text-primary rounded-full border border-primary/20 text-xs font-medium font-data-tabular">
+                  <span class="material-symbols-outlined text-[16px]">groups</span>
+                  <span id="card-employee-count-val" class="font-bold">1</span>
+                  <span id="card-employee-label" class="text-[11px] text-on-surface-variant font-normal">employee</span>
+                </div>
               </div>
 
-              <div class="flex flex-col gap-2">
-                <label class="font-label-sm text-xs text-on-surface" for="card-coverage-type">Coverage Type</label>
-                <select id="card-coverage-type" class="h-11 px-4 rounded-xl border border-outline-variant bg-surface-container-low text-on-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/20">
-                  <option value="GL">General Liability Only (GL)</option>
-                  <option value="GL+EO" selected>General Liability + E&amp;O (GL+EO)</option>
-                </select>
+              <div class="relative flex items-center w-full py-1">
+                <input 
+                  id="card-employee-count" 
+                  type="range" 
+                  min="0" 
+                  max="100" 
+                  step="1" 
+                  value="1" 
+                  class="w-full h-2.5 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" 
+                />
+              </div>
+
+              <div class="flex justify-between text-[11px] font-data-tabular text-on-surface-variant/70 px-0.5">
+                <span>0 (Solo)</span>
+                <span>25</span>
+                <span>50</span>
+                <span>75</span>
+                <span>100+</span>
               </div>
             </div>
           </div>
@@ -157,10 +201,26 @@ const {
     const errorBanner = document.getElementById('calc-error-banner');
     const errorText = document.getElementById('calc-error-text');
 
+    const PROPERTY_TIERS = [10000, 20000, 30000, 50000];
+    const PROPERTY_LABELS = ['(Minimal)', '(Standard)', '(Recommended)', '(High Asset)'];
+
     const updateRenters = () => {
       if (!rentersContainer || !minDisplay || !maxDisplay || !breakdownList || !disclaimerText) return;
       const baseRate = parseFloat(rentersContainer.getAttribute('data-base-rate') || '180');
-      const propVal = parseInt((document.getElementById('card-property-select') as HTMLSelectElement)?.value || '20000');
+
+      const propSlider = document.getElementById('card-property-slider') as HTMLInputElement;
+      const sliderIdx = parseInt(propSlider?.value || '1');
+      const propVal = PROPERTY_TIERS[sliderIdx] || 20000;
+
+      const propValDisplay = document.getElementById('card-property-val');
+      const propBadgeLabel = document.getElementById('card-property-badge-label');
+      if (propValDisplay) {
+        propValDisplay.textContent = `$${propVal.toLocaleString('en-US')}`;
+      }
+      if (propBadgeLabel) {
+        propBadgeLabel.textContent = PROPERTY_LABELS[sliderIdx] || '';
+      }
+
       const liabVal = parseInt((document.getElementById('card-liability-select') as HTMLSelectElement)?.value || '300000');
       const dedVal = parseInt((document.getElementById('card-deductible-select') as HTMLSelectElement)?.value || '1000');
 
@@ -200,6 +260,15 @@ const {
       const empCount = empInputVal === '' || empInputVal === undefined ? 0 : parseFloat(empInputVal);
       const covType = (document.getElementById('card-coverage-type') as HTMLSelectElement)?.value || 'GL+EO';
 
+      const empValDisplay = document.getElementById('card-employee-count-val');
+      const empLabelDisplay = document.getElementById('card-employee-label');
+      if (empValDisplay) {
+        empValDisplay.textContent = Math.round(empCount).toString();
+      }
+      if (empLabelDisplay) {
+        empLabelDisplay.textContent = Math.round(empCount) === 1 ? 'employee' : 'employees';
+      }
+
       try {
         if (errorBanner) errorBanner.classList.add('hidden');
         const res = calculateBusinessPremium({
@@ -229,7 +298,11 @@ const {
     };
 
     if (rentersContainer) {
-      document.getElementById('card-property-select')?.addEventListener('change', updateRenters);
+      const propSlider = document.getElementById('card-property-slider');
+      if (propSlider) {
+        propSlider.addEventListener('input', updateRenters);
+        propSlider.addEventListener('change', updateRenters);
+      }
       document.getElementById('card-liability-select')?.addEventListener('change', updateRenters);
       document.getElementById('card-deductible-select')?.addEventListener('change', updateRenters);
       updateRenters();
@@ -237,7 +310,11 @@ const {
 
     if (businessContainer) {
       document.getElementById('card-revenue-tier')?.addEventListener('change', updateBusiness);
-      document.getElementById('card-employee-count')?.addEventListener('input', updateBusiness);
+      const empInput = document.getElementById('card-employee-count');
+      if (empInput) {
+        empInput.addEventListener('input', updateBusiness);
+        empInput.addEventListener('change', updateBusiness);
+      }
       document.getElementById('card-coverage-type')?.addEventListener('change', updateBusiness);
       updateBusiness();
     }
