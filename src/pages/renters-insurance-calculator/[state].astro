@@ -140,7 +140,7 @@ const statePct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost / maxR
       </div>
 
       <!-- Main Layout Container -->
-      <div class="max-w-[1280px] mx-auto w-full px-margin-mobile md:px-margin-desktop pt-2 sm:pt-4 pb-stack-lg lg:pb-[72px] relative z-10 flex flex-col gap-3 sm:gap-4 md:gap-stack-lg lg:gap-[96px]">
+      <div class="max-w-[1280px] mx-auto w-full px-margin-mobile md:px-margin-desktop pt-2 sm:pt-3 pb-stack-lg lg:pb-[72px] relative z-10 flex flex-col gap-2.5 sm:gap-3 lg:gap-4">
         <!-- Breadcrumbs Navigation -->
         <Breadcrumbs items={[
           { label: 'Renters Insurance', href: '/renters-insurance-calculator/' },
@@ -154,8 +154,8 @@ const statePct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost / maxR
               <span class="w-6 sm:w-8 h-[2px] bg-primary"></span>
               <span class="font-label-sm text-[11px] sm:text-label-sm tracking-widest uppercase text-on-surface-variant">{data.name} State Data</span>
             </div>
-            <h1 class="font-display-lg text-2xl sm:text-3xl md:text-4xl lg:text-display-lg text-primary text-balance font-semibold leading-tight md:leading-none">Renters Insurance Cost in {data.name}</h1>
-            <p class="font-body-lg text-sm sm:text-base md:text-body-lg text-on-surface-variant text-balance leading-relaxed">
+            <h1 class="font-display-lg text-2xl sm:text-3xl md:text-4xl lg:text-[38px] text-primary text-balance font-semibold leading-tight">Renters Insurance Cost in {data.name}</h1>
+            <p class="font-body-lg text-sm sm:text-base lg:text-base text-on-surface-variant text-balance leading-relaxed">
               Estimate your monthly renters insurance premium in {data.name}. Adjust coverage limits and deductibles to see how they impact your projected costs based on localized data models.
             </p>
             <div class="flex flex-col sm:flex-row gap-stack-sm mt-stack-sm">
@@ -178,7 +178,7 @@ const statePct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost / maxR
         </section>
 
         <!-- Calculator Section -->
-        <div id="calculator" class="w-full scroll-mt-[100px]">
+        <div id="calculator" class="w-full scroll-mt-[100px] mt-2 sm:mt-4">
           <CalculatorCard
             title={`${data.name} Renters Insurance Estimator`}
             subtitle={`Model monthly premium ranges for ${data.name} based on state actuarial benchmarks.`}
@@ -190,7 +190,7 @@ const statePct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost / maxR
 
         <!-- Data Grid Section -->
         <section class="flex flex-col gap-4 sm:gap-stack-md mt-stack-md">
-          <h2 class="font-headline-lg text-xl sm:text-2xl md:text-headline-lg text-primary font-bold border-b border-outline-variant/50 pb-3 sm:pb-4">{data.name} Market Data</h2>
+          <h2 class="font-headline-lg text-xl sm:text-2xl lg:text-3xl text-primary font-bold border-b border-outline-variant/50 pb-3 sm:pb-4">{data.name} Market Data</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-gutter">
             <!-- Card 1: Derived Average Cost -->
             <div class="bg-surface-container-lowest rounded-lg p-5 sm:p-stack-md shadow-sm border border-outline-variant/30 flex flex-col relative group hover:shadow-md transition-shadow">
@@ -302,7 +302,7 @@ const statePct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost / maxR
           <section id="risk-profile" class="mt-stack-md pt-stack-md border-t border-outline-variant/40 scroll-mt-24">
             <div class="flex flex-col gap-2 sm:gap-stack-sm mb-4 sm:mb-6">
               <span class="font-label-sm text-[11px] sm:text-xs text-secondary uppercase tracking-widest font-semibold">Localized Risk</span>
-              <h2 class="font-headline-lg text-xl sm:text-2xl md:text-headline-lg text-primary font-bold">{data.name} Risk Profile</h2>
+              <h2 class="font-headline-lg text-xl sm:text-2xl lg:text-3xl text-primary font-bold">{data.name} Risk Profile</h2>
             </div>
             {validRiskFactors.length > 0 ? (
               <div class={`grid gap-4 md:gap-gutter ${
@@ -315,8 +315,8 @@ const statePct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost / maxR
                     <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
                       <span class="material-symbols-outlined text-[20px] sm:text-[22px] not-italic normal-case select-none">{getIconName(rf.icon)}</span>
                     </div>
-                    {rf.title && <h3 class="font-headline-sm font-bold text-primary text-sm sm:text-base">{rf.title}</h3>}
-                    {rf.description && <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">{rf.description}</p>}
+                    {rf.title && <h3 class="font-headline-sm font-bold text-primary text-sm sm:text-base lg:text-lg">{rf.title}</h3>}
+                    {rf.description && <p class="font-body-md text-xs sm:text-sm text-on-surface-variant leading-relaxed">{rf.description}</p>}
                   </div>
                 ))}
               </div>
@@ -335,27 +335,27 @@ const statePct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost / maxR
               <span class="w-6 sm:w-8 h-[2px] bg-outline-variant"></span>
               <span class="font-label-sm text-[11px] sm:text-label-sm tracking-widest uppercase text-on-surface-variant">Process</span>
             </div>
-            <h2 class="font-display-lg text-xl sm:text-2xl md:text-[36px] leading-tight md:leading-[44px] text-primary tracking-tight font-bold">How we calculate estimates</h2>
+            <h2 class="font-display-lg text-xl sm:text-2xl lg:text-3xl leading-tight text-primary tracking-tight font-bold">How we calculate estimates</h2>
             <div class="flex flex-col gap-4 sm:gap-6 mt-3 sm:mt-4 relative">
               <div class="absolute left-[11px] top-2 bottom-2 w-[1px] bg-outline-variant/50 -z-10"></div>
               <div class="flex gap-3.5 sm:gap-4 items-start bg-surface-container-lowest p-3.5 sm:p-4 rounded-lg shadow-sm border border-outline-variant/30">
                 <div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-data-tabular text-[12px] shrink-0 mt-0.5">1</div>
                 <div class="flex flex-col">
-                  <h4 class="font-data-tabular text-sm sm:text-[16px] text-primary font-medium">Data Aggregation</h4>
+                  <h4 class="font-data-tabular text-sm sm:text-[15px] lg:text-base text-primary font-medium">Data Aggregation</h4>
                   <p class="font-body-md text-xs sm:text-[14px] text-on-surface-variant mt-1">We collect anonymized quoting data from top carriers across {data.name} ZIP codes, updated quarterly.</p>
                 </div>
               </div>
               <div class="flex gap-3.5 sm:gap-4 items-start bg-surface-container-lowest p-3.5 sm:p-4 rounded-lg shadow-sm border border-outline-variant/30">
                 <div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-data-tabular text-[12px] shrink-0 mt-0.5">2</div>
                 <div class="flex flex-col">
-                  <h4 class="font-data-tabular text-sm sm:text-[16px] text-primary font-medium">Actuarial Modeling</h4>
+                  <h4 class="font-data-tabular text-sm sm:text-[15px] lg:text-base text-primary font-medium">Actuarial Modeling</h4>
                   <p class="font-body-md text-xs sm:text-[14px] text-on-surface-variant mt-1">Base rates are adjusted using proprietary multipliers for coverage limits, deductibles, and local risk factors.</p>
                 </div>
               </div>
               <div class="flex gap-3.5 sm:gap-4 items-start bg-surface-container-lowest p-4 rounded-lg shadow-sm border border-outline-variant/30">
                 <div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-data-tabular text-[12px] shrink-0 mt-0.5">3</div>
                 <div class="flex flex-col">
-                  <h4 class="font-data-tabular text-sm sm:text-[16px] text-primary font-medium">Estimate Generation</h4>
+                  <h4 class="font-data-tabular text-sm sm:text-[15px] lg:text-base text-primary font-medium">Estimate Generation</h4>
                   <p class="font-body-md text-xs sm:text-[14px] text-on-surface-variant mt-1">The calculator outputs a localized projection, designed to give you a realistic baseline before seeking official quotes.</p>
                 </div>
               </div>
@@ -378,7 +378,7 @@ const statePct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost / maxR
           <section class="mt-stack-md pt-stack-lg border-t border-outline-variant/40 w-full">
             <div class="flex flex-col gap-2 sm:gap-stack-sm mb-4 sm:mb-6">
               <span class="font-label-sm text-[11px] sm:text-xs text-secondary uppercase tracking-widest font-semibold">Underwriting Analysis</span>
-              <h2 class="font-headline-lg text-xl sm:text-2xl md:text-headline-lg text-primary font-bold">How Renters Insurance Works in {data.name}</h2>
+              <h2 class="font-headline-lg text-xl sm:text-2xl lg:text-3xl text-primary font-bold">How Renters Insurance Works in {data.name}</h2>
             </div>
             {hasBlogContent ? (
               <div class="w-full bg-surface-container-lowest p-5 sm:p-6 md:p-8 rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col gap-5 sm:gap-6">
@@ -386,27 +386,27 @@ const statePct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost / maxR
                   <div class="flex flex-col gap-2">
                     <div class="flex items-center gap-2">
                       <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                      <h3 class="font-headline-sm text-base sm:text-lg text-primary font-bold">Why Renters Rates in {data.name} Average ${derivedAnnualCost}/yr</h3>
+                      <h3 class="font-headline-sm text-base sm:text-lg lg:text-xl text-primary font-bold">Why Renters Rates in {data.name} Average ${derivedAnnualCost}/yr</h3>
                     </div>
-                    <p class="font-body-md text-xs sm:text-sm md:text-body-md text-on-surface-variant leading-relaxed pl-4" set:html={linkStateNamesInText(blogContent.whyThisRate, allStates, data.slug)} />
+                    <p class="font-body-md text-xs sm:text-sm lg:text-base text-on-surface-variant leading-relaxed pl-4" set:html={linkStateNamesInText(blogContent.whyThisRate, allStates, data.slug)} />
                   </div>
                 )}
                 {blogContent.howCalculated?.trim() && (
                   <div class="flex flex-col gap-2 pt-4 sm:pt-5 border-t border-outline-variant/20">
                     <div class="flex items-center gap-2">
                       <div class="w-2 h-2 rounded-full bg-primary"></div>
-                      <h3 class="font-headline-sm text-base sm:text-lg text-primary font-bold">Calculating Premium Estimates</h3>
+                      <h3 class="font-headline-sm text-base sm:text-lg lg:text-xl text-primary font-bold">Calculating Premium Estimates</h3>
                     </div>
-                    <p class="font-body-md text-xs sm:text-sm md:text-body-md text-on-surface-variant leading-relaxed pl-4" set:html={linkStateNamesInText(blogContent.howCalculated, allStates, data.slug)} />
+                    <p class="font-body-md text-xs sm:text-sm lg:text-base text-on-surface-variant leading-relaxed pl-4" set:html={linkStateNamesInText(blogContent.howCalculated, allStates, data.slug)} />
                   </div>
                 )}
                 {blogContent.comparisonNote?.trim() && (
                   <div class="flex flex-col gap-2 pt-4 sm:pt-5 border-t border-outline-variant/20">
                     <div class="flex items-center gap-2">
                       <div class="w-2 h-2 rounded-full bg-outline"></div>
-                      <h3 class="font-headline-sm text-base sm:text-lg text-primary font-bold">Regional & National Rate Comparison</h3>
+                      <h3 class="font-headline-sm text-base sm:text-lg lg:text-xl text-primary font-bold">Regional & National Rate Comparison</h3>
                     </div>
-                    <p class="font-body-md text-xs sm:text-sm md:text-body-md text-on-surface-variant leading-relaxed pl-4" set:html={linkStateNamesInText(blogContent.comparisonNote, allStates, data.slug)} />
+                    <p class="font-body-md text-xs sm:text-sm lg:text-base text-on-surface-variant leading-relaxed pl-4" set:html={linkStateNamesInText(blogContent.comparisonNote, allStates, data.slug)} />
                   </div>
                 )}
               </div>
@@ -422,8 +422,8 @@ const statePct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost / maxR
         {(validFaqs.length > 0 || isDev) && (
           <section class="mt-stack-md pt-stack-lg border-t border-outline-variant/50 w-full">
             <div class="text-center mb-4 sm:mb-stack-md max-w-2xl mx-auto">
-              <h2 class="font-headline-lg text-xl sm:text-2xl md:text-headline-lg text-primary font-bold mb-1.5 sm:mb-2">Frequently Asked Questions</h2>
-              <p class="font-body-md text-xs sm:text-sm md:text-body-md text-on-surface-variant">Common queries regarding {data.name} renters insurance.</p>
+              <h2 class="font-headline-lg text-xl sm:text-2xl lg:text-3xl text-primary font-bold mb-1.5 sm:mb-2">Frequently Asked Questions</h2>
+              <p class="font-body-md text-xs sm:text-sm lg:text-base text-on-surface-variant">Common queries regarding {data.name} renters insurance.</p>
             </div>
             {validFaqs.length > 0 ? (
               <>

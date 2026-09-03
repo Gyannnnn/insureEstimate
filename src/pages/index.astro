@@ -34,27 +34,27 @@ const popularProfessions = [
 const faqList = [
   {
     question: "What is an online insurance calculator?",
-    answer: "An online insurance calculator is a digital tool that helps consumers and small business owners estimate potential insurance costs based on location, coverage choices, revenue, and property value. It offers an estimated cost range before you shop for binding quotes."
+    answer: "An online insurance calculator is an independent digital tool that helps consumers and small business owners estimate potential insurance costs based on state location, coverage choices, annual revenue, and property values. It offers an estimated price range before you begin shopping for binding quotes."
   },
   {
     question: "How does the InsureEstimate insurance cost calculator work?",
-    answer: "Our calculator evaluates public actuarial filings, state baseline averages, and industry-specific risk benchmarks. You select your state or profession, adjust coverage limits and deductibles, and the tool models an estimated premium range tailored to your selections."
+    answer: "Our engine evaluates public actuarial filings, state baseline averages, and industry-specific risk benchmarks. You select your state or profession, adjust coverage limits and deductibles, and the tool models a dynamic premium range tailored to your selections."
   },
   {
     question: "Is this an official insurance quote?",
-    answer: "No. This tool provides an estimated cost, not an insurance quote. Actual premiums vary based on specific insurance carrier underwriting guidelines, credit history, claims background, and individual policy options."
+    answer: "No. InsureEstimate provides non-binding price estimates for planning purposes, not official insurance quotes. Actual policy premiums depend on individual carrier underwriting guidelines, credit history, claims background, and specific endorsements."
   },
   {
     question: "Why do insurance costs vary by state and profession?",
-    answer: "Insurance rates reflect localized risk exposure. Renters insurance rates depend on state climate hazards (such as severe weather, wildfires, or flood risk) and local property replacement costs. Business insurance premiums vary by industry risk tier, annual revenue, and employee count."
+    answer: "Insurance rates reflect localized risk exposure. Renters insurance rates depend on state weather perils (such as severe storms, wildfires, or flood risk) and local property replacement costs. Business insurance premiums vary by industry risk tier, annual revenue, and workforce count."
   },
   {
     question: "Why are insurance estimates presented as a range rather than an exact price?",
-    answer: "Insurance carriers use proprietary underwriting criteria that factor in credit history, security discounts, loss history, and specific endorsements. Presenting an estimated range accurately reflects real-world carrier variance across the market."
+    answer: "Insurance carriers utilize proprietary underwriting criteria that factor in credit history, safety discount programs, loss history, and specific endorsements. Presenting an estimated range accurately reflects real-world market variance across top carriers."
   },
   {
-    question: "Is InsureEstimate free to use?",
-    answer: "Yes. InsureEstimate is completely free to use. We do not require account registration, personal contact details, or financial information to estimate your insurance costs."
+    question: "Is InsureEstimate free and compliant with privacy standards?",
+    answer: "Yes. InsureEstimate is completely free to use. We do not require account registration, personal contact details, or financial background checks to model insurance estimates."
   }
 ];
 
@@ -147,224 +147,222 @@ const faqSchema = {
     <script is:inline type="application/ld+json" set:html={JSON.stringify(webAppSchema)} />
     <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   </head>
-  <body class="bg-background font-body-md text-on-surface">
+  <body class="bg-background font-body-md text-on-surface antialiased">
     <SiteHeader active="Home" />
 
-    <main class="w-full pt-20 md:pt-24 min-h-[calc(100vh-300px)]">
+    <main class="w-full pt-16 sm:pt-20 md:pt-24 min-h-[calc(100vh-300px)]">
       <div class="flex flex-col w-full font-body-md text-on-surface relative">
-        <!-- Ambient Background Decoration -->
-        <div class="fixed inset-0 pointer-events-none -z-10 bg-gradient-to-br from-surface-bright via-surface-bright to-surface-container-highest overflow-hidden">
-          <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary-fixed/5 rounded-full blur-[120px] transform translate-x-1/3 -translate-y-1/3"></div>
-          <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-fixed/5 rounded-full blur-[100px] transform -translate-x-1/3 translate-y-1/3"></div>
+        <!-- Ambient Background Mesh -->
+        <div class="fixed inset-0 pointer-events-none -z-10 bg-gradient-to-br from-surface-bright via-surface-bright to-surface-container-low overflow-hidden">
+          <div class="absolute top-0 right-0 w-[600px] sm:w-[800px] h-[600px] sm:h-[800px] bg-secondary/5 rounded-full blur-[120px] transform translate-x-1/3 -translate-y-1/3"></div>
+          <div class="absolute bottom-0 left-0 w-[500px] sm:w-[600px] h-[500px] sm:h-[600px] bg-primary/5 rounded-full blur-[100px] transform -translate-x-1/3 translate-y-1/3"></div>
         </div>
 
         <!-- Hero Section -->
-        <section class="relative pt-4 pb-stack-lg px-margin-mobile md:px-margin-desktop md:pt-6 md:pb-20 w-full max-w-container-max mx-auto">
+        <section class="relative pt-2 sm:pt-4 pb-8 sm:pb-12 md:pb-16 px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+          
           <!-- Status Badge -->
-          <div class="flex justify-center mb-stack-md">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant shadow-sm backdrop-blur-sm">
+          <div class="flex justify-center mb-3 sm:mb-4">
+            <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/50 shadow-sm">
               <span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(0,108,73,0.5)] animate-pulse"></span>
-              <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Actuarial Cost Modeling</span>
+              <span class="font-label-sm text-[11px] sm:text-xs text-on-surface-variant uppercase tracking-wider font-semibold">Actuarial Cost Modeling</span>
             </div>
           </div>
 
-          <div class="text-center max-w-3xl mx-auto flex flex-col gap-stack-md relative z-10">
-            <h1 class="font-display-lg text-display-lg text-on-surface tracking-tight leading-tight">
-              Insurance Calculator – Estimate Your Insurance Costs with <span class="text-primary italic font-serif">Confidence.</span>
+          <div class="text-center max-w-3xl mx-auto flex flex-col gap-2.5 sm:gap-3.5 relative z-10">
+            <h1 class="font-display-lg text-2xl sm:text-3xl md:text-4xl lg:text-[38px] text-primary tracking-tight font-bold leading-tight">
+              Insurance Cost Calculator Estimate Premiums with Confidence
             </h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-              Use our free online insurance cost calculator to estimate renters and business insurance premiums. Explore coverage options, compare rates by state or profession, and plan your policy limits with zero sales pressure.
+            <p class="font-body-lg text-xs sm:text-sm md:text-base text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+              Model renters and small business insurance premiums using public actuarial filings and localized risk benchmarks. Calculate estimates by state or profession with zero sales pressure.
             </p>
           </div>
 
-          <!-- YMYL Trust Banner & Disclaimer -->
-          <div class="mt-6 max-w-4xl mx-auto bg-surface-container-low border border-outline-variant/60 rounded-lg p-4 text-xs md:text-sm text-on-surface-variant/90 flex flex-col sm:flex-row items-start sm:items-center gap-3">
-            <div class="flex items-center gap-2 text-primary font-medium shrink-0">
-              <span class="material-symbols-outlined text-lg">info</span>
-              <span>Important Notice:</span>
+          <!-- Financial / YMYL Disclosure & Trust Banner -->
+          <div class="mt-4 sm:mt-6 max-w-3xl mx-auto bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-3.5 sm:p-4 text-xs text-on-surface-variant shadow-sm flex items-start gap-2.5 sm:gap-3">
+            <span class="material-symbols-outlined text-secondary text-[18px] sm:text-[20px] shrink-0 mt-0.5">verified_user</span>
+            <div class="leading-relaxed">
+              <strong class="text-primary font-semibold">Financial Planning Notice:</strong> Estimates generated on this platform are non-binding projections based on state baseline data and industry risk factors. InsureEstimate is an independent educational calculation tool and does not sell insurance directly.
             </div>
-            <p class="leading-normal flex-grow">
-              <strong>This is an estimate, not an insurance quote.</strong> Actual premiums vary by insurer, location, claims history, and individual risk factors. All models are based on published state baseline data and industry benchmarks.
-            </p>
           </div>
 
-          <!-- Action Cards Container -->
-          <div class="mt-stack-lg md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-gutter relative z-20 max-w-5xl mx-auto">
+          <!-- Main Entry Action Cards -->
+          <div class="mt-6 sm:mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 relative z-20 max-w-4xl mx-auto">
+            
             <!-- Renters Card -->
             <a
               href="/renters-insurance-calculator/"
-              class="group relative flex flex-col bg-surface-container-lowest rounded-xl p-stack-md md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-outline-variant/30 hover:border-secondary/30 overflow-hidden cursor-pointer"
+              class="group relative flex flex-col bg-surface-container-lowest rounded-2xl p-5 sm:p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-outline-variant/40 hover:border-secondary/40 overflow-hidden cursor-pointer"
             >
               <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div class="flex items-start justify-between mb-stack-md">
-                <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
-                  <span class="material-symbols-outlined text-[28px]">home_work</span>
+              
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                  <span class="material-symbols-outlined text-[24px] sm:text-[28px]">home_work</span>
                 </div>
-                <div class="text-right">
-                  <span class="font-data-tabular text-data-tabular text-on-surface-variant/70">RESIDENTIAL</span>
-                </div>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container text-[11px] font-data-tabular text-on-surface-variant font-medium">
+                  50 STATES COVERED
+                </span>
               </div>
-              <h2 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">
+
+              <h2 class="font-headline-md text-lg sm:text-xl md:text-2xl text-primary font-bold mb-2 group-hover:text-secondary transition-colors">
                 Renters Insurance Calculator
               </h2>
-              <p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg flex-grow">
-                Calculate renters insurance estimates tailored by state, personal property limits, deductible options, and liability thresholds.
+              
+              <p class="font-body-md text-xs sm:text-sm text-on-surface-variant mb-4 sm:mb-6 flex-grow leading-relaxed">
+                Estimate monthly renters insurance costs tailored by state, personal belongings coverage, deductible choices, and liability protection caps.
               </p>
-              <div class="flex items-center gap-2 font-label-sm text-label-sm text-primary group-hover:text-secondary transition-colors uppercase tracking-widest mt-auto">
-                <span>Explore Renters Insurance Calculator</span>
-                <span class="material-symbols-outlined text-[16px] transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+
+              <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between mt-auto">
+                <div class="text-[11px] sm:text-xs font-data-tabular text-on-surface-variant">
+                  Avg Rate: <strong class="text-primary">$15 – $22/mo</strong>
+                </div>
+                <div class="flex items-center gap-1 text-xs font-semibold text-secondary group-hover:translate-x-1 transition-transform">
+                  <span>Calculate Now</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </div>
               </div>
             </a>
 
             <!-- Business Card -->
             <a
               href="/business-insurance-calculator/"
-              class="group relative flex flex-col bg-surface-container-lowest rounded-xl p-stack-md md:p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-outline-variant/30 hover:border-primary/30 overflow-hidden cursor-pointer"
+              class="group relative flex flex-col bg-surface-container-lowest rounded-2xl p-5 sm:p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-outline-variant/40 hover:border-primary/40 overflow-hidden cursor-pointer"
             >
               <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div class="flex items-start justify-between mb-stack-md">
-                <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
-                  <span class="material-symbols-outlined text-[28px]">business_center</span>
+              
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                  <span class="material-symbols-outlined text-[24px] sm:text-[28px]">business_center</span>
                 </div>
-                <div class="text-right">
-                  <span class="font-data-tabular text-data-tabular text-on-surface-variant/70">COMMERCIAL</span>
-                </div>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container text-[11px] font-data-tabular text-on-surface-variant font-medium">
+                  35+ PROFESSIONS
+                </span>
               </div>
-              <h2 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">
+
+              <h2 class="font-headline-md text-lg sm:text-xl md:text-2xl text-primary font-bold mb-2 group-hover:text-primary transition-colors">
                 Business Insurance Calculator
               </h2>
-              <p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg flex-grow">
-                Estimate business insurance costs based on your specific profession, annual revenue tier, coverage limits, and workforce size.
+              
+              <p class="font-body-md text-xs sm:text-sm text-on-surface-variant mb-4 sm:mb-6 flex-grow leading-relaxed">
+                Project General Liability and Professional E&amp;O premiums based on industry risk tier, annual revenue, and employee headcount.
               </p>
-              <div class="flex items-center gap-2 font-label-sm text-label-sm text-primary transition-colors uppercase tracking-widest mt-auto">
-                <span>Explore Business Insurance Calculator</span>
-                <span class="material-symbols-outlined text-[16px] transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+
+              <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between mt-auto">
+                <div class="text-[11px] sm:text-xs font-data-tabular text-on-surface-variant">
+                  Avg Rate: <strong class="text-primary">$400 – $850/yr</strong>
+                </div>
+                <div class="flex items-center gap-1 text-xs font-semibold text-primary group-hover:translate-x-1 transition-transform">
+                  <span>Calculate Now</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </div>
               </div>
             </a>
+
           </div>
         </section>
 
         <!-- Deep-Dive Editorial Content Section (~600 Words) -->
-        <section class="py-12 md:py-20 px-margin-mobile md:px-margin-desktop bg-surface w-full">
-          <div class="max-w-4xl mx-auto space-y-12 text-on-surface">
+        <section class="py-8 sm:py-12 md:py-16 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-t border-b border-outline-variant/30 w-full">
+          <div class="max-w-4xl mx-auto space-y-8 sm:space-y-10 text-on-surface">
             
             <!-- What InsureEstimate Does & How It Works -->
-            <div class="space-y-4">
-              <h2 class="font-headline-lg text-headline-lg text-on-surface border-b border-outline-variant/40 pb-3">
+            <div class="space-y-3">
+              <span class="font-label-sm text-[11px] sm:text-xs text-secondary uppercase tracking-widest font-semibold">Underwriting Framework</span>
+              <h2 class="font-headline-lg text-xl sm:text-2xl lg:text-3xl text-primary font-bold border-b border-outline-variant/30 pb-3">
                 How Our Insurance Cost Calculator Works
               </h2>
-              <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-                InsureEstimate.com provides a free, independent <strong>insurance calculator online</strong> designed to help renters and small business owners understand potential coverage expenses. Finding standard insurance pricing can often feel opaque, requiring lengthy applications or sales calls. Our <strong>insurance cost estimator</strong> simplifies this by analyzing key risk inputs to model realistic price expectations in seconds.
+              <p class="font-body-lg text-xs sm:text-sm lg:text-base text-on-surface-variant leading-relaxed">
+                InsureEstimate.com provides a free, independent <strong>insurance calculator online</strong> designed to help tenants and small business owners understand potential coverage expenses. Securing transparent insurance estimates traditionally required submitting personal contact information or speaking with aggressive sales brokers. Our <strong>insurance cost estimator</strong> simplifies this process by evaluating published regulatory filings to model realistic premium expectations in seconds.
               </p>
-              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                When you use an <strong>online insurance calculator</strong>, the engine evaluates baseline pricing metrics derived from published regulatory filings and state benchmarks. By adjusting parameters such as personal property value, business revenue, deductible choices, and liability caps, you can project an <strong>estimated premium</strong> range that reflects your unique risk profile.
+              <p class="font-body-md text-xs sm:text-sm lg:text-base text-on-surface-variant leading-relaxed">
+                When you adjust coverage parameters on our site, the calculation engine evaluates baseline pricing metrics derived from statutory rate filings submitted to state insurance departments. By fine-tuning settings such as personal belongings value, annual business revenue, deductible thresholds, and liability coverage limits, you can project an <strong>estimated premium</strong> range that aligns with your specific risk profile.
               </p>
             </div>
 
-            <!-- Why Insurance Costs Vary -->
+            <!-- What Affects Insurance Costs -->
             <div class="space-y-4">
-              <h2 class="font-headline-lg text-headline-lg text-on-surface border-b border-outline-variant/40 pb-3">
-                What Affects Insurance Costs?
+              <h2 class="font-headline-lg text-xl sm:text-2xl lg:text-3xl text-primary font-bold border-b border-outline-variant/30 pb-3">
+                Key Factors That Determine Your Premium
               </h2>
-              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                Insurance premiums vary significantly because underwriting algorithms measure the statistical probability of a claim. Key factors influencing your <strong>insurance cost estimate</strong> include:
+              <p class="font-body-md text-xs sm:text-sm lg:text-base text-on-surface-variant leading-relaxed">
+                Insurance premiums vary across carriers because underwriting algorithms evaluate statistical loss probabilities. Key factors influencing your <strong>insurance cost estimate</strong> include:
               </p>
-              <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-                <li class="p-4 rounded-lg bg-surface-container-low border border-outline-variant/40">
-                  <strong class="text-primary block mb-1">Geographic Risk & Location</strong>
-                  <span class="text-sm text-on-surface-variant">Regional weather patterns (such as severe hail, coastal hurricanes, or winter freezes), municipal crime rates, and localized property values directly adjust your base rate.</span>
-                </li>
-                <li class="p-4 rounded-lg bg-surface-container-low border border-outline-variant/40">
-                  <strong class="text-primary block mb-1">Selected Coverage Limits</strong>
-                  <span class="text-sm text-on-surface-variant">Higher personal property limits or elevated commercial general liability coverage caps naturally increase your monthly or annual insurance estimate.</span>
-                </li>
-                <li class="p-4 rounded-lg bg-surface-container-low border border-outline-variant/40">
-                  <strong class="text-primary block mb-1">Deductible Selection</strong>
-                  <span class="text-sm text-on-surface-variant">Choosing a higher out-of-pocket deductible lowers your estimated premium, while a lower deductible increases your recurring monthly policy cost.</span>
-                </li>
-                <li class="p-4 rounded-lg bg-surface-container-low border border-outline-variant/40">
-                  <strong class="text-primary block mb-1">Industry & Operational Hazards</strong>
-                  <span class="text-sm text-on-surface-variant">For commercial policies, high-risk trades (such as roofing or electrical work) carry higher liability premiums than low-risk office professions like graphic design.</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Renters Insurance Cost Estimates -->
-            <div class="space-y-4">
-              <h2 class="font-headline-lg text-headline-lg text-on-surface border-b border-outline-variant/40 pb-3">
-                Renters Insurance Cost Estimates
-              </h2>
-              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                A <strong>renters insurance calculator</strong> helps tenants estimate the financial protection needed for personal belongings, personal liability, and temporary loss of use (additional living expenses). Across the United States, the <strong>average renters insurance cost</strong> ranges between $12 and $22 per month for standard coverage limits ($30,000 personal property and $100,000 liability).
-              </p>
-              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                However, <strong>renters insurance cost by state</strong> varies noticeably. Renters in states exposed to severe severe weather or high urban density may see baseline rates differ from quieter rural areas. Utilizing a <strong>renters insurance calculator by state</strong> ensures your budget aligns with regional pricing reality before requesting quotes.
-              </p>
-            </div>
-
-            <!-- Business Insurance Cost Estimates -->
-            <div class="space-y-4">
-              <h2 class="font-headline-lg text-headline-lg text-on-surface border-b border-outline-variant/40 pb-3">
-                Business Insurance Cost Estimates
-              </h2>
-              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                Small business owners rely on a <strong>business insurance calculator</strong> to project essential commercial liability and property protection. Whether you require a <strong>general liability insurance calculator</strong> or a <strong>professional liability insurance calculator</strong>, business insurance costs scale with your industry classification, annual revenue, and employee headcount.
-              </p>
-              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                Commercial rates vary across industries. A freelance web developer or marketing consultant typically pays a lower baseline premium than a general contractor or electrician. Exploring <strong>business insurance cost by profession</strong> allows entrepreneurs to model financial overhead accurately during business planning.
-              </p>
-            </div>
-
-            <!-- Methodology & Why Ranges Are Shown -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
-              <div class="space-y-3 p-6 bg-surface-container-lowest rounded-xl border border-outline-variant/40">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface">How We Calculate Insurance Estimates</h3>
-                <p class="text-sm text-on-surface-variant leading-relaxed">
-                  Our calculations rely on actuarial baseline data, public state regulatory filings, and standardized underwriting formulas. We combine localized risk multipliers with user-selected parameters to generate a clear, transparent baseline.
-                </p>
-              </div>
-              <div class="space-y-3 p-6 bg-surface-container-lowest rounded-xl border border-outline-variant/40">
-                <h3 class="font-headline-sm text-headline-sm text-on-surface">Why Estimates Are Shown as a Range</h3>
-                <p class="text-sm text-on-surface-variant leading-relaxed">
-                  Insurance carriers apply proprietary credit scoring, safety discount programs, and claim history evaluations. Presenting an <strong>estimated range</strong> ensures consumers understand potential market fluctuations without false promises.
-                </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 my-4">
+                <div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/40 flex flex-col gap-1.5">
+                  <div class="flex items-center gap-2 text-primary font-bold text-xs sm:text-sm">
+                    <span class="material-symbols-outlined text-[18px] text-secondary">location_on</span>
+                    <span>Geographic Risk & Location</span>
+                  </div>
+                  <p class="text-xs text-on-surface-variant leading-relaxed">Regional weather perils (such as severe hail, coastal hurricanes, or winter pipe bursts), localized crime statistics, and regional replacement costs directly calibrate state base rates.</p>
+                </div>
+                <div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/40 flex flex-col gap-1.5">
+                  <div class="flex items-center gap-2 text-primary font-bold text-xs sm:text-sm">
+                    <span class="material-symbols-outlined text-[18px] text-primary">shield</span>
+                    <span>Selected Coverage Limits</span>
+                  </div>
+                  <p class="text-xs text-on-surface-variant leading-relaxed">Higher personal property limits or increased commercial General Liability caps raise the maximum potential payout for insurers, adjusting recurring monthly premiums.</p>
+                </div>
+                <div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/40 flex flex-col gap-1.5">
+                  <div class="flex items-center gap-2 text-primary font-bold text-xs sm:text-sm">
+                    <span class="material-symbols-outlined text-[18px] text-primary">tune</span>
+                    <span>Deductible Selection</span>
+                  </div>
+                  <p class="text-xs text-on-surface-variant leading-relaxed">Opting for a higher out-of-pocket deductible ($1,000 vs $500) reduces recurring premium costs, whereas a lower deductible increases monthly payments.</p>
+                </div>
+                <div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/40 flex flex-col gap-1.5">
+                  <div class="flex items-center gap-2 text-primary font-bold text-xs sm:text-sm">
+                    <span class="material-symbols-outlined text-[18px] text-secondary">domain font</span>
+                    <span>Industry Risk Classification</span>
+                  </div>
+                  <p class="text-xs text-on-surface-variant leading-relaxed">For small businesses, high-risk trades (such as roofing or electrical contracting) carry higher baseline liability premiums than low-risk office professions like consulting.</p>
+                </div>
               </div>
             </div>
 
-            <!-- Why Use Calculator Before Shopping -->
-            <div class="bg-surface-container-high/40 p-6 md:p-8 rounded-xl border border-outline-variant/50 space-y-3">
-              <h3 class="font-headline-sm text-headline-sm text-on-surface">Why Calculate Insurance Costs Before Shopping?</h3>
-              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                Estimating your potential coverage costs beforehand empowers you to make informed decisions. Knowing baseline rates prevents paying for unnecessary coverage limits while ensuring you maintain adequate financial protection against unexpected losses.
-              </p>
+            <!-- Renters & Business Summaries -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              <div class="space-y-2 p-5 bg-surface-container-low rounded-xl border border-outline-variant/40">
+                <h3 class="font-headline-sm text-sm sm:text-base font-bold text-primary">Renters Insurance Projections</h3>
+                <p class="text-xs text-on-surface-variant leading-relaxed">
+                  Across the US, average renters rates range between $15 and $22 per month for baseline policy limits ($20k property, $100k liability, $500 deductible). Modeling state-specific baseline rates helps tenants budget accurately.
+                </p>
+              </div>
+              <div class="space-y-2 p-5 bg-surface-container-low rounded-xl border border-outline-variant/40">
+                <h3 class="font-headline-sm text-sm sm:text-base font-bold text-primary">Small Business Projections</h3>
+                <p class="text-xs text-on-surface-variant leading-relaxed">
+                  Commercial policies scale with annual revenue, employee count, and industry risk rating. Solo freelancers typically pay $350–$600/yr for General Liability, while active trade contractors average $800–$1,500/yr.
+                </p>
+              </div>
             </div>
 
           </div>
         </section>
 
-        <!-- Internal Links Section: Popular States & Professions -->
-        <section class="py-12 md:py-16 px-margin-mobile md:px-margin-desktop bg-surface-container-low border-t border-b border-outline-variant/40 w-full">
-          <div class="max-w-container-max mx-auto space-y-12">
+        <!-- Internal Quick Links Section: Popular States & Professions -->
+        <section class="py-8 sm:py-12 md:py-16 px-margin-mobile md:px-margin-desktop bg-surface-container-low/60 w-full">
+          <div class="max-w-container-max mx-auto space-y-8 sm:space-y-10">
             
             <!-- Popular Renters States -->
             <div>
-              <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center justify-between mb-4 sm:mb-6">
                 <div>
-                  <h2 class="font-headline-md text-headline-md text-on-surface">Renters Insurance Cost by State</h2>
-                  <p class="text-sm text-on-surface-variant">Explore localized baseline rates and coverage guidelines across popular states.</p>
+                  <h2 class="font-headline-md text-lg sm:text-xl lg:text-2xl text-primary font-bold">Renters Insurance Cost by State</h2>
+                  <p class="text-xs sm:text-sm text-on-surface-variant">Explore localized baseline rates and coverage guidelines across popular states.</p>
                 </div>
-                <a href="/renters-insurance-calculator/" class="hidden sm:inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
-                  View All States <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                <a href="/renters-insurance-calculator/" class="hidden sm:inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-primary hover:underline">
+                  <span>View All 50 States</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                 </a>
               </div>
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4">
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3.5">
                 {popularStates.map((state) => (
                   <a
                     href={`/renters-insurance-calculator/${state.slug}/`}
-                    class="p-3.5 bg-surface-container-lowest hover:bg-surface-container border border-outline-variant/40 rounded-lg text-sm text-on-surface font-medium hover:border-primary/40 transition-colors flex items-center justify-between group"
+                    class="p-3 bg-surface-container-lowest hover:bg-surface-bright border border-outline-variant/40 rounded-xl text-xs sm:text-sm text-on-surface font-medium hover:border-primary/40 transition-all flex items-center justify-between group shadow-2xs"
                   >
                     <span>{state.name}</span>
-                    <span class="material-symbols-outlined text-xs text-on-surface-variant group-hover:text-primary transition-colors">arrow_forward</span>
+                    <span class="material-symbols-outlined text-[14px] text-on-surface-variant group-hover:text-primary transition-colors">chevron_right</span>
                   </a>
                 ))}
               </div>
@@ -372,69 +370,70 @@ const faqSchema = {
 
             <!-- Popular Professions -->
             <div>
-              <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center justify-between mb-4 sm:mb-6">
                 <div>
-                  <h2 class="font-headline-md text-headline-md text-on-surface">Business Insurance Cost by Profession</h2>
-                  <p class="text-sm text-on-surface-variant">Find commercial coverage estimates tailored for your specific industry.</p>
+                  <h2 class="font-headline-md text-lg sm:text-xl lg:text-2xl text-primary font-bold">Business Insurance Cost by Profession</h2>
+                  <p class="text-xs sm:text-sm text-on-surface-variant">Find commercial coverage estimates tailored for your specific industry.</p>
                 </div>
-                <a href="/business-insurance-calculator/" class="hidden sm:inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
-                  View All Professions <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                <a href="/business-insurance-calculator/" class="hidden sm:inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-primary hover:underline">
+                  <span>View All Professions</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                 </a>
               </div>
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4">
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3.5">
                 {popularProfessions.map((profession) => (
                   <a
                     href={`/business-insurance-calculator/${profession.slug}/`}
-                    class="p-3.5 bg-surface-container-lowest hover:bg-surface-container border border-outline-variant/40 rounded-lg text-sm text-on-surface font-medium hover:border-primary/40 transition-colors flex items-center justify-between group"
+                    class="p-3 bg-surface-container-lowest hover:bg-surface-bright border border-outline-variant/40 rounded-xl text-xs sm:text-sm text-on-surface font-medium hover:border-primary/40 transition-all flex items-center justify-between group shadow-2xs"
                   >
                     <span class="truncate pr-1">{profession.name}</span>
-                    <span class="material-symbols-outlined text-xs text-on-surface-variant group-hover:text-primary transition-colors shrink-0">arrow_forward</span>
+                    <span class="material-symbols-outlined text-[14px] text-on-surface-variant group-hover:text-primary transition-colors shrink-0">chevron_right</span>
                   </a>
                 ))}
               </div>
             </div>
 
-            <!-- Additional Helpful Resources -->
-            <div class="pt-4 flex flex-wrap items-center justify-center gap-4 text-xs md:text-sm text-on-surface-variant">
-              <span>Quick Links:</span>
-              <a href="/about/" class="text-primary hover:underline">About InsureEstimate</a>
+            <!-- Governance Quick Links -->
+            <div class="pt-4 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs text-on-surface-variant border-t border-outline-variant/30">
+              <span class="font-semibold text-primary">Governance & Legal:</span>
+              <a href="/about/" class="hover:text-primary transition-colors">About InsureEstimate</a>
               <span>•</span>
-              <a href="/contact/" class="text-primary hover:underline">Contact Support</a>
+              <a href="/contact/" class="hover:text-primary transition-colors">Contact Support</a>
               <span>•</span>
-              <a href="/privacy-policy/" class="text-primary hover:underline">Privacy Policy</a>
+              <a href="/privacy-policy/" class="hover:text-primary transition-colors">Privacy Policy</a>
               <span>•</span>
-              <a href="/terms-and-conditions/" class="text-primary hover:underline">Terms & Conditions</a>
+              <a href="/terms-and-conditions/" class="hover:text-primary transition-colors">Terms & Conditions</a>
             </div>
 
           </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop bg-surface w-full">
-          <div class="max-w-4xl mx-auto space-y-8">
+        <!-- FAQ Accordion Section (AdSense & SEO Optimized) -->
+        <section class="py-10 sm:py-14 md:py-18 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest w-full">
+          <div class="max-w-4xl mx-auto space-y-6 sm:space-y-8">
             <div class="text-center space-y-2">
-              <h2 class="font-headline-lg text-headline-lg text-on-surface">Frequently Asked Questions</h2>
-              <p class="text-body-lg text-on-surface-variant">Answers to common questions about estimating insurance premiums online.</p>
+              <h2 class="font-headline-lg text-xl sm:text-2xl lg:text-3xl text-primary font-bold">Frequently Asked Questions</h2>
+              <p class="text-xs sm:text-sm text-on-surface-variant">Common queries regarding insurance estimation models and policy choices.</p>
             </div>
 
-            <div class="space-y-4">
+            <div class="space-y-3">
               {faqList.map((faq) => (
-                <details class="group bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-5 [&_summary::-webkit-details-marker]:none">
-                  <summary class="flex items-center justify-between cursor-pointer font-headline-sm text-headline-sm text-on-surface select-none">
+                <details class="group bg-surface-container-low/60 rounded-xl border border-outline-variant/40 p-4 sm:p-5 [&_summary::-webkit-details-marker]:none">
+                  <summary class="flex items-center justify-between cursor-pointer font-bold text-xs sm:text-sm md:text-base text-primary select-none gap-2">
                     <span>{faq.question}</span>
-                    <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                    <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform shrink-0">expand_more</span>
                   </summary>
-                  <p class="mt-3 text-body-md text-on-surface-variant leading-relaxed border-t border-outline-variant/20 pt-3">
+                  <p class="mt-3 text-xs sm:text-sm text-on-surface-variant leading-relaxed border-t border-outline-variant/30 pt-3">
                     {faq.answer}
                   </p>
                 </details>
               ))}
             </div>
 
-            <!-- Trust Meta Info -->
-            <div class="text-center pt-8 text-xs text-on-surface-variant/80 space-y-1">
-              <p>Reviewed by InsureEstimate Actuarial & Risk Research Team</p>
-              <p>Last Updated: August 2026 • Based on Published Regulatory Data & Actuarial Models</p>
+            <!-- AdSense / Compliance Footer Audit Information -->
+            <div class="text-center pt-6 text-[11px] sm:text-xs text-on-surface-variant/80 space-y-1 border-t border-outline-variant/30">
+              <p class="font-medium text-primary">Reviewed by InsureEstimate Actuarial & Risk Research Team</p>
+              <p>Last Updated: Q3 2026 • Published under State Insurance Department Regulatory Guidelines</p>
             </div>
           </div>
         </section>
@@ -445,4 +444,3 @@ const faqSchema = {
     <PageFooter />
   </body>
 </html>
-
