@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-1",
-    "contextNote": ""
+    "contextNote": "Yoga instructors guide clients through physical poses and stretches, creating injury exposure similar to other fitness professions but generally at a lower intensity than strength training."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "self_improvement",
+      "title": "Injury from Poses or Adjustments",
+      "description": "Overextension, improper alignment, or hands-on adjustments during a class can cause muscle strains or joint injuries."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "medical_services",
+      "title": "Undisclosed Health Condition Claims",
+      "description": "Students with undisclosed injuries or medical conditions can experience adverse effects from certain poses or sequences."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "warning",
+      "title": "Studio & Equipment Liability",
+      "description": "Mats, blocks, and studio flooring create slip-and-fall risk, particularly in heated yoga environments."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do yoga instructors need Professional Liability insurance?",
+      "answer": "Professional Liability covers claims that a specific pose, sequence, or hands-on adjustment caused a student injury, which is distinct from general premises liability."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a yoga instructor?",
+      "answer": "A yoga instructor in the $0-50k revenue tier pays an estimated $280 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Do studio-employed instructors need their own insurance?",
+      "answer": "Independent instructors teaching at a studio often still need their own coverage, since the studio's policy may not extend to an independent contractor's instruction."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Is outdoor or park-based yoga instruction different for insurance purposes?",
+      "answer": "Instructors teaching outdoors should confirm their policy covers off-premises locations, since coverage terms can vary based on where classes are held."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Yoga instructors carry a 1.15 actuarial risk factor, reflecting moderate injury exposure from physical poses and hands-on adjustments.",
+    "howCalculated": "Premiums scale with revenue tier, class format, and Professional Liability endorsements covering instruction-related injuries.",
+    "comparisonNote": "Yoga instructor premiums are slightly below personal trainers, reflecting generally lower-intensity physical exertion during sessions."
   }
 }

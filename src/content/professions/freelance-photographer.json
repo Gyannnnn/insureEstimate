@@ -18,50 +18,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-1",
-    "contextNote": ""
+    "contextNote": "Freelance photographers work on location with valuable camera equipment, giving them meaningful equipment and liability exposure despite minimal physical labor."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "photo_camera",
+      "title": "Equipment Theft or Damage",
+      "description": "Cameras, lenses, and lighting gear are high-value and frequently transported to varied shoot locations, increasing loss exposure."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "warning",
+      "title": "On-Location Property Damage",
+      "description": "Setting up lighting stands or props at a client's venue can accidentally damage property, triggering a liability claim."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "description",
+      "title": "Missed Delivery or Lost Images",
+      "description": "Corrupted files, equipment failure, or missed shots at a one-time event like a wedding can lead to client disputes over undelivered work."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do freelance photographers need an equipment floater?",
+      "answer": "An equipment floater covers cameras and gear against theft or damage away from a fixed business location, which a standard General Liability policy does not include."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a freelance photographer?",
+      "answer": "A freelance photographer in the $0-50k revenue tier pays an estimated $265 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Do venues require photographers to carry their own insurance?",
+      "answer": "Many wedding venues and event spaces require photographers to provide a Certificate of Insurance showing General Liability coverage before allowing them to shoot on-site."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Does a photographer need Professional Liability insurance?",
+      "answer": "Professional Liability covers claims that missed or lost images caused a client financial or emotional harm, which is especially relevant for one-time events like weddings."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Freelance photographers hold a 1.0 actuarial risk factor, reflecting moderate equipment-loss exposure balanced against low physical-labor risk.",
+    "howCalculated": "Premiums scale with revenue tier, team size, and Equipment Floater or Professional Liability endorsements.",
+    "comparisonNote": "Photography premiums sit near the calculator's midpoint, comparable to videographers and slightly above other creative freelancers like copywriters or designers."
   }
 }

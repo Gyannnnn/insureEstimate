@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-1",
-    "contextNote": ""
+    "contextNote": "Mobile notaries perform document verification with legal consequences, so their exposure centers on notarial errors rather than physical risk despite frequent travel to client locations."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "edit_document",
+      "title": "Notarial Errors & Fraud Facilitation",
+      "description": "An incorrectly notarized document, or one signed under fraudulent circumstances the notary failed to catch, can create significant legal liability."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "gavel",
+      "title": "Legal Document Invalidation",
+      "description": "Errors in the notarization process can cause a legal document to be challenged or invalidated, leading to claims from affected parties."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "local_shipping",
+      "title": "Travel-Related Liability",
+      "description": "Mobile notaries drive to client homes, offices, and hospitals for signings, creating auto-related liability exposure during travel."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do notaries need Notary Errors & Omissions insurance?",
+      "answer": "Notary E&O covers claims arising from mistakes in the notarization process, such as failing to properly verify a signer's identity, which standard General Liability does not cover."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a mobile notary?",
+      "answer": "A mobile notary in the $0-50k revenue tier pays an estimated $250 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Is a notary bond the same as notary insurance?",
+      "answer": "No. A notary bond protects the public and is often required by the state, while Notary E&O insurance protects the notary's own finances from claims and legal defense costs."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Do mobile notaries need Commercial Auto insurance?",
+      "answer": "Notaries who drive to client locations for signings as a regular part of business may need to confirm their auto coverage extends to business use, since personal policies often exclude it."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Mobile notaries carry a 0.85 actuarial risk factor, reflecting narrow but consequential liability tied to document accuracy rather than physical hazard.",
+    "howCalculated": "Premiums scale with revenue tier and Notary Errors & Omissions endorsements covering notarization mistakes.",
+    "comparisonNote": "Mobile notary premiums are among the lower tiers in this calculator, comparable to tutors and translators, reflecting minimal physical risk."
   }
 }

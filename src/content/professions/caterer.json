@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "1-8",
-    "contextNote": ""
+    "contextNote": "Catering businesses combine food-safety exposure with on-site event work and vehicle transport, giving them one of the higher risk profiles among small hospitality businesses."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "restaurant",
+      "title": "Foodborne Illness Claims",
+      "description": "Improper food handling or contamination at an event can lead to bodily injury claims from multiple guests at once."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "local_shipping",
+      "title": "Transport & Delivery Accidents",
+      "description": "Caterers regularly drive to job sites with food, equipment, and staff, creating commercial auto exposure standard personal auto policies exclude."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "warning",
+      "title": "On-Site Property Damage",
+      "description": "Spills, kitchen equipment mishaps, or accidental damage to a venue's property during setup or service can trigger liability claims."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do caterers need General Liability with food contamination coverage?",
+      "answer": "Standard General Liability policies can exclude foodborne illness claims unless a food contamination endorsement is added, which is essential given caterers serve food directly to the public."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a caterer?",
+      "answer": "A caterer in the $0-50k revenue tier pays an estimated $315 per year for baseline General Liability coverage, reflecting the higher 1.5 risk factor for food-service businesses."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Do caterers need Commercial Auto insurance?",
+      "answer": "Yes. Any vehicle used to transport food, equipment, or staff to job sites for business purposes typically needs to be covered by a Commercial Auto policy rather than a personal one."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Does venue liquor service change a caterer's insurance needs?",
+      "answer": "Caterers who serve or provide alcohol at events often need a liquor liability endorsement in addition to General Liability, since standard policies typically exclude alcohol-related claims."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Caterers hold a 1.5 actuarial risk factor, driven by food-safety exposure, on-site event work, and routine vehicle use for deliveries.",
+    "howCalculated": "Premiums scale with revenue tier, staff count, and endorsements such as food contamination coverage or Commercial Auto for delivery vehicles.",
+    "comparisonNote": "Catering premiums run higher than most professional-services businesses but remain lower than physically hazardous trades like electrical or general contracting work."
   }
 }

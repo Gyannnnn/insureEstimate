@@ -16,50 +16,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-1",
-    "contextNote": ""
+    "contextNote": "Photographer's assistants support shoots by handling equipment and logistics rather than owning client relationships directly, giving them a narrower liability profile than lead photographers."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "photo_camera",
+      "title": "Equipment Handling Damage",
+      "description": "Assistants regularly carry and set up cameras, lighting, and grip equipment, creating risk of accidental damage to gear they don't own."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "warning",
+      "title": "On-Set Property Damage",
+      "description": "Moving lighting stands, backdrops, or props on location can accidentally damage a client's or venue's property."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "personal_injury",
+      "title": "On-Set Injury",
+      "description": "Handling heavy equipment and cables on a busy shoot set creates trip-and-fall and lifting-injury risk."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do photographer's assistants need General Liability insurance?",
+      "answer": "Many production companies and venues require anyone working on-set, including assistants, to carry proof of General Liability before allowing access."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a photographer's assistant?",
+      "answer": "A photographer's assistant in the $0-50k revenue tier pays an estimated $250 per year for baseline General Liability coverage, one of the lowest tiers in this calculator."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does an assistant need their own coverage if the lead photographer has insurance?",
+      "answer": "The lead photographer's policy typically doesn't extend to independent assistants, so most assistants carry their own General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Do assistants need an equipment floater if they don't own the gear?",
+      "answer": "Assistants generally don't need an equipment floater for gear they don't own, though they should confirm liability if they're responsible for equipment damage while handling it."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Photographer's assistants carry a 0.85 actuarial risk factor, reflecting lower exposure than lead photographers since they don't typically own the equipment or client contract.",
+    "howCalculated": "Premiums scale with revenue tier and General Liability coverage sized to on-set access requirements.",
+    "comparisonNote": "Photographer's assistant premiums are among the lowest creative-services tiers, below lead freelance photographers and videographers."
   }
 }

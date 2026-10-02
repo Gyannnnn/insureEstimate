@@ -18,50 +18,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-2",
-    "contextNote": ""
+    "contextNote": "Videographers carry expensive camera and audio equipment to varied filming locations, giving them equipment and premises-liability exposure similar to photographers but with more gear."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "videocam",
+      "title": "Equipment Theft or Damage",
+      "description": "Cameras, drones, lighting, and audio gear are high-value and frequently transported, increasing loss and damage exposure."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "warning",
+      "title": "On-Location Property Damage",
+      "description": "Setting up lighting rigs, tripods, or drones at a client's venue can accidentally damage property or injure bystanders."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "description",
+      "title": "Post-Production Delivery Disputes",
+      "description": "Lost footage, missed deadlines, or edits that don't match client expectations can trigger contract disputes, especially for one-time events."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do videographers need Commercial Property or gear coverage?",
+      "answer": "This coverage protects expensive camera, lighting, and audio equipment against theft or damage while being transported or used on location, which most standard policies exclude."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a videographer?",
+      "answer": "A videographer in the $0-50k revenue tier pays an estimated $270 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does a videographer flying a drone need extra coverage?",
+      "answer": "Drone operation for commercial video work often requires separate aviation liability coverage, since standard General Liability policies typically exclude aircraft-related claims."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Do venues require videographers to carry insurance?",
+      "answer": "Many wedding venues and event spaces require a Certificate of Insurance showing General Liability coverage before allowing a videographer to film on-site."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Videographers carry a 1.05 actuarial risk factor, reflecting equipment and on-location liability slightly above still photographers due to more extensive gear.",
+    "howCalculated": "Premiums scale with revenue tier, team size, and Commercial Property/Gear or Errors & Omissions endorsements.",
+    "comparisonNote": "Videographer premiums are slightly higher than freelance photographers, reflecting the greater equipment value typically involved in video production."
   }
 }

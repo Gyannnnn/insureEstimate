@@ -1,0 +1,20 @@
+# InsureEstimate
+
+> InsureEstimate is a free, independent insurance cost estimator. It provides non-binding renters insurance premium ranges for all 50 US states and business insurance premium ranges for 35+ professions, based on published-style actuarial rate factors. It is not an insurance carrier, agent, or broker, and does not sell policies or collect quote-request personal data.
+
+## Calculators
+
+- [Renters Insurance Calculator](https://insureestimate.com/renters-insurance-calculator/): State-by-state renters insurance cost estimator covering all 50 US states, with local weather/disaster risk context.
+- [Business Insurance Calculator](https://insureestimate.com/business-insurance-calculator/): Profession-specific business insurance cost estimator (general liability, professional E&O) covering 35+ professions.
+
+## About
+
+- [About Us](https://insureestimate.com/about/): Methodology, mission, and how the estimation engine works.
+- [Contact](https://insureestimate.com/contact/): Support and inquiry contact.
+- [Privacy Policy](https://insureestimate.com/privacy-policy/)
+- [Terms and Conditions](https://insureestimate.com/terms-and-conditions/)
+
+## Notes
+
+- All figures are educational estimates, not binding insurance quotes. Actual premiums vary by carrier underwriting.
+- Full page index: https://insureestimate.com/sitemap-index.xml

@@ -18,50 +18,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-5",
-    "contextNote": ""
+    "contextNote": "Financial consultants advise clients on money decisions carrying real fiduciary weight, making professional-liability exposure the dominant risk rather than physical hazard."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "account_balance",
+      "title": "Fiduciary Breach Claims",
+      "description": "A client who suffers investment losses tied to advice may allege the consultant breached their fiduciary duty or gave negligent guidance."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "lock",
+      "title": "Sensitive Financial Data Exposure",
+      "description": "Consultants store account numbers, tax records, and financial plans, creating significant liability if that data is breached."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "gavel",
+      "title": "Regulatory & Compliance Disputes",
+      "description": "Financial advice is subject to regulatory scrutiny, and compliance missteps can trigger costly investigations or claims."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do financial consultants need fiduciary Errors & Omissions coverage?",
+      "answer": "Fiduciary E&O specifically covers claims that a consultant's investment or planning advice breached their duty of care, which standard General Liability does not address."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a financial consultant?",
+      "answer": "A financial consultant in the $0-50k revenue tier pays an estimated $290 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does a financial consultant need Cyber Liability insurance?",
+      "answer": "Yes. Handling clients' financial account details and tax records creates significant data-breach exposure that a Cyber Risk endorsement is designed to cover."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Is General Liability enough for a financial consultant?",
+      "answer": "No. General Liability covers bodily injury and property damage, not investment advice outcomes, so fiduciary E&O is considered essential for this profession."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Financial consultants carry a 1.25 actuarial risk factor, reflecting significant fiduciary and data-privacy exposure despite low physical premises risk.",
+    "howCalculated": "Premiums scale with revenue tier, team size, and fiduciary Errors & Omissions or Cyber Risk endorsements.",
+    "comparisonNote": "Financial consulting premiums rank among the higher professional-services tiers, above general business consulting, reflecting the added fiduciary liability."
   }
 }

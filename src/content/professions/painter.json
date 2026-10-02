@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-3",
-    "contextNote": ""
+    "contextNote": "Painters work on ladders and scaffolding with solvents and equipment, giving the trade fall-related and property-damage exposure typical of exterior and interior construction work."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "brush",
+      "title": "Overspray & Property Damage",
+      "description": "Paint overspray or drips can damage a client's landscaping, vehicles, or adjacent surfaces during a job."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "height",
+      "title": "Ladder & Scaffold Falls",
+      "description": "Exterior and multi-story painting work requires ladders and scaffolding, creating significant fall-injury exposure."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "warning",
+      "title": "Fire & Chemical Hazard",
+      "description": "Solvents, thinners, and certain paint products are flammable and can create fire risk if not stored or used properly."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do painters need a ladders and scaffold endorsement?",
+      "answer": "This endorsement specifically addresses the elevated fall-injury risk of working from ladders and scaffolding, which is central to most painting jobs."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a painter?",
+      "answer": "A painter in the $0-50k revenue tier pays an estimated $315 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does General Liability cover paint overspray damage?",
+      "answer": "Yes, accidental overspray or drips onto a client's property or a neighboring property is a typical General Liability claim."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Do painters need Workers' Compensation?",
+      "answer": "Most states require Workers' Compensation once a painting business has employees, given the fall and chemical-exposure risks of the trade."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Painters carry a 1.5 actuarial risk factor, reflecting fall risk from ladder and scaffold work along with property-damage exposure from overspray.",
+    "howCalculated": "Premiums scale with revenue tier, crew size, and Ladders & Scaffold endorsements.",
+    "comparisonNote": "Painter premiums are comparable to caterers and below electricians or general contractors, reflecting moderate-to-high but not the most severe trade risk."
   }
 }

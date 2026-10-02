@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-1",
-    "contextNote": ""
+    "contextNote": "Massage therapists provide hands-on bodywork in close physical contact with clients, creating bodily-injury and misconduct-allegation exposure unique to touch-based services."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "spa",
+      "title": "Injury During Treatment",
+      "description": "Deep tissue or therapeutic techniques applied incorrectly can aggravate an existing injury or cause new soreness and bruising, leading to claims."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "medical_services",
+      "title": "Pre-Existing Condition Aggravation",
+      "description": "Clients with undisclosed medical conditions can experience adverse reactions to massage techniques, creating liability exposure."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "storefront",
+      "title": "Premises & Equipment Liability",
+      "description": "Massage tables, hot stone equipment, and treatment room hazards can cause slip-and-fall or equipment-related injuries."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do massage therapists need Professional Liability insurance?",
+      "answer": "Professional Liability covers claims that a specific technique or treatment caused injury or aggravated a condition, which General Liability does not cover."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a massage therapist?",
+      "answer": "A massage therapist in the $0-50k revenue tier pays an estimated $285 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Do mobile massage therapists need different coverage?",
+      "answer": "Mobile therapists who travel to client homes often need to confirm their policy covers off-premises work, and may need Commercial Auto if using a vehicle for business travel."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Does massage therapist insurance require a license?",
+      "answer": "Most carriers require an active state massage therapy license to issue Professional Liability coverage, since the policy is underwritten around licensed scope of practice."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Massage therapists carry a 1.2 actuarial risk factor, reflecting hands-on physical contact and treatment-related injury exposure.",
+    "howCalculated": "Premiums scale with revenue tier, staff count, and Professional Liability endorsements covering treatment-related claims.",
+    "comparisonNote": "Massage therapist premiums are comparable to dog groomers and real estate agents, and slightly below other personal-care professions like estheticians."
   }
 }

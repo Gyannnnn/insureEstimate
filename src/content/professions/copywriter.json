@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-1",
-    "contextNote": ""
+    "contextNote": "Copywriters produce written content with no physical work product or premises risk, so their exposure is almost entirely tied to the accuracy and originality of the words they deliver."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "description",
+      "title": "Missed Deadlines & Scope Disputes",
+      "description": "Late or incomplete deliverables can trigger breach-of-contract claims from clients relying on copy for time-sensitive campaigns."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "copyright",
+      "title": "Copyright & Plagiarism Claims",
+      "description": "Content that unintentionally mirrors existing copyrighted material can expose both the writer and the client to infringement claims."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "campaign",
+      "title": "Misleading Claims in Client Copy",
+      "description": "Marketing copy that overstates a client's product claims can create liability if a third party relies on inaccurate statements."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do copywriters need Errors & Omissions insurance?",
+      "answer": "E&O coverage protects copywriters against claims that their content was inaccurate, plagiarized, or failed to meet contractual expectations, which General Liability alone does not address."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a copywriter?",
+      "answer": "A solo copywriter in the $0-50k revenue tier pays an estimated $245 per year for baseline General Liability coverage, one of the lowest tiers in the business-insurance calculator."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does a copywriter need General Liability if they work from home?",
+      "answer": "Most copywriters carry General Liability primarily because clients require proof of coverage in contracts, even though in-person client interaction is rare."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Is copyright infringement covered by standard business insurance?",
+      "answer": "Some E&O and media liability endorsements cover unintentional infringement claims, but coverage varies by carrier, so copywriters should confirm this explicitly with their policy."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Copywriters hold a 0.8 actuarial risk factor, among the lowest in the calculator, reflecting minimal physical hazard and narrow professional-liability exposure.",
+    "howCalculated": "Premiums scale with annual revenue tier and team size, with Professional Liability (E&O) as the primary optional endorsement.",
+    "comparisonNote": "Copywriting premiums are among the lowest of any profession modeled here, comparable to graphic designers and translators, and well below hands-on trades or hospitality businesses."
   }
 }

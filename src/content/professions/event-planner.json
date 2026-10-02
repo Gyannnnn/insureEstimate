@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-3",
-    "contextNote": ""
+    "contextNote": "Event planners coordinate vendors, venues, and guests, so their liability centers on contractual failures and third-party incidents at events they organize but don't directly control."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "event",
+      "title": "Vendor & Venue Coordination Failures",
+      "description": "A missed booking, double-booked venue, or vendor no-show can trigger breach-of-contract claims from the client."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "groups",
+      "title": "Guest Injury at Managed Events",
+      "description": "Even though the planner doesn't own the venue, they can be named in bodily-injury claims arising from event logistics they arranged."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "description",
+      "title": "Contract & Deposit Disputes",
+      "description": "Cancellations, refund disagreements, and scope changes are a frequent source of disputes requiring legal defense."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do event planners need Errors & Omissions coverage?",
+      "answer": "E&O protects planners against claims that a planning mistake, such as a vendor mix-up or scheduling error, caused the client financial loss."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for an event planner?",
+      "answer": "An event planner in the $0-50k revenue tier pays an estimated $280 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does an event planner need coverage separate from the venue's policy?",
+      "answer": "Yes. A venue's insurance covers its own premises, not the planner's professional services, so planners need their own General Liability and E&O coverage."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Is one-time event insurance different from a planner's annual policy?",
+      "answer": "Event planners typically carry an annual General Liability policy for their business operations, which is distinct from single-event policies that clients sometimes purchase for one wedding or party."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Event planners hold a 1.15 actuarial risk factor, reflecting moderate liability exposure tied to third-party coordination rather than direct physical work.",
+    "howCalculated": "Premiums scale with revenue tier, team size, and Errors & Omissions endorsements covering planning and coordination mistakes.",
+    "comparisonNote": "Event planning premiums sit near the market midpoint, above low-risk creative freelancers but below food-service and physical-labor trades."
   }
 }

@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-3",
-    "contextNote": ""
+    "contextNote": "Real estate agents guide clients through high-value transactions with significant financial stakes, making disclosure and representation errors the central liability concern."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "real_estate_agent",
+      "title": "Disclosure & Misrepresentation Claims",
+      "description": "A missed property defect disclosure or inaccurate representation during a sale can lead to claims from buyers after closing."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "gavel",
+      "title": "Transaction Documentation Errors",
+      "description": "Mistakes in contracts, disclosures, or closing paperwork can create legal exposure given the high dollar value of real estate deals."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "description",
+      "title": "Fiduciary Duty Disputes",
+      "description": "Agents owe fiduciary duties to clients, and perceived breaches, such as favoring one party in a dual-agency deal, can trigger claims."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do real estate agents need Errors & Omissions insurance?",
+      "answer": "E&O covers claims tied to disclosure mistakes, misrepresentation, or documentation errors during a transaction, which is the core liability risk in real estate sales."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a real estate agent?",
+      "answer": "A real estate agent in the $0-50k revenue tier pays an estimated $285 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does my brokerage's E&O policy cover me as an individual agent?",
+      "answer": "Many brokerages carry a firm-wide E&O policy, but coverage limits and gaps vary, so many agents carry supplemental individual coverage as well."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Do real estate agents need coverage after a home sale closes?",
+      "answer": "Yes. E&O claims are often filed well after closing once a buyer discovers an undisclosed defect, so coverage needs to extend beyond the transaction date."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Real estate agents carry a 1.2 actuarial risk factor, reflecting significant transaction-related liability tied to the high dollar value of property sales.",
+    "howCalculated": "Premiums scale with revenue tier, team size, and Errors & Omissions endorsements specific to real estate transactions.",
+    "comparisonNote": "Real estate agent premiums are comparable to dog groomers and massage therapists, and higher than most desk-based professional-services consultants."
   }
 }

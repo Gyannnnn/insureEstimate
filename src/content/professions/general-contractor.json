@@ -19,50 +19,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "1-10",
-    "contextNote": ""
+    "contextNote": "General contractors oversee entire job sites with subcontractors, heavy equipment, and structural work, making them the highest-risk profession modeled in this calculator."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "construction",
+      "title": "Job Site Injury & Structural Failure",
+      "description": "Managing multi-trade job sites creates exposure to serious bodily injury claims from workers, subcontractors, or visitors."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "engineering",
+      "title": "Subcontractor Liability",
+      "description": "Contractors can be held liable for the work of subcontractors they hire, even when the contractor didn't perform the task directly."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "local_shipping",
+      "title": "Heavy Equipment & Vehicle Risk",
+      "description": "Trucks, trailers, and heavy machinery moved between job sites create significant commercial auto and equipment-damage exposure."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do general contractors need Workers' Compensation?",
+      "answer": "Almost every state requires Workers' Compensation for construction businesses with employees, given the high injury rate associated with job-site work."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a general contractor?",
+      "answer": "A general contractor in the $0-50k revenue tier pays an estimated $385 per year for baseline General Liability coverage, the highest baseline of any profession modeled here."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Is a general contractor liable for subcontractor mistakes?",
+      "answer": "Often yes. Contractors can be named in claims arising from subcontractor work performed under their oversight, which is why many require subs to carry their own coverage and list the contractor as additionally insured."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Do general contractors need a surety bond in addition to insurance?",
+      "answer": "Many states and clients require a contractor's license bond separate from General Liability insurance; the bond guarantees contractual performance rather than covering liability claims."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "General contractors carry a 2.2 actuarial risk factor, the highest in the calculator, reflecting job-site injury severity, subcontractor exposure, and heavy-equipment risk.",
+    "howCalculated": "Premiums scale with revenue tier, crew size, and required endorsements including Workers' Compensation, Commercial Auto, and Tools & Equipment coverage.",
+    "comparisonNote": "General contracting premiums are the highest of any profession modeled here, above electricians and plumbers, reflecting the compounded risk of coordinating an entire job site."
   }
 }

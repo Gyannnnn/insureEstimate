@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "1-5",
-    "contextNote": ""
+    "contextNote": "Plumbers work with pressurized water and gas lines inside occupied homes and buildings, giving the trade severe water-damage and property-loss exposure second only to general contracting."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "plumbing",
+      "title": "Water Damage from Failed Repairs",
+      "description": "A pipe that fails after a repair job can flood a home or building, causing extensive and expensive property damage claims."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "warning",
+      "title": "Gas Line & Fire Hazard",
+      "description": "Improper gas line work carries fire and explosion risk that can cause severe property damage and bodily injury."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "construction",
+      "title": "Tools & Equipment Loss",
+      "description": "Specialized plumbing tools and diagnostic equipment represent significant replacement cost if stolen or damaged on the job."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do plumbers need a water damage endorsement?",
+      "answer": "A water damage endorsement specifically covers flooding or leaks caused by a failed repair, which is the most common and costly claim type in this trade."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a plumber?",
+      "answer": "A plumber in the $0-50k revenue tier pays an estimated $365 per year for baseline General Liability coverage, one of the highest tiers modeled here."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does General Liability cover a flood caused by a plumbing mistake?",
+      "answer": "General Liability with a water damage endorsement typically covers completed-operations claims where a repair failure caused flooding after the plumber left the job."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Do plumbers need Workers' Compensation?",
+      "answer": "Most states require Workers' Compensation once a plumbing business hires employees, given the physical strain and injury risk associated with the trade."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Plumbers carry a 2.0 actuarial risk factor, reflecting the severe property-damage potential of water and gas line failures inside occupied buildings.",
+    "howCalculated": "Premiums scale with revenue tier, crew size, and water damage or Tools & Equipment endorsements.",
+    "comparisonNote": "Plumber premiums rank among the highest of any profession modeled here, just below general contractors and above electricians, reflecting the severity of water-damage claims."
   }
 }

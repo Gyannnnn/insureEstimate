@@ -18,50 +18,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "1-5",
-    "contextNote": ""
+    "contextNote": "Electrical work carries serious injury and fire risk, placing electricians among the highest-risk professions in the business-insurance calculator alongside other licensed trades."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "electrical_services",
+      "title": "Electrical Fire & Property Damage",
+      "description": "Faulty wiring or installation errors can cause fires or equipment damage well after the job is complete, creating completed-operations liability."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "personal_injury",
+      "title": "Bodily Injury from Shock",
+      "description": "Electrical work carries inherent shock and burn risk to both the electrician and anyone nearby during a job."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "construction",
+      "title": "Tools & Equipment Loss",
+      "description": "Specialized meters, wiring tools, and diagnostic equipment represent significant replacement cost if stolen or damaged on a job site."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why is General Liability essential for electricians?",
+      "answer": "General Liability covers third-party bodily injury and property damage, which is critical given the fire and shock hazards inherent to electrical work."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for an electrician?",
+      "answer": "An electrician in the $0-50k revenue tier pays an estimated $355 per year for baseline General Liability coverage, reflecting the trade's high 1.9 risk factor."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Do electricians need Workers' Compensation?",
+      "answer": "Almost every state requires Workers' Compensation once an electrician hires employees, given the elevated injury risk of working with live electrical systems."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "What does a tools floater cover for an electrician?",
+      "answer": "A tools floater covers the cost to repair or replace testing equipment, wiring tools, and machinery if they're stolen, lost, or damaged away from a fixed business location."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Electricians hold a 1.9 actuarial risk factor, among the highest modeled here, reflecting serious shock, fire, and completed-operations liability inherent to the trade.",
+    "howCalculated": "Premiums scale with revenue tier, crew size, and endorsements such as a Tools Floater or Workers' Compensation for employees.",
+    "comparisonNote": "Electrician premiums rank among the highest of any profession in this calculator, just below general contractors and plumbers, reflecting the trade's severe injury and fire exposure."
   }
 }

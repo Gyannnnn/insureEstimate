@@ -18,50 +18,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-3",
-    "contextNote": ""
+    "contextNote": "Business consultants advise clients on strategy and operations without producing physical work product, so exposure centers on the advice itself rather than premises or equipment risk."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "gavel",
+      "title": "Advisory Negligence Claims",
+      "description": "A client who acts on flawed strategic recommendations and suffers financial loss can pursue a professional negligence claim against the consultant."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "description",
+      "title": "Contract & Scope Disputes",
+      "description": "Ambiguous statements of work or missed deliverables can trigger breach-of-contract claims requiring legal defense."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "lock",
+      "title": "Confidential Data Exposure",
+      "description": "Consultants routinely handle sensitive client financials and internal plans, creating liability if that data is leaked or breached."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do business consultants need Errors & Omissions insurance?",
+      "answer": "E&O coverage protects consultants against claims that their advice or analysis was negligent, inaccurate, or failed to deliver the promised business outcome, even when the consultant acted in good faith."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a business consultant?",
+      "answer": "A solo consultant in the $0-50k revenue tier pays an estimated $265 per year for baseline General Liability coverage; adding Errors & Omissions raises that total."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does a business consultant need Cyber Liability coverage?",
+      "answer": "Yes. Consultants who store client financial data, strategy documents, or access client systems remotely face data-breach exposure that General Liability does not cover."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Is General Liability enough for a business consultant?",
+      "answer": "General Liability covers third-party bodily injury and property damage, but it excludes claims arising from professional advice. Most consultants pair it with Errors & Omissions for full protection."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Business consultants carry a 1.0 actuarial risk factor, reflecting minimal physical hazard offset by meaningful professional-advice liability exposure.",
+    "howCalculated": "Premiums scale with annual revenue tier, team headcount, and whether Errors & Omissions or Cyber Liability endorsements are added to the base General Liability policy.",
+    "comparisonNote": "Business consulting premiums sit near the market midpoint \u2014 higher than low-touch creative freelancers, but well below hands-on trades like electricians or contractors."
   }
 }

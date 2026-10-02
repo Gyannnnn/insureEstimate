@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-2",
-    "contextNote": ""
+    "contextNote": "Handymen perform varied small repair jobs across many client properties, creating broad but generally moderate liability exposure compared to licensed single-trade specialists."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "handyman",
+      "title": "Property Damage During Repairs",
+      "description": "Working across plumbing, electrical, carpentry, and other small repairs increases the chance of accidentally damaging a client's property."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "construction",
+      "title": "Tools & Equipment Loss",
+      "description": "Handymen carry a wide range of tools between job sites, creating theft and damage exposure that standard property policies don't cover away from a fixed location."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "personal_injury",
+      "title": "Bodily Injury from Varied Tasks",
+      "description": "Jumping between ladder work, power tools, and manual labor across different trades increases the range of ways a handyman can be injured or cause injury."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do handymen need General Liability insurance?",
+      "answer": "General Liability covers third-party property damage and bodily injury, which is important given handymen work directly inside and around client properties on varied tasks."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a handyman?",
+      "answer": "A handyman in the $0-50k revenue tier pays an estimated $325 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does a handyman need a separate license for electrical or plumbing work?",
+      "answer": "Many states restrict handymen from performing licensed electrical or plumbing work beyond minor repairs, and insurance coverage can be affected if unlicensed work exceeds legal limits."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "What does a tools and equipment endorsement cover for a handyman?",
+      "answer": "It covers the cost to repair or replace tools and equipment if stolen or damaged while being transported between job sites, which a standard property policy typically excludes."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Handymen carry a 1.6 actuarial risk factor, reflecting broad exposure across multiple minor trades rather than the concentrated risk of a single specialty.",
+    "howCalculated": "Premiums scale with revenue tier, team size, and Tools & Equipment endorsements covering gear transported between job sites.",
+    "comparisonNote": "Handyman premiums sit below licensed single-trade specialists like electricians or plumbers, but above most non-trade small service businesses."
   }
 }

@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-2",
-    "contextNote": ""
+    "contextNote": "Hair stylists work directly with chemicals and heat tools on clients, creating moderate bodily-injury exposure tied to the physical nature of salon services."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "content_cut",
+      "title": "Chemical Burn & Reaction Claims",
+      "description": "Coloring, perming, and relaxing treatments involve chemicals that can cause burns or allergic reactions if not applied correctly."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "local_fire_department",
+      "title": "Heat Tool Injury",
+      "description": "Flat irons, curling irons, and blow dryers create burn risk to clients during styling services."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "storefront",
+      "title": "Salon Premises Liability",
+      "description": "Slips on wet floors or falling equipment in a salon setting are common sources of third-party injury claims."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do hair stylists need Professional Liability insurance in addition to General Liability?",
+      "answer": "General Liability covers slip-and-fall injuries in the salon, while Professional Liability covers claims that a chemical treatment or cut caused harm, which requires separate coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a hair stylist?",
+      "answer": "A hair stylist in the $0-50k revenue tier pays an estimated $275 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Do booth-renting stylists need their own insurance?",
+      "answer": "Yes. Salon owners' policies typically don't extend to independent stylists renting a chair, so most salons require renters to carry their own General Liability and Professional Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Does hair stylist insurance cover chemical treatment reactions?",
+      "answer": "A Professional Liability policy covering chemical or styling services typically covers claims arising from allergic reactions or burns from coloring and treatment products."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Hair stylists carry a 1.1 actuarial risk factor, reflecting moderate chemical and heat-tool exposure inherent to salon services.",
+    "howCalculated": "Premiums scale with revenue tier, staff count, and Professional Liability endorsements covering chemical or styling treatments.",
+    "comparisonNote": "Hair stylist premiums are comparable to other personal-care professions and moderately higher than desk-based professional services."
   }
 }

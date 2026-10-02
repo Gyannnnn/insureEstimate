@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-2",
-    "contextNote": ""
+    "contextNote": "Social media managers control client-facing brand messaging and ad spend, making campaign errors and account-access mistakes their primary liability exposure."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "campaign",
+      "title": "Posting & Campaign Errors",
+      "description": "An incorrect post, mistimed campaign, or ad targeting error can cause reputational or financial harm the client seeks to recover."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "lock",
+      "title": "Account Access & Credential Exposure",
+      "description": "Managing client login credentials for social platforms creates liability if an account is compromised while under the manager's control."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "copyright",
+      "title": "Content Licensing Missteps",
+      "description": "Using third-party images, video, or music in client posts without proper licensing can expose the manager to infringement claims."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do social media managers need Professional Liability insurance?",
+      "answer": "It covers claims that a posting mistake or campaign error caused the client financial or reputational harm, which General Liability doesn't address."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a social media manager?",
+      "answer": "A social media manager in the $0-50k revenue tier pays an estimated $255 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does a social media manager need Cyber Liability insurance?",
+      "answer": "Yes. Holding client account credentials and ad platform access creates data-security exposure that a Cyber Liability endorsement is designed to address."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "What happens if a client's account is hacked while I manage it?",
+      "answer": "Liability depends on the circumstances, but Cyber Liability coverage can help cover response costs and potential claims if a breach occurs while the manager has account access."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Social media managers carry a 0.9 actuarial risk factor, reflecting low physical hazard offset by account-access and campaign-related liability.",
+    "howCalculated": "Premiums scale with revenue tier, team size, and Professional Liability or Cyber Liability endorsements.",
+    "comparisonNote": "Social media manager premiums are comparable to bookkeepers, sitting in the lower-middle of the calculator's range."
   }
 }

@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-1",
-    "contextNote": ""
+    "contextNote": "Graphic designers deliver visual work product with no physical premises or equipment risk, so their exposure is almost entirely tied to intellectual property and contractual disputes."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "copyright",
+      "title": "Copyright & Trademark Infringement",
+      "description": "Designs that unintentionally resemble existing trademarks or copyrighted artwork can expose the designer to infringement claims."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "description",
+      "title": "Missed Deadlines & Revisions Disputes",
+      "description": "Disagreements over the number of included revisions or delivery timelines are a common source of client disputes."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "devices",
+      "title": "File Delivery & Format Errors",
+      "description": "Incorrect file formats or corrupted deliverables used in print or production can cause costly client-side errors."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do graphic designers need Errors & Omissions insurance?",
+      "answer": "E&O covers claims that a design error, missed deadline, or file mistake caused the client financial loss, which General Liability does not address."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a graphic designer?",
+      "answer": "A graphic designer in the $0-50k revenue tier pays an estimated $245 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does a freelance graphic designer need General Liability?",
+      "answer": "Many clients and platforms require proof of General Liability before hiring a freelancer, even though in-person interaction and premises risk are minimal."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Is copyright infringement a common claim against designers?",
+      "answer": "It's one of the more frequent professional-liability claims in creative services, especially when stock imagery or fonts are used without proper licensing."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Graphic designers hold a 0.8 actuarial risk factor, among the lowest modeled here, reflecting minimal physical hazard and narrow intellectual-property exposure.",
+    "howCalculated": "Premiums scale with revenue tier and team size, with Professional Liability (E&O) as the primary optional endorsement.",
+    "comparisonNote": "Graphic design premiums are among the lowest of any profession in this calculator, matching copywriters and well below physical trades or hospitality businesses."
   }
 }

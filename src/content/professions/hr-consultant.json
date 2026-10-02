@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-2",
-    "contextNote": ""
+    "contextNote": "HR consultants advise on employment policy and practices, so their primary exposure is employment-related claims rather than physical or premises risk."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "gavel",
+      "title": "Employment Practices Claims",
+      "description": "Advice on hiring, termination, or workplace policy that leads to a discrimination or wrongful-termination claim can expose the consultant to liability."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "description",
+      "title": "Compliance Advisory Errors",
+      "description": "Incorrect guidance on labor law or regulatory compliance can result in financial penalties the client seeks to recover from the consultant."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "lock",
+      "title": "Confidential Employee Data Exposure",
+      "description": "HR consultants handle sensitive personnel records, creating liability if that information is mishandled or breached."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do HR consultants need Employment Practices Liability Insurance (EPLI)?",
+      "answer": "EPLI covers claims arising from employment-related advice, such as wrongful termination or discrimination guidance, which standard General Liability and even E&O often exclude."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for an HR consultant?",
+      "answer": "An HR consultant in the $0-50k revenue tier pays an estimated $260 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Is Errors & Omissions the same as EPLI for HR consultants?",
+      "answer": "No. E&O covers general professional advice mistakes, while EPLI specifically covers employment-related claims like discrimination or harassment allegations tied to the consultant's guidance."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Do HR consultants handling payroll need additional coverage?",
+      "answer": "Consultants who process payroll or handle financial employee data often add Cyber Liability or Fidelity coverage alongside E&O and EPLI."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "HR consultants carry a 0.95 actuarial risk factor, reflecting low physical hazard offset by meaningful employment-practices liability exposure.",
+    "howCalculated": "Premiums scale with revenue tier, team size, and Errors & Omissions or EPLI endorsements specific to employment advisory work.",
+    "comparisonNote": "HR consulting premiums are near the lower-middle of the professional-services range, similar to marketing consultants and below financial or IT consulting."
   }
 }

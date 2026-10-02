@@ -58,23 +58,6 @@ const faqList = [
   }
 ];
 
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "InsureEstimate",
-  "url": canonicalUrl,
-  "description": siteDescription
-};
-
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "InsureEstimate",
-  "url": canonicalUrl,
-  "logo": "https://insureestimate.com/favicon-96x96.png",
-  "sameAs": []
-};
-
 const webAppSchema = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
@@ -141,9 +124,7 @@ const faqSchema = {
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- JSON-LD Structured Data -->
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    <!-- JSON-LD Structured Data (Organization + WebSite schema is site-wide via PageFooter.astro) -->
     <script is:inline type="application/ld+json" set:html={JSON.stringify(webAppSchema)} />
     <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   </head>

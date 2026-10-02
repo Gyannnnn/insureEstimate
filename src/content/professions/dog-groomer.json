@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-2",
-    "contextNote": ""
+    "contextNote": "Dog groomers handle live animals directly, which introduces bite and injury risk to both animals and staff that most other small service businesses don't face."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "pets",
+      "title": "Animal Injury During Grooming",
+      "description": "Nicks, cuts, or stress-related injury to a pet during grooming can lead to veterinary-cost claims from the owner."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "warning",
+      "title": "Bites & Handler Injuries",
+      "description": "Groomers are frequently bitten or scratched by anxious or aggressive animals, creating both employee-injury and liability exposure."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "inventory_2",
+      "title": "Care, Custody & Control Claims",
+      "description": "Because pets are left in the groomer's custody, an escaped or injured animal can trigger a bailee-style liability claim distinct from standard premises coverage."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do dog groomers need an animal damage endorsement?",
+      "answer": "Standard General Liability can exclude claims for injury to animals in the groomer's care, so an animal damage endorsement specifically covers veterinary bills if a pet is hurt during a session."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a dog groomer?",
+      "answer": "A dog groomer in the $0-50k revenue tier pays an estimated $285 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is bailee's customer coverage and why does a groomer need it?",
+      "answer": "Bailee's customer coverage protects the groomer if a pet in their temporary care is lost, injured, or dies, filling a gap that standard liability policies typically don't address."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Does a mobile dog groomer need different coverage than a shop-based one?",
+      "answer": "Mobile groomers typically need Commercial Auto coverage in addition to General Liability, since their grooming van and equipment travel to client homes."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Dog groomers carry a 1.2 actuarial risk factor, reflecting the physical handling of live animals and the resulting injury and custody-related claim exposure.",
+    "howCalculated": "Premiums scale with revenue tier, staff count, and whether animal damage or bailee's customer endorsements are added to the base policy.",
+    "comparisonNote": "Dog grooming premiums run higher than most desk-based professional services but lower than construction trades, reflecting moderate physical risk."
   }
 }

@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-5",
-    "contextNote": ""
+    "contextNote": "IT consultants manage client systems and data remotely, making technology errors and data breaches the dominant risk rather than physical hazard."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "computer",
+      "title": "System Downtime & Data Loss",
+      "description": "A configuration error or failed migration can cause client system downtime or data loss, leading to significant financial-loss claims."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "security",
+      "title": "Cybersecurity Breach Liability",
+      "description": "Consultants with access to client networks can be held partly responsible if that access is exploited in a breach."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "description",
+      "title": "Project Scope & Delivery Disputes",
+      "description": "IT projects that run over budget or fail to meet technical specifications are a common source of contract disputes."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do IT consultants need Cyber Liability / Tech E&O coverage?",
+      "answer": "This combined coverage protects against claims that a technical error caused data loss or a security breach, which General Liability specifically excludes."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for an IT consultant?",
+      "answer": "An IT consultant in the $0-50k revenue tier pays an estimated $280 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does an IT consultant need General Liability if all work is remote?",
+      "answer": "Many clients still require proof of General Liability in contracts even for remote work, and it covers any on-site visits for installation or troubleshooting."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Is Tech E&O different from standard Errors & Omissions?",
+      "answer": "Tech E&O is tailored to technology services, combining professional liability for advice or code errors with cyber coverage for data breaches, offering broader protection than generic E&O alone."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "IT consultants carry a 1.15 actuarial risk factor, reflecting elevated exposure to data-related claims despite minimal physical hazard.",
+    "howCalculated": "Premiums scale with revenue tier, team size, and Cyber Liability / Tech E&O endorsements covering data breach and system-error claims.",
+    "comparisonNote": "IT consulting premiums are moderately higher than general business consulting, reflecting the added cyber-risk exposure of managing client technology systems."
   }
 }

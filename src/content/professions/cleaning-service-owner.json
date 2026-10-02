@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "1-5",
-    "contextNote": ""
+    "contextNote": "Cleaning businesses work inside clients' homes and offices with keys or access codes, making theft allegations and accidental property damage the dominant risk drivers."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "cleaning_services",
+      "title": "Accidental Property Damage",
+      "description": "Cleaning chemicals, equipment, or staff movement can damage flooring, furniture, or fixtures inside a client's property."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "security",
+      "title": "Theft & Missing Item Allegations",
+      "description": "Because cleaners work unsupervised inside homes and offices, disputes over lost or damaged valuables are a leading source of claims."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "groups",
+      "title": "Employee Injury On-Site",
+      "description": "Slips, chemical exposure, and repetitive strain are common injury sources for cleaning crews working across multiple locations daily."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do cleaning businesses need a janitorial bond?",
+      "answer": "A janitorial bond (fidelity/crime coverage) reimburses clients for theft committed by an employee, which General Liability does not cover and which clients often require before hiring."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a cleaning service?",
+      "answer": "A cleaning service owner in the $0-50k revenue tier pays an estimated $305 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does General Liability cover damage a cleaner causes to a client's home?",
+      "answer": "Yes, General Liability typically covers accidental property damage caused during a cleaning job, such as a broken item or water damage from equipment."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Do cleaning businesses with employees need Workers' Compensation?",
+      "answer": "Most states require Workers' Compensation once a cleaning business hires even one employee, given the physical nature of the work and injury frequency in the industry."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Cleaning service owners carry a 1.4 actuarial risk factor, reflecting frequent unsupervised access to client property and moderate physical injury exposure for staff.",
+    "howCalculated": "Premiums scale with revenue tier, crew size, and whether a janitorial bond or crime coverage endorsement is added to the base policy.",
+    "comparisonNote": "Cleaning service premiums are higher than office-based professional services but lower than skilled trades that involve power tools or structural work."
   }
 }

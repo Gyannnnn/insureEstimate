@@ -18,50 +18,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "1-5",
-    "contextNote": ""
+    "contextNote": "HVAC technicians work with pressurized refrigerants, electrical systems, and rooftop or crawlspace access, giving the trade injury and property-damage exposure similar to electricians."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "hvac",
+      "title": "System Failure & Fire Risk",
+      "description": "Improper installation or repair of heating and cooling systems can lead to fires, refrigerant leaks, or carbon monoxide exposure after the job is finished."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "personal_injury",
+      "title": "Fall & Confined Space Injury",
+      "description": "Technicians frequently work on rooftops, attics, and crawlspaces, creating elevated fall and confined-space injury risk."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "local_shipping",
+      "title": "Vehicle & Equipment Transport",
+      "description": "HVAC units and tools are heavy and transported between job sites daily, creating commercial auto and equipment-damage exposure."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do HVAC technicians need Workers' Compensation?",
+      "answer": "Most states require Workers' Compensation once an HVAC business has employees, given the fall, electrical, and confined-space injury risks inherent to the trade."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for an HVAC technician?",
+      "answer": "An HVAC technician in the $0-50k revenue tier pays an estimated $350 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does General Liability cover a fire caused by a faulty HVAC installation?",
+      "answer": "General Liability typically covers completed-operations claims, meaning damage that occurs after the job is finished due to installation error, subject to policy terms."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Do HVAC technicians need Commercial Auto insurance?",
+      "answer": "Yes. Vehicles used to transport HVAC units, refrigerant, and tools between job sites for business purposes generally require Commercial Auto coverage."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "HVAC technicians carry a 1.85 actuarial risk factor, reflecting fire, electrical, and fall hazards comparable to other licensed skilled trades.",
+    "howCalculated": "Premiums scale with revenue tier, crew size, and endorsements such as Commercial Auto and Workers' Compensation.",
+    "comparisonNote": "HVAC technician premiums rank just below electricians and plumbers, reflecting similarly severe but slightly narrower injury exposure."
   }
 }

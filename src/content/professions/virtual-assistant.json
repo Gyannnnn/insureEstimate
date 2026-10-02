@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-1",
-    "contextNote": ""
+    "contextNote": "Virtual assistants perform administrative and support tasks remotely with access to client systems, making data handling the main exposure rather than physical risk."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "computer",
+      "title": "Data Handling Errors",
+      "description": "Mistakes in managing schedules, communications, or records on a client's behalf can lead to financial or reputational harm claims."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "lock",
+      "title": "Client Account & Credential Access",
+      "description": "Virtual assistants often hold login credentials for email, calendars, and business tools, creating liability if that access is misused or breached."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "description",
+      "title": "Missed Task or Deadline Disputes",
+      "description": "Overlooked tasks or missed deadlines on time-sensitive client work can trigger disputes over service quality."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do virtual assistants need General Liability insurance?",
+      "answer": "Many clients require proof of General Liability in service contracts, even for entirely remote work, as a baseline business protection."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a virtual assistant?",
+      "answer": "A virtual assistant in the $0-50k revenue tier pays an estimated $245 per year for baseline General Liability coverage, among the lowest tiers modeled here."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does a virtual assistant need Cyber Liability insurance?",
+      "answer": "Yes, if the assistant has access to client email accounts, financial tools, or customer data, a Cyber Risk endorsement helps cover breach-related liability."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Is Professional Liability necessary for a virtual assistant?",
+      "answer": "It can be valuable for VAs handling higher-responsibility tasks like bookkeeping-adjacent work or client communications, where an error could cause measurable financial harm."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Virtual assistants carry a 0.8 actuarial risk factor, among the lowest modeled here, reflecting minimal physical hazard and narrow data-access liability.",
+    "howCalculated": "Premiums scale with revenue tier and Cyber Risk endorsements covering client account and data access.",
+    "comparisonNote": "Virtual assistant premiums are among the lowest of any profession here, matching copywriters and translators."
   }
 }

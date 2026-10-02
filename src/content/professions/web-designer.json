@@ -18,50 +18,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-2",
-    "contextNote": ""
+    "contextNote": "Web designers build client-facing digital products involving code, hosting, and third-party integrations, giving them broader technical liability exposure than purely visual creative work."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "devices",
+      "title": "Site Errors & Downtime",
+      "description": "A coding mistake or broken integration can cause a client's website to malfunction or go offline, resulting in lost business the client may seek to recover."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "security",
+      "title": "Website Security Vulnerabilities",
+      "description": "Sites built with outdated plugins or weak security practices can be breached, exposing the designer to liability if client or customer data is compromised."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "copyright",
+      "title": "Licensing & Content Missteps",
+      "description": "Using unlicensed stock images, fonts, or themes in a client project can trigger infringement claims against both designer and client."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do web designers need Cyber Liability insurance in addition to E&O?",
+      "answer": "Cyber Liability covers data-breach claims if a site the designer built is compromised, while E&O covers claims that design or coding work itself was negligent \u2014 together they address the profession's two main exposures."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a web designer?",
+      "answer": "A web designer in the $0-50k revenue tier pays an estimated $250 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does a web designer need insurance if they only build sites, not host them?",
+      "answer": "Yes. Even without hosting responsibility, design and coding errors can still cause client financial loss, which is the core risk Professional Liability addresses."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Are e-commerce web designers at higher risk?",
+      "answer": "Designers building sites that process payments or store customer data generally carry higher Cyber Liability exposure given the sensitivity of that information."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Web designers carry a 0.85 actuarial risk factor, reflecting low physical hazard offset by technical and cybersecurity liability tied to the sites they build.",
+    "howCalculated": "Premiums scale with revenue tier, team size, and Professional Liability or Cyber Liability endorsements.",
+    "comparisonNote": "Web designer premiums are slightly higher than graphic designers, reflecting the added technical and security exposure of coded deliverables."
   }
 }

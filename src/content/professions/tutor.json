@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-1",
-    "contextNote": ""
+    "contextNote": "Tutors work one-on-one or in small groups with students, often minors, giving them a distinct liability profile centered on supervision and educational outcomes rather than physical trade risk."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "school",
+      "title": "Student Supervision Claims",
+      "description": "Tutors working with minors carry supervision-related liability if a student is injured or a safety incident occurs during a session."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "description",
+      "title": "Educational Outcome Disputes",
+      "description": "Parents or students who feel tutoring failed to deliver promised academic results can raise disputes over fees or service quality."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "home",
+      "title": "In-Home Session Liability",
+      "description": "Tutors who travel to a student's home or host sessions in their own space face premises-related liability distinct from a school setting."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do tutors need General Liability insurance?",
+      "answer": "General Liability covers bodily injury or property damage that could occur during an in-person tutoring session, whether at the tutor's location or the student's home."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a tutor?",
+      "answer": "A tutor in the $0-50k revenue tier pays an estimated $250 per year for baseline General Liability coverage, one of the lowest tiers modeled here."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does a tutor working with children need special coverage?",
+      "answer": "Tutors working with minors should confirm their Professional Liability policy addresses supervision-related claims, since working with children carries added scrutiny."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Is online-only tutoring lower risk than in-person tutoring?",
+      "answer": "Yes, online tutoring generally carries lower premises and supervision risk, though Professional Liability for educational outcome disputes still applies to both formats."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Tutors carry a 0.85 actuarial risk factor, reflecting low physical hazard balanced against supervision-related liability, particularly when working with minors.",
+    "howCalculated": "Premiums scale with revenue tier and Professional Liability endorsements covering educational service disputes.",
+    "comparisonNote": "Tutor premiums are among the lowest of any profession modeled here, comparable to mobile notaries and translators."
   }
 }

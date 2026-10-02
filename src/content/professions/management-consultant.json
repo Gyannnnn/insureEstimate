@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-5",
-    "contextNote": ""
+    "contextNote": "Management consultants advise on organizational strategy at a higher level than individual project consulting, carrying professional-liability exposure similar to business consultants."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "gavel",
+      "title": "Strategic Advisory Negligence",
+      "description": "A client who implements a flawed organizational or operational recommendation and suffers losses may pursue a professional negligence claim."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "description",
+      "title": "Engagement Scope Disputes",
+      "description": "Large consulting engagements with multiple deliverables are prone to disagreements over scope, timelines, and included services."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "groups",
+      "title": "Third-Party Reliance Claims",
+      "description": "Reports or recommendations shared with a client's board or investors can create liability if third parties rely on them and suffer losses."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do management consultants need Errors & Omissions insurance?",
+      "answer": "E&O protects against claims that strategic advice was negligent or failed to deliver promised results, which is the core liability exposure for this profession."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a management consultant?",
+      "answer": "A management consultant in the $0-50k revenue tier pays an estimated $270 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does management consulting insurance cover claims from a client's investors?",
+      "answer": "Some E&O policies extend to third-party reliance claims, but coverage varies, so consultants working with boards or investors should confirm this scope with their carrier."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Is management consulting riskier than general business consulting?",
+      "answer": "The two carry similar risk profiles; management consulting is priced slightly higher here, reflecting typically larger engagement scope and higher-stakes recommendations."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Management consultants carry a 1.05 actuarial risk factor, reflecting professional-advice exposure similar to general business consulting with slightly broader engagement scope.",
+    "howCalculated": "Premiums scale with revenue tier, team size, and Errors & Omissions endorsements.",
+    "comparisonNote": "Management consulting premiums sit just above general business consulting and below financial consulting, which carries added fiduciary exposure."
   }
 }

@@ -16,50 +16,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-1",
-    "contextNote": ""
+    "contextNote": "Translators convert content between languages with no physical work product, so their exposure is narrowly focused on translation accuracy in high-stakes documents."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "translate",
+      "title": "Mistranslation in Legal or Medical Documents",
+      "description": "An inaccurate translation of a legal contract or medical record can cause serious downstream harm to the parties relying on it."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "description",
+      "title": "Missed Deadline Disputes",
+      "description": "Time-sensitive translations for legal filings or business deals can trigger disputes if delivered late."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "lock",
+      "title": "Confidential Document Handling",
+      "description": "Translators often handle sensitive legal, medical, or business documents, creating liability if that content is mishandled or disclosed."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do translators need Errors & Omissions insurance?",
+      "answer": "E&O covers claims that a translation error caused financial or legal harm, which is especially important for legal, medical, or technical translation work."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a translator?",
+      "answer": "A translator in the $0-50k revenue tier pays an estimated $245 per year for baseline General Liability coverage, among the lowest tiers modeled here."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Do certified court translators need different coverage?",
+      "answer": "Court and legal translators often face stricter client requirements for E&O coverage given the high stakes of legal document accuracy."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Is General Liability necessary for a translator who works entirely remotely?",
+      "answer": "Many clients require proof of General Liability in contracts regardless of remote work status, even though physical premises risk is minimal for this profession."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Translators carry a 0.8 actuarial risk factor, among the lowest in the calculator, reflecting minimal physical hazard and narrowly scoped professional-liability exposure.",
+    "howCalculated": "Premiums scale with revenue tier, with Professional Liability (E&O) as the primary and often only relevant endorsement.",
+    "comparisonNote": "Translator premiums are among the lowest of any profession here, matching copywriters and graphic designers."
   }
 }

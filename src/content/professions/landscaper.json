@@ -18,50 +18,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "1-5",
-    "contextNote": ""
+    "contextNote": "Landscapers operate heavy equipment and vehicles across outdoor properties, giving the trade meaningful property-damage and equipment exposure similar to other outdoor trades."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "yard",
+      "title": "Property Damage from Equipment",
+      "description": "Mowers, trimmers, and other power equipment can damage irrigation lines, fences, or hardscaping during routine work."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "local_shipping",
+      "title": "Vehicle & Trailer Accidents",
+      "description": "Landscapers transport heavy equipment and materials between properties daily, creating commercial auto exposure."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "personal_injury",
+      "title": "Debris & Equipment Injury",
+      "description": "Flying debris from mowers or trimmers and injuries from power equipment are common sources of bodily-injury claims."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do landscapers need Commercial Auto insurance?",
+      "answer": "Trucks and trailers used to haul equipment and materials between job sites for business purposes generally require Commercial Auto rather than a personal auto policy."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a landscaper?",
+      "answer": "A landscaper in the $0-50k revenue tier pays an estimated $330 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does General Liability cover damage to a client's sprinkler system?",
+      "answer": "Yes, accidental damage to irrigation systems or other property during routine landscaping work is a typical General Liability claim."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "What does an equipment floater cover for a landscaper?",
+      "answer": "It covers mowers, trimmers, and other equipment against theft or damage while being transported or stored away from a fixed business location."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Landscapers carry a 1.65 actuarial risk factor, reflecting heavy equipment use, vehicle transport, and outdoor property-damage exposure.",
+    "howCalculated": "Premiums scale with revenue tier, crew size, and Commercial Auto or Equipment Floater endorsements.",
+    "comparisonNote": "Landscaping premiums are comparable to handymen and painters, reflecting moderate-to-high physical and equipment risk below licensed trades like electrical or HVAC work."
   }
 }

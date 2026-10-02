@@ -10,6 +10,24 @@ const breadcrumbItems = [
   { label: 'About Us' }
 ];
 
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Gyanaranjan Patra',
+  jobTitle: 'Founder & Lead Engineer',
+  url: 'https://insureestimate.com/about/',
+  sameAs: ['https://www.linkedin.com/in/higyan/'],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'InsureEstimate',
+    url: 'https://insureestimate.com/',
+  },
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Veer Surendra Sai University of Technology',
+  },
+};
+
 const coreValues = [
   {
     icon: 'calculate',
@@ -69,6 +87,7 @@ const methodologySteps = [
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} />
 </head>
 <body class="bg-background font-body-md text-slate-800 antialiased selection:bg-emerald-100 selection:text-emerald-900">
   <SiteHeader active="" />
@@ -175,7 +194,7 @@ const methodologySteps = [
         <div class="flex flex-col gap-2 mb-10 text-center max-w-2xl mx-auto">
           <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest">Underwriting Architecture</span>
           <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-2xl md:text-3xl font-bold text-slate-900">How Our Calculation Engine Works</h2>
-          <p class="text-xs md:text-sm text-slate-600">Our calculations follow standardized insurance mathematical guidelines used by certified actuaries.</p>
+          <p class="text-xs md:text-sm text-slate-600">Our calculations follow standardized insurance mathematical conventions, built on publicly filed state rate data rather than a single carrier's proprietary formula.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -186,6 +205,36 @@ const methodologySteps = [
               <p class="text-xs text-slate-600 leading-relaxed">{step.description}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <!-- METHODOLOGY OWNER / E-E-A-T -->
+      <section class="my-16">
+        <div class="flex flex-col gap-2 mb-8 text-center max-w-2xl mx-auto">
+          <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest">Who's Behind This</span>
+          <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-2xl md:text-3xl font-bold text-slate-900">Methodology Owner &amp; Lead Engineer</h2>
+        </div>
+
+        <div class="max-w-3xl mx-auto bg-slate-50 p-8 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row gap-6 items-start">
+          <div class="w-16 h-16 rounded-2xl bg-emerald-700 text-white flex items-center justify-center shrink-0 font-['Plus_Jakarta_Sans',sans-serif] text-xl font-extrabold">
+            GP
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-wrap items-baseline gap-x-2">
+              <h3 class="font-bold text-slate-900 text-lg">Gyanaranjan Patra</h3>
+              <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wide">Founder &amp; Lead Engineer</span>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Gyanaranjan holds an engineering degree in Information Technology from Veer Surendra Sai University of Technology (VSSUT), Burla, Sambalpur, India. He designed and built InsureEstimate's estimation engine, sourcing the underlying base rates and risk-classification data from public state insurance department filings and translating them into the transparent, deterministic calculators used across this site.
+            </p>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              He personally reviews and maintains the state and profession rate factors published on InsureEstimate to keep them aligned with publicly available filings.
+            </p>
+            <a href="https://www.linkedin.com/in/higyan/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-700 hover:text-emerald-800 hover:underline w-max mt-1">
+              <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+              View LinkedIn Profile
+            </a>
+          </div>
         </div>
       </section>
 

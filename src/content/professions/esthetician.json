@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-2",
-    "contextNote": ""
+    "contextNote": "Estheticians perform hands-on skincare treatments involving chemical peels, extractions, and equipment that touches clients directly, creating meaningful bodily-injury exposure."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "medical_services",
+      "title": "Skin Reaction & Chemical Burn Claims",
+      "description": "Chemical peels, waxing, or facial treatments can cause allergic reactions or burns, leading to bodily injury claims."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "spa",
+      "title": "Equipment-Related Injury",
+      "description": "Devices such as microdermabrasion or LED tools can cause injury if used improperly or if equipment malfunctions."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "coronavirus",
+      "title": "Sanitation & Cross-Contamination Claims",
+      "description": "Skincare tools that contact skin directly create infection-transmission risk if sanitation protocols aren't followed between clients."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do estheticians need Professional Liability insurance?",
+      "answer": "Professional Liability covers claims that a treatment was performed negligently or caused an adverse reaction, which General Liability alone typically excludes."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for an esthetician?",
+      "answer": "An esthetician in the $0-50k revenue tier pays an estimated $290 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does esthetician insurance cover chemical peel reactions?",
+      "answer": "A Professional Liability policy tailored to medical spa or skincare services typically covers claims arising from adverse reactions to chemical treatments, provided services were performed within the esthetician's licensed scope."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Do estheticians renting a chair need their own policy?",
+      "answer": "Yes. Salon or spa liability policies rarely extend to independent contractors, so estheticians renting a chair or room typically need their own General Liability and Professional Liability coverage."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Estheticians carry a 1.25 actuarial risk factor, reflecting hands-on treatment exposure involving chemicals and skin-contact equipment.",
+    "howCalculated": "Premiums scale with revenue tier, staff count, and Professional Liability endorsements tailored to medical spa or skincare services.",
+    "comparisonNote": "Esthetician premiums are comparable to other personal-care professions like massage therapy, and higher than desk-based professional services."
   }
 }

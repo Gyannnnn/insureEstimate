@@ -17,50 +17,46 @@
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-3",
-    "contextNote": ""
+    "contextNote": "Marketing consultants advise on campaigns and strategy without physical work product, so their exposure centers on advertising claims and campaign performance disputes."
   },
   "riskFactors": [
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "campaign",
+      "title": "Misleading Advertising Claims",
+      "description": "Campaign content that overstates a client's product or service claims can expose both the consultant and client to regulatory or third-party claims."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "description",
+      "title": "Campaign Performance Disputes",
+      "description": "Clients who don't see expected results from a marketing strategy may allege the consultant's advice was negligent."
     },
     {
-      "icon": "shield",
-      "title": "",
-      "description": ""
+      "icon": "copyright",
+      "title": "Intellectual Property Missteps",
+      "description": "Using third-party images, music, or brand elements without proper licensing in campaign materials can trigger infringement claims."
     }
   ],
   "faqs": [
     {
-      "question": "",
-      "answer": ""
+      "question": "Why do marketing consultants need Professional Liability insurance?",
+      "answer": "It covers claims that marketing advice or campaign strategy was negligent or failed to deliver agreed results, which General Liability doesn't address."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "What is the average cost of business insurance for a marketing consultant?",
+      "answer": "A marketing consultant in the $0-50k revenue tier pays an estimated $260 per year for baseline General Liability coverage."
     },
     {
-      "question": "",
-      "answer": ""
+      "question": "Does marketing consultant insurance cover advertising claim disputes?",
+      "answer": "Professional Liability can cover claims tied to advisory mistakes, but regulatory advertising violations may require additional review with a carrier depending on the campaign type."
     },
     {
-      "question": "",
-      "answer": ""
-    },
-    {
-      "question": "",
-      "answer": ""
+      "question": "Is General Liability enough for a marketing consultant?",
+      "answer": "Most marketing consultants pair General Liability with Professional Liability (E&O), since the bulk of their real exposure comes from campaign advice, not physical premises risk."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "",
-    "howCalculated": "",
-    "comparisonNote": ""
+    "whyThisRiskFactor": "Marketing consultants carry a 0.95 actuarial risk factor, reflecting low physical hazard offset by advisory and intellectual-property exposure.",
+    "howCalculated": "Premiums scale with revenue tier, team size, and Professional Liability (E&O) endorsements.",
+    "comparisonNote": "Marketing consulting premiums are similar to HR consulting and social media management, reflecting comparable low-physical, advice-driven risk profiles."
   }
 }
