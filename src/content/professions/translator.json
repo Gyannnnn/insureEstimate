@@ -12,11 +12,11 @@
   "notes": "",
   "intro": "",
   "seoTitle": "Business Insurance Cost for Translators",
-  "seoDescription": "Calculate estimated business insurance costs for translator businesses including general liability and professional E&O coverage.",
+  "seoDescription": "Translator insurance costs about $245/yr for solo General Liability. Learn when E&O matters for legal and medical translation and agency indemnity clauses.",
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-1",
-    "contextNote": "Translators convert content between languages with no physical work product, so their exposure is narrowly focused on translation accuracy in high-stakes documents."
+    "contextNote": "Translators work almost entirely from home offices on documents supplied by clients or agencies, so physical risk is close to zero. Exposure concentrates on accuracy and confidentiality, and it varies sharply by specialty: a marketing localization error is usually embarrassing, while an error in a contract, patent filing, medical record, or immigration document can carry real financial or legal consequences. Some agencies require freelancers to carry their own E&O and to indemnify the agency for errors."
   },
   "riskFactors": [
     {
@@ -33,6 +33,28 @@
       "icon": "lock",
       "title": "Confidential Document Handling",
       "description": "Translators often handle sensitive legal, medical, or business documents, creating liability if that content is mishandled or disclosed."
+    },
+    {
+      "icon": "gavel",
+      "title": "Indemnity Clauses in Agency Contracts",
+      "description": "Translation agency vendor agreements frequently require the freelancer to indemnify the agency for errors, shifting an end client's claim onto the individual translator."
+    }
+  ],
+  "claimScenarios": [
+    {
+      "title": "Dosage instruction error",
+      "scenario": "A translator working on patient discharge instructions renders a medication dosage incorrectly. The healthcare provider catches it after a complaint and seeks the cost of reissuing documents and reviewing affected patients from the agency, which passes the claim to the translator under their vendor agreement.",
+      "coverage": "Professional liability (E&O), which covers negligent errors that cause a client financial loss, including defense costs."
+    },
+    {
+      "title": "Mistranslated contract clause",
+      "scenario": "A mistranslated termination clause in a distribution agreement leads a client to miss a notice deadline. The client alleges the error cost them the contract renewal and claims the lost revenue.",
+      "coverage": "Professional liability (E&O). Check that your policy limit is realistic for the value of the documents you translate, not just your annual revenue."
+    },
+    {
+      "title": "Confidential files exposed",
+      "scenario": "A translator's email account is compromised and an attacker downloads a folder of client acquisition documents awaiting translation. The client must notify affected parties and investigate the breach.",
+      "coverage": "Cyber liability for breach response and notification costs. E&O alone may not cover a data breach."
     }
   ],
   "faqs": [
@@ -51,11 +73,19 @@
     {
       "question": "Is General Liability necessary for a translator who works entirely remotely?",
       "answer": "Many clients require proof of General Liability in contracts regardless of remote work status, even though physical premises risk is minimal for this profession."
+    },
+    {
+      "question": "How much E&O coverage does a translator need?",
+      "answer": "Match the limit to the stakes of your documents and the contracts you sign. Client and agency contracts often specify a minimum, commonly $1 million per claim. Translators working mainly on marketing or general business content may find lower limits acceptable, while legal, medical, and patent specialists should confirm what their contracts require before quoting."
+    },
+    {
+      "question": "Does post-editing machine translation change my liability?",
+      "answer": "Not in the client's eyes. If you deliver the final text, you are typically treated as responsible for its accuracy whether you translated it from scratch or post-edited machine output. Some clients now specify whether AI tools may be used, so follow those terms, and confirm your E&O policy doesn't exclude work produced with AI tools."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "Translators carry a 0.8 actuarial risk factor, among the lowest in the calculator, reflecting minimal physical hazard and narrowly scoped professional-liability exposure.",
-    "howCalculated": "Premiums scale with revenue tier, with Professional Liability (E&O) as the primary and often only relevant endorsement.",
-    "comparisonNote": "Translator premiums are among the lowest of any profession here, matching copywriters and graphic designers."
+    "whyThisRiskFactor": "Translators share the calculator's lowest risk factor, 0.8, with copywriters, graphic designers, and virtual assistants. The work has essentially no physical footprint: no client visits, no tools, no job sites. The exposure that remains is real but narrow. It comes down to whether a client loses money because a translated document said something the source didn't, and whether confidential material stays confidential while it's in your hands. Because both risks scale with what the documents are used for, a legal or medical specialist can face larger claims than a generalist even though both start from the same base factor.",
+    "howCalculated": "The estimate multiplies the 0.8 factor by your revenue tier, adds a per-employee cost and a fixed policy administration baseline, and adds a flat E&O charge when General Liability + E&O is selected. For most translators, E&O is the coverage that matters; General Liability is usually carried because a client or agency contract requires it. At the $0-50k tier with one employee, choosing GL + E&O moves the estimate from $208-$282 to $361-$489 per year. The calculator doesn't price specialty, so expect legal, medical, and patent work to quote above these figures.",
+    "comparisonNote": "Translators price the same as copywriters, graphic designers, and virtual assistants (all 0.8), and just below tutors, mobile notaries, and web designers at 0.85. Compared with a social media manager at 0.9, translators rarely hold client account access or spend client budgets, which is the main reason the factor is lower even though both are remote, document-driven professions."
   }
 }

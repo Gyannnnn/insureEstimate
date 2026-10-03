@@ -13,11 +13,11 @@
   "notes": "",
   "intro": "",
   "seoTitle": "Business Insurance Cost for Social Media Managers",
-  "seoDescription": "Calculate estimated business insurance costs for social media manager businesses including general liability and professional E&O coverage.",
+  "seoDescription": "Social media manager insurance costs about $255/yr for solo General Liability. See E&O, cyber, and ad-spend risks, with real-world claim scenarios.",
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-2",
-    "contextNote": "Social media managers control client-facing brand messaging and ad spend, making campaign errors and account-access mistakes their primary liability exposure."
+    "contextNote": "Social media managers publish on behalf of clients, usually with direct access to brand accounts, ad budgets, and customer messages. That combination means most claims come from what gets posted, what gets spent, or who gets into an account, not from physical accidents. Most work solo or in small agencies, often as contractors under a client's services agreement, which is frequently what triggers the need for proof of coverage."
   },
   "riskFactors": [
     {
@@ -34,6 +34,28 @@
       "icon": "copyright",
       "title": "Content Licensing Missteps",
       "description": "Using third-party images, video, or music in client posts without proper licensing can expose the manager to infringement claims."
+    },
+    {
+      "icon": "payments",
+      "title": "Ad Spend Mismanagement",
+      "description": "A wrong budget cap, duplicated campaign, or misconfigured bid strategy can burn through a client's paid-media budget in hours, and clients often look to the manager to make up the overspend."
+    }
+  ],
+  "claimScenarios": [
+    {
+      "title": "Unlicensed photo in a client post",
+      "scenario": "A manager pulls an image from a search engine for a client's promotional post. Months later the photographer's licensing agent sends a demand letter for unlicensed commercial use, naming both the brand and the manager who published it.",
+      "coverage": "Media liability, or a professional liability policy that includes intellectual property coverage. Many General Liability policies exclude this exposure for businesses whose work is advertising or publishing."
+    },
+    {
+      "title": "Campaign spends the wrong budget",
+      "scenario": "A paid campaign is set to a lifetime budget instead of a daily one and spends a month of the client's ad budget over a weekend. The client withholds payment and asks the manager to cover the overspend.",
+      "coverage": "Professional liability (E&O) for the client's financial loss. Policies usually won't refund your own fees, so contract terms on billing disputes still matter."
+    },
+    {
+      "title": "Compromised client account",
+      "scenario": "A phishing email gives an attacker access to the manager's password manager and, through it, a client's Instagram and ad accounts. The attacker posts scam links and runs fraudulent ads before access is recovered.",
+      "coverage": "Cyber liability for breach response and third-party claims. General Liability does not cover data breaches or account takeovers."
     }
   ],
   "faqs": [
@@ -52,11 +74,19 @@
     {
       "question": "What happens if a client's account is hacked while I manage it?",
       "answer": "Liability depends on the circumstances, but Cyber Liability coverage can help cover response costs and potential claims if a breach occurs while the manager has account access."
+    },
+    {
+      "question": "Can a social media manager be liable for defamatory or misleading posts?",
+      "answer": "Yes. If you write or approve a post that makes a false statement about a competitor or a misleading product claim, the injured party may name you alongside the client. Media liability, or professional liability with media coverage, is designed for these claims, and a written client approval step helps show the content was signed off."
+    },
+    {
+      "question": "How much does a social media manager pay for General Liability plus E&O?",
+      "answer": "In this calculator, a solo social media manager in the $0-50k revenue tier with one employee and GL + E&O is estimated at $370-$500 per year. Moving to the $50-150k tier raises that to $389-$526, since revenue is a proxy for the number and size of campaigns you're responsible for."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "Social media managers carry a 0.9 actuarial risk factor, reflecting low physical hazard offset by account-access and campaign-related liability.",
-    "howCalculated": "Premiums scale with revenue tier, team size, and Professional Liability or Cyber Liability endorsements.",
-    "comparisonNote": "Social media manager premiums are comparable to bookkeepers, sitting in the lower-middle of the calculator's range."
+    "whyThisRiskFactor": "Social media managers carry a 0.9 risk factor, slightly below the calculator's midpoint. There is almost no bodily-injury or property-damage exposure: the work happens on laptops and phones, and client meetings are usually virtual. What keeps the factor above the 0.8 floor shared by translators and copywriters is control. A social media manager doesn't just advise a client; they publish in the client's name, hold the account passwords, and often have authority to spend ad budget directly. Each of those creates a path to a client loss that is immediate and easy to measure, such as an overspent campaign, a post that has to be retracted, or an account locked during a launch.",
+    "howCalculated": "The estimate starts from the 0.9 risk factor multiplied by your revenue tier, because higher revenue generally means more clients, larger ad budgets under management, and larger potential claims. A per-employee cost is added for each team member who can post or spend on a client's behalf, plus a fixed policy administration baseline. Selecting General Liability + E&O adds a flat professional liability charge, which for social media work is usually the more important of the two coverages. Cyber liability isn't modeled in the calculator, so if you hold client credentials, budget for it separately.",
+    "comparisonNote": "At a 0.9 factor, social media managers price the same as bookkeepers and just above copywriters, translators, and graphic designers at 0.8. They sit slightly below marketing and HR consultants at 0.95, and far below hands-on trades like electricians (1.9) or general contractors (2.2), where bodily injury and property damage dominate pricing."
   }
 }

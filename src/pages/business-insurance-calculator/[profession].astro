@@ -40,6 +40,10 @@ const validRiskFactors = (data.riskFactors || []).filter(
   rf => (rf.title && rf.title.trim() !== '') || (rf.description && rf.description.trim() !== '')
 );
 
+const claimScenarios = (data.claimScenarios || []).filter(
+  cs => cs.title.trim() !== '' && cs.scenario.trim() !== ''
+);
+
 const validFaqs = (data.faqs || []).filter(
   f => f.question && f.question.trim() !== '' && f.answer && f.answer.trim() !== ''
 );
@@ -242,6 +246,28 @@ const professionPct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost /
               [Dev Mode] Specific risk factors for {data.name} will appear here once written.
             </div>
           )}
+        </div>
+      </section>
+    )}
+
+    <!-- Claim Scenarios Section -->
+    {claimScenarios.length > 0 && (
+      <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 sm:py-stack-md z-10 relative">
+        <div class="flex flex-col gap-2 sm:gap-stack-sm mb-4 sm:mb-6">
+          <span class="font-label-sm text-[11px] sm:text-xs text-secondary uppercase tracking-widest font-semibold">Claim Scenarios</span>
+          <h2 class="font-headline-md text-xl sm:text-2xl lg:text-3xl text-primary font-bold">How {data.name} Claims Typically Happen</h2>
+          <p class="font-body-md text-xs sm:text-sm text-on-surface-variant">Illustrative examples of common claim patterns, not records of specific claims.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
+          {claimScenarios.map(cs => (
+            <div class="bg-surface-container-lowest p-4 sm:p-5 rounded-xl border border-outline-variant/30 flex flex-col gap-2 sm:gap-2.5 shadow-sm">
+              <h3 class="font-body-md font-bold text-primary text-xs sm:text-sm lg:text-base">{cs.title}</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">{cs.scenario}</p>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed mt-auto pt-2.5 border-t border-outline-variant/20">
+                <span class="font-semibold text-primary">Coverage that responds:</span> {cs.coverage}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
     )}

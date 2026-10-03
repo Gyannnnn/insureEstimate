@@ -1,4 +1,7 @@
 ---
+import { calculateRentersPremium } from '../lib/calculators/rentersInsurance';
+import { calculateBusinessPremium } from '../lib/calculators/businessInsurance';
+
 interface Props {
   title?: string;
   subtitle?: string;
@@ -20,6 +23,14 @@ const {
   riskFactor = 1.0,
   period = type === 'renters' ? '/ mo' : '/ yr'
 } = Astro.props;
+
+// Pre-render the estimate for the default control values below so the HTML carries a real
+// number for crawlers and no-JS visitors. Invalid factors throw here and fail the build.
+const initial = type === 'renters'
+  ? calculateRentersPremium({ stateBaseRate: baseRate, propertyValue: 20000, liabilityCoverage: 300000, deductible: 1000 })
+  : calculateBusinessPremium({ professionRiskFactor: riskFactor, revenueTier: '50-150k', employeeCount: 1, coverageType: 'GL+EO' });
+const initialMin = Math.round(type === 'renters' ? initial.monthlyLow : initial.low);
+const initialMax = Math.round(type === 'renters' ? initial.monthlyHigh : initial.high);
 ---
 
 <div class="w-full py-stack-md z-10 relative">
@@ -155,14 +166,14 @@ const {
         <!-- Inline Error Banner -->
         <div id="calc-error-banner" class="hidden p-3 rounded-lg bg-error-container text-error text-xs flex items-center gap-2">
           <span class="material-symbols-outlined text-[18px]">warning</span>
-          <span id="calc-error-text">Invalid calculation input.</span>
+          <span id="calc-error-text"></span>
         </div>
 
         <div id="calc-result-container">
           <div class="flex items-baseline gap-2">
-            <span id="card-result-min" class="font-headline-lg text-2xl sm:text-3xl md:text-[34px] font-bold text-primary font-data-tabular">$0</span>
+            <span id="card-result-min" class="font-headline-lg text-2xl sm:text-3xl md:text-[34px] font-bold text-primary font-data-tabular">${initialMin}</span>
             <span class="text-on-surface-variant font-body-md">–</span>
-            <span id="card-result-max" class="font-headline-lg text-2xl sm:text-3xl md:text-[34px] font-bold text-primary font-data-tabular">$0</span>
+            <span id="card-result-max" class="font-headline-lg text-2xl sm:text-3xl md:text-[34px] font-bold text-primary font-data-tabular">${initialMax}</span>
             <span id="card-result-period" class="text-on-surface-variant text-xs sm:text-sm font-body-md">{period}</span>
           </div>
           <p class="font-body-md text-on-surface-variant text-[11px] sm:text-[12px] mt-1">Calculated projection for {entityName}</p>
@@ -172,14 +183,19 @@ const {
         <div class="space-y-2 border-t border-outline-variant/30 pt-3 text-xs">
           <span class="font-label-sm text-[11px] text-primary uppercase font-bold tracking-wider block mb-1">Calculation Breakdown</span>
           <div id="calc-breakdown-list" class="space-y-1.5 text-on-surface-variant">
-            <!-- Rendered dynamically -->
+            {initial.breakdown.map(item => (
+              <div class="flex justify-between items-center text-on-surface-variant">
+                <span class={type === 'business' ? 'truncate pr-2' : undefined}>{item.label}:</span>
+                <span class={`font-data-tabular text-on-surface font-medium${type === 'business' ? ' shrink-0' : ''}`}>{type === 'business' ? `$${item.value}` : item.value}</span>
+              </div>
+            ))}
           </div>
         </div>
 
         <!-- Dynamic Disclaimer -->
         <div class="p-3 bg-surface-container-lowest rounded-lg border border-outline-variant/20 text-[11px] text-on-surface-variant flex gap-2 items-start leading-relaxed">
           <span class="material-symbols-outlined text-secondary text-[16px] shrink-0 mt-0.5">info</span>
-          <span id="calc-disclaimer">Estimates are for informational purposes only and do not constitute binding insurance quotes.</span>
+          <span id="calc-disclaimer">{initial.disclaimer}</span>
         </div>
       </div>
     </div>

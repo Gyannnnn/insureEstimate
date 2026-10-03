@@ -13,11 +13,11 @@
   "notes": "",
   "intro": "",
   "seoTitle": "Business Insurance Cost for Personal Trainers",
-  "seoDescription": "Calculate estimated business insurance costs for personal trainer businesses including general liability and professional E&O coverage.",
+  "seoDescription": "Personal trainer insurance costs about $295/yr for solo General Liability. See how instruction injuries, certification, and in-home sessions affect pricing.",
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-2",
-    "contextNote": "Personal trainers guide clients through physically demanding exercise, making bodily injury during sessions the dominant and most direct risk in this profession."
+    "contextNote": "Personal trainers work in commercial gyms, private studios, clients' homes, parks, and over video. The common thread is physical exertion under their direction, which makes client injury the defining exposure. Many trainers are independent contractors renting floor space from a gym, and the gym's own policy typically protects the gym, not the contractor."
   },
   "riskFactors": [
     {
@@ -34,12 +34,34 @@
       "icon": "warning",
       "title": "Equipment & Facility Liability",
       "description": "Free weights, resistance bands, and gym equipment create injury risk if it fails or is used improperly during a session."
+    },
+    {
+      "icon": "restaurant",
+      "title": "Nutrition & Scope-of-Practice Advice",
+      "description": "Meal plans, supplement recommendations, or advice about managing a medical condition can fall outside a trainer's scope of practice, and claims arising from that advice may not be covered."
+    }
+  ],
+  "claimScenarios": [
+    {
+      "title": "Injury from a programmed lift",
+      "scenario": "A trainer increases a new client's deadlift load too quickly and the client suffers a herniated disc. The client claims the program ignored the back history they disclosed at intake and seeks medical costs and lost wages.",
+      "coverage": "Professional liability, which covers injuries alleged to result from your instruction or programming. Fitness insurance policies usually bundle it with General Liability."
+    },
+    {
+      "title": "Equipment fails in a client's home",
+      "scenario": "During an in-home session, a resistance band the trainer brought snaps and strikes the client in the face, and the recoil knocks a television off its stand.",
+      "coverage": "General Liability for the bodily injury and property damage. Check whether your policy also covers equipment you own and bring to sessions."
+    },
+    {
+      "title": "Cardiac event during interval training",
+      "scenario": "A client who didn't mention a heart condition on their intake form collapses during a high-intensity interval session. The family argues the trainer should have screened more carefully and responded faster.",
+      "coverage": "Professional liability. A signed health questionnaire such as the PAR-Q+, a liability waiver, and current CPR/AED certification strengthen your defense, and insurers often require them."
     }
   ],
   "faqs": [
     {
       "question": "Why do personal trainers need General Liability with bodily injury coverage?",
-      "answer": "Bodily injury is the primary risk in personal training, so General Liability with this specific emphasis covers client injuries sustained during a workout session."
+      "answer": "General Liability covers bodily injury and property damage that happen around your sessions, such as a client tripping over equipment you set up. Injuries alleged to come from your instruction itself are usually handled by Professional Liability, which is why most fitness policies bundle the two."
     },
     {
       "question": "What is the average cost of business insurance for a personal trainer?",
@@ -52,11 +74,19 @@
     {
       "question": "Does Professional Liability matter for personal trainers?",
       "answer": "Yes. Professional Liability covers claims that a specific training program or exercise recommendation was negligent, which is distinct from a general premises injury claim."
+    },
+    {
+      "question": "Do I need a certification to get personal trainer insurance?",
+      "answer": "Most insurers that specialize in fitness professionals ask for a current certification from a recognized body, often one accredited by the NCCA, plus CPR/AED certification. Uncertified trainers may still find coverage, but typically from fewer insurers."
+    },
+    {
+      "question": "Am I covered when training clients online or outdoors?",
+      "answer": "It depends on the policy. Check that your coverage territory includes virtual sessions with clients in other states or countries, and that outdoor sessions in parks or public spaces aren't excluded. Some parks also require a permit and proof of insurance for commercial fitness sessions."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "Personal trainers carry a 1.3 actuarial risk factor, reflecting direct and frequent bodily-injury exposure inherent to supervised physical exercise.",
-    "howCalculated": "Premiums scale with revenue tier, client volume, and Professional Liability endorsements covering training-related injuries.",
-    "comparisonNote": "Personal trainer premiums rank among the higher personal-service tiers, above yoga instructors and estheticians, reflecting more intense physical exertion during sessions."
+    "whyThisRiskFactor": "Personal trainers carry a 1.3 risk factor, near the top of the personal-service professions in this calculator and well above desk-based work. The reason is direct: clients can be injured doing exactly what the trainer told them to do. Sprains, strains, and back injuries are the common claims, while rarer events such as cardiac incidents during intense sessions drive severity. The factor stays well below construction trades like plumbers (2.0) and general contractors (2.2) because trainers' work doesn't carry the property-damage and serious job-site injury exposure of those trades.",
+    "howCalculated": "The estimate multiplies the 1.3 factor by your revenue tier, then adds a per-employee cost for each trainer on staff, a fixed policy administration baseline, and a flat professional liability charge when GL + E&O is selected. For trainers, GL + E&O is the realistic configuration, since most injury claims allege negligent instruction. A solo trainer in the $0-50k tier with one employee is estimated at $404-$546 per year with both coverages, compared with $251-$339 for General Liability alone.",
+    "comparisonNote": "Personal trainers price above yoga instructors (1.15), massage therapists (1.2), and estheticians (1.25), reflecting the heavier loads and intensity of strength and conditioning work. They sit below cleaning service owners (1.4) and caterers (1.5), and far below electricians (1.9) and plumbers (2.0), whose work adds property damage and serious on-site injury risks."
   }
 }

@@ -13,11 +13,11 @@
   "notes": "",
   "intro": "",
   "seoTitle": "Business Insurance Cost for Tutors",
-  "seoDescription": "Calculate estimated business insurance costs for tutor businesses including general liability and professional E&O coverage.",
+  "seoDescription": "Tutor insurance costs about $250/yr for solo General Liability. Covers in-home sessions, test-prep disputes, and abuse coverage for tutors working with minors.",
   "industryContext": {
     "typicalRevenueTier": "0-50k",
     "typicalEmployeeCount": "0-1",
-    "contextNote": "Tutors work one-on-one or in small groups with students, often minors, giving them a distinct liability profile centered on supervision and educational outcomes rather than physical trade risk."
+    "contextNote": "Most tutors work alone, either online or in a student's home, a library, or their own home. Unlike most remote professions, tutors spend much of their time with minors, which brings supervision and abuse-allegation exposure that insurers take seriously. Parents are usually the paying client, so disputes over results or fees come from someone other than the student being taught."
   },
   "riskFactors": [
     {
@@ -34,6 +34,28 @@
       "icon": "home",
       "title": "In-Home Session Liability",
       "description": "Tutors who travel to a student's home or host sessions in their own space face premises-related liability distinct from a school setting."
+    },
+    {
+      "icon": "shield",
+      "title": "Abuse & Molestation Allegations",
+      "description": "Any one-on-one work with minors carries the risk of an abuse allegation, and many General Liability policies exclude it unless a specific abuse and molestation endorsement is added."
+    }
+  ],
+  "claimScenarios": [
+    {
+      "title": "Student injured at the tutor's home",
+      "scenario": "A student trips on a loose rug on the way into a home tutoring session and fractures a wrist. The parents seek medical costs from the tutor, and the tutor's homeowners policy denies the claim because the injury happened during a business activity.",
+      "coverage": "General Liability. Homeowners policies commonly exclude injuries arising from business activities, even a small one run from home."
+    },
+    {
+      "title": "Test-prep refund dispute",
+      "scenario": "A family pays for a 12-week SAT prep package marketed with a score increase. When the student's score doesn't improve, the parents claim the tutor misrepresented results and demand the fees back plus the cost of a replacement course.",
+      "coverage": "Professional liability (E&O) may cover defense costs for the negligence or misrepresentation claim. Refunds of your own fees are usually excluded, so avoid guaranteeing outcomes in marketing."
+    },
+    {
+      "title": "Allegation after a one-on-one session",
+      "scenario": "A parent alleges inappropriate conduct during an unsupervised in-home session. Even when an allegation is unfounded, legal defense costs begin immediately.",
+      "coverage": "An abuse and molestation endorsement or standalone policy. Without it, many General Liability policies exclude these claims entirely, including defense costs."
     }
   ],
   "faqs": [
@@ -47,16 +69,24 @@
     },
     {
       "question": "Does a tutor working with children need special coverage?",
-      "answer": "Tutors working with minors should confirm their Professional Liability policy addresses supervision-related claims, since working with children carries added scrutiny."
+      "answer": "Yes. Ask specifically about abuse and molestation coverage, which many General Liability policies exclude by default. Some tutoring agencies, schools, and districts require it, along with a background check, before they will refer students to you."
     },
     {
       "question": "Is online-only tutoring lower risk than in-person tutoring?",
       "answer": "Yes, online tutoring generally carries lower premises and supervision risk, though Professional Liability for educational outcome disputes still applies to both formats."
+    },
+    {
+      "question": "Does my homeowners or renters insurance cover tutoring at home?",
+      "answer": "Usually not. Most homeowners and renters policies exclude liability arising from business activities, so a student injured during a paid session in your home may not be covered. Some insurers offer a home-business endorsement, but a General Liability policy is the more common solution for tutors who teach at home."
+    },
+    {
+      "question": "How much does a tutor pay for General Liability plus E&O?",
+      "answer": "In this calculator, a solo tutor in the $0-50k revenue tier with one employee and GL + E&O is estimated at $366-$495 per year. A small tutoring business in the $150-500k tier with three staff is estimated at $485-$657, before any abuse and molestation endorsement, which the calculator doesn't price."
     }
   ],
   "blogContent": {
-    "whyThisRiskFactor": "Tutors carry a 0.85 actuarial risk factor, reflecting low physical hazard balanced against supervision-related liability, particularly when working with minors.",
-    "howCalculated": "Premiums scale with revenue tier and Professional Liability endorsements covering educational service disputes.",
-    "comparisonNote": "Tutor premiums are among the lowest of any profession modeled here, comparable to mobile notaries and translators."
+    "whyThisRiskFactor": "Tutors carry a 0.85 risk factor, one step above the 0.8 floor for fully remote document work. Physical risk is low but not zero: in-person sessions bring students into your home or you into theirs, and slip-and-fall injuries can happen in either. The bigger distinction is who you work with. Insurers price one-on-one work with minors carefully because supervision failures and abuse allegations, even unfounded ones, are expensive to defend. Online-only tutors remove most premises risk but keep the outcome-dispute exposure that comes with promising academic results to paying parents.",
+    "howCalculated": "The estimate multiplies the 0.85 factor by your revenue tier, then adds a per-employee cost for each tutor you employ, a fixed policy administration baseline, and a flat professional liability charge when GL + E&O is selected. Revenue matters because a larger tutoring business serves more students, and each added tutor is another adult working one-on-one with children. Abuse and molestation coverage isn't modeled, so if you work with minors, expect a real quote to add it as an endorsement.",
+    "comparisonNote": "Tutors price alongside mobile notaries, web designers, and photographers' assistants at 0.85. They sit below yoga instructors (1.15) and personal trainers (1.3), whose sessions involve physical exertion and a higher chance of bodily injury, and slightly above translators and copywriters (0.8), who rarely meet clients in person."
   }
 }

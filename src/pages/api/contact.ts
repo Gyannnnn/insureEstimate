@@ -1,4 +1,5 @@
 import type { APIRoute } from 'astro';
+import { getSecret } from 'astro:env/server';
 import { Resend } from 'resend';
 
 export const prerender = false;
@@ -12,11 +13,13 @@ const SUBJECT_MAP: Record<string, string> = {
 };
 
 export const POST: APIRoute = async ({ request }) => {
-  const resendApiKey = import.meta.env.RESEND_API_KEY || process.env.RESEND_API_KEY;
-  const recipientEmail = import.meta.env.CONTACT_RECIPIENT_EMAIL || process.env.CONTACT_RECIPIENT_EMAIL;
+  // Read secrets at request time from the Worker's runtime env (set via `wrangler secret`).
+  // import.meta.env would be inlined into the bundle at build time.
+  const resendApiKey = getSecret('RESEND_API_KEY');
+  const recipientEmail = getSecret('CONTACT_RECIPIENT_EMAIL');
 
   if (!resendApiKey) {
-    console.error('Something Went Wrong');
+    console.error('Missing RESEND_API_KEY in runtime environment.');
     return new Response(
       JSON.stringify({ success: false, error: 'Email service configuration missing RESEND_API_KEY.' }),
       { status: 500, headers: { 'Content-Type': 'application/json' } }
@@ -24,7 +27,7 @@ export const POST: APIRoute = async ({ request }) => {
   }
 
   if (!recipientEmail) {
-    console.error('Missing CONTACT_RECIPIENT_EMAIL in environment variables.');
+    console.error('Missing CONTACT_RECIPIENT_EMAIL in runtime environment.');
     return new Response(
       JSON.stringify({ success: false, error: 'Email service configuration missing recipient email.' }),
       { status: 500, headers: { 'Content-Type': 'application/json' } }
@@ -32,26 +35,6 @@ export const POST: APIRoute = async ({ request }) => {
   }
 
   try {
-    // Strictly load environment variables from process.env or import.meta.env
-    const resendApiKey = process.env.RESEND_API_KEY || import.meta.env.RESEND_API_KEY;
-    const recipientEmail = process.env.CONTACT_RECIPIENT_EMAIL || import.meta.env.CONTACT_RECIPIENT_EMAIL;
-
-    if (!resendApiKey) {
-      console.error('Something Went Wrong');
-      return new Response(
-        JSON.stringify({ success: false, error: 'Server email service is not configured properly.' }),
-        { status: 500, headers: { 'Content-Type': 'application/json' } }
-      );
-    }
-
-    if (!recipientEmail) {
-      console.error('Missing CONTACT_RECIPIENT_EMAIL in environment variables.');
-      return new Response(
-        JSON.stringify({ success: false, error: 'Server email recipient is not configured properly.' }),
-        { status: 500, headers: { 'Content-Type': 'application/json' } }
-      );
-    }
-
     const body = await request.json();
     const { name, email, subject, message } = body;
 
