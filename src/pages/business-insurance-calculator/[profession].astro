@@ -12,7 +12,9 @@ import {
 import { siteCopy } from '../../lib/site';
 import GoogleAnalytics from '../../components/GoogleAnalytics.astro';
 import Fonts from '../../components/Fonts.astro';
+import SiteSchema from '../../components/SiteSchema.astro';
 import { BUSINESS_FACTORS } from '../../lib/calculators/factors';
+import { professionMetaDescription } from '../../lib/seo';
 import '../../styles/global.css';
 
 export async function getStaticPaths() {
@@ -23,7 +25,6 @@ const profession = await getEntry('professions', Astro.params.profession!);
 if (!profession) return Astro.redirect('/');
 const { data } = profession;
 const title = data.seoTitle || `Business Insurance Cost for ${data.name}`;
-const description = data.seoDescription || `Explore baseline liability, E&O, and commercial property cost estimates for a ${data.name.toLowerCase()}.`;
 
 const allProfessions = await getCollection('professions');
 const nationalAvgAnnual = calculateNationalBusinessAverage(allProfessions.map(p => p.data.riskFactor));
@@ -31,6 +32,14 @@ const nationalAvgAnnual = calculateNationalBusinessAverage(allProfessions.map(p 
 const standardEst = getBusinessStandardPremium(data.riskFactor);
 const derivedAnnualCost = standardEst.annual;
 const derivedMonthlyCost = standardEst.monthly;
+
+// Hand-written seoDescription wins; otherwise build one from this profession's own numbers and risks.
+const description = data.seoDescription?.trim() || professionMetaDescription({
+  name: data.name,
+  glAnnual: derivedAnnualCost,
+  glEoAnnual: derivedAnnualCost + BUSINESS_FACTORS.eoAddonFlat,
+  riskTitles: (data.riskFactors || []).map(rf => rf.title),
+});
 
 const industryContext = data.industryContext || {
   typicalRevenueTier: "0-50k",
@@ -118,6 +127,7 @@ const professionPct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost /
   <meta name="description" content={description}>
   <link rel="canonical" href={`https://insureestimate.com/business-insurance-calculator/${data.slug}/`} />
   <Fonts />
+  <SiteSchema />
 </head>
 <body class="bg-canvas font-sans text-ink antialiased">
   <SiteHeader active="Business Insurance" />
@@ -126,7 +136,7 @@ const professionPct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost /
     <!-- Breadcrumbs Navigation -->
     <div class="container-page pt-8">
       <Breadcrumbs items={[
-        { label: 'Business Insurance', href: '/business-insurance-calculator/' },
+        { label: 'Business Insurance Calculator', href: '/business-insurance-calculator/' },
         { label: data.name }
       ]} />
     </div>

@@ -7,21 +7,6 @@ const allStates = allStatesRaw.sort((a, b) => a.data.name.localeCompare(b.data.n
 const allProfessionsRaw = await getCollection('professions');
 const allProfessions = allProfessionsRaw.sort((a, b) => a.data.name.localeCompare(b.data.name));
 
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'InsureEstimate',
-  url: 'https://insureestimate.com/',
-  logo: 'https://insureestimate.com/favicon-96x96.png',
-};
-
-const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'InsureEstimate',
-  url: 'https://insureestimate.com/',
-  description: 'Estimate insurance costs with free online calculators for renters and small businesses. Explore coverage costs by state, profession, and industry.',
-};
 
 const linkClass = 'text-body-md text-body transition-colors hover:text-ink';
 ---
@@ -105,6 +90,3 @@ const linkClass = 'text-body-md text-body transition-colors hover:text-ink';
 
   </div>
 </footer>
-
-<script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
-<script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />

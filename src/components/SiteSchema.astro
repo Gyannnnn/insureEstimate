@@ -1,0 +1,22 @@
+---
+// Site-wide Organization + WebSite JSON-LD. Included in the <head> of every page so tools
+// that only parse <head> (not just Google, which reads the whole document) still find it.
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'InsureEstimate',
+  url: 'https://insureestimate.com/',
+  logo: 'https://insureestimate.com/favicon-96x96.png',
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'InsureEstimate',
+  url: 'https://insureestimate.com/',
+  description: 'Estimate insurance costs with free online calculators for renters and small businesses. Explore coverage costs by state, profession, and industry.',
+};
+---
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />

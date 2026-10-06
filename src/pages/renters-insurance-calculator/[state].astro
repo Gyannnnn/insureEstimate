@@ -14,7 +14,9 @@ import {
 } from '../../lib/calculators/standardProfile';
 import GoogleAnalytics from '../../components/GoogleAnalytics.astro';
 import Fonts from '../../components/Fonts.astro';
+import SiteSchema from '../../components/SiteSchema.astro';
 import { RENTERS_FACTORS } from '../../lib/calculators/factors';
+import { stateMetaDescription } from '../../lib/seo';
 import '../../styles/global.css';
 
 export async function getStaticPaths() {
@@ -25,7 +27,6 @@ const stateEntry = await getEntry('states', Astro.params.state!);
 if (!stateEntry) return Astro.redirect('/');
 const { data } = stateEntry;
 const title = data.seoTitle || `Renters Insurance Cost in ${data.name}`;
-const description = data.seoDescription || `Estimate your monthly renters insurance premium in ${data.name}.`;
 
 const allStates = await getCollection('states');
 const nationalAvgAnnual = calculateNationalRentersAverage(allStates.map(s => s.data.baseRate));
@@ -33,6 +34,14 @@ const nationalAvgAnnual = calculateNationalRentersAverage(allStates.map(s => s.d
 const standardEst = getRentersStandardPremium(data.baseRate);
 const derivedAnnualCost = standardEst.annual;
 const derivedMonthlyCost = standardEst.monthly;
+
+// Hand-written seoDescription wins; otherwise build one from this state's own numbers and risks.
+const description = data.seoDescription?.trim() || stateMetaDescription({
+  name: data.name,
+  monthly: derivedMonthlyCost,
+  annual: derivedAnnualCost,
+  riskTitles: (data.riskFactors || []).map(rf => rf.title),
+});
 
 const defaultImage = '/images/states/default.jpg';
 let stateImage = data.image || `/images/states/${data.slug}.jpg`;
@@ -127,6 +136,7 @@ const statePct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost / maxR
   <meta name="description" content={description}>
   <link rel="canonical" href={`https://insureestimate.com/renters-insurance-calculator/${data.slug}/`} />
   <Fonts />
+  <SiteSchema />
 </head>
 <body class="bg-canvas font-sans text-ink antialiased">
   <SiteHeader active="Renters Insurance" />
@@ -135,7 +145,7 @@ const statePct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost / maxR
     <div class="container-page relative z-10 flex flex-col gap-8 pb-8 pt-8">
       <!-- Breadcrumbs Navigation -->
       <Breadcrumbs items={[
-        { label: 'Renters Insurance', href: '/renters-insurance-calculator/' },
+        { label: 'Renters Insurance Calculator', href: '/renters-insurance-calculator/' },
         { label: data.name }
       ]} />
 

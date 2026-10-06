@@ -4,6 +4,7 @@ import PageFooter from '../components/PageFooter.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import Fonts from '../components/Fonts.astro';
+import SiteSchema from '../components/SiteSchema.astro';
 import '../styles/global.css';
 
 const breadcrumbItems = [
@@ -23,6 +24,7 @@ const lastUpdated = 'August 30, 2026';
   <meta name="description" content="Read InsureEstimate's Terms and Conditions. Understand our non-binding actuarial estimation disclaimer, terms of use, and intellectual property guidelines.">
   <link rel="canonical" href="https://insureestimate.com/terms-and-conditions/" />
   <Fonts />
+  <SiteSchema />
 </head>
 <body class="bg-canvas font-sans text-ink antialiased">
   <SiteHeader active="" />

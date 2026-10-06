@@ -6,6 +6,7 @@ import CalculatorCard from '../../components/CalculatorCard.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import GoogleAnalytics from '../../components/GoogleAnalytics.astro';
 import Fonts from '../../components/Fonts.astro';
+import SiteSchema from '../../components/SiteSchema.astro';
 import { getBusinessStandardPremium } from '../../lib/calculators/standardProfile';
 import '../../styles/global.css';
 
@@ -59,6 +60,7 @@ const featuredProfessions = professions.filter(p => featuredSlugs.includes(p.dat
   <meta name="description" content="Estimate small business insurance cost projections by profession. Compare General Liability and Professional Liability rates tailored to your industry.">
   <link rel="canonical" href="https://insureestimate.com/business-insurance-calculator/" />
   <Fonts />
+  <SiteSchema />
 </head>
 <body class="bg-canvas font-sans text-ink antialiased">
   <SiteHeader active="Business Insurance" />
@@ -67,7 +69,7 @@ const featuredProfessions = professions.filter(p => featuredSlugs.includes(p.dat
     <!-- Hero Section -->
     <section class="container-page relative z-10 flex flex-col gap-8 pb-16 pt-8">
       <!-- Breadcrumbs Navigation -->
-      <Breadcrumbs items={[{ label: 'Business Insurance' }]} />
+      <Breadcrumbs items={[{ label: 'Business Insurance Calculator' }]} />
 
       <div class="grid grid-cols-1 items-end gap-6 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-12">
         <div class="flex max-w-3xl flex-col gap-4">

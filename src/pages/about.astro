@@ -4,6 +4,7 @@ import PageFooter from '../components/PageFooter.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import Fonts from '../components/Fonts.astro';
+import SiteSchema from '../components/SiteSchema.astro';
 import '../styles/global.css';
 
 const breadcrumbItems = [
@@ -85,6 +86,7 @@ const methodologySteps = [
   <meta name="description" content="Learn about InsureEstimate's mission to provide independent, actuarial-backed renters and commercial business insurance cost intelligence across all 50 US states.">
   <link rel="canonical" href="https://insureestimate.com/about/" />
   <Fonts />
+  <SiteSchema />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} />
 </head>
 <body class="bg-canvas font-sans text-ink antialiased">
