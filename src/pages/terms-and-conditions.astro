@@ -3,10 +3,10 @@ import SiteHeader from '../components/SiteHeader.astro';
 import PageFooter from '../components/PageFooter.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import Fonts from '../components/Fonts.astro';
 import '../styles/global.css';
 
 const breadcrumbItems = [
-  { label: 'Home', href: '/' },
   { label: 'Terms and Conditions' }
 ];
 
@@ -22,36 +22,35 @@ const lastUpdated = 'August 30, 2026';
   <title>Terms and Conditions - InsureEstimate</title>
   <meta name="description" content="Read InsureEstimate's Terms and Conditions. Understand our non-binding actuarial estimation disclaimer, terms of use, and intellectual property guidelines.">
   <link rel="canonical" href="https://insureestimate.com/terms-and-conditions/" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <Fonts />
 </head>
-<body class="bg-background font-body-md text-slate-800 antialiased selection:bg-emerald-100 selection:text-emerald-900">
+<body class="bg-canvas font-sans text-ink antialiased">
   <SiteHeader active="" />
 
-  <main class="w-full pt-20 md:pt-24 min-h-[calc(100vh-300px)]">
-    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6">
+  <main class="w-full pt-16">
+    <div class="container-page pt-8">
       <Breadcrumbs items={breadcrumbItems} />
 
       <!-- HEADER CONTAINER -->
-      <section class="mt-6 mb-10 pb-8 border-b border-slate-200/80">
+      <section class="mb-12 mt-8 border-b border-hairline pb-10">
         <div class="flex flex-col gap-3">
-          <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest">Legal Framework</span>
-          <h1 class="font-['Plus_Jakarta_Sans',sans-serif] text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <span class="eyebrow">Legal Framework</span>
+          <h1 class="title-page">
             Terms and Conditions
           </h1>
-          <p class="text-xs text-slate-500 font-data-tabular">
+          <p class="font-mono text-body-sm text-mute">
             Last Revised: {lastUpdated} | Terms of Platform Service
           </p>
         </div>
       </section>
 
       <!-- TERMS CONTENT BODY -->
-      <div class="max-w-4xl space-y-10 text-slate-700 text-sm md:text-base leading-relaxed">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_240px] lg:gap-16">
+      <div class="max-w-prose space-y-12 text-body-lg text-body [&_strong]:font-semibold [&_strong]:text-ink">
         
         <!-- SECTION 1: ACCEPTANCE OF TERMS -->
-        <section class="space-y-4">
-          <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-xl md:text-2xl font-bold text-slate-900">
+        <section id="section-1" class="scroll-mt-24 space-y-4">
+          <h2 class="text-2xl font-semibold leading-8 tracking-[-0.9px] text-ink">
             1. Acceptance of Terms
           </h2>
           <p>
@@ -60,33 +59,33 @@ const lastUpdated = 'August 30, 2026';
         </section>
 
         <!-- SECTION 2: IMPORTANT NON-BINDING ESTIMATE DISCLAIMER -->
-        <section class="space-y-4 pt-6 border-t border-slate-200/60">
-          <div class="p-6 rounded-2xl bg-slate-900 text-white space-y-3 shadow-lg">
-            <div class="flex items-center gap-2 text-emerald-400 font-bold uppercase tracking-wider text-xs">
+        <section id="section-2" class="scroll-mt-24 space-y-4 border-t border-hairline pt-12">
+          <div class="space-y-3 rounded-xl border border-warning/40 bg-warning-soft/40 p-6">
+            <div class="flex items-center gap-2 font-mono text-mono-eyebrow uppercase text-warning-deep">
               <span class="material-symbols-outlined text-[20px]">warning</span>
               Critical Educational & Non-Binding Quote Disclaimer
             </div>
-            <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-lg font-bold text-white">
+            <h2 class="text-heading-md text-ink">
               2. InsureEstimate is Not an Insurance Agency or Carrier
             </h2>
-            <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
+            <p class="text-body-lg text-body">
               InsureEstimate is an independent data research and algorithmic calculation platform. <strong>InsureEstimate is NOT a licensed insurance broker, insurance agent, insurance carrier, or underwriting entity.</strong> We do not issue insurance policies, execute coverage binders, process insurance claims, or solicit insurance products on behalf of specific carriers.
             </p>
-            <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
+            <p class="text-body-lg text-body">
               All calculation outputs, monthly premium ranges, annual projections, and state averages generated by our Renters Insurance Calculator and Business Insurance Calculator are provided <strong>solely for informational, educational, and benchmarking purposes</strong>. They do NOT constitute formal insurance quotes, legal advice, financial advice, or binding contracts to provide insurance.
             </p>
           </div>
         </section>
 
         <!-- SECTION 3: CALCULATION METHODOLOGY & ACCURACY -->
-        <section class="space-y-4 pt-6 border-t border-slate-200/60">
-          <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-xl md:text-2xl font-bold text-slate-900">
+        <section id="section-3" class="scroll-mt-24 space-y-4 border-t border-hairline pt-12">
+          <h2 class="text-2xl font-semibold leading-8 tracking-[-0.9px] text-ink">
             3. Actuarial Calculation Methodology & Rate Variability
           </h2>
           <p>
             Our calculation engine estimates premium ranges using statutory department of insurance filings, regional loss ratios, industry risk multipliers, and standard actuarial formulas. However, actual premium quotes offered by licensed insurance carriers will vary based on carrier-specific underwriting criteria, including but not limited to:
           </p>
-          <ul class="list-disc pl-6 space-y-2 text-xs md:text-sm text-slate-600">
+          <ul class="list-disc space-y-2 pl-5 marker:text-faint">
             <li>Specific building construction material, building age, fire protection class, and ZIP code micro-location.</li>
             <li>Individual applicant credit-based insurance scores, claims history, and prior coverage lapses.</li>
             <li>Specific business operations, endorsements, umbrella limits, and employee payroll verification.</li>
@@ -95,8 +94,8 @@ const lastUpdated = 'August 30, 2026';
         </section>
 
         <!-- SECTION 4: INTELLECTUAL PROPERTY -->
-        <section class="space-y-4 pt-6 border-t border-slate-200/60">
-          <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-xl md:text-2xl font-bold text-slate-900">
+        <section id="section-4" class="scroll-mt-24 space-y-4 border-t border-hairline pt-12">
+          <h2 class="text-2xl font-semibold leading-8 tracking-[-0.9px] text-ink">
             4. Intellectual Property Rights
           </h2>
           <p>
@@ -108,12 +107,12 @@ const lastUpdated = 'August 30, 2026';
         </section>
 
         <!-- SECTION 5: PROHIBITED USES -->
-        <section class="space-y-4 pt-6 border-t border-slate-200/60">
-          <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-xl md:text-2xl font-bold text-slate-900">
+        <section id="section-5" class="scroll-mt-24 space-y-4 border-t border-hairline pt-12">
+          <h2 class="text-2xl font-semibold leading-8 tracking-[-0.9px] text-ink">
             5. Prohibited Conduct
           </h2>
           <p>You agree not to:</p>
-          <ul class="list-disc pl-6 space-y-2 text-xs md:text-sm text-slate-600">
+          <ul class="list-disc space-y-2 pl-5 marker:text-faint">
             <li>Use the Services for any illegal purpose or in violation of any local, state, national, or international law.</li>
             <li>Attempt to probe, scan, or test the vulnerability of our system network or breach security authentication measures.</li>
             <li>Use automated scripts, bots, spiders, or crawlers to extract site data at rates that degrade platform performance.</li>
@@ -122,8 +121,8 @@ const lastUpdated = 'August 30, 2026';
         </section>
 
         <!-- SECTION 6: LIMITATION OF LIABILITY -->
-        <section class="space-y-4 pt-6 border-t border-slate-200/60">
-          <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-xl md:text-2xl font-bold text-slate-900">
+        <section id="section-6" class="scroll-mt-24 space-y-4 border-t border-hairline pt-12">
+          <h2 class="text-2xl font-semibold leading-8 tracking-[-0.9px] text-ink">
             6. Limitation of Liability & Warranty Disclaimer
           </h2>
           <p>
@@ -135,8 +134,8 @@ const lastUpdated = 'August 30, 2026';
         </section>
 
         <!-- SECTION 7: GOVERNING LAW -->
-        <section class="space-y-4 pt-6 border-t border-slate-200/60 pb-12">
-          <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-xl md:text-2xl font-bold text-slate-900">
+        <section id="section-7" class="scroll-mt-24 space-y-4 border-t border-hairline pt-12">
+          <h2 class="text-2xl font-semibold leading-8 tracking-[-0.9px] text-ink">
             7. Governing Law & Contact
           </h2>
           <p>
@@ -145,12 +144,26 @@ const lastUpdated = 'August 30, 2026';
           <p>
             If you have questions regarding these Terms and Conditions, please contact us at:
           </p>
-          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 text-xs md:text-sm font-data-tabular space-y-1">
-            <p class="font-bold text-slate-900">InsureEstimate Legal Department</p>
-            <p class="text-slate-600">Email: <a href="mailto:legal@insureestimate.com" class="text-emerald-700 underline hover:text-emerald-800">legal@insureestimate.com</a></p>
+          <div class="well space-y-1 p-6 text-body-md">
+            <p class="font-medium text-ink">InsureEstimate Legal Department</p>
+            <p class="text-body">Email: <a href="mailto:legal@insureestimate.com" class="link">legal@insureestimate.com</a></p>
           </div>
         </section>
 
+      </div>
+
+      <aside class="hidden lg:block">
+        <nav class="sticky top-28 flex flex-col gap-3 border-l border-hairline pl-5 text-body-md" aria-label="On this page">
+          <span class="text-label-sm text-ink">On this page</span>
+          <a href="#section-1" class="link-quiet">1. Acceptance of Terms</a>
+          <a href="#section-2" class="link-quiet">2. InsureEstimate is Not an Insurance Agency or Carrier</a>
+          <a href="#section-3" class="link-quiet">3. Actuarial Calculation Methodology &amp; Rate Variability</a>
+          <a href="#section-4" class="link-quiet">4. Intellectual Property Rights</a>
+          <a href="#section-5" class="link-quiet">5. Prohibited Conduct</a>
+          <a href="#section-6" class="link-quiet">6. Limitation of Liability &amp; Warranty Disclaimer</a>
+          <a href="#section-7" class="link-quiet">7. Governing Law &amp; Contact</a>
+        </nav>
+      </aside>
       </div>
     </div>
   </main>

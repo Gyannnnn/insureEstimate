@@ -3,10 +3,10 @@ import SiteHeader from '../components/SiteHeader.astro';
 import PageFooter from '../components/PageFooter.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import Fonts from '../components/Fonts.astro';
 import '../styles/global.css';
 
 const breadcrumbItems = [
-  { label: 'Home', href: '/' },
   { label: 'Contact Us' }
 ];
 
@@ -29,223 +29,219 @@ const contactTopics = [
   <title>Contact Us - InsureEstimate Support & Inquiries</title>
   <meta name="description" content="Get in touch with the InsureEstimate actuarial research team for inquiries, state rate feedback, media requests, or calculator suggestions.">
   <link rel="canonical" href="https://insureestimate.com/contact/" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <Fonts />
 </head>
-<body class="bg-background font-body-md text-slate-800 antialiased selection:bg-emerald-100 selection:text-emerald-900">
+<body class="bg-canvas font-sans text-ink antialiased">
   <SiteHeader active="" />
 
-  <main class="w-full pt-20 md:pt-24 min-h-[calc(100vh-300px)]">
-    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6">
+  <main class="w-full pt-16">
+    <div class="container-page pt-8">
       <Breadcrumbs items={breadcrumbItems} />
 
       <!-- PAGE HEADER -->
-      <section class="mt-6 mb-10 pb-8 border-b border-slate-200/80">
-        <div class="flex flex-col gap-3 max-w-3xl">
-          <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest">Get In Touch</span>
-          <h1 class="font-['Plus_Jakarta_Sans',sans-serif] text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+      <section class="mb-12 mt-8 border-b border-hairline pb-10">
+        <div class="flex max-w-3xl flex-col gap-4">
+          <span class="eyebrow">Get In Touch</span>
+          <h1 class="title-page">
             Contact InsureEstimate Support
           </h1>
-          <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+          <p class="lead">
             Have questions about our actuarial calculation methodology, state renters rate data, or business insurance risk models? Send us a message and our email engine will deliver it directly to our team.
           </p>
         </div>
       </section>
 
       <!-- 2-COLUMN CONTENT SECTION -->
-      <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-10 items-start mb-16">
-        
-        <!-- LEFT COLUMN: CONTACT CARDS & METRICS -->
-        <div class="flex flex-col gap-6">
-          
-          <div class="bg-slate-900 text-white p-6 md:p-8 rounded-3xl shadow-xl flex flex-col gap-6 relative overflow-hidden">
-            <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+      <div class="grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] lg:gap-12">
 
-            <div class="flex flex-col gap-2">
-              <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Fast Support SLA</span>
-              <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-xl font-bold">Direct Channels</h2>
-              <p class="text-xs text-slate-300 leading-relaxed">Our research and data compliance team reviews every submission promptly.</p>
+        <!-- LEFT COLUMN: CONTACT CARDS -->
+        <div class="flex flex-col gap-6">
+          <div class="card overflow-hidden">
+            <div class="flex flex-col gap-1 border-b border-hairline p-6">
+              <span class="eyebrow">Fast Support SLA</span>
+              <h2 class="title-card">Direct Channels</h2>
+              <p class="text-body-md text-body">Our research and data compliance team reviews every submission promptly.</p>
             </div>
 
-            <div class="flex flex-col gap-4 text-xs">
-              <div class="flex items-start gap-3.5 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
-                <span class="material-symbols-outlined text-emerald-400 text-[20px] shrink-0">mail</span>
-                <div>
-                  <span class="block font-bold text-white">General & Support Inquiries</span>
-                  <a href="mailto:hi.gyanaranjanpatra@gmail.com" class="text-emerald-300 hover:underline">hi.gyanaranjanpatra@gmail.com</a>
+            <div class="flex flex-col divide-y divide-hairline text-body-md">
+              <div class="flex items-start gap-4 px-6 py-4">
+                <span class="icon-tile h-8 w-8"><span class="material-symbols-outlined text-[18px]">mail</span></span>
+                <div class="min-w-0">
+                  <span class="block font-medium text-ink">General &amp; Support Inquiries</span>
+                  <a href="mailto:hi.gyanaranjanpatra@gmail.com" class="link break-all font-normal">hi.gyanaranjanpatra@gmail.com</a>
                 </div>
               </div>
 
-              <div class="flex items-start gap-3.5 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
-                <span class="material-symbols-outlined text-emerald-400 text-[20px] shrink-0">security</span>
-                <div>
-                  <span class="block font-bold text-white">Data Privacy & Legal Office</span>
-                  <a href="mailto:hi.gyanaranjanpatra@gmail.com" class="text-emerald-300 hover:underline">hi.gyanaranjanpatra@gmail.com</a>
+              <div class="flex items-start gap-4 px-6 py-4">
+                <span class="icon-tile h-8 w-8"><span class="material-symbols-outlined text-[18px]">security</span></span>
+                <div class="min-w-0">
+                  <span class="block font-medium text-ink">Data Privacy &amp; Legal Office</span>
+                  <a href="mailto:hi.gyanaranjanpatra@gmail.com" class="link break-all font-normal">hi.gyanaranjanpatra@gmail.com</a>
                 </div>
               </div>
 
-              <div class="flex items-start gap-3.5 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
-                <span class="material-symbols-outlined text-emerald-400 text-[20px] shrink-0">schedule</span>
+              <div class="flex items-start gap-4 px-6 py-4">
+                <span class="icon-tile h-8 w-8"><span class="material-symbols-outlined text-[18px]">schedule</span></span>
                 <div>
-                  <span class="block font-bold text-white">Support Operating Hours</span>
-                  <span class="text-slate-300">Mon - Fri: 8:00 AM - 6:00 PM EST</span>
+                  <span class="block font-medium text-ink">Support Operating Hours</span>
+                  <span class="text-body">Mon - Fri: 8:00 AM - 6:00 PM EST</span>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- FAQ SNIPPET CARD -->
-          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 space-y-4">
-            <h3 class="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-slate-900 text-base flex items-center gap-2">
-              <span class="material-symbols-outlined text-emerald-700 text-[20px]">help</span>
+          <div class="well flex flex-col gap-4 p-6">
+            <h3 class="flex items-center gap-2 text-body-lg font-semibold text-ink">
+              <span class="material-symbols-outlined text-[20px] text-mute">help</span>
               Quick Answers
             </h3>
-            <div class="space-y-3 text-xs">
-              <div>
-                <p class="font-semibold text-slate-900">Can I request an official insurance quote here?</p>
-                <p class="text-slate-600 mt-0.5">InsureEstimate provides actuarial estimates only. To buy a policy, contact licensed carrier agents directly.</p>
+            <div class="flex flex-col divide-y divide-hairline text-body-md">
+              <div class="pb-4">
+                <p class="font-medium text-ink">Can I request an official insurance quote here?</p>
+                <p class="mt-1 text-body">InsureEstimate provides actuarial estimates only. To buy a policy, contact licensed carrier agents directly.</p>
               </div>
-              <div class="pt-2 border-t border-slate-200/60">
-                <p class="font-semibold text-slate-900">How often are state rates updated?</p>
-                <p class="text-slate-600 mt-0.5">Our state base rates are audited quarterly against state statutory insurance filings.</p>
+              <div class="pt-4">
+                <p class="font-medium text-ink">How often are state rates updated?</p>
+                <p class="mt-1 text-body">Our state base rates are audited quarterly against state statutory insurance filings.</p>
               </div>
             </div>
           </div>
-
         </div>
 
         <!-- RIGHT COLUMN: INTERACTIVE FORM WITH REAL-TIME VALIDATION & RESEND API -->
-        <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-200/80 shadow-md">
+        <div class="panel p-6 shadow-md md:p-8">
           <div class="mb-6 flex flex-col gap-1">
-            <h2 class="font-['Plus_Jakarta_Sans',sans-serif] text-xl font-bold text-slate-900">Send Us a Message</h2>
-            <p class="text-xs text-slate-500">Fill out the form below. All fields marked with <span class="text-red-500">*</span> are required.</p>
+            <h2 class="title-card">Send Us a Message</h2>
+            <p class="text-body-md text-mute">Fill out the form below. All fields marked with <span class="text-error">*</span> are required.</p>
           </div>
 
           <!-- SERVER ERROR BANNER (HIDDEN INITIALLY) -->
-          <div id="contact-api-error-banner" class="hidden mb-6 p-4 rounded-xl bg-red-50 border border-red-200 text-red-900 text-xs flex items-start gap-2.5">
-            <span class="material-symbols-outlined text-red-600 text-[20px] shrink-0">error</span>
+          <div id="contact-api-error-banner" class="hidden mb-6 flex items-start gap-2.5 rounded-lg border border-error/20 bg-error-container p-4 text-body-md text-error" role="alert">
+            <span class="material-symbols-outlined shrink-0 text-[20px]">error</span>
             <div class="space-y-0.5">
-              <span class="font-bold block">Transmission Failed</span>
+              <span class="block font-medium">Transmission Failed</span>
               <span id="api-error-text">An unexpected error occurred. Please try again.</span>
             </div>
           </div>
 
           <!-- SUCCESS BANNER (HIDDEN INITIALLY) -->
-          <div id="contact-success-banner" class="hidden p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 flex-col gap-3">
-            <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-md">
-              <span class="material-symbols-outlined text-[24px]">mark_email_read</span>
+          <div id="contact-success-banner" class="hidden flex-col gap-3 rounded-xl border border-brand/30 bg-brand-soft p-6 text-ink" role="status">
+            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-ink text-white">
+              <span class="material-symbols-outlined text-[22px]">mark_email_read</span>
             </div>
-            <h3 class="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-lg">Message Dispatched Successfully!</h3>
-            <p class="text-xs leading-relaxed text-emerald-900">
+            <h3 class="text-heading-md text-ink">Message Dispatched Successfully!</h3>
+            <p class="text-body-md text-body">
               Thank you for contacting InsureEstimate. Your message has been sent to our support team. A team member will reply to your provided email address shortly.
             </p>
-            <button 
-              id="reset-form-btn" 
-              type="button" 
-              class="mt-2 text-xs font-bold text-emerald-800 hover:text-emerald-950 underline self-start cursor-pointer"
+            <button
+              id="reset-form-btn"
+              type="button"
+              class="btn-ghost-sm mt-2 self-start"
             >
-              Send another message →
+              Send another message
             </button>
           </div>
 
           <!-- CONTACT FORM -->
           <form id="contact-form" novalidate class="flex flex-col gap-5">
-            
+
             <!-- FULL NAME FIELD -->
-            <div class="flex flex-col gap-1.5 relative">
-              <label for="contact-name" class="text-xs font-bold text-slate-700 uppercase tracking-wider">
-                Full Name <span class="text-red-500">*</span>
+            <div class="relative flex flex-col gap-2">
+              <label for="contact-name" class="field-label">
+                Full Name <span class="text-error">*</span>
               </label>
               <div class="relative">
-                <input 
-                  type="text" 
-                  id="contact-name" 
+                <input
+                  type="text"
+                  id="contact-name"
                   name="name"
-                  placeholder="e.g. Sarah Jenkins" 
-                  class="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-600 transition-all placeholder:text-slate-400"
+                  autocomplete="name"
+                  placeholder="e.g. Sarah Jenkins"
+                  class="field-control pr-10"
                 >
-                <span id="name-valid-icon" class="hidden material-symbols-outlined text-emerald-600 text-[18px] absolute right-3 top-1/2 -translate-y-1/2">check_circle</span>
+                <span id="name-valid-icon" class="hidden material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-[18px] text-brand-ink">check_circle</span>
               </div>
-              <span id="name-error" class="hidden text-[11px] font-medium text-red-600 flex items-center gap-1">
+              <span id="name-error" class="hidden flex items-center gap-1 text-body-sm text-error">
                 <span class="material-symbols-outlined text-[14px]">error</span>
                 <span>Please enter your full name (at least 2 characters).</span>
               </span>
             </div>
 
             <!-- EMAIL ADDRESS FIELD -->
-            <div class="flex flex-col gap-1.5 relative">
-              <label for="contact-email" class="text-xs font-bold text-slate-700 uppercase tracking-wider">
-                Email Address <span class="text-red-500">*</span>
+            <div class="relative flex flex-col gap-2">
+              <label for="contact-email" class="field-label">
+                Email Address <span class="text-error">*</span>
               </label>
               <div class="relative">
-                <input 
-                  type="email" 
-                  id="contact-email" 
+                <input
+                  type="email"
+                  id="contact-email"
                   name="email"
-                  placeholder="e.g. sarah.jenkins@example.com" 
-                  class="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-600 transition-all placeholder:text-slate-400"
+                  autocomplete="email"
+                  placeholder="e.g. sarah.jenkins@example.com"
+                  class="field-control pr-10"
                 >
-                <span id="email-valid-icon" class="hidden material-symbols-outlined text-emerald-600 text-[18px] absolute right-3 top-1/2 -translate-y-1/2">check_circle</span>
+                <span id="email-valid-icon" class="hidden material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-[18px] text-brand-ink">check_circle</span>
               </div>
-              <span id="email-error" class="hidden text-[11px] font-medium text-red-600 flex items-center gap-1">
+              <span id="email-error" class="hidden flex items-center gap-1 text-body-sm text-error">
                 <span class="material-symbols-outlined text-[14px]">error</span>
                 <span>Please enter a valid email address (e.g. user@domain.com).</span>
               </span>
             </div>
 
             <!-- INQUIRY CATEGORY FIELD -->
-            <div class="flex flex-col gap-1.5 relative">
-              <label for="contact-subject" class="text-xs font-bold text-slate-700 uppercase tracking-wider">
-                Inquiry Category <span class="text-red-500">*</span>
+            <div class="relative flex flex-col gap-2">
+              <label for="contact-subject" class="field-label">
+                Inquiry Category <span class="text-error">*</span>
               </label>
               <div class="relative">
-                <select 
-                  id="contact-subject" 
+                <select
+                  id="contact-subject"
                   name="subject"
-                  class="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-600 transition-all bg-white cursor-pointer"
+                  class="field-control"
                 >
                   {contactTopics.map((topic) => (
                     <option value={topic.value}>{topic.label}</option>
                   ))}
                 </select>
               </div>
-              <span id="subject-error" class="hidden text-[11px] font-medium text-red-600 flex items-center gap-1">
+              <span id="subject-error" class="hidden flex items-center gap-1 text-body-sm text-error">
                 <span class="material-symbols-outlined text-[14px]">error</span>
                 <span>Please select an inquiry category.</span>
               </span>
             </div>
 
             <!-- MESSAGE FIELD -->
-            <div class="flex flex-col gap-1.5 relative">
-              <label for="contact-message" class="text-xs font-bold text-slate-700 uppercase tracking-wider">
-                Message <span class="text-red-500">*</span>
+            <div class="relative flex flex-col gap-2">
+              <label for="contact-message" class="field-label">
+                Message <span class="text-error">*</span>
               </label>
-              <textarea 
-                id="contact-message" 
+              <textarea
+                id="contact-message"
                 name="message"
-                rows="4"
+                rows="5"
                 placeholder="Write your question, calculator feedback, or state data inquiry here..."
-                class="w-full px-4 py-3 rounded-xl border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-600 transition-all placeholder:text-slate-400"
+                class="field-control resize-y"
               ></textarea>
               <div class="flex items-center justify-between">
-                <span id="message-error" class="hidden text-[11px] font-medium text-red-600 flex items-center gap-1">
+                <span id="message-error" class="hidden flex items-center gap-1 text-body-sm text-error">
                   <span class="material-symbols-outlined text-[14px]">error</span>
                   <span>Message must be at least 10 characters long.</span>
                 </span>
-                <span id="char-count" class="text-[10px] text-slate-400 font-data-tabular ml-auto">0 / 1000</span>
+                <span id="char-count" class="num ml-auto font-mono text-[11px] text-mute">0 / 1000</span>
               </div>
             </div>
 
             <!-- SUBMIT BUTTON WITH LOADING SPINNER ANIMATION -->
-            <button 
-              id="contact-submit-btn" 
-              type="submit" 
-              class="mt-2 w-full py-3.5 px-6 rounded-xl bg-slate-900 text-white font-['Plus_Jakarta_Sans',sans-serif] font-bold text-sm hover:bg-slate-800 active:scale-[0.99] transition-all shadow-md flex items-center justify-center gap-2.5 group cursor-pointer border border-slate-800 disabled:opacity-70 disabled:cursor-not-allowed"
+            <button
+              id="contact-submit-btn"
+              type="submit"
+              class="btn mt-2 h-11 w-full rounded-md bg-ink px-5 text-body-lg text-white hover:bg-[#383838]"
             >
-              <span id="btn-spinner" class="hidden w-4 h-4 rounded-full border-2 border-white/30 border-t-emerald-400 animate-spin"></span>
+              <span id="btn-spinner" class="hidden h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white"></span>
               <span id="btn-text">Send Message</span>
-              <span id="btn-icon" class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">send</span>
+              <span id="btn-icon" class="material-symbols-outlined text-[18px]">send</span>
             </button>
 
           </form>

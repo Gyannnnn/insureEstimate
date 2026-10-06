@@ -5,17 +5,14 @@ import PageFooter from '../../components/PageFooter.astro';
 import CalculatorCard from '../../components/CalculatorCard.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import GoogleAnalytics from '../../components/GoogleAnalytics.astro';
+import Fonts from '../../components/Fonts.astro';
+import { getBusinessStandardPremium } from '../../lib/calculators/standardProfile';
 import '../../styles/global.css';
 
 const professions = await getCollection('professions');
 
-const categoriesMap: Record<string, typeof professions> = {
-  'Creative Services': [],
-  'Consulting': [],
-  'Skilled Trades': [],
-  'Personal Services': [],
-  'Professional & Other': []
-};
+// Group by the categories that actually exist in the content, largest groups first.
+const categoriesMap: Record<string, typeof professions> = {};
 
 professions.forEach(p => {
   const cat = p.data.category || 'Professional & Other';
@@ -24,6 +21,29 @@ professions.forEach(p => {
   }
   categoriesMap[cat].push(p);
 });
+
+const categories = Object.entries(categoriesMap)
+  .map(([name, items]) => ({
+    name,
+    id: `cat-${name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`,
+    items: items.sort((a, b) => a.data.name.localeCompare(b.data.name)),
+  }))
+  .sort((a, b) => b.items.length - a.items.length || a.name.localeCompare(b.name));
+
+const CATEGORY_ICONS: Record<string, string> = {
+  'Creative Services': 'palette',
+  'Professional Services': 'work',
+  'Trades & Construction': 'construction',
+  'Personal Care & Beauty': 'content_cut',
+  'Fitness & Wellness': 'fitness_center',
+  'Food & Hospitality': 'restaurant',
+  'Events & Hospitality': 'celebration',
+  'Pet Services': 'pets',
+  'Educational Services': 'school',
+  'Residential & Commercial Services': 'cleaning_services',
+};
+const iconFor = (category?: string) => CATEGORY_ICONS[category || ''] || 'badge';
+const baselineFor = (riskFactor: number) => getBusinessStandardPremium(riskFactor).annual;
 
 const featuredSlugs = ['freelance-photographer', 'it-consultant', 'general-contractor'];
 const featuredProfessions = professions.filter(p => featuredSlugs.includes(p.data.slug));
@@ -38,70 +58,50 @@ const featuredProfessions = professions.filter(p => featuredSlugs.includes(p.dat
   <title>Business Insurance Cost Estimator by Profession | InsureEstimate</title>
   <meta name="description" content="Estimate small business insurance cost projections by profession. Compare General Liability and Professional Liability rates tailored to your industry.">
   <link rel="canonical" href="https://insureestimate.com/business-insurance-calculator/" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <Fonts />
 </head>
-<body class="bg-background font-body-md text-on-surface">
+<body class="bg-canvas font-sans text-ink antialiased">
   <SiteHeader active="Business Insurance" />
 
-  <main class="w-full pt-20 md:pt-24 min-h-[calc(100vh-300px)]">
-    <!-- Ambient Texture & Grid -->
-    <div aria-hidden="true" class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-      <svg class="absolute top-0 left-0 w-full h-[600px] opacity-[0.03]" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern height="40" id="grid-pattern" patternUnits="userSpaceOnUse" width="40">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1"></path>
-          </pattern>
-        </defs>
-        <rect fill="url(#grid-pattern)" height="100%" width="100%"></rect>
-        <circle class="text-primary blur-[120px]" cx="20%" cy="10%" fill="currentColor" r="300"></circle>
-      </svg>
-    </div>
-
+  <main class="w-full pt-16">
     <!-- Hero Section -->
-    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-2 sm:pt-4 pb-stack-md relative z-10 flex flex-col gap-3 sm:gap-4 md:gap-stack-lg">
+    <section class="container-page relative z-10 flex flex-col gap-8 pb-16 pt-8">
       <!-- Breadcrumbs Navigation -->
       <Breadcrumbs items={[{ label: 'Business Insurance' }]} />
 
-      <div class="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-4 md:gap-gutter items-center">
-        <div class="flex flex-col gap-2.5 sm:gap-stack-sm max-w-3xl">
-          <div class="flex flex-wrap items-center gap-2 sm:gap-base">
-            <span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-[11px] sm:text-xs font-label-sm uppercase tracking-wider font-semibold">
-              Commercial Risk Directory
-            </span>
-            <span class="text-[11px] sm:text-xs text-on-surface-variant font-data-tabular">
-              35+ Profession Actuarial Models
-            </span>
+      <div class="grid grid-cols-1 items-end gap-6 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-12">
+        <div class="flex max-w-3xl flex-col gap-4">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="badge">Commercial Risk Directory</span>
+            <span class="font-mono text-body-sm text-mute">35+ Profession Actuarial Models</span>
           </div>
 
-          <h1 class="font-display-lg text-2xl sm:text-3xl md:text-4xl lg:text-[38px] text-primary tracking-tight font-semibold leading-tight">
+          <h1 class="title-page">
             Business Insurance Cost Estimator
           </h1>
 
-          <p class="font-body-lg text-sm sm:text-base lg:text-base text-on-surface-variant leading-relaxed">
+          <p class="lead">
             Select your industry or profession to calculate localized General Liability, Professional E&amp;O, and property coverage cost projections based on data-backed actuarial risk models.
           </p>
         </div>
 
         <!-- Stat Highlight Card -->
-        <div class="bg-surface-container-low rounded-2xl p-5 sm:p-6 border border-outline-variant/30 relative overflow-hidden flex flex-col justify-between shadow-sm min-h-[140px] sm:min-h-[160px]">
-          <div class="relative z-10">
-            <span class="font-label-sm text-[11px] sm:text-xs text-on-surface-variant uppercase tracking-wider block mb-1">
-              Average Small Business Premium
-            </span>
-            <div class="font-headline-lg text-2xl sm:text-3xl lg:text-[32px] xl:text-[36px] font-bold text-primary font-data-tabular">
-              $400 – $850 <span class="text-xs sm:text-sm font-normal text-on-surface-variant font-body-md">/ yr</span>
+        <div class="card flex flex-col justify-between gap-4 p-5 sm:p-6">
+          <div class="flex flex-col gap-2">
+            <span class="eyebrow">Average Small Business Premium</span>
+            <div class="num text-[32px] font-semibold leading-9 tracking-[-1.28px] text-ink lg:text-[36px] lg:leading-10">
+              $400 – $850 <span class="text-body-md font-normal tracking-normal text-mute">/ yr</span>
             </div>
           </div>
-          <div class="relative z-10 mt-3 pt-2.5 sm:pt-3 border-t border-outline-variant/30 flex items-center gap-2 text-[11px] sm:text-xs text-secondary font-medium">
-            <span class="material-symbols-outlined text-[14px] sm:text-[16px]">verified</span>
+          <div class="flex items-center gap-2 border-t border-hairline pt-3 text-body-md text-body">
+            <span class="material-symbols-outlined text-[16px] text-brand-ink">verified</span>
             Industry Actuarial Benchmarks
           </div>
         </div>
       </div>
 
       <!-- Shared Calculator Card (Connected to Real Engine) -->
-      <div id="calculator" class="w-full scroll-mt-[100px]">
+      <div id="calculator" class="w-full scroll-mt-24">
         <CalculatorCard
           title="Interactive Commercial Estimator"
           subtitle="Select annual revenue and team parameters to compute real-time cost projections."
@@ -112,45 +112,47 @@ const featuredProfessions = professions.filter(p => featuredSlugs.includes(p.dat
     </section>
 
     <!-- Search & Filter Controls -->
-    <section id="profession-search-section" class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 sm:py-stack-md relative z-10 scroll-mt-24">
-      <div class="flex flex-col md:flex-row gap-3 md:gap-gutter items-center justify-between bg-surface-container-low rounded-xl p-3.5 sm:p-4 border border-outline-variant/30">
-        <div class="relative w-full md:w-96">
-          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px] sm:text-[20px]">search</span>
-          <input id="profession-search" type="text" placeholder="Search professions (e.g. Photographer, Contractor)..." class="w-full h-9 sm:h-10 pl-9 sm:pl-10 pr-12 rounded-lg bg-surface-container-lowest border border-outline-variant text-xs sm:text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" />
-          <span class="hidden sm:inline-flex absolute right-3 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-surface-container-high text-[10px] font-data-tabular text-on-surface-variant">⌘K</span>
+    <section id="profession-search-section" class="relative z-30 scroll-mt-24 border-y md:sticky md:top-16 border-hairline bg-canvas/85 backdrop-blur-md">
+      <div class="container-page flex flex-col gap-3 py-3 md:flex-row md:items-center md:gap-6">
+        <div class="relative w-full md:w-96 md:shrink-0">
+          <span class="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-mute">search</span>
+          <label for="profession-search" class="sr-only">Search professions</label>
+          <input id="profession-search" type="search" autocomplete="off" placeholder="Search professions (e.g. Photographer, Contractor)..." class="field-control h-10 pl-9 pr-14" />
+          <kbd id="search-shortcut" class="pointer-events-none absolute right-2.5 top-1/2 hidden -translate-y-1/2 rounded border border-hairline bg-canvas px-1.5 py-0.5 font-mono text-[10px] text-mute sm:inline-flex">⌘K</kbd>
         </div>
-        <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-0">
-          <a href="#cat-creative" class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-primary hover:bg-surface-bright transition-colors whitespace-nowrap text-[11px] sm:text-xs font-medium border border-outline-variant/20">Creative &amp; Media</a>
-          <a href="#cat-consulting" class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-primary hover:bg-surface-bright transition-colors whitespace-nowrap text-[11px] sm:text-xs font-medium border border-outline-variant/20">Consulting</a>
-          <a href="#cat-trades" class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-primary hover:bg-surface-bright transition-colors whitespace-nowrap text-[11px] sm:text-xs font-medium border border-outline-variant/20">Skilled Trades</a>
-          <a href="#cat-personal" class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-primary hover:bg-surface-bright transition-colors whitespace-nowrap text-[11px] sm:text-xs font-medium border border-outline-variant/20">Personal Services</a>
-        </div>
+        <nav class="-mx-4 flex items-center gap-2 overflow-x-auto px-4 pb-1 md:mx-0 md:px-0 md:pb-0" aria-label="Jump to category">
+          {categories.map(cat => (
+            <a href={`#${cat.id}`} class="chip">{cat.name}</a>
+          ))}
+        </nav>
       </div>
     </section>
 
     <!-- Popular / High Intent Section -->
-    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 sm:py-stack-md relative z-10">
-      <div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-stack-md">
-        <h2 class="font-headline-md text-lg sm:text-xl md:text-headline-md text-primary font-bold">Popular &amp; High Intent Profiles</h2>
-        <div class="h-[1px] flex-grow bg-surface-container-highest"></div>
+    <section class="container-page relative z-10 pt-16">
+      <div class="mb-6 flex items-center gap-4">
+        <h2 class="text-2xl font-semibold leading-8 tracking-[-0.9px] text-ink">Popular &amp; High Intent Profiles</h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-gutter">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
         {featuredProfessions.map(p => (
-          <a href={`/business-insurance-calculator/${p.data.slug}/`} class="group bg-surface-container-lowest p-5 sm:p-6 rounded-2xl border border-outline-variant/30 hover:border-primary/40 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <a href={`/business-insurance-calculator/${p.data.slug}/`} class="card-link group flex flex-col justify-between p-6">
             <div>
-              <div class="flex items-center justify-between mb-3 sm:mb-4">
-                <span class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
-                  <span class="material-symbols-outlined text-[20px] sm:text-[22px]">work</span>
+              <div class="mb-6 flex items-center justify-between gap-2">
+                <span class="icon-tile h-10 w-10">
+                  <span class="material-symbols-outlined text-[22px]">{iconFor(p.data.category)}</span>
                 </span>
-                <span class="font-data-tabular text-[11px] sm:text-xs text-on-surface-variant bg-surface-container-low px-2.5 py-1 rounded-full">{p.data.category}</span>
+                <span class="badge">{p.data.category}</span>
               </div>
-              <h3 class="font-headline-md text-base sm:text-lg md:text-headline-md text-primary font-bold group-hover:text-secondary transition-colors mb-1.5 sm:mb-2">{p.data.name}</h3>
-              <p class="font-body-md text-on-surface-variant text-xs sm:text-sm line-clamp-2">Tailored liability models for independent {p.data.name.toLowerCase()} businesses.</p>
+              <h3 class="text-heading-md text-ink">{p.data.name}</h3>
+              <p class="mt-1 line-clamp-2 text-body-md text-body">Tailored liability models for independent {p.data.name.toLowerCase()} businesses.</p>
             </div>
-            <div class="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-outline-variant/20 flex items-center justify-between">
-              <span class="font-label-sm text-[11px] sm:text-xs text-primary font-semibold">View Cost Model</span>
-              <span class="material-symbols-outlined text-primary text-[16px] sm:text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            <div class="mt-6 flex items-center justify-between border-t border-hairline pt-4">
+              <span class="num text-body-md text-mute"><span class="font-semibold text-ink">${baselineFor(p.data.riskFactor)}</span> /yr baseline</span>
+              <span class="inline-flex items-center gap-0.5 text-body-md font-medium text-ink">
+                View Cost Model
+                <span class="material-symbols-outlined text-[18px] text-mute group-hover:text-ink">chevron_right</span>
+              </span>
             </div>
           </a>
         ))}
@@ -158,49 +160,51 @@ const featuredProfessions = professions.filter(p => featuredSlugs.includes(p.dat
     </section>
 
     <!-- Category Directory Grid -->
-    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 sm:py-stack-md relative z-10">
-      <div class="flex flex-col gap-6 sm:gap-stack-lg">
-        {Object.entries(categoriesMap).map(([category, items]) => (
-          <div id={`cat-${category.toLowerCase().replace(/[^a-z0-9]/g, '-')}`} class="scroll-mt-24 profession-category-block">
-            <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-stack-sm">
-              <h2 class="font-headline-md text-base sm:text-lg md:text-headline-md text-primary font-bold">{category}</h2>
-              <span class="text-[11px] sm:text-xs text-on-surface-variant font-data-tabular">({items.length} profiles)</span>
-              <div class="h-[1px] flex-grow bg-surface-container-highest"></div>
+    <section class="container-page relative z-10 pt-16">
+      <div class="flex flex-col gap-12">
+        {categories.map(cat => (
+          <div id={cat.id} class="profession-category-block scroll-mt-40">
+            <div class="mb-4 flex items-baseline gap-3 border-b border-hairline pb-3">
+              <h2 class="text-heading-md text-ink">{cat.name}</h2>
+              <span class="font-mono text-body-sm text-mute">({cat.items.length} profiles)</span>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-4">
-              {items.map(p => (
-                <a href={`/business-insurance-calculator/${p.data.slug}/`} class="profession-card group flex items-center gap-3.5 sm:gap-4 p-3 sm:p-4 bg-surface-container-lowest border border-outline-variant/30 rounded-xl hover:border-primary/30 hover:shadow-sm transition-all" data-name={p.data.name.toLowerCase()}>
-                  <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary/10 transition-colors shrink-0">
-                    <span class="material-symbols-outlined text-[18px] sm:text-[20px]">badge</span>
-                  </div>
-                  <div class="flex flex-col min-w-0">
-                    <span class="font-body-md text-xs sm:text-sm font-medium text-primary truncate group-hover:text-secondary transition-colors">{p.data.name}</span>
-                    <span class="font-data-tabular text-[11px] sm:text-[12px] text-on-surface-variant">View Estimate</span>
-                  </div>
+            <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3 xl:grid-cols-3">
+              {cat.items.map(p => (
+                <a href={`/business-insurance-calculator/${p.data.slug}/`} class="profession-card card-link group flex items-center gap-3 p-3" data-name={p.data.name.toLowerCase()}>
+                  <span class="icon-tile text-body group-hover:text-ink">
+                    <span class="material-symbols-outlined text-[20px]">{iconFor(p.data.category)}</span>
+                  </span>
+                  <span class="flex min-w-0 flex-1 flex-col">
+                    <span class="truncate text-body-md font-medium text-ink">{p.data.name}</span>
+                    <span class="num text-body-sm text-mute">From ${baselineFor(p.data.riskFactor)}/yr baseline</span>
+                  </span>
+                  <span class="material-symbols-outlined shrink-0 text-[18px] text-faint group-hover:text-ink">chevron_right</span>
                 </a>
               ))}
             </div>
           </div>
         ))}
+
+        <div id="profession-empty" hidden class="rounded-xl border border-dashed border-hairline bg-elevated p-10 text-center">
+          <p class="text-body-lg font-medium text-ink">No professions match your search.</p>
+          <p class="mt-1 text-body-md text-body">Try a broader term, or use the estimator above with your revenue and team size.</p>
+        </div>
       </div>
     </section>
 
     <!-- Missing Profession CTA -->
-    <section class="w-full bg-surface-container-lowest border-t border-outline-variant/30 mt-6 sm:mt-stack-md py-6 sm:py-stack-lg">
-      <div class="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-center text-center relative z-10">
-        <div class="w-12 h-12 sm:w-16 sm:h-16 bg-primary rounded-2xl flex items-center justify-center shadow-lg mb-4 sm:mb-6 transform -rotate-3 hover:rotate-0 transition-transform">
-          <span class="material-symbols-outlined text-[24px] sm:text-[32px] text-on-primary">calculate</span>
-        </div>
-        <h2 class="font-headline-lg text-xl sm:text-2xl md:text-headline-lg text-primary font-bold mb-3 sm:mb-4">Don't see your specific profession?</h2>
-        <p class="font-body-lg text-xs sm:text-base md:text-body-lg text-on-surface-variant mb-6 sm:mb-8 max-w-xl">
+    <section class="mt-24 w-full border-y border-hairline bg-elevated py-20 md:py-24">
+      <div class="container-page flex max-w-3xl flex-col items-center text-center">
+        <h2 class="title-section">Don't see your specific profession?</h2>
+        <p class="lead mt-4 max-w-xl">
           Our proprietary modeling engine can generate a custom risk profile and estimate for nearly any small business type.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a class="inline-flex items-center justify-center h-12 px-8 bg-primary text-on-primary rounded-xl font-body-md font-medium hover:bg-primary/90 transition-colors" href="#calculator">
+        <div class="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+          <a class="btn-primary" href="#calculator">
             Build Custom Estimate
           </a>
-          <a class="inline-flex items-center justify-center h-12 px-8 bg-surface-container-lowest text-primary border border-outline-variant rounded-xl font-body-md font-medium hover:bg-surface-container-low transition-colors" href="/renters-insurance-calculator/">
+          <a class="btn-secondary" href="/renters-insurance-calculator/">
             Explore Renters Calculators
           </a>
         </div>
@@ -215,6 +219,8 @@ const featuredProfessions = professions.filter(p => featuredSlugs.includes(p.dat
       // Search Filter Script
       const searchInput = document.getElementById('profession-search') as HTMLInputElement;
       const cards = document.querySelectorAll('.profession-card');
+      const blocks = document.querySelectorAll<HTMLElement>('.profession-category-block');
+      const emptyState = document.getElementById('profession-empty');
 
       searchInput?.addEventListener('input', (e) => {
         const query = (e.target as HTMLInputElement).value.toLowerCase().trim();
@@ -226,7 +232,20 @@ const featuredProfessions = professions.filter(p => featuredSlugs.includes(p.dat
             (card as HTMLElement).style.display = 'none';
           }
         });
+
+        // Hide category groups left empty by the filter, and say so when nothing matches.
+        let visibleBlocks = 0;
+        blocks.forEach((block) => {
+          const hasMatch = Array.from(block.querySelectorAll<HTMLElement>('.profession-card')).some(c => c.style.display !== 'none');
+          block.hidden = !hasMatch;
+          if (hasMatch) visibleBlocks++;
+        });
+        if (emptyState) emptyState.hidden = visibleBlocks > 0;
       });
+
+      // Show the right shortcut hint for the platform.
+      const shortcut = document.getElementById('search-shortcut');
+      if (shortcut && !/Mac|iPhone|iPad/.test(navigator.userAgent)) shortcut.textContent = 'Ctrl K';
 
       document.addEventListener('keydown', (e) => {
         if ((e.metaKey || e.ctrlKey) && e.key === 'k') {

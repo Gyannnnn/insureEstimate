@@ -13,6 +13,8 @@ import {
   calculateNationalRentersAverage
 } from '../../lib/calculators/standardProfile';
 import GoogleAnalytics from '../../components/GoogleAnalytics.astro';
+import Fonts from '../../components/Fonts.astro';
+import { RENTERS_FACTORS } from '../../lib/calculators/factors';
 import '../../styles/global.css';
 
 export async function getStaticPaths() {
@@ -124,355 +126,331 @@ const statePct = Math.min(100, Math.max(10, Math.round((derivedAnnualCost / maxR
   <title>{title} | InsureEstimate</title>
   <meta name="description" content={description}>
   <link rel="canonical" href={`https://insureestimate.com/renters-insurance-calculator/${data.slug}/`} />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <Fonts />
 </head>
-<body class="bg-background font-body-md text-on-surface">
+<body class="bg-canvas font-sans text-ink antialiased">
   <SiteHeader active="Renters Insurance" />
 
-  <main class="w-full pt-20 md:pt-24 min-h-[calc(100vh-300px)]">
-    <div class="flex flex-col w-full relative">
-      <!-- Gradient mesh & blur decorations -->
-      <div aria-hidden="true" class="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-surface to-surface-container-low"></div>
-        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary-container/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
-        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-fixed/20 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4"></div>
-      </div>
+  <main class="w-full pt-16">
+    <div class="container-page relative z-10 flex flex-col gap-8 pb-8 pt-8">
+      <!-- Breadcrumbs Navigation -->
+      <Breadcrumbs items={[
+        { label: 'Renters Insurance', href: '/renters-insurance-calculator/' },
+        { label: data.name }
+      ]} />
 
-      <!-- Main Layout Container -->
-      <div class="max-w-[1280px] mx-auto w-full px-margin-mobile md:px-margin-desktop pt-2 sm:pt-3 pb-stack-lg lg:pb-[72px] relative z-10 flex flex-col gap-2.5 sm:gap-3 lg:gap-4">
-        <!-- Breadcrumbs Navigation -->
-        <Breadcrumbs items={[
-          { label: 'Renters Insurance', href: '/renters-insurance-calculator/' },
-          { label: data.name }
-        ]} />
-
-        <!-- Hero Section -->
-        <section class="flex flex-col md:flex-row gap-4 md:gap-gutter items-start">
-          <div class="flex-1 flex flex-col gap-2.5 sm:gap-stack-md max-w-2xl">
-            <div class="flex items-center gap-2 sm:gap-base">
-              <span class="w-6 sm:w-8 h-[2px] bg-primary"></span>
-              <span class="font-label-sm text-[11px] sm:text-label-sm tracking-widest uppercase text-on-surface-variant">{data.name} State Data</span>
-            </div>
-            <h1 class="font-display-lg text-2xl sm:text-3xl md:text-4xl lg:text-[38px] text-primary text-balance font-semibold leading-tight">Renters Insurance Cost in {data.name}</h1>
-            <p class="font-body-lg text-sm sm:text-base lg:text-base text-on-surface-variant text-balance leading-relaxed">
-              Estimate your monthly renters insurance premium in {data.name}. Adjust coverage limits and deductibles to see how they impact your projected costs based on localized data models.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-stack-sm mt-stack-sm">
-              <a class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded hover:bg-primary/90 transition-colors h-12 font-data-tabular text-data-tabular tracking-wide shadow-sm" href="#calculator">
-                Calculate Estimate
-              </a>
-              <a class="inline-flex items-center justify-center bg-surface-container-lowest text-primary border border-outline-variant px-6 py-3 rounded hover:bg-surface-container-low transition-colors h-12 font-data-tabular text-data-tabular tracking-wide shadow-sm" href="#methodology">
-                View Methodology
-              </a>
-            </div>
+      <!-- Hero Section -->
+      <section class="grid grid-cols-1 items-center gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-12">
+        <div class="flex max-w-2xl flex-col gap-5">
+          <span class="eyebrow">{data.name} State Data</span>
+          <h1 class="title-page">Renters Insurance Cost in {data.name}</h1>
+          <p class="lead">
+            Estimate your monthly renters insurance premium in {data.name}. Adjust coverage limits and deductibles to see how they impact your projected costs based on localized data models.
+          </p>
+          <div class="mt-2 flex flex-col gap-3 sm:flex-row">
+            <a class="btn-primary" href="#calculator">
+              Calculate Estimate
+            </a>
+            <a class="btn-secondary" href="#methodology">
+              View Methodology
+            </a>
           </div>
-          <div class="flex-1 hidden md:block w-full h-[320px] rounded-lg overflow-hidden shadow-lg relative group">
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent z-10 mix-blend-multiply"></div>
-            <div class="bg-cover bg-center w-full h-full transition-transform duration-700 group-hover:scale-105" style={`background-image: url('${stateImage}')`}></div>
-            <div class="absolute bottom-6 left-6 z-20 flex flex-col gap-1">
-              <span class="font-data-tabular text-data-tabular text-on-primary/80">State Profile</span>
-              <span class="font-headline-md text-headline-md text-on-primary">{data.name} ({data.abbreviation})</span>
-            </div>
-          </div>
-        </section>
-
-        <!-- Calculator Section -->
-        <div id="calculator" class="w-full scroll-mt-[100px] mt-2 sm:mt-4">
-          <CalculatorCard
-            title={`${data.name} Renters Insurance Estimator`}
-            subtitle={`Model monthly premium ranges for ${data.name} based on state actuarial benchmarks.`}
-            type="renters"
-            entityName={data.name}
-            baseRate={data.baseRate}
-          />
         </div>
+        <div class="relative hidden h-[320px] w-full overflow-hidden rounded-2xl border border-hairline bg-hairline-soft md:block">
+          <img src={stateImage} alt={data.imageAlt || `${data.name} state profile`} class="h-full w-full object-cover" loading="eager" decoding="async" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
+          <div class="absolute bottom-5 left-5 flex flex-col gap-0.5 text-white">
+            <span class="font-mono text-[11px] uppercase text-white/75">State Profile</span>
+            <span class="text-heading-md">{data.name} ({data.abbreviation})</span>
+          </div>
+        </div>
+      </section>
 
-        <!-- Data Grid Section -->
-        <section class="flex flex-col gap-4 sm:gap-stack-md mt-stack-md">
-          <h2 class="font-headline-lg text-xl sm:text-2xl lg:text-3xl text-primary font-bold border-b border-outline-variant/50 pb-3 sm:pb-4">{data.name} Market Data</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-gutter">
-            <!-- Card 1: Derived Average Cost -->
-            <div class="bg-surface-container-lowest rounded-lg p-5 sm:p-stack-md shadow-sm border border-outline-variant/30 flex flex-col relative group hover:shadow-md transition-shadow">
-              <div class="absolute top-0 right-0 w-16 h-16 bg-primary/5 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
-              <span class="font-label-sm text-[11px] sm:text-label-sm text-on-surface-variant uppercase tracking-wider mb-1.5 sm:mb-2">State Benchmark</span>
-              <h3 class="font-headline-md text-lg sm:text-xl md:text-headline-md text-primary font-bold mb-3 sm:mb-4">Average Cost</h3>
-              <div class="flex items-baseline gap-2 mb-3 sm:mb-4">
-                <span class="font-display-lg text-2xl sm:text-3xl md:text-[40px] text-primary leading-none font-bold">${derivedAnnualCost}</span>
-                <span class="font-data-tabular text-xs sm:text-data-tabular text-on-surface-variant">/year (${derivedMonthlyCost}/mo)</span>
+      <!-- Calculator Section -->
+      <div id="calculator" class="w-full scroll-mt-24">
+        <CalculatorCard
+          title={`${data.name} Renters Insurance Estimator`}
+          subtitle={`Model monthly premium ranges for ${data.name} based on state actuarial benchmarks.`}
+          type="renters"
+          entityName={data.name}
+          baseRate={data.baseRate}
+        />
+      </div>
+    </div>
+
+    <div class="container-page relative z-10 flex flex-col gap-16 pb-8 pt-8 md:gap-24">
+      <!-- Data Grid Section -->
+      <section class="flex flex-col gap-8">
+        <h2 class="title-section">{data.name} Market Data</h2>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <!-- Card 1: Derived Average Cost -->
+          <div class="card flex flex-col p-6">
+            <span class="eyebrow mb-2">State Benchmark</span>
+            <h3 class="title-card mb-4">Average Cost</h3>
+            <div class="num mb-4 flex items-baseline gap-2">
+              <span class="text-[40px] font-semibold leading-none tracking-[-1.8px] text-ink">${derivedAnnualCost}</span>
+              <span class="text-body-md text-mute">/year (${derivedMonthlyCost}/mo)</span>
+            </div>
+            <p class="mb-6 text-body-md text-body">
+              The average cost of renters insurance in {data.name} is derived as ${derivedAnnualCost} per year (${derivedMonthlyCost}/month) based on standard coverage inputs ($20k property, $100k liability, $500 deductible).
+            </p>
+            <div class="mt-auto border-t border-hairline pt-4">
+              <div class="num mb-2 flex justify-between font-mono text-[12px] text-mute">
+                <span class="text-ink">{data.abbreviation} Avg (${derivedAnnualCost})</span>
+                <span>National Avg (${nationalAvgAnnual})</span>
               </div>
-              <p class="font-body-md text-xs sm:text-[14px] text-on-surface-variant leading-relaxed mb-4 sm:mb-6">
-                The average cost of renters insurance in {data.name} is derived as ${derivedAnnualCost} per year (${derivedMonthlyCost}/month) based on standard coverage inputs ($20k property, $100k liability, $500 deductible).
+              <div class="flex h-1.5 w-full overflow-hidden rounded-full bg-hairline">
+                <div class="rounded-full bg-ink" style={`width: ${statePct}%`}></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Typical Coverage -->
+          <div class="card flex flex-col p-6">
+            <span class="eyebrow mb-2">Demographics</span>
+            <h3 class="title-card mb-4">Typical Coverage</h3>
+            <ul class="num mb-4 flex flex-col divide-y divide-hairline text-body-md">
+              <li class="flex justify-between py-2.5 first:pt-0">
+                <span class="text-body">Personal Property</span>
+                <span class="font-medium text-ink">${demographics.typicalPersonalProperty.toLocaleString('en-US')}</span>
+              </li>
+              <li class="flex justify-between py-2.5">
+                <span class="text-body">Liability</span>
+                <span class="font-medium text-ink">${demographics.typicalLiability.toLocaleString('en-US')}</span>
+              </li>
+              <li class="flex justify-between py-2.5">
+                <span class="text-body">Deductible</span>
+                <span class="font-medium text-ink">${demographics.typicalDeductible.toLocaleString('en-US')}</span>
+              </li>
+            </ul>
+            {demographics.demographicNote?.trim() ? (
+              <p class="mt-auto border-t border-hairline pt-4 text-body-md text-body">
+                {demographics.demographicNote}
               </p>
-              <div class="mt-auto pt-4 border-t border-outline-variant/20">
-                <div class="flex justify-between font-data-tabular text-[12px] text-on-surface-variant mb-2">
-                  <span>{data.abbreviation} Avg (${derivedAnnualCost})</span>
-                  <span>National Avg (${nationalAvgAnnual})</span>
-                </div>
-                <div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden flex">
-                  <div class="bg-primary rounded-full transition-all duration-500" style={`width: ${statePct}%`}></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 2: Typical Coverage -->
-            <div class="bg-surface-container-lowest rounded-lg p-stack-md shadow-sm border border-outline-variant/30 flex flex-col relative group hover:shadow-md transition-shadow">
-              <div class="absolute top-0 right-0 w-16 h-16 bg-primary/5 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
-              <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-2">Demographics</span>
-              <h3 class="font-headline-md text-headline-md text-primary mb-4">Typical Coverage</h3>
-              <ul class="flex flex-col gap-3 font-data-tabular text-[14px] mb-4">
-                <li class="flex justify-between border-b border-outline-variant/30 pb-2">
-                  <span class="text-on-surface-variant">Personal Property</span>
-                  <span class="text-primary font-medium">${demographics.typicalPersonalProperty.toLocaleString()}</span>
-                </li>
-                <li class="flex justify-between border-b border-outline-variant/30 pb-2">
-                  <span class="text-on-surface-variant">Liability</span>
-                  <span class="text-primary font-medium">${demographics.typicalLiability.toLocaleString()}</span>
-                </li>
-                <li class="flex justify-between pb-2">
-                  <span class="text-on-surface-variant">Deductible</span>
-                  <span class="text-primary font-medium">${demographics.typicalDeductible.toLocaleString()}</span>
-                </li>
-              </ul>
-              {demographics.demographicNote?.trim() ? (
-                <p class="font-body-md text-[14px] text-on-surface-variant leading-relaxed mt-auto pt-2 border-t border-outline-variant/20">
-                  {demographics.demographicNote}
-                </p>
-              ) : isDev ? (
-                <p class="font-body-md text-xs text-on-surface-variant/60 italic mt-auto pt-2 border-t border-outline-variant/20">
-                  [Dev Mode] Demographic note coming soon.
-                </p>
-              ) : (
-                <p class="font-body-md text-[14px] text-on-surface-variant leading-relaxed mt-auto pt-2 border-t border-outline-variant/20">
-                  Standard coverage limits balance adequate personal asset protection with affordable monthly premiums.
-                </p>
-              )}
-            </div>
-
-            <!-- Card 3: Risk Factors Overview -->
-            <div class="bg-surface-container-lowest rounded-lg p-stack-md shadow-sm border border-outline-variant/30 flex flex-col justify-between relative group hover:shadow-md transition-shadow">
-              <div class="absolute top-0 right-0 w-16 h-16 bg-primary/5 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
-              <div>
-                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-2 block">Risk Factors</span>
-                <h3 class="font-headline-md text-headline-md text-primary mb-4">{data.abbreviation} Considerations</h3>
-                {validRiskFactors.length > 0 ? (
-                  <div class="flex flex-col gap-3">
-                    {validRiskFactors.slice(0, 3).map(rf => (
-                      <div class="flex gap-2.5 items-start">
-                        <div class="w-6 h-6 rounded bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
-                          <span class="material-symbols-outlined text-[16px] not-italic normal-case select-none">{getIconName(rf.icon)}</span>
-                        </div>
-                        <div class="flex flex-col min-w-0">
-                          <span class="font-data-tabular text-[13px] text-primary font-semibold truncate">{rf.title}</span>
-                          {rf.description && <span class="font-body-md text-[12px] text-on-surface-variant line-clamp-2 leading-tight">{rf.description}</span>}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                ) : isDev ? (
-                  <div class="p-3 border border-dashed border-outline-variant/60 rounded text-xs text-on-surface-variant/60 italic">
-                    [Dev Mode] Risk factors content coming soon.
-                  </div>
-                ) : (
-                  <div class="flex flex-col gap-3">
-                    <div class="flex gap-2.5 items-start">
-                      <div class="w-6 h-6 rounded bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
-                        <span class="material-symbols-outlined text-[16px] not-italic normal-case select-none">shield</span>
-                      </div>
-                      <div class="flex flex-col">
-                        <span class="font-data-tabular text-[13px] text-primary font-semibold">Standard Perils</span>
-                        <span class="font-body-md text-[12px] text-on-surface-variant">Fire, theft, and water damage from plumbing are standard perils.</span>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-              {validRiskFactors.length > 0 && (
-                <a href="#risk-profile" class="mt-4 pt-3 border-t border-outline-variant/20 inline-flex items-center justify-between text-xs font-semibold text-primary hover:text-secondary transition-colors">
-                  <span>View full risk profile ({validRiskFactors.length})</span>
-                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-                </a>
-              )}
-            </div>
-          </div>
-        </section>
-
-        <!-- Risk Factors Full Grid Section -->
-        {(validRiskFactors.length > 0 || isDev) && (
-          <section id="risk-profile" class="mt-stack-md pt-stack-md border-t border-outline-variant/40 scroll-mt-24">
-            <div class="flex flex-col gap-2 sm:gap-stack-sm mb-4 sm:mb-6">
-              <span class="font-label-sm text-[11px] sm:text-xs text-secondary uppercase tracking-widest font-semibold">Localized Risk</span>
-              <h2 class="font-headline-lg text-xl sm:text-2xl lg:text-3xl text-primary font-bold">{data.name} Risk Profile</h2>
-            </div>
-            {validRiskFactors.length > 0 ? (
-              <div class={`grid gap-4 md:gap-gutter ${
-                validRiskFactors.length === 2 ? 'grid-cols-1 md:grid-cols-2' :
-                validRiskFactors.length === 4 ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4' :
-                'grid-cols-1 md:grid-cols-3'
-              }`}>
-                {validRiskFactors.map(rf => (
-                  <div class="bg-surface-container-lowest p-4 sm:p-5 rounded-xl border border-outline-variant/30 flex flex-col gap-2.5 sm:gap-3 shadow-sm hover:shadow-md hover:border-primary/40 transition-all">
-                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                      <span class="material-symbols-outlined text-[20px] sm:text-[22px] not-italic normal-case select-none">{getIconName(rf.icon)}</span>
-                    </div>
-                    {rf.title && <h3 class="font-headline-sm font-bold text-primary text-sm sm:text-base lg:text-lg">{rf.title}</h3>}
-                    {rf.description && <p class="font-body-md text-xs sm:text-sm text-on-surface-variant leading-relaxed">{rf.description}</p>}
-                  </div>
-                ))}
-              </div>
+            ) : isDev ? (
+              <p class="mt-auto border-t border-hairline pt-4 text-body-sm italic text-mute">
+                [Dev Mode] Demographic note coming soon.
+              </p>
             ) : (
-              <div class="bg-surface-container-low p-6 rounded-xl border border-dashed border-outline-variant/60 text-xs text-on-surface-variant/70 italic">
-                [Dev Mode] Risk factors details for {data.name} will be rendered here once content is populated.
-              </div>
+              <p class="mt-auto border-t border-hairline pt-4 text-body-md text-body">
+                Standard coverage limits balance adequate personal asset protection with affordable monthly premiums.
+              </p>
             )}
-          </section>
-        )}
-
-        <!-- Split Section: Methodology & Image -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center mt-stack-md pt-stack-lg border-t border-outline-variant/50 scroll-mt-24" id="methodology">
-          <div class="flex flex-col gap-stack-md">
-            <div class="flex items-center gap-2 mb-1 sm:mb-2">
-              <span class="w-6 sm:w-8 h-[2px] bg-outline-variant"></span>
-              <span class="font-label-sm text-[11px] sm:text-label-sm tracking-widest uppercase text-on-surface-variant">Process</span>
-            </div>
-            <h2 class="font-display-lg text-xl sm:text-2xl lg:text-3xl leading-tight text-primary tracking-tight font-bold">How we calculate estimates</h2>
-            <div class="flex flex-col gap-4 sm:gap-6 mt-3 sm:mt-4 relative">
-              <div class="absolute left-[11px] top-2 bottom-2 w-[1px] bg-outline-variant/50 -z-10"></div>
-              <div class="flex gap-3.5 sm:gap-4 items-start bg-surface-container-lowest p-3.5 sm:p-4 rounded-lg shadow-sm border border-outline-variant/30">
-                <div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-data-tabular text-[12px] shrink-0 mt-0.5">1</div>
-                <div class="flex flex-col">
-                  <h4 class="font-data-tabular text-sm sm:text-[15px] lg:text-base text-primary font-medium">Data Aggregation</h4>
-                  <p class="font-body-md text-xs sm:text-[14px] text-on-surface-variant mt-1">We collect anonymized quoting data from top carriers across {data.name} ZIP codes, updated quarterly.</p>
-                </div>
-              </div>
-              <div class="flex gap-3.5 sm:gap-4 items-start bg-surface-container-lowest p-3.5 sm:p-4 rounded-lg shadow-sm border border-outline-variant/30">
-                <div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-data-tabular text-[12px] shrink-0 mt-0.5">2</div>
-                <div class="flex flex-col">
-                  <h4 class="font-data-tabular text-sm sm:text-[15px] lg:text-base text-primary font-medium">Actuarial Modeling</h4>
-                  <p class="font-body-md text-xs sm:text-[14px] text-on-surface-variant mt-1">Base rates are adjusted using proprietary multipliers for coverage limits, deductibles, and local risk factors.</p>
-                </div>
-              </div>
-              <div class="flex gap-3.5 sm:gap-4 items-start bg-surface-container-lowest p-4 rounded-lg shadow-sm border border-outline-variant/30">
-                <div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-data-tabular text-[12px] shrink-0 mt-0.5">3</div>
-                <div class="flex flex-col">
-                  <h4 class="font-data-tabular text-sm sm:text-[15px] lg:text-base text-primary font-medium">Estimate Generation</h4>
-                  <p class="font-body-md text-xs sm:text-[14px] text-on-surface-variant mt-1">The calculator outputs a localized projection, designed to give you a realistic baseline before seeking official quotes.</p>
-                </div>
-              </div>
-            </div>
           </div>
 
-          <div class="w-full h-full min-h-[300px] sm:min-h-[400px] bg-surface-container-low rounded-xl shadow-inner relative overflow-hidden flex items-center justify-center">
-            <div class="absolute inset-0 bg-cover bg-center opacity-80 mix-blend-luminosity" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCV5XOuzo2X2Wf_QBYeMa5HNavdHTJRmHpwzpiDxVw_oMSwJXOwPxKIr0oAvYSWMGMT0sMW-sDKc9-g2y_-GitkYFs-7XeCh_YCkS3p6f4Q4Bvk96ivBo_7wpwmAmhu7tb91SIQ_GWmldWgwb7kaHbo-LK9a62Ov4JhgdLl56SvFW-uFRAAb0Ha32OlKJc3LwvjqPYmppmi4MekXyI7cjXeAqty0jL18uMC3qt6MmNOunVysAbrUsib')"></div>
-            <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 mix-blend-overlay"></div>
-            <div class="relative z-10 bg-white/90 backdrop-blur-md p-5 sm:p-6 rounded-lg shadow-xl border border-white/20 max-w-xs transform rotate-1">
-              <span class="material-symbols-outlined text-secondary text-[22px] sm:text-[24px] mb-2">database</span>
-              <h5 class="font-data-tabular text-xs sm:text-[14px] text-primary font-semibold mb-1">Model Integrity</h5>
-              <p class="font-body-md text-[11px] sm:text-[12px] text-on-surface-variant">Estimates are non-binding projections based on historical rate filings and aggregated quote data.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Blog / Rate Analysis Section -->
-        {(hasBlogContent || isDev) && (
-          <section class="mt-stack-md pt-stack-lg border-t border-outline-variant/40 w-full">
-            <div class="flex flex-col gap-2 sm:gap-stack-sm mb-4 sm:mb-6">
-              <span class="font-label-sm text-[11px] sm:text-xs text-secondary uppercase tracking-widest font-semibold">Underwriting Analysis</span>
-              <h2 class="font-headline-lg text-xl sm:text-2xl lg:text-3xl text-primary font-bold">How Renters Insurance Works in {data.name}</h2>
-            </div>
-            {hasBlogContent ? (
-              <div class="w-full bg-surface-container-lowest p-5 sm:p-6 md:p-8 rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col gap-5 sm:gap-6">
-                {blogContent.whyThisRate?.trim() && (
-                  <div class="flex flex-col gap-2">
-                    <div class="flex items-center gap-2">
-                      <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                      <h3 class="font-headline-sm text-base sm:text-lg lg:text-xl text-primary font-bold">Why Renters Rates in {data.name} Average ${derivedAnnualCost}/yr</h3>
-                    </div>
-                    <p class="font-body-md text-xs sm:text-sm lg:text-base text-on-surface-variant leading-relaxed pl-4" set:html={linkStateNamesInText(blogContent.whyThisRate, allStates, data.slug)} />
-                  </div>
-                )}
-                {blogContent.howCalculated?.trim() && (
-                  <div class="flex flex-col gap-2 pt-4 sm:pt-5 border-t border-outline-variant/20">
-                    <div class="flex items-center gap-2">
-                      <div class="w-2 h-2 rounded-full bg-primary"></div>
-                      <h3 class="font-headline-sm text-base sm:text-lg lg:text-xl text-primary font-bold">Calculating Premium Estimates</h3>
-                    </div>
-                    <p class="font-body-md text-xs sm:text-sm lg:text-base text-on-surface-variant leading-relaxed pl-4" set:html={linkStateNamesInText(blogContent.howCalculated, allStates, data.slug)} />
-                  </div>
-                )}
-                {blogContent.comparisonNote?.trim() && (
-                  <div class="flex flex-col gap-2 pt-4 sm:pt-5 border-t border-outline-variant/20">
-                    <div class="flex items-center gap-2">
-                      <div class="w-2 h-2 rounded-full bg-outline"></div>
-                      <h3 class="font-headline-sm text-base sm:text-lg lg:text-xl text-primary font-bold">Regional & National Rate Comparison</h3>
-                    </div>
-                    <p class="font-body-md text-xs sm:text-sm lg:text-base text-on-surface-variant leading-relaxed pl-4" set:html={linkStateNamesInText(blogContent.comparisonNote, allStates, data.slug)} />
-                  </div>
-                )}
-              </div>
-            ) : (
-              <div class="bg-surface-container-low p-6 rounded-2xl border border-dashed border-outline-variant/60 text-xs text-on-surface-variant/70 italic">
-                [Dev Mode] Detailed rate analysis content for {data.name} will appear here once written.
-              </div>
-            )}
-          </section>
-        )}
-
-        <!-- FAQ Section -->
-        {(validFaqs.length > 0 || isDev) && (
-          <section class="mt-stack-md pt-stack-lg border-t border-outline-variant/50 w-full">
-            <div class="text-center mb-4 sm:mb-stack-md max-w-2xl mx-auto">
-              <h2 class="font-headline-lg text-xl sm:text-2xl lg:text-3xl text-primary font-bold mb-1.5 sm:mb-2">Frequently Asked Questions</h2>
-              <p class="font-body-md text-xs sm:text-sm lg:text-base text-on-surface-variant">Common queries regarding {data.name} renters insurance.</p>
-            </div>
-            {validFaqs.length > 0 ? (
-              <>
-                <script type="application/ld+json" is:inline set:html={JSON.stringify({
-                  "@context": "https://schema.org",
-                  "@type": "FAQPage",
-                  "mainEntity": validFaqs.map(faq => ({
-                    "@type": "Question",
-                    "name": faq.question,
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": faq.answer
-                    }
-                  }))
-                })} />
-                <div class="flex flex-col gap-3.5 max-w-4xl mx-auto">
-                  {validFaqs.map(faq => (
-                    <details class="group bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm overflow-hidden transition-all duration-200 hover:border-primary/40 hover:shadow-md">
-                      <summary class="p-5 flex justify-between items-center font-headline-sm font-bold text-primary hover:text-secondary cursor-pointer list-none select-none gap-4 text-base">
-                        <div class="flex items-center gap-3">
-                          <div class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
-                            <span class="material-symbols-outlined text-[18px]">help_outline</span>
-                          </div>
-                          <span>{faq.question}</span>
-                        </div>
-                        <div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300 text-on-surface-variant">
-                          <span class="material-symbols-outlined text-[18px]">expand_more</span>
-                        </div>
-                      </summary>
-                      <div class="px-5 pb-5 pt-0">
-                        <div class="pt-3 border-t border-outline-variant/15 text-sm text-on-surface-variant leading-relaxed">
-                          {faq.answer}
-                        </div>
+          <!-- Card 3: Risk Factors Overview -->
+          <div class="card flex flex-col justify-between p-6">
+            <div>
+              <span class="eyebrow mb-2 block">Risk Factors</span>
+              <h3 class="title-card mb-4">{data.abbreviation} Considerations</h3>
+              {validRiskFactors.length > 0 ? (
+                <div class="flex flex-col gap-4">
+                  {validRiskFactors.slice(0, 3).map(rf => (
+                    <div class="flex items-start gap-3">
+                      <span class="icon-tile h-8 w-8">
+                        <span class="material-symbols-outlined text-[18px]">{getIconName(rf.icon)}</span>
+                      </span>
+                      <div class="flex min-w-0 flex-col">
+                        <span class="truncate text-body-md font-medium text-ink">{rf.title}</span>
+                        {rf.description && <span class="line-clamp-2 text-body-sm text-mute">{rf.description}</span>}
                       </div>
-                    </details>
+                    </div>
                   ))}
                 </div>
-              </>
-            ) : (
-              <div class="bg-surface-container-low p-6 rounded-2xl border border-dashed border-outline-variant/60 text-xs text-on-surface-variant/70 text-center italic max-w-4xl mx-auto">
-                [Dev Mode] Frequently asked questions for {data.name} will appear here once written.
-              </div>
+              ) : isDev ? (
+                <div class="rounded-lg border border-dashed border-hairline p-3 text-body-sm italic text-mute">
+                  [Dev Mode] Risk factors content coming soon.
+                </div>
+              ) : (
+                <div class="flex items-start gap-3">
+                  <span class="icon-tile h-8 w-8">
+                    <span class="material-symbols-outlined text-[18px]">shield</span>
+                  </span>
+                  <div class="flex flex-col">
+                    <span class="text-body-md font-medium text-ink">Standard Perils</span>
+                    <span class="text-body-sm text-mute">Fire, theft, and water damage from plumbing are standard perils.</span>
+                  </div>
+                </div>
+              )}
+            </div>
+            {validRiskFactors.length > 0 && (
+              <a href="#risk-profile" class="group mt-6 inline-flex items-center justify-between border-t border-hairline pt-4 text-body-md font-medium text-ink hover:text-brand-ink">
+                <span>View full risk profile ({validRiskFactors.length})</span>
+                <span class="material-symbols-outlined text-[18px] text-mute group-hover:text-brand-ink">arrow_downward</span>
+              </a>
             )}
-          </section>
-        )}
+          </div>
+        </div>
+      </section>
 
-        <!-- Related States Cross-Linking Section -->
-        <RelatedStates currentState={stateEntry} allStates={allStates} />
-      </div>
+      <!-- Risk Factors Full Grid Section -->
+      {(validRiskFactors.length > 0 || isDev) && (
+        <section id="risk-profile" class="flex scroll-mt-24 flex-col gap-8">
+          <div class="flex flex-col gap-3">
+            <span class="eyebrow">Localized Risk</span>
+            <h2 class="title-section">{data.name} Risk Profile</h2>
+          </div>
+          {validRiskFactors.length > 0 ? (
+            <div class={`grid gap-4 ${
+              validRiskFactors.length === 2 ? 'grid-cols-1 md:grid-cols-2' :
+              validRiskFactors.length === 4 ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4' :
+              'grid-cols-1 md:grid-cols-3'
+            }`}>
+              {validRiskFactors.map(rf => (
+                <div class="card flex flex-col gap-3 p-6">
+                  <span class="icon-tile">
+                    <span class="material-symbols-outlined text-[20px]">{getIconName(rf.icon)}</span>
+                  </span>
+                  {rf.title && <h3 class="text-body-lg font-semibold text-ink">{rf.title}</h3>}
+                  {rf.description && <p class="text-body-md text-body">{rf.description}</p>}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div class="rounded-xl border border-dashed border-hairline bg-canvas p-6 text-body-sm italic text-mute">
+              [Dev Mode] Risk factors details for {data.name} will be rendered here once content is populated.
+            </div>
+          )}
+        </section>
+      )}
+
+      <!-- Split Section: Methodology & Formula -->
+      <section class="grid scroll-mt-24 grid-cols-1 items-start gap-10 border-t border-hairline pt-16 md:pt-24 lg:grid-cols-2 lg:gap-16" id="methodology">
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-3">
+            <span class="eyebrow">Process</span>
+            <h2 class="title-section">How we calculate estimates</h2>
+          </div>
+          <ol class="flex flex-col">
+            <li class="relative flex gap-4 pb-8 before:absolute before:bottom-0 before:left-[13px] before:top-8 before:w-px before:bg-hairline">
+              <span class="num flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-hairline bg-elevated font-mono text-[12px] font-medium text-ink">1</span>
+              <div class="flex flex-col gap-1 pt-0.5">
+                <h3 class="text-body-lg font-semibold text-ink">Data Aggregation</h3>
+                <p class="text-body-md text-body">We collect anonymized quoting data from top carriers across {data.name} ZIP codes, updated quarterly.</p>
+              </div>
+            </li>
+            <li class="relative flex gap-4 pb-8 before:absolute before:bottom-0 before:left-[13px] before:top-8 before:w-px before:bg-hairline">
+              <span class="num flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-hairline bg-elevated font-mono text-[12px] font-medium text-ink">2</span>
+              <div class="flex flex-col gap-1 pt-0.5">
+                <h3 class="text-body-lg font-semibold text-ink">Actuarial Modeling</h3>
+                <p class="text-body-md text-body">Base rates are adjusted using proprietary multipliers for coverage limits, deductibles, and local risk factors.</p>
+              </div>
+            </li>
+            <li class="relative flex gap-4">
+              <span class="num flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-ink font-mono text-[12px] font-medium text-white">3</span>
+              <div class="flex flex-col gap-1 pt-0.5">
+                <h3 class="text-body-lg font-semibold text-ink">Estimate Generation</h3>
+                <p class="text-body-md text-body">The calculator outputs a localized projection, designed to give you a realistic baseline before seeking official quotes.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- The actual model, shown as a spec rather than an illustration -->
+        <div class="flex flex-col gap-3">
+          <div class="overflow-hidden rounded-xl border border-hairline bg-elevated shadow-md">
+            <div class="flex items-center justify-between border-b border-hairline bg-canvas px-4 py-2.5">
+              <span class="font-mono text-[12px] text-mute">{data.slug}.model</span>
+              <span class="badge">{data.abbreviation}</span>
+            </div>
+            <div class="num overflow-x-auto p-4 font-mono text-[13px] leading-7 md:p-5">
+              <div class="text-mute">// Renters premium for {data.name}</div>
+              <div><span class="text-ink">annual</span> <span class="text-faint">=</span> base_rate <span class="text-faint">×</span> property <span class="text-faint">×</span> liability <span class="text-faint">×</span> deductible</div>
+              <div><span class="text-ink">range</span>&nbsp; <span class="text-faint">=</span> annual <span class="text-faint">±</span> {Math.round(RENTERS_FACTORS.estimateRangePercent * 100)}%</div>
+              <div class="mt-4 text-mute">// Standard profile: $20k property, $100k liability, $500 deductible</div>
+              <div>base_rate <span class="text-faint">=</span> <span class="font-medium text-brand-ink">${data.baseRate}</span></div>
+              <div>property&nbsp; <span class="text-faint">=</span> ×{RENTERS_FACTORS.propertyValue[20000].toFixed(2)}</div>
+              <div>liability <span class="text-faint">=</span> ×{RENTERS_FACTORS.liability[100000].toFixed(2)}</div>
+              <div>deductible <span class="text-faint">=</span> ×{RENTERS_FACTORS.deductible[500].toFixed(2)}</div>
+              <div class="mt-4 border-t border-dashed border-hairline pt-4"><span class="text-ink">annual</span> <span class="text-faint">≈</span> <span class="font-semibold text-ink">${derivedAnnualCost}/yr</span> <span class="text-mute">(${derivedMonthlyCost}/mo)</span></div>
+            </div>
+          </div>
+          <p class="flex items-start gap-2 text-body-sm text-mute">
+            <span class="material-symbols-outlined mt-px shrink-0 text-[16px]">database</span>
+            <span><strong class="font-medium text-body">Model Integrity:</strong> Estimates are non-binding projections based on historical rate filings and aggregated quote data.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Blog / Rate Analysis Section -->
+      {(hasBlogContent || isDev) && (
+        <section class="flex w-full flex-col gap-8 border-t border-hairline pt-16 md:pt-24">
+          <div class="flex flex-col gap-3">
+            <span class="eyebrow">Underwriting Analysis</span>
+            <h2 class="title-section">How Renters Insurance Works in {data.name}</h2>
+          </div>
+          {hasBlogContent ? (
+            <div class="panel flex flex-col divide-y divide-hairline">
+              {blogContent.whyThisRate?.trim() && (
+                <div class="grid grid-cols-1 gap-3 p-6 md:grid-cols-[260px_minmax(0,1fr)] md:gap-10 md:p-8">
+                  <h3 class="text-body-lg font-semibold text-ink">Why Renters Rates in {data.name} Average ${derivedAnnualCost}/yr</h3>
+                  <p class="prose-body" set:html={linkStateNamesInText(blogContent.whyThisRate, allStates, data.slug)} />
+                </div>
+              )}
+              {blogContent.howCalculated?.trim() && (
+                <div class="grid grid-cols-1 gap-3 p-6 md:grid-cols-[260px_minmax(0,1fr)] md:gap-10 md:p-8">
+                  <h3 class="text-body-lg font-semibold text-ink">Calculating Premium Estimates</h3>
+                  <p class="prose-body" set:html={linkStateNamesInText(blogContent.howCalculated, allStates, data.slug)} />
+                </div>
+              )}
+              {blogContent.comparisonNote?.trim() && (
+                <div class="grid grid-cols-1 gap-3 p-6 md:grid-cols-[260px_minmax(0,1fr)] md:gap-10 md:p-8">
+                  <h3 class="text-body-lg font-semibold text-ink">Regional &amp; National Rate Comparison</h3>
+                  <p class="prose-body" set:html={linkStateNamesInText(blogContent.comparisonNote, allStates, data.slug)} />
+                </div>
+              )}
+            </div>
+          ) : (
+            <div class="rounded-xl border border-dashed border-hairline bg-canvas p-6 text-body-sm italic text-mute">
+              [Dev Mode] Detailed rate analysis content for {data.name} will appear here once written.
+            </div>
+          )}
+        </section>
+      )}
+
+      <!-- FAQ Section -->
+      {(validFaqs.length > 0 || isDev) && (
+        <section class="grid w-full grid-cols-1 gap-10 border-t border-hairline pt-16 md:pt-24 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-16">
+          <div class="flex flex-col gap-3">
+            <h2 class="title-section">Frequently Asked Questions</h2>
+            <p class="text-body-md text-body">Common queries regarding {data.name} renters insurance.</p>
+          </div>
+          {validFaqs.length > 0 ? (
+            <>
+              <script type="application/ld+json" is:inline set:html={JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": validFaqs.map(faq => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                  }
+                }))
+              })} />
+              <div class="faq-list">
+                {validFaqs.map(faq => (
+                  <details class="faq-item">
+                    <summary>
+                      <span>{faq.question}</span>
+                      <span class="material-symbols-outlined faq-icon">add</span>
+                    </summary>
+                    <p class="faq-body">{faq.answer}</p>
+                  </details>
+                ))}
+              </div>
+            </>
+          ) : (
+            <div class="rounded-xl border border-dashed border-hairline bg-canvas p-6 text-center text-body-sm italic text-mute">
+              [Dev Mode] Frequently asked questions for {data.name} will appear here once written.
+            </div>
+          )}
+        </section>
+      )}
+
+      <!-- Related States Cross-Linking Section -->
+      <RelatedStates currentState={stateEntry} allStates={allStates} />
     </div>
   </main>
 

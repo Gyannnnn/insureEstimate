@@ -40,304 +40,222 @@ const topProfessions = [
   { name: 'Landscaper', slug: 'landscaper', icon: 'yard', tag: 'Trades' },
   { name: 'Real Estate Agent', slug: 'real-estate-agent', icon: 'real_estate_agent', tag: 'Services' },
 ];
+
+const navLink = (isActive: boolean) => [
+  'inline-flex h-8 items-center gap-1 rounded-full px-3 text-body-md transition-colors',
+  isActive ? 'bg-hairline-soft font-medium text-ink' : 'text-body hover:bg-hairline-soft hover:text-ink',
+];
 ---
 
-<!-- Import Google Font for Brand Logo -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<header class="fixed inset-x-0 top-0 z-50 border-b border-hairline bg-canvas/80 backdrop-blur-md supports-[backdrop-filter]:bg-canvas/70">
+  <div class="container-page flex h-16 items-center justify-between gap-4">
 
-<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] transition-all duration-300">
-  <!-- Subtle Top Emerald Accent Line -->
-  <div class="h-[2px] w-full bg-gradient-to-r from-emerald-500/0 via-emerald-600/60 to-emerald-500/0"></div>
-
-  <div class="h-16 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between gap-4">
-    
-    <!-- BRAND LOGO: InsureEstimate -->
-    <a href="/" class="flex items-center gap-2.5 group shrink-0 focus:outline-none py-1">
-      <!-- Professional Typography Logo -->
-      <div class="flex items-center font-['Plus_Jakarta_Sans',sans-serif]">
-        <span class="text-xl md:text-2xl font-bold tracking-tight text-slate-900">Insure</span>
-        <span class="text-xl md:text-2xl font-extrabold tracking-tight text-emerald-700">Estimate</span>
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block ml-0.5 self-baseline mb-1"></span>
-      </div>
+    <!-- Wordmark -->
+    <a href="/" class="flex shrink-0 items-center rounded-md py-1" aria-label="InsureEstimate home">
+      <span class="text-[20px] font-semibold leading-none tracking-[-0.6px] text-ink">Insure</span>
+      <span class="text-[20px] font-semibold leading-none tracking-[-0.6px] text-brand-ink">Estimate</span>
+      <span class="mb-0.5 ml-0.5 inline-block h-1.5 w-1.5 self-end rounded-full bg-brand" aria-hidden="true"></span>
     </a>
 
-    <!-- DESKTOP NAVIGATION MENU (CENTER) -->
-    <nav aria-label="Main Navigation" class="hidden lg:flex items-center gap-1.5">
-      
-      <!-- HOME LINK -->
-      <a 
-        href="/" 
-        class:list={[
-          'px-4 py-2 rounded-xl text-sm font-medium transition-all flex items-center gap-2',
-          active === 'Home' 
-            ? 'bg-emerald-50/80 text-emerald-900 font-semibold border border-emerald-200/60 shadow-xs' 
-            : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
-        ]}
-      >
-        <span class="material-symbols-outlined text-[18px] text-slate-500">home</span>
-        <span>Home</span>
-      </a>
+    <!-- Desktop navigation -->
+    <nav aria-label="Main Navigation" class="hidden items-center gap-1 lg:flex">
+      <a href="/" class:list={navLink(active === 'Home')} aria-current={active === 'Home' ? 'page' : undefined}>Home</a>
 
-      <!-- RENTERS INSURANCE MEGA MENU DROP-DOWN -->
-      <div class="relative group/nav-renters py-3">
-        <a 
-          href="/renters-insurance-calculator/" 
-          class:list={[
-            'px-4 py-2 rounded-xl text-sm font-medium transition-all inline-flex items-center gap-2 cursor-pointer',
-            active === 'Renters Insurance' 
-              ? 'bg-emerald-50/80 text-emerald-900 font-semibold border border-emerald-200/60 shadow-xs' 
-              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
-          ]}
+      <!-- Renters mega menu -->
+      <div class="group/nav-renters relative py-3">
+        <a
+          href="/renters-insurance-calculator/"
+          class:list={navLink(active === 'Renters Insurance')}
+          aria-haspopup="true"
+          aria-current={active === 'Renters Insurance' ? 'page' : undefined}
         >
-          <span class="material-symbols-outlined text-[18px] text-slate-500">home_work</span>
-          <span>Renters Insurance</span>
-          <span class="material-symbols-outlined text-[16px] text-slate-400 group-hover/nav-renters:rotate-180 group-hover/nav-renters:text-emerald-700 transition-transform duration-200">expand_more</span>
+          Renters Insurance
+          <span class="material-symbols-outlined text-[18px] text-mute transition-transform duration-200 group-hover/nav-renters:rotate-180 group-focus-within/nav-renters:rotate-180">expand_more</span>
         </a>
 
-        <!-- MEGA MENU PANEL -->
-        <div class="absolute left-1/2 -translate-x-1/2 top-full w-[860px] opacity-0 invisible group-hover/nav-renters:opacity-100 group-hover/nav-renters:visible transition-all duration-200 ease-out translate-y-2 group-hover/nav-renters:translate-y-0 pointer-events-none group-hover/nav-renters:pointer-events-auto">
-          <div class="bg-white/95 rounded-2xl border border-slate-200/90 shadow-2xl p-5 grid grid-cols-[240px_1fr] gap-6 backdrop-blur-2xl">
-            
-            <!-- Featured Spotlight Column -->
-            <div class="bg-gradient-to-br from-emerald-50/60 via-slate-50 to-white p-4 rounded-xl border border-emerald-100 flex flex-col justify-between">
+        <div class="pointer-events-none invisible absolute left-1/2 top-full w-[820px] -translate-x-1/2 translate-y-1 opacity-0 transition duration-150 ease-out group-hover/nav-renters:pointer-events-auto group-hover/nav-renters:visible group-hover/nav-renters:translate-y-0 group-hover/nav-renters:opacity-100 group-focus-within/nav-renters:pointer-events-auto group-focus-within/nav-renters:visible group-focus-within/nav-renters:translate-y-0 group-focus-within/nav-renters:opacity-100">
+          <div class="grid grid-cols-[232px_1fr] gap-2 rounded-xl border border-hairline bg-elevated p-2 shadow-2xl">
+            <div class="flex flex-col justify-between rounded-lg bg-canvas p-5">
               <div class="flex flex-col gap-2">
-                <span class="px-2.5 py-0.5 rounded-full bg-emerald-100/80 text-emerald-800 text-[10px] font-semibold uppercase tracking-wider w-max border border-emerald-200/60">
-                  Residential Baseline
-                </span>
-                <h3 class="font-headline-md text-base font-bold text-slate-900">Renters Estimator</h3>
-                <p class="text-xs text-slate-600 leading-relaxed">
+                <span class="eyebrow">Residential baseline</span>
+                <h3 class="text-heading-md text-ink">Renters Estimator</h3>
+                <p class="text-body-md text-body">
                   Compare rates across all 50 US states modeled with localized actuarial filing data.
                 </p>
               </div>
-              <a 
-                href="/renters-insurance-calculator/" 
-                class="mt-4 inline-flex items-center justify-between w-full p-2.5 bg-slate-900 text-white rounded-lg text-xs font-semibold hover:bg-slate-800 transition-colors shadow-sm"
-              >
+              <a href="/renters-insurance-calculator/" class="btn-sm mt-6 w-full justify-between">
                 <span>National Index</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
               </a>
             </div>
 
-            <!-- States Directory Column (20 Popular States in 4-Column Grid) -->
-            <div class="flex flex-col justify-between">
+            <div class="flex flex-col justify-between p-3">
               <div>
-                <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-100">
-                  <span class="text-xs font-bold text-slate-900 uppercase tracking-wider font-label-sm">Top State Estimators</span>
-                  <span class="text-[11px] text-slate-500 font-data-tabular">20 Popular States</span>
+                <div class="mb-2 flex items-center justify-between px-2">
+                  <span class="text-label-sm text-ink">Top State Estimators</span>
+                  <span class="font-mono text-body-sm text-mute">20 popular states</span>
                 </div>
-                <div class="grid grid-cols-4 gap-2">
+                <div class="grid grid-cols-4 gap-0.5">
                   {topStates.map((st) => (
-                    <a 
+                    <a
                       href={`/renters-insurance-calculator/${st.slug}/`}
-                      class="flex items-center justify-between p-1.5 px-2 rounded-lg bg-slate-50/60 border border-slate-200/60 hover:border-emerald-500/50 hover:bg-emerald-50/40 transition-all group/st"
+                      class="flex items-center rounded-md px-2 py-1.5 text-body-md text-body transition-colors hover:bg-hairline-soft hover:text-ink"
                     >
-                      <span class="text-xs font-medium text-slate-700 group-hover/st:text-emerald-800 transition-colors truncate">{st.name}</span>
-                      <span class="text-[10px] font-data-tabular text-slate-400 group-hover/st:text-emerald-700 ml-1 shrink-0">{st.code}</span>
+                      <span class="truncate">{st.name}</span>
                     </a>
                   ))}
                 </div>
               </div>
-              <a 
-                href="/renters-insurance-calculator/#browse-states" 
-                class="mega-scroll-link mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-emerald-700 hover:text-emerald-800 transition-colors"
+              <a
+                href="/renters-insurance-calculator/#browse-states"
+                class="mega-scroll-link mt-3 flex items-center justify-between rounded-md border-t border-hairline px-2 pt-3 text-body-md font-medium text-ink hover:text-brand-ink"
               >
                 <span>View All 50 US States</span>
-                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
               </a>
             </div>
-
           </div>
         </div>
       </div>
 
-      <!-- BUSINESS INSURANCE MEGA MENU DROP-DOWN -->
-      <div class="relative group/nav-business py-3">
-        <a 
-          href="/business-insurance-calculator/" 
-          class:list={[
-            'px-4 py-2 rounded-xl text-sm font-medium transition-all inline-flex items-center gap-2 cursor-pointer',
-            active === 'Business Insurance' 
-              ? 'bg-emerald-50/80 text-emerald-900 font-semibold border border-emerald-200/60 shadow-xs' 
-              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/70'
-          ]}
+      <!-- Business mega menu -->
+      <div class="group/nav-business relative py-3">
+        <a
+          href="/business-insurance-calculator/"
+          class:list={navLink(active === 'Business Insurance')}
+          aria-haspopup="true"
+          aria-current={active === 'Business Insurance' ? 'page' : undefined}
         >
-          <span class="material-symbols-outlined text-[18px] text-slate-500">business_center</span>
-          <span>Business Insurance</span>
-          <span class="material-symbols-outlined text-[16px] text-slate-400 group-hover/nav-business:rotate-180 group-hover/nav-business:text-emerald-700 transition-transform duration-200">expand_more</span>
+          Business Insurance
+          <span class="material-symbols-outlined text-[18px] text-mute transition-transform duration-200 group-hover/nav-business:rotate-180 group-focus-within/nav-business:rotate-180">expand_more</span>
         </a>
 
-        <!-- MEGA MENU PANEL -->
-        <div class="absolute left-1/2 -translate-x-1/2 top-full w-[800px] opacity-0 invisible group-hover/nav-business:opacity-100 group-hover/nav-business:visible transition-all duration-200 ease-out translate-y-2 group-hover/nav-business:translate-y-0 pointer-events-none group-hover/nav-business:pointer-events-auto">
-          <div class="bg-white/95 rounded-2xl border border-slate-200/90 shadow-2xl p-5 grid grid-cols-[240px_1fr] gap-6 backdrop-blur-2xl">
-            
-            <!-- Featured Spotlight Column -->
-            <div class="bg-gradient-to-br from-emerald-50/60 via-slate-50 to-white p-4 rounded-xl border border-emerald-100 flex flex-col justify-between">
+        <div class="pointer-events-none invisible absolute left-1/2 top-full w-[760px] -translate-x-1/2 translate-y-1 opacity-0 transition duration-150 ease-out group-hover/nav-business:pointer-events-auto group-hover/nav-business:visible group-hover/nav-business:translate-y-0 group-hover/nav-business:opacity-100 group-focus-within/nav-business:pointer-events-auto group-focus-within/nav-business:visible group-focus-within/nav-business:translate-y-0 group-focus-within/nav-business:opacity-100">
+          <div class="grid grid-cols-[232px_1fr] gap-2 rounded-xl border border-hairline bg-elevated p-2 shadow-2xl">
+            <div class="flex flex-col justify-between rounded-lg bg-canvas p-5">
               <div class="flex flex-col gap-2">
-                <span class="px-2.5 py-0.5 rounded-full bg-emerald-100/80 text-emerald-800 text-[10px] font-semibold uppercase tracking-wider w-max border border-emerald-200/60">
-                  Commercial Models
-                </span>
-                <h3 class="font-headline-md text-base font-bold text-slate-900">Business Estimator</h3>
-                <p class="text-xs text-slate-600 leading-relaxed">
+                <span class="eyebrow">Commercial models</span>
+                <h3 class="text-heading-md text-ink">Business Estimator</h3>
+                <p class="text-body-md text-body">
                   Tailored General Liability &amp; E&amp;O cost projections for freelancers and small businesses.
                 </p>
               </div>
-              <a 
-                href="/business-insurance-calculator/" 
-                class="mt-4 inline-flex items-center justify-between w-full p-2.5 bg-slate-900 text-white rounded-lg text-xs font-semibold hover:bg-slate-800 transition-colors shadow-sm"
-              >
+              <a href="/business-insurance-calculator/" class="btn-sm mt-6 w-full justify-between">
                 <span>Profession Index</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
               </a>
             </div>
 
-            <!-- Professions Directory Column -->
-            <div class="flex flex-col justify-between">
+            <div class="flex flex-col justify-between p-3">
               <div>
-                <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-100">
-                  <span class="text-xs font-bold text-slate-900 uppercase tracking-wider font-label-sm">Popular Business Profiles</span>
-                  <span class="text-[11px] text-slate-500 font-data-tabular">35+ Industries</span>
+                <div class="mb-2 flex items-center justify-between px-2">
+                  <span class="text-label-sm text-ink">Popular Business Profiles</span>
+                  <span class="font-mono text-body-sm text-mute">35+ industries</span>
                 </div>
-                <div class="grid grid-cols-2 gap-2">
+                <div class="grid grid-cols-2 gap-0.5">
                   {topProfessions.map((prof) => (
-                    <a 
+                    <a
                       href={`/business-insurance-calculator/${prof.slug}/`}
-                      class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50/60 border border-slate-200/60 hover:border-emerald-500/50 hover:bg-emerald-50/40 transition-all group/prof"
+                      class="group/prof flex items-center gap-3 rounded-md px-2 py-1.5 transition-colors hover:bg-hairline-soft"
                     >
-                      <div class="w-7 h-7 rounded-md bg-emerald-100/80 text-emerald-800 flex items-center justify-center shrink-0 group-hover/prof:bg-emerald-700 group-hover/prof:text-white transition-colors">
-                        <span class="material-symbols-outlined text-[16px]">{prof.icon}</span>
-                      </div>
-                      <div class="flex flex-col min-w-0">
-                        <span class="text-xs font-medium text-slate-700 group-hover/prof:text-emerald-900 transition-colors truncate">{prof.name}</span>
-                        <span class="text-[10px] text-slate-400 font-data-tabular">{prof.tag}</span>
-                      </div>
+                      <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-hairline bg-elevated text-body group-hover/prof:text-ink">
+                        <span class="material-symbols-outlined text-[18px]">{prof.icon}</span>
+                      </span>
+                      <span class="flex min-w-0 flex-col">
+                        <span class="truncate text-body-md font-medium text-ink">{prof.name}</span>
+                        <span class="text-body-sm text-mute">{prof.tag}</span>
+                      </span>
                     </a>
                   ))}
                 </div>
               </div>
-              <a 
-                href="/business-insurance-calculator/#profession-search-section" 
-                class="mega-scroll-link mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-emerald-700 hover:text-emerald-800 transition-colors"
+              <a
+                href="/business-insurance-calculator/#profession-search-section"
+                class="mega-scroll-link mt-3 flex items-center justify-between rounded-md border-t border-hairline px-2 pt-3 text-body-md font-medium text-ink hover:text-brand-ink"
               >
                 <span>Explore All 35+ Profession Profiles</span>
-                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
               </a>
             </div>
-
           </div>
         </div>
       </div>
-
     </nav>
 
-    <!-- RIGHT ACTION AREA -->
-    <div class="hidden sm:flex items-center gap-3 shrink-0">
-      <a 
-        href="/renters-insurance-calculator" 
-        class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition-all shadow-sm hover:shadow-md border border-slate-800 group"
-      >
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="material-symbols-outlined text-[18px] text-slate-300 group-hover:text-white transition-colors">calculate</span>
-        <span>Get Instant Estimate</span>
+    <!-- Right actions -->
+    <div class="flex items-center gap-2">
+      <a href="/renters-insurance-calculator" class="btn-sm hidden sm:inline-flex">
+        Get Instant Estimate
       </a>
-    </div>
 
-    <!-- MOBILE HAMBURGER BUTTON -->
-    <div class="flex lg:hidden items-center gap-2">
-      <button 
+      <button
         id="mobile-menu-toggle"
-        type="button" 
-        class="w-10 h-10 flex items-center justify-center text-slate-900 rounded-xl hover:bg-slate-100 transition-colors focus:outline-none border border-slate-200" 
+        type="button"
+        class="flex h-9 w-9 items-center justify-center rounded-md border border-hairline bg-elevated text-ink transition-colors hover:bg-hairline-soft lg:hidden"
         aria-label="Toggle Navigation Menu"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
       >
-        <span id="menu-icon-open" class="material-symbols-outlined text-[24px]">menu</span>
-        <span id="menu-icon-close" class="material-symbols-outlined text-[24px] hidden">close</span>
+        <span id="menu-icon-open" class="material-symbols-outlined text-[20px]">menu</span>
+        <span id="menu-icon-close" class="material-symbols-outlined hidden text-[20px]">close</span>
       </button>
     </div>
-
   </div>
 
-  <!-- MOBILE NAVIGATION DRAWER -->
-  <div 
-    id="mobile-menu" 
-    class="hidden lg:hidden border-t border-slate-200 bg-white/95 backdrop-blur-2xl px-margin-mobile py-5 flex-col gap-4 shadow-xl max-h-[85vh] overflow-y-auto"
+  <!-- Mobile navigation drawer -->
+  <div
+    id="mobile-menu"
+    class="hidden max-h-[calc(100dvh-4rem)] flex-col gap-6 overflow-y-auto border-t border-hairline bg-canvas px-4 pb-6 pt-4 sm:px-6 lg:hidden"
   >
-    <a 
-      href="/" 
+    <a
+      href="/"
       class:list={[
-        'p-3 rounded-xl font-medium text-sm flex items-center justify-between transition-colors',
-        active === 'Home' ? 'bg-emerald-50 text-emerald-900 font-semibold border border-emerald-200' : 'text-slate-700 hover:bg-slate-50'
+        'flex items-center justify-between rounded-lg px-3 py-2.5 text-body-lg font-medium',
+        active === 'Home' ? 'bg-hairline-soft text-ink' : 'text-ink hover:bg-hairline-soft',
       ]}
     >
-      <div class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-slate-500 text-[20px]">home</span>
-        <span>Home</span>
-      </div>
-      <span class="material-symbols-outlined text-slate-400 text-[18px]">chevron_right</span>
+      <span>Home</span>
+      <span class="material-symbols-outlined text-[20px] text-mute">chevron_right</span>
     </a>
 
-    <!-- Mobile Renters Section -->
-    <div class="flex flex-col gap-2 p-3.5 bg-slate-50 rounded-xl border border-slate-200/80">
-      <a 
-        href="/renters-insurance-calculator/#browse-states" 
-        class="mega-scroll-link flex items-center justify-between font-bold text-sm text-slate-900"
+    <div class="flex flex-col gap-3">
+      <a
+        href="/renters-insurance-calculator/#browse-states"
+        class="mega-scroll-link flex items-center justify-between px-3 text-body-lg font-medium text-ink"
       >
-        <div class="flex items-center gap-2.5">
-          <span class="material-symbols-outlined text-emerald-700 text-[20px]">home_work</span>
-          <span>Renters Insurance</span>
-        </div>
-        <span class="text-xs font-semibold text-emerald-700 font-data-tabular">All 50 States →</span>
+        <span>Renters Insurance</span>
+        <span class="font-mono text-body-sm text-mute">All 50 states</span>
       </a>
-      <div class="grid grid-cols-2 gap-1.5 mt-2 pt-2.5 border-t border-slate-200/60">
+      <div class="grid grid-cols-2 gap-2">
         {topStates.slice(0, 8).map((st) => (
-          <a 
-            href={`/renters-insurance-calculator/${st.slug}/`}
-            class="text-xs text-slate-700 hover:text-emerald-800 py-1 px-2 rounded bg-white border border-slate-200/80 flex items-center justify-between"
-          >
+          <a href={`/renters-insurance-calculator/${st.slug}/`} class="row-link py-2">
             <span class="truncate">{st.name}</span>
-            <span class="text-[10px] text-slate-400 font-data-tabular ml-1">{st.code}</span>
           </a>
         ))}
       </div>
     </div>
 
-    <!-- Mobile Business Section -->
-    <div class="flex flex-col gap-2 p-3.5 bg-slate-50 rounded-xl border border-slate-200/80">
-      <a 
-        href="/business-insurance-calculator/#profession-search-section" 
-        class="mega-scroll-link flex items-center justify-between font-bold text-sm text-slate-900"
+    <div class="flex flex-col gap-3">
+      <a
+        href="/business-insurance-calculator/#profession-search-section"
+        class="mega-scroll-link flex items-center justify-between px-3 text-body-lg font-medium text-ink"
       >
-        <div class="flex items-center gap-2.5">
-          <span class="material-symbols-outlined text-emerald-700 text-[20px]">business_center</span>
-          <span>Business Insurance</span>
-        </div>
-        <span class="text-xs font-semibold text-emerald-700 font-data-tabular">35+ Profiles →</span>
+        <span>Business Insurance</span>
+        <span class="font-mono text-body-sm text-mute">35+ profiles</span>
       </a>
-      <div class="grid grid-cols-1 gap-1.5 mt-2 pt-2.5 border-t border-slate-200/60">
+      <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
         {topProfessions.slice(0, 4).map((prof) => (
-          <a 
-            href={`/business-insurance-calculator/${prof.slug}/`}
-            class="text-xs text-slate-700 hover:text-emerald-800 py-1.5 px-2 rounded bg-white border border-slate-200/80 flex items-center gap-2"
-          >
-            <span class="material-symbols-outlined text-[16px] text-emerald-700">{prof.icon}</span>
+          <a href={`/business-insurance-calculator/${prof.slug}/`} class="row-link justify-start gap-3 py-2">
+            <span class="material-symbols-outlined text-[18px] text-mute">{prof.icon}</span>
             <span>{prof.name}</span>
           </a>
         ))}
       </div>
     </div>
 
-    <!-- Mobile CTA -->
-    <div class="pt-2">
-      <a 
-        href="/renters-insurance-calculator/#calculator" 
-        class="flex items-center justify-center gap-2 w-full py-3 bg-slate-900 text-white font-semibold text-sm rounded-xl shadow-md border border-slate-800"
-      >
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="material-symbols-outlined text-[18px]">calculate</span>
-        <span>Get Instant Estimate</span>
-      </a>
-    </div>
+    <a href="/renters-insurance-calculator/#calculator" class="btn-primary w-full">
+      Get Instant Estimate
+    </a>
   </div>
 </header>
 
@@ -348,20 +266,18 @@ const topProfessions = [
   const iconOpen = document.getElementById('menu-icon-open');
   const iconClose = document.getElementById('menu-icon-close');
 
+  const setMenuOpen = (open: boolean) => {
+    if (!menu || !iconOpen || !iconClose) return;
+    menu.classList.toggle('hidden', !open);
+    menu.classList.toggle('flex', open);
+    iconOpen.classList.toggle('hidden', open);
+    iconClose.classList.toggle('hidden', !open);
+    toggleBtn?.setAttribute('aria-expanded', String(open));
+  };
+
   if (toggleBtn && menu && iconOpen && iconClose) {
     toggleBtn.addEventListener('click', () => {
-      const isHidden = menu.classList.contains('hidden');
-      if (isHidden) {
-        menu.classList.remove('hidden');
-        menu.classList.add('flex');
-        iconOpen.classList.add('hidden');
-        iconClose.classList.remove('hidden');
-      } else {
-        menu.classList.add('hidden');
-        menu.classList.remove('flex');
-        iconOpen.classList.remove('hidden');
-        iconClose.classList.add('hidden');
-      }
+      setMenuOpen(menu.classList.contains('hidden'));
     });
   }
 
@@ -370,7 +286,7 @@ const topProfessions = [
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
       if (!href) return;
-      
+
       const url = new URL(href, window.location.href);
       if (url.pathname === window.location.pathname && url.hash) {
         e.preventDefault();
@@ -379,10 +295,7 @@ const topProfessions = [
           targetEl.scrollIntoView({ behavior: 'smooth' });
           // Close mobile menu if open
           if (menu && !menu.classList.contains('hidden')) {
-            menu.classList.add('hidden');
-            menu.classList.remove('flex');
-            iconOpen?.classList.remove('hidden');
-            iconClose?.classList.add('hidden');
+            setMenuOpen(false);
           }
         }
       }

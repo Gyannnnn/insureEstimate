@@ -22,165 +22,84 @@ const websiteSchema = {
   url: 'https://insureestimate.com/',
   description: 'Estimate insurance costs with free online calculators for renters and small businesses. Explore coverage costs by state, profession, and industry.',
 };
+
+const linkClass = 'text-body-md text-body transition-colors hover:text-ink';
 ---
 
-<!-- Import Google Font for Brand Logo -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<footer class="relative z-10 mt-24 w-full border-t border-hairline bg-canvas">
+  <div class="container-page flex flex-col gap-12 py-16">
 
-<footer class="w-full bg-slate-50/60 border-t border-slate-200/80 mt-stack-lg relative z-10">
-  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col gap-8">
-    
-    <!-- TOP ROW: BRAND & QUICK LINKS -->
-    <div class="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-8 border-b border-slate-200/70 pb-8">
-      
-      <!-- Brand Column -->
-      <div class="flex flex-col gap-3">
-        <a href="/" class="flex items-center group focus:outline-none w-max py-0.5">
-          <div class="flex items-center font-['Plus_Jakarta_Sans',sans-serif]">
-            <span class="text-2xl font-bold tracking-tight text-slate-900">Insure</span>
-            <span class="text-2xl font-extrabold tracking-tight text-emerald-700">Estimate</span>
-            <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block ml-0.5 self-baseline mb-1"></span>
-          </div>
+    <!-- Brand + primary link groups -->
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-[1.6fr_1fr_1fr]">
+      <div class="flex max-w-md flex-col gap-4">
+        <a href="/" class="flex w-max items-center rounded-md py-0.5" aria-label="InsureEstimate home">
+          <span class="text-[20px] font-semibold leading-none tracking-[-0.6px] text-ink">Insure</span>
+          <span class="text-[20px] font-semibold leading-none tracking-[-0.6px] text-brand-ink">Estimate</span>
+          <span class="mb-0.5 ml-0.5 inline-block h-1.5 w-1.5 self-end rounded-full bg-brand" aria-hidden="true"></span>
         </a>
-        <p class="text-xs text-slate-600 leading-relaxed max-w-md">
+        <p class="text-body-md text-body">
           Providing transparent, data-driven insurance premium estimates across all 50 US States and 35+ professional categories based on statutory insurance filings and actuarial risk benchmarks.
         </p>
-        <div class="flex items-center gap-2 mt-1">
-          <span class="px-2.5 py-1 rounded-full bg-emerald-100/70 text-emerald-800 text-[10px] font-semibold uppercase tracking-wider border border-emerald-200/60">
-            50 US States
-          </span>
-          <span class="px-2.5 py-1 rounded-full bg-slate-200/70 text-slate-700 text-[10px] font-semibold uppercase tracking-wider border border-slate-300/60">
-            35+ Business Models
-          </span>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="badge">50 US States</span>
+          <span class="badge">35+ Business Models</span>
         </div>
       </div>
 
-      <!-- Calculators Column -->
-      <div class="flex flex-col gap-3">
-        <h4 class="font-label-sm text-xs text-slate-900 uppercase font-bold tracking-wider">Core Estimator Hubs</h4>
-        <nav class="flex flex-col gap-2.5 text-xs">
-          <a class="group text-slate-600 hover:text-emerald-800 transition-colors font-medium flex items-center gap-2 w-max" href="/renters-insurance-calculator/">
-            <span class="material-symbols-outlined text-[16px] text-emerald-700">home_work</span>
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
-              Renters Insurance Calculator
-            </span>
-          </a>
-          <a class="group text-slate-600 hover:text-emerald-800 transition-colors font-medium flex items-center gap-2 w-max" href="/business-insurance-calculator/">
-            <span class="material-symbols-outlined text-[16px] text-slate-700">business_center</span>
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
-              Business Insurance Calculator
-            </span>
-          </a>
-          <a class="group text-slate-600 hover:text-emerald-800 transition-colors font-medium flex items-center gap-2 w-max" href="/renters-insurance-calculator/#browse-states">
-            <span class="material-symbols-outlined text-[16px] text-slate-500">map</span>
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
-              State Renters Directory
-            </span>
-          </a>
+      <div class="flex flex-col gap-4">
+        <h4 class="text-label-sm text-ink">Core Estimator Hubs</h4>
+        <nav class="flex flex-col gap-3" aria-label="Calculators">
+          <a class={linkClass} href="/renters-insurance-calculator/">Renters Insurance Calculator</a>
+          <a class={linkClass} href="/business-insurance-calculator/">Business Insurance Calculator</a>
+          <a class={linkClass} href="/renters-insurance-calculator/#browse-states">State Renters Directory</a>
         </nav>
       </div>
 
-      <!-- Platform & Company Links -->
-      <div class="flex flex-col gap-3">
-        <h4 class="font-label-sm text-xs text-slate-900 uppercase font-bold tracking-wider">Company &amp; Governance</h4>
-        <nav class="flex flex-col gap-2.5 text-xs">
-          <a class="group text-slate-600 hover:text-emerald-800 transition-colors font-medium w-max" href="/about/">
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
-              About Us
-            </span>
-          </a>
-          <a class="group text-slate-600 hover:text-emerald-800 transition-colors font-medium w-max" href="/contact/">
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
-              Contact Support
-            </span>
-          </a>
-          <a class="group text-slate-600 hover:text-emerald-800 transition-colors font-medium w-max" href="/privacy-policy/">
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
-              Privacy Policy
-            </span>
-          </a>
-          <a class="group text-slate-600 hover:text-emerald-800 transition-colors font-medium w-max" href="/terms-and-conditions/">
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
-              Terms &amp; Conditions
-            </span>
-          </a>
+      <div class="flex flex-col gap-4">
+        <h4 class="text-label-sm text-ink">Company &amp; Governance</h4>
+        <nav class="flex flex-col gap-3" aria-label="Company">
+          <a class={linkClass} href="/about/">About Us</a>
+          <a class={linkClass} href="/contact/">Contact Support</a>
+          <a class={linkClass} href="/privacy-policy/">Privacy Policy</a>
+          <a class={linkClass} href="/terms-and-conditions/">Terms &amp; Conditions</a>
         </nav>
       </div>
-
     </div>
 
-    <!-- SECTION 1: ALL 50 STATES RENTERS INSURANCE DIRECTORY -->
-    <div class="flex flex-col gap-3 border-b border-slate-200/70 pb-8">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-1">
-        <div class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-emerald-700 text-[20px]">location_on</span>
-          <h3 class="font-headline-md text-xs font-bold text-slate-900 uppercase tracking-wider font-label-sm">
-            Renters Insurance by State
-          </h3>
-          <!-- <span class="px-2 py-0.5 rounded bg-slate-200/70 text-slate-700 text-[10px] font-data-tabular font-semibold">
-            All 50 States
-          </span> -->
-        </div>
-      </div>
-
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-2">
+    <!-- All 50 states -->
+    <div class="flex flex-col gap-4 border-t border-hairline pt-10">
+      <h3 class="text-label-sm text-ink">Renters Insurance by State</h3>
+      <div class="grid grid-cols-2 gap-x-6 gap-y-2.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {allStates.map((st) => (
-          <a 
-            href={`/renters-insurance-calculator/${st.data.slug}/`}
-            class="text-xs text-slate-600 hover:text-emerald-800 transition-colors font-medium py-0.5 group w-max"
-          >
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
-              {st.data.name}
-            </span>
+          <a href={`/renters-insurance-calculator/${st.data.slug}/`} class={`${linkClass} w-max`}>
+            {st.data.name}
           </a>
         ))}
       </div>
     </div>
 
-    <!-- SECTION 2: ALL BUSINESS PROFESSIONS DIRECTORY -->
-    <div class="flex flex-col gap-3 border-b border-slate-200/70 pb-8">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-1">
-        <div class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-green-700 text-[20px]">work</span>
-          <h3 class="font-headline-md text-xs font-bold text-slate-900 uppercase tracking-wider font-label-sm">
-            Business Insurance by Profession
-          </h3>
-          <!-- <span class="px-2 py-0.5 rounded bg-slate-200/70 text-slate-700 text-[10px] font-data-tabular font-semibold">
-            {allProfessions.length} Professions
-          </span> -->
-        </div>
-      </div>
-
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-2">
+    <!-- All professions -->
+    <div class="flex flex-col gap-4 border-t border-hairline pt-10">
+      <h3 class="text-label-sm text-ink">Business Insurance by Profession</h3>
+      <div class="grid grid-cols-2 gap-x-6 gap-y-2.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {allProfessions.map((prof) => (
-          <a 
-            href={`/business-insurance-calculator/${prof.data.slug}/`}
-            class="text-xs text-slate-600 hover:text-emerald-800 transition-colors font-medium py-0.5 group w-max"
-          >
-            <span class="relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-emerald-700 after:transition-all after:duration-300 group-hover:after:w-full">
-              {prof.data.name}
-            </span>
+          <a href={`/business-insurance-calculator/${prof.data.slug}/`} class={`${linkClass} w-max max-w-full truncate`}>
+            {prof.data.name}
           </a>
         ))}
       </div>
     </div>
 
-    <!-- BOTTOM LEGAL & COPYRIGHT ROW -->
-    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 text-center md:text-left pt-2">
-      <p class="font-body-md italic max-w-2xl text-[11px] leading-relaxed">
+    <!-- Legal row -->
+    <div class="flex flex-col gap-6 border-t border-hairline pt-8 md:flex-row md:items-start md:justify-between">
+      <p class="max-w-2xl text-body-sm text-mute">
         Disclaimer: InsureEstimate premium projections are calculated using statutory regulatory filings, state loss ratios, and industry actuarial risk models. Estimates are for informational purposes and do not constitute binding insurance quotes.
       </p>
-      <div class="flex flex-col sm:flex-row items-center gap-3 shrink-0 text-[11px] font-data-tabular">
-        <span class="text-slate-600 font-medium">© {new Date().getFullYear()} InsureEstimate.</span>
-        <div class="flex items-center gap-2.5 text-slate-500">
-          <a href="/privacy-policy/" class="hover:text-emerald-700 transition-colors">Privacy</a>
-          <span>•</span>
-          <a href="/terms-and-conditions/" class="hover:text-emerald-700 transition-colors">Terms</a>
-          <span>•</span>
-          <a href="/contact/" class="hover:text-emerald-700 transition-colors">Contact</a>
-        </div>
+      <div class="flex shrink-0 flex-wrap items-center gap-x-5 gap-y-2 text-body-sm">
+        <span class="text-body">© {new Date().getFullYear()} InsureEstimate.</span>
+        <a href="/privacy-policy/" class="text-mute transition-colors hover:text-ink">Privacy</a>
+        <a href="/terms-and-conditions/" class="text-mute transition-colors hover:text-ink">Terms</a>
+        <a href="/contact/" class="text-mute transition-colors hover:text-ink">Contact</a>
       </div>
     </div>
 
