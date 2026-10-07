@@ -1,4 +1,5 @@
-export type PropertyValue = 10000 | 20000 | 30000 | 50000;
+// Any limit from $10,000 to $50,000; factors interpolate between the anchor tiers in RENTERS_FACTORS.propertyValue.
+export type PropertyValue = number;
 export type LiabilityCoverage = 100000 | 300000 | 500000;
 export type Deductible = 500 | 1000 | 2500;
 

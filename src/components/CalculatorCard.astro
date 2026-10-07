@@ -29,21 +29,37 @@ const {
 const initial = type === 'renters'
   ? calculateRentersPremium({ stateBaseRate: baseRate, propertyValue: 20000, liabilityCoverage: 300000, deductible: 1000 })
   : calculateBusinessPremium({ professionRiskFactor: riskFactor, revenueTier: '50-150k', employeeCount: 1, coverageType: 'GL+EO' });
-const initialMin = Math.round(type === 'renters' ? initial.monthlyLow : initial.low);
-const initialMax = Math.round(type === 'renters' ? initial.monthlyHigh : initial.high);
+const money = (amount: number) => `$${Math.round(amount).toLocaleString('en-US')}`;
+const initialMin = money(type === 'renters' ? initial.monthlyLow : initial.low);
+const initialMax = money(type === 'renters' ? initial.monthlyHigh : initial.high);
+
+// Personal property slider runs $10k–$50k in $1k steps; the engine interpolates between these anchor
+// limits, and the client script badges the slider with the nearest anchor's tier name.
+const propertyTiers = [
+  { value: 10000, name: 'Minimal' },
+  { value: 20000, name: 'Standard' },
+  { value: 30000, name: 'Recommended' },
+  { value: 50000, name: 'High Asset' },
+];
+
+// Row-width px per px of font for the widest range each calculator can show (renters: 3-digit
+// monthly, business: 4-digit annual with comma). Drives .result-figure sizing in global.css.
+const figureRatio = type === 'renters' ? 5 : 6.4;
 
 // Display-only formatting for breakdown values; must match formatValue() in the client script.
 const formatValue = (label: string, value: number) => {
-  if (type === 'business') return `$${value.toLocaleString('en-US')}`;
-  return label === 'State base rate' ? `$${value.toLocaleString('en-US')}` : `×${value.toFixed(2)}`;
+  if (type === 'business') return money(value);
+  return label === 'State base rate' ? money(value) : `×${value.toFixed(2)}`;
 };
 ---
 
 <div class="relative z-10 w-full">
   <div class="panel scroll-mt-24 overflow-hidden shadow-md" id="calculator-card">
-    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_400px]">
+    <!-- Desktop: the estimate spans both rows and the disclaimer sits under the controls, filling
+         the space the shorter controls column would otherwise leave empty. Mobile keeps DOM order. -->
+    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_400px] lg:grid-rows-[1fr_auto]">
       <!-- Controls -->
-      <div class="flex flex-col gap-8 p-5 sm:p-8">
+      <div class="flex flex-col gap-8 p-5 sm:p-8 lg:col-start-1 lg:row-start-1">
         <div class="flex flex-col gap-2">
           <span class="eyebrow">Actuarial Calculation Engine</span>
           <h2 class="text-2xl font-semibold leading-8 tracking-[-0.9px] text-ink">{title}</h2>
@@ -54,29 +70,37 @@ const formatValue = (label: string, value: number) => {
           <div class="flex flex-col gap-7" data-calc-type="renters" data-base-rate={baseRate}>
             <!-- 1. Personal property coverage -->
             <div class="flex flex-col gap-3">
-              <div class="flex items-center justify-between gap-3">
+              <!-- Wraps the value under the label on narrow screens. Every tier name shares one grid
+                   cell so the badge is always as wide as the longest; sliding never reflows the row. -->
+              <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5">
                 <label class="field-label" for="card-property-slider">Personal Property Coverage</label>
-                <div class="num inline-flex items-baseline gap-1.5 text-body-md">
-                  <span id="card-property-val" class="font-semibold text-ink">$20,000</span>
-                  <span id="card-property-badge-label" class="text-mute">(Standard)</span>
+                <div class="num flex shrink-0 items-center gap-2 whitespace-nowrap">
+                  <span id="card-property-val" class="text-body-md font-semibold text-ink">$20,000</span>
+                  <span id="card-property-tier" class="badge grid justify-items-center">
+                    {propertyTiers.map(tier => (
+                      <span data-tier={tier.value} class:list={['col-start-1 row-start-1', { invisible: tier.value !== 20000 }]}>{tier.name}</span>
+                    ))}
+                  </span>
                 </div>
               </div>
 
               <input
                 id="card-property-slider"
                 type="range"
-                min="0"
-                max="3"
-                step="1"
-                value="1"
+                min="10000"
+                max="50000"
+                step="1000"
+                value="20000"
+                aria-valuetext="$20,000 (Standard)"
                 class="range"
-                style="--fill: 33.333%"
+                style="--fill: 25%"
               />
 
               <div class="flex justify-between font-mono text-[11px] leading-4 text-mute">
                 <span>$10k</span>
                 <span>$20k</span>
                 <span>$30k</span>
+                <span>$40k</span>
                 <span>$50k</span>
               </div>
             </div>
@@ -161,7 +185,7 @@ const formatValue = (label: string, value: number) => {
       </div>
 
       <!-- Live estimate -->
-      <div class="flex flex-col gap-6 border-t border-hairline bg-canvas p-5 sm:p-8 lg:border-l lg:border-t-0">
+      <div class="flex flex-col gap-6 border-t border-hairline bg-canvas p-5 sm:p-8 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:border-l lg:border-t-0">
         <div class="flex items-center justify-between">
           <span class="eyebrow">Live Actuarial Estimate</span>
           <span class="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase text-mute">
@@ -176,11 +200,11 @@ const formatValue = (label: string, value: number) => {
           <span id="calc-error-text"></span>
         </div>
 
-        <div id="calc-result-container" aria-live="polite">
-          <div class="num flex flex-wrap items-baseline gap-x-2 text-ink">
-            <span id="card-result-min" class="text-[40px] font-semibold leading-[44px] tracking-[-1.8px] sm:text-[48px] sm:leading-[52px] sm:tracking-[-2.4px]">${initialMin}</span>
-            <span class="text-[28px] font-normal text-faint" aria-hidden="true">–</span>
-            <span id="card-result-max" class="text-[40px] font-semibold leading-[44px] tracking-[-1.8px] sm:text-[48px] sm:leading-[52px] sm:tracking-[-2.4px]">${initialMax}</span>
+        <div id="calc-result-container" class="[container-type:inline-size]" aria-live="polite">
+          <div class="num result-figure flex items-baseline gap-x-2 whitespace-nowrap text-ink" style={`--figure-ratio: ${figureRatio}`}>
+            <span id="card-result-min" class="font-semibold tracking-[-0.05em]">{initialMin}</span>
+            <span class="text-[0.6em] font-normal text-faint" aria-hidden="true">–</span>
+            <span id="card-result-max" class="font-semibold tracking-[-0.05em]">{initialMax}</span>
             <span id="card-result-period" class="text-body-lg text-mute">{period}</span>
           </div>
           <p class="mt-2 text-body-md text-body">Calculated projection for {entityName}</p>
@@ -199,12 +223,13 @@ const formatValue = (label: string, value: number) => {
           </div>
         </div>
 
-        <!-- Disclaimer -->
-        <p class="mt-auto flex items-start gap-2 text-body-sm text-mute">
-          <span class="material-symbols-outlined mt-px shrink-0 text-[16px]">info</span>
-          <span id="calc-disclaimer">{initial.disclaimer}</span>
-        </p>
       </div>
+
+      <!-- Disclaimer: closes the estimate panel on mobile; sits under the controls on desktop. -->
+      <p class="flex items-start gap-2 bg-canvas px-5 pb-5 text-body-sm text-mute sm:px-8 sm:pb-8 lg:col-start-1 lg:row-start-2 lg:bg-transparent">
+        <span class="material-symbols-outlined mt-px shrink-0 text-[16px]">info</span>
+        <span id="calc-disclaimer">{initial.disclaimer}</span>
+      </p>
     </div>
   </div>
 </div>
@@ -224,8 +249,6 @@ const formatValue = (label: string, value: number) => {
     const errorBanner = document.getElementById('calc-error-banner');
     const errorText = document.getElementById('calc-error-text');
 
-    const PROPERTY_TIERS = [10000, 20000, 30000, 50000];
-    const PROPERTY_LABELS = ['(Minimal)', '(Standard)', '(Recommended)', '(High Asset)'];
 
     // Display-only helpers: paint the filled part of a range track, format breakdown values.
     const paintRange = (el: HTMLInputElement | null) => {
@@ -235,9 +258,10 @@ const formatValue = (label: string, value: number) => {
       const pct = max > min ? ((Number(el.value) - min) / (max - min)) * 100 : 0;
       el.style.setProperty('--fill', `${pct}%`);
     };
+    const money = (amount: number) => `$${Math.round(amount).toLocaleString('en-US')}`;
     const formatValue = (type: 'renters' | 'business', label: string, value: number) => {
-      if (type === 'business') return `$${value.toLocaleString('en-US')}`;
-      return label === 'State base rate' ? `$${value.toLocaleString('en-US')}` : `×${value.toFixed(2)}`;
+      if (type === 'business') return money(value);
+      return label === 'State base rate' ? money(value) : `×${value.toFixed(2)}`;
     };
     const renderBreakdown = (type: 'renters' | 'business', items: { label: string; value: number }[]) =>
       items
@@ -253,18 +277,22 @@ const formatValue = (label: string, value: number) => {
       const baseRate = parseFloat(rentersContainer.getAttribute('data-base-rate') || '180');
 
       const propSlider = document.getElementById('card-property-slider') as HTMLInputElement;
-      const sliderIdx = parseInt(propSlider?.value || '1');
-      const propVal = PROPERTY_TIERS[sliderIdx] || 20000;
+      const propVal = Number(propSlider?.value) || 20000;
       paintRange(propSlider);
 
+      const propValText = money(propVal);
       const propValDisplay = document.getElementById('card-property-val');
-      const propBadgeLabel = document.getElementById('card-property-badge-label');
       if (propValDisplay) {
-        propValDisplay.textContent = `$${propVal.toLocaleString('en-US')}`;
+        propValDisplay.textContent = propValText;
       }
-      if (propBadgeLabel) {
-        propBadgeLabel.textContent = PROPERTY_LABELS[sliderIdx] || '';
-      }
+      // Badge the nearest anchor tier (ties go to the higher one). Swap which stacked name is visible
+      // instead of rewriting text, so the badge width never changes.
+      const tierEls = [...document.querySelectorAll<HTMLElement>('#card-property-tier [data-tier]')];
+      const distance = (el: HTMLElement) => Math.abs(Number(el.dataset.tier) - propVal);
+      const activeTier = tierEls.reduce<HTMLElement | null>((best, el) => (!best || distance(el) <= distance(best) ? el : best), null);
+      tierEls.forEach(el => el.classList.toggle('invisible', el !== activeTier));
+      const tierName = activeTier?.textContent || '';
+      propSlider?.setAttribute('aria-valuetext', tierName ? `${propValText} (${tierName})` : propValText);
 
       const liabVal = parseInt((document.getElementById('card-liability-select') as HTMLSelectElement)?.value || '300000');
       const dedVal = parseInt((document.getElementById('card-deductible-select') as HTMLSelectElement)?.value || '1000');
@@ -273,13 +301,13 @@ const formatValue = (label: string, value: number) => {
         if (errorBanner) errorBanner.classList.add('hidden');
         const res = calculateRentersPremium({
           stateBaseRate: baseRate,
-          propertyValue: propVal as any,
+          propertyValue: propVal,
           liabilityCoverage: liabVal as any,
           deductible: dedVal as any,
         });
 
-        minDisplay.textContent = `$${Math.round(res.monthlyLow)}`;
-        maxDisplay.textContent = `$${Math.round(res.monthlyHigh)}`;
+        minDisplay.textContent = money(res.monthlyLow);
+        maxDisplay.textContent = money(res.monthlyHigh);
         disclaimerText.textContent = res.disclaimer;
 
         breakdownList.innerHTML = renderBreakdown('renters', res.breakdown);
@@ -319,8 +347,8 @@ const formatValue = (label: string, value: number) => {
           coverageType: covType as any,
         });
 
-        minDisplay.textContent = `$${Math.round(res.low)}`;
-        maxDisplay.textContent = `$${Math.round(res.high)}`;
+        minDisplay.textContent = money(res.low);
+        maxDisplay.textContent = money(res.high);
         disclaimerText.textContent = res.disclaimer;
 
         breakdownList.innerHTML = renderBreakdown('business', res.breakdown);

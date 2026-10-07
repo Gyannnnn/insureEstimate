@@ -50,6 +50,37 @@ describe('Calculator Engine & Validation Unit Tests', () => {
         });
       }, /Invalid propertyValue/);
     });
+
+    it('keeps anchor tier factors exact and interpolates property limits between them', () => {
+      const factorAt = (propertyValue: number) => calculateRentersPremium({
+        stateBaseRate: 180,
+        propertyValue,
+        liabilityCoverage: 300000,
+        deductible: 1000,
+      }).breakdown[1].value;
+
+      assert.equal(factorAt(10000), 0.6);
+      assert.equal(factorAt(20000), 1.0);
+      assert.equal(factorAt(30000), 1.3);
+      assert.equal(factorAt(50000), 1.8);
+      assert.equal(round2(factorAt(15000)), 0.8);
+      assert.equal(round2(factorAt(25000)), 1.15);
+      assert.equal(round2(factorAt(40000)), 1.55);
+      assert.ok(factorAt(21000) > factorAt(20000) && factorAt(21000) < factorAt(22000));
+    });
+
+    it('throws error for propertyValue outside the anchor range', () => {
+      for (const propertyValue of [9999, 50001, NaN]) {
+        assert.throws(() => {
+          calculateRentersPremium({
+            stateBaseRate: 180,
+            propertyValue,
+            liabilityCoverage: 300000,
+            deductible: 1000,
+          });
+        }, /Invalid propertyValue/);
+      }
+    });
   });
 
   describe('Business Premium Calculator', () => {

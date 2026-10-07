@@ -2,9 +2,21 @@ import { RENTERS_FACTORS } from './factors';
 import type { PremiumEstimate, RentersInput } from './types';
 import { round2, validateRentersInput } from './validate';
 
+// Exact at the anchor tiers in RENTERS_FACTORS.propertyValue, linear between them.
+// Expects a validated value (inside the anchor range).
+export function propertyFactorFor(value: number): number {
+  const table = RENTERS_FACTORS.propertyValue;
+  if (table[value] !== undefined) return table[value];
+  const anchors = Object.keys(table).map(Number).sort((a, b) => a - b);
+  const upper = anchors.findIndex(a => a > value);
+  const lo = anchors[upper - 1];
+  const hi = anchors[upper];
+  return table[lo] + ((value - lo) / (hi - lo)) * (table[hi] - table[lo]);
+}
+
 export function calculateRentersPremium(input: RentersInput): PremiumEstimate {
   const v = validateRentersInput(input);
-  const propertyFactor = RENTERS_FACTORS.propertyValue[v.propertyValue];
+  const propertyFactor = propertyFactorFor(v.propertyValue);
   const liabilityFactor = RENTERS_FACTORS.liability[v.liabilityCoverage];
   const deductibleFactor = RENTERS_FACTORS.deductible[v.deductible];
 

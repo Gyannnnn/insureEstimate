@@ -68,6 +68,17 @@
   .lead { @apply text-body-lg text-body md:text-[18px] md:leading-[28px]; }
   .num { font-variant-numeric: tabular-nums; font-feature-settings: 'tnum' 1; }
 
+  /* Calculator live-estimate figure. Sized from its container's width, never from its digits, so the
+     widest range stays on one line and the size holds steady while a slider moves. --figure-ratio
+     (set per calculator) is row px per font px for that widest range; 64px covers period + gaps. */
+  .result-figure { font-size: 32px; line-height: 1.1; }
+  @supports (width: 1cqi) {
+    .result-figure { font-size: clamp(28px, calc((100cqi - 64px) / var(--figure-ratio, 6)), 40px); }
+    @media (min-width: 640px) {
+      .result-figure { font-size: clamp(28px, calc((100cqi - 64px) / var(--figure-ratio, 6)), 48px); }
+    }
+  }
+
   .link { @apply font-medium text-brand-ink underline decoration-brand-ink/30 underline-offset-4 transition-colors hover:decoration-brand-ink; }
   .link-quiet { @apply text-body transition-colors hover:text-ink; }
 

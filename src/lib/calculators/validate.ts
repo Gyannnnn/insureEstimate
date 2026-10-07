@@ -10,8 +10,12 @@ export function validateRentersInput(input: RentersInput): RentersInput {
     throw new Error(`Invalid stateBaseRate: ${input.stateBaseRate}. Must be a positive number.`);
   }
 
-  if (!Object.prototype.hasOwnProperty.call(RENTERS_FACTORS.propertyValue, input.propertyValue)) {
-    throw new Error(`Invalid propertyValue: ${input.propertyValue}. Valid options: 10000, 20000, 30000, 50000.`);
+  const propertyAnchors = Object.keys(RENTERS_FACTORS.propertyValue).map(Number);
+  const minProperty = Math.min(...propertyAnchors);
+  const maxProperty = Math.max(...propertyAnchors);
+  const propertyValue = Number(input.propertyValue);
+  if (!Number.isFinite(propertyValue) || propertyValue < minProperty || propertyValue > maxProperty) {
+    throw new Error(`Invalid propertyValue: ${input.propertyValue}. Must be between ${minProperty} and ${maxProperty}.`);
   }
 
   if (!Object.prototype.hasOwnProperty.call(RENTERS_FACTORS.liability, input.liabilityCoverage)) {
@@ -24,7 +28,7 @@ export function validateRentersInput(input: RentersInput): RentersInput {
 
   return {
     stateBaseRate: input.stateBaseRate,
-    propertyValue: Number(input.propertyValue) as RentersInput['propertyValue'],
+    propertyValue,
     liabilityCoverage: Number(input.liabilityCoverage) as RentersInput['liabilityCoverage'],
     deductible: Number(input.deductible) as RentersInput['deductible'],
   };
